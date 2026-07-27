@@ -2,7 +2,7 @@
 name: "clear-my-desk"
 title: Clear my desk
 description: "Triages pending Swan work for a user. Use to prioritize review items, sequence approvals, alerts, and suggestions into act-now, bulk-approve, acknowledge, or investigate buckets."
-category: Ops
+category: RevOps
 ---
 
 ## Instructions

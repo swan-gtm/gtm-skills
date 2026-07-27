@@ -7,9 +7,9 @@ category: RevOps
 
 # Revenue Performance Metrics
 
-You are a revenue analytics specialist who has built measurement frameworks for B2B companies across stages. You think in systems of connected metrics — every number exists in a chain from activity to revenue, and your job is to find the broken link.
+You are a revenue analytics specialist who has built measurement frameworks for B2B companies across stages. You think in systems of connected metrics: every number exists in a chain from activity to revenue, and your job is to find the broken link.
 
-Your philosophy: Metrics are diagnostic tools, not scorecards. The value of a metric is in the question it prompts, not the number it displays. When revenue is off track, the answer is always in the data — but only if you measure the right things at the right granularity.
+Your philosophy: Metrics are diagnostic tools, not scorecards. The value of a metric is in the question it prompts, not the number it displays. When revenue is off track, the answer is always in the data: but only if you measure the right things at the right granularity.
 
 ## The Revenue Math Framework
 
@@ -20,9 +20,9 @@ Track volume at each stage of the revenue funnel. These are your primary "what h
 ```
 V1:  Website Visitors / Inbound Traffic
 V2:  Leads (known contacts with intent signal)
-V3:  MQLs (marketing qualified — fit + engagement threshold)
-V4:  SALs (sales accepted leads — human quality gate)
-V5:  SQLs (sales qualified — confirmed opportunity)
+V3:  MQLs (marketing qualified: fit + engagement threshold)
+V4:  SALs (sales accepted leads: human quality gate)
+V5:  SQLs (sales qualified: confirmed opportunity)
 V6:  Opportunities Created (deal in pipeline)
 V7:  Proposals / Demos Delivered
 V8:  Negotiations (verbal intent, commercial discussion)
@@ -49,11 +49,11 @@ CR6: Retain → Expand rate    (are customers growing with you?)
 
 **Benchmark ranges for B2B SaaS:**
 ```
-Lead → MQL:          5-15%  (depends heavily on lead definition and source)
-MQL → SQL:           20-40% (below 20% = MQL definition problem)
-SQL → Opportunity:   60-80% (below 60% = qualification problem)
-Opportunity → Win:   15-30% (varies by segment; enterprise 15-20%, SMB 25-35%)
-Overall Lead → Win:  1-3%   (the compound effect of all conversion rates)
+Lead → MQL:          20-25% average (Data-Mania, First Page Sage, 2026; depends heavily on lead definition and source)
+MQL → SQL:           15-21% average, top performers 39-40% (Artisan Strategies, SaaS Hero, 2026)
+SQL → Opportunity:   60-80% (practice-based baseline; external benchmarks limited for this stage)
+Opportunity → Win:   15-30% varies by segment: enterprise 15-20%, SMB 25-35% (Pavilion, Ebsta, 2026)
+Overall Lead → Win:  1-3% (composite, derived from funnel math not external benchmark)
 ```
 
 ### AI-Native Product Metrics
@@ -64,10 +64,10 @@ For companies where AI is the product (not just a tool in the GTM stack), the st
 
 | Layer | What it measures | Examples | When to use |
 |-------|-----------------|----------|-------------|
-| 1. Explicit | Direct user feedback | Thumbs up/down, chat feedback, survey scores | Starting point — cheap to implement, correlates with conversion (Gamma) |
-| 2. Implicit | Post-output behaviour | Edit intensity, copy rate, send rate of AI drafts, time modifying output | Stronger signal — shows whether outputs are actually useful |
+| 1. Explicit | Direct user feedback | Thumbs up/down, chat feedback, survey scores | Starting point: cheap to implement, correlates with conversion (Gamma) |
+| 2. Implicit | Post-output behaviour | Edit intensity, copy rate, send rate of AI drafts, time modifying output | Stronger signal: shows whether outputs are actually useful |
 | 3. Adoption | Usage patterns | DAU/MAU (copilot), messages per DAU (agentic), days editing/month | Standard but interpretation shifts: depth > frequency |
-| 4. Business impact | Work completed | Resolution rate, automation rate, FTEs augmented, digital capacity, time savings | Ultimate measure — is the AI completing valuable work? |
+| 4. Business impact | Work completed | Resolution rate, automation rate, FTEs augmented, digital capacity, time savings | Ultimate measure: is the AI completing valuable work? |
 
 **Key metric shifts for AI-native companies:**
 
@@ -121,7 +121,7 @@ LEVER 2: Win Rate (conversion)
   Diagnostic: Are we closing deals at a competitive rate?
   Improve via: Better qualification, sales process, competitive positioning
   Typical action: Methodology training, demo improvement, better multi-threading
-  Warning: Win rate improvements compound — 25% → 30% = 20% more revenue
+  Warning: Win rate improvements compound: 25% → 30% = 20% more revenue
 
 LEVER 3: Average Deal Size (value)
   Diagnostic: Are we selling the full solution or leaving money on the table?
@@ -183,7 +183,7 @@ the lifetime at a reasonable period (5-7 years for planning purposes).
 ```
 Target: 3:1 minimum (below 3:1, you're buying growth unprofitably)
 Sweet spot: 3:1 to 5:1
-Above 5:1: You're likely under-investing in growth — spend more to capture market
+Above 5:1: You're likely under-investing in growth: spend more to capture market
 
 By segment:
   Enterprise: 5:1+ is common (high LTV, high CAC, but great ratio)
@@ -221,11 +221,11 @@ Example:
   NRR = (€10M + €1.5M - €300K - €700K) ÷ €10M = 105%
 
 Benchmarks:
-  <90%:  Critical — the business is shrinking from within
-  90-100%: Below par — growth is entirely dependent on new acquisition
-  100-110%: Good — existing base is stable to growing
-  110-120%: Strong — expansion engine is working
-  120%+: Exceptional — each cohort grows significantly over time
+  <90%:  Critical: the business is shrinking from within
+  90-100%: Below par: growth is entirely dependent on new acquisition
+  100-110%: Good: existing base is stable to growing
+  110-120%: Strong: expansion engine is working
+  120%+: Exceptional: each cohort grows significantly over time
 ```
 
 **Why NRR matters more than growth rate:** A company growing 50% with 80% NRR needs to acquire 70% of its base in new revenue each year just to maintain growth. A company growing 30% with 120% NRR only needs to acquire 10% of its base. The second company is far more efficient and durable.
@@ -239,7 +239,7 @@ GRR is always ≤ 100% (it excludes expansion). It tells you how much
 revenue you keep before any expansion effort.
 
 Benchmarks:
-  <80%: Serious retention problem — fix before investing in growth
+  <80%: Serious retention problem: fix before investing in growth
   80-85%: Below average for SaaS
   85-90%: Average
   90-95%: Strong
@@ -265,6 +265,8 @@ Healthy composition at maturity (€25M+ ARR):
 If expansion is <20% of new ARR, you're leaving money on the table.
 If new business is >70% of new ARR, you're too acquisition-dependent.
 ```
+
+**AI-Generated Inbound and Pipeline Pollution (2026 caveat):** 70%+ of intent signals now originate from AI-research traffic (Landbase, Digital Applied, 2026). Traditional pipeline composition benchmarks (30-50% new / 30-50% expansion) predate this shift. When measuring composition, filter AI-generated research signals from genuine buying signals, or adjust thresholds upward for new business. A pipeline that appears 80% new business may actually be 60% new logos plus 20% AI-noise. Segment your composition analysis: (a) AI-research sourced pipeline, (b) human-initiated and referral pipeline. Track them separately until you can reliably distinguish them in your CRM.
 
 ## Growth Benchmarks
 
@@ -292,11 +294,11 @@ Burn Multiple = Net Burn ÷ Net New ARR
 This tells you how much you're spending to generate each euro of new ARR.
 
 Benchmarks:
-  <1x:   Exceptional efficiency (rare — company is nearly self-funding growth)
-  1-1.5x: Strong — sustainable growth investment
-  1.5-2x: Average — acceptable at scale-up stage
-  2-3x:   Concerning — needs efficiency improvement
-  >3x:    Alarming — burning cash without proportionate ARR return
+  <1x:   Exceptional efficiency (rare: company is nearly self-funding growth)
+  1-1.5x: Strong: sustainable growth investment
+  1.5-2x: Average: acceptable at scale-up stage
+  2-3x:   Concerning: needs efficiency improvement
+  >3x:    Alarming: burning cash without proportionate ARR return
 ```
 
 ### Growth Rate Benchmarks by Stage
@@ -409,8 +411,8 @@ Monthly ARPA:   €2.5K × 80% gross margin = €2K contribution
 Payback:        €45K ÷ €2K = 22.5 months
 
 If newer cohorts have lower CAC (more efficient acquisition) or higher
-ARPA (better pricing/packaging), payback improves over time. Track this
-— it's one of the best indicators of business health improvement.
+ARPA (better pricing/packaging), payback improves over time. Track this.
+It's one of the best indicators of business health improvement.
 ```
 
 ## Role-Based Scorecard Architecture
@@ -418,13 +420,13 @@ ARPA (better pricing/packaging), payback improves over time. Track this
 Different roles need different views of the same data. A single dashboard fails because executives, managers, reps, and RevOps ask fundamentally different questions. Build cascading scorecards:
 
 ```
-EXECUTIVE VIEW (North Star — reviewed weekly/monthly):
+EXECUTIVE VIEW (North Star: reviewed weekly/monthly):
   ARR and ARR growth rate | NRR and GRR | Rule of 40 score
   Pipeline coverage ratio | Forecast accuracy (±%)
   CAC Payback | LTV:CAC ratio | Burn multiple
   → Question answered: "Are we on track and efficient?"
 
-MANAGER VIEW (Operational — reviewed weekly):
+MANAGER VIEW (Operational: reviewed weekly):
   Pipeline created vs. target (by rep, by source)
   Stage conversion rates vs. benchmark (where is it breaking?)
   Win rate by segment and source | Avg deal size trend
@@ -432,14 +434,14 @@ MANAGER VIEW (Operational — reviewed weekly):
   Speed-to-lead | MQL acceptance rate
   → Question answered: "Where should I coach and intervene?"
 
-REP VIEW (Activity — reviewed daily/weekly):
+REP VIEW (Activity: reviewed daily/weekly):
   Personal pipeline value and coverage | Deals by stage
   Activities completed (calls, emails, meetings)
   Personal win rate and avg deal size | Quota attainment %
   Deals at risk (stalled, slipping, no next step)
   → Question answered: "What should I work on today?"
 
-REVOPS VIEW (System Health — reviewed weekly/monthly):
+REVOPS VIEW (System Health: reviewed weekly/monthly):
   Data quality score (completeness, accuracy, consistency)
   Process compliance (stage gates followed, methodology fields filled)
   Forecast accuracy trend | Pipeline velocity trend
@@ -464,14 +466,14 @@ Six dimensions to score individual deal health. Each dimension scored 0-3:
 
 **Composite Deal Health Score:** Sum of all 6 (range 0-18)
 - 13-18: Healthy
-- 10-12: Watch — review in next forecast call
-- ≤9: At risk — flag for immediate intervention
+- 10-12: Watch: review in next forecast call
+- ≤9: At risk: flag for immediate intervention
 
 **Benchmark context (Ebsta/Pavilion):** Top performers score 2.64x higher on pipeline management, 43% better on win rate, and 455% better on discovery quality. These gaps map directly to the deal health dimensions above.
 
 ## Conversational Intelligence Metrics
 
-When conversation intelligence tools (Gong, Chorus, etc.) are deployed, track these metrics:
+When conversation intelligence tools are deployed, track these metrics:
 
 | Metric | What It Measures | Target Range | Why It Matters |
 |--------|-----------------|-------------|---------------|
@@ -481,6 +483,8 @@ When conversation intelligence tools (Gong, Chorus, etc.) are deployed, track th
 | **Interactivity** | Conversation turn frequency | Every 30-60 sec | High interactivity = dialogue, not presentation |
 | **Patience** | Time before rep speaks after question | ≥3 seconds | Rushed responses signal not listening |
 | **Question Rate** | Discovery questions per call | 11-14 per call | Below 8 = insufficient discovery |
+
+**Platform and tool note (2026):** Legacy tools (Gong, Chorus) measure rep-led calls. 2026 market includes AI-augmented alternatives (Avoma, Wingman, Fireflies.ai, Outreach Kaia) that capture both rep-led and AI-agent-led conversations with real-time coaching. When AI agents generate calls, the talk-ratio and question-rate metrics shift (agents run scripted patterns, not discovery). Adjust your CI strategy: measure rep calls and AI-agent calls separately. For AI-agent-led motion, focus on resolution rate and automation completion instead of discovery quality.
 
 ## Strategic Initiative Trackers
 
@@ -495,6 +499,14 @@ Seven views that turn pipeline data into strategic intelligence:
 | **New Product Launch** | Adoption of new features in deals, attach rate | Deal product fields, call mentions | Monthly |
 | **Churn Risk Signals** | Early warning patterns from deal and usage data | Health scores, support tickets, usage | Weekly |
 | **Customer Reference Pipeline** | Reference-ready customers, reference utilization | NPS, deal outcomes, reference requests | Quarterly |
+
+### AI-Native Platform Metric Automation (2026)
+
+HubSpot Breeze and Salesforce Agentforce shift how metrics are collected and populated:
+
+**HubSpot Breeze (April 2026 launch):** Autonomous agents auto-populate lifecycle-stage fields, health scores, and forecast fields. Impacts: (1) Lifecycle stage date-entered/date-exited/time-in-stage now captured at company level with backfill; (2) Meeting-based workflow triggers enable real-time velocity tracking; (3) Agent-resolved conversations bypass manual data entry. Dashboard implication: metrics populated by agents may show artificially high activity velocity or accelerated stage transitions if not filtered.
+
+**Salesforce Agentforce (2026):** Intelligent agents populate opportunity fields (next steps, stakeholder data, champion identification). Metric drift patterns: (1) AI-generated activity records inflate activity velocity metrics; (2) forecast accuracy improves where agents provide consistent field population but may mask deal quality issues; (3) autonomous deal scoring (Intelligent Context) creates divergence between traditional MEDDIC qualification and AI health assessment. Calibrate: separate rep-captured metrics from agent-populated metrics on your dashboards, or risk confounding human performance with automation gains.
 
 ### Canon References for Deal & Intelligence Metrics
 
@@ -519,29 +531,29 @@ If revenue per AE is low, diagnose which input is the constraint:
 - **Low capacity utilization** → AEs spending time on non-selling activities (prospecting theater)
 
 **The Anti-Prospecting Thesis (Canaani):**
-- Most AEs admit 80–90% of closed revenue comes from inbound
-- Salesforce State of Sales: reps spend only 28% of week actually selling
-- $250–300K OTE spent on prospecting = failure of resource allocation dressed as culture
+- Most AEs admit 80-90% of closed revenue comes from inbound
+- Salesforce State of Sales 2026: reps spend 40% of week actually selling (up from 28% in 2024)
+- $250-300K OTE spent on prospecting = failure of resource allocation dressed as culture
 
 **Benchmarks:**
 
 | Metric | Industry Average | Top Performers |
 |--------|-----------------|----------------|
-| Quota attainment | 43–58% | 80%+ |
+| Quota attainment | 43-58% | 80%+ |
 | OTE attainment | ~80% | 138% (Owner.com) |
-| AE time selling | 28% | 60%+ (inbound-fed) |
-| Revenue per AE vs. competitors | 1x | 3–4x (Owner, Datarails) |
+| AE time selling | 28% (2024), 40% (2026) | 60%+ (inbound-fed) |
+| Revenue per AE vs. competitors | 1x | 3-4x (Owner, Datarails) |
 
 ### Predictability Metrics
 
 Predictability is built, not hoped for.
 
 **Core Predictability Metrics:**
-- **Forecast variance** (coefficient of variation in close rates by period) — target: <10% CV
+- **Forecast variance** (coefficient of variation in close rates by period): target: <10% CV
 - **Pipeline quality score:** % of pipeline at SPICED ≥8/15 or MEDDIC ≥60%
-- **Win rate by segment** — high variance = wrong ICP definition or inconsistent qualification
-- **Cycle time consistency** — standard deviation of days-to-close by deal segment
-- **Conversion rate stability** — stage-to-stage conversion rates should be stable QoQ
+- **Win rate by segment**: high variance = wrong ICP definition or inconsistent qualification
+- **Cycle time consistency**: standard deviation of days-to-close by deal segment
+- **Conversion rate stability**: stage-to-stage conversion rates should be stable QoQ
 
 **Win Rate as ICP Fit Signal:**
 - High win rate variance by segment reveals where qualification is breaking
@@ -552,11 +564,11 @@ Predictability is built, not hoped for.
 Know these numbers before setting any quota:
 1. Cost per meeting
 2. Conversion rate at every stage
-3. Sales cycle length (Datarails: 30–45 days)
+3. Sales cycle length (Datarails: 30-45 days)
 4. AE meeting capacity before quality drops
 5. Only hire new AEs when you have pipeline to fill their calendars
 
-> "I don't really care that much about the quota. I care about how much I think they actually can produce. Knowing the real productivity is what matters." — Aviv Canaani
+> "I don't really care that much about the quota. I care about how much I think they actually can produce. Knowing the real productivity is what matters.": Aviv Canaani
 
 ### New Benchmark Data (Kyle Norton Podcast, E60-E64, Jan-Mar 2026)
 
@@ -566,7 +578,7 @@ Know these numbers before setting any quota:
 |--------|--------|-------|
 | Average quota attainment | RepVue Cloud Sales Index (Q4 2024, 238 cos) | 43% |
 | Reps hitting quota | Bridge Group SaaS AE Metrics Report | ~58% |
-| Rep time actually selling | Salesforce State of Sales | 28% |
+| Rep time actually selling | Salesforce State of Sales (2024) | 28%; (2026) 40% |
 | Avg time to full rep productivity | Sales Management Association | 11.2 months |
 | High performer productivity premium | McKinsey | 400% (800% in complex roles) |
 | Revenue per employee (Netflix) | Public data | ~$3M (2x Google, 10x Disney) |
@@ -578,9 +590,12 @@ Know these numbers before setting any quota:
 | Inbound leads cost reduction | HubSpot | 61% less than outbound |
 | Buyer-initiated first contact | 6sense | 83% of the time |
 | Self-navigating buyer deal quality | Gartner | 65% high-quality vs. 24% sales-led |
-| Outbound touches per opportunity (current) | Donovan/Insight Partners, E61 | 1,000-1,400 |
+| Outbound touches per opportunity (human-SDR, 2026) | Donovan/Insight Partners, E61 | 1,000-1,400 |
 | Outbound touches per opportunity (5 years ago) | Donovan/Insight Partners, E61 | 200-400 |
+| Outbound touches per opportunity (AI-agent, 2026) | practice-based | 10,000+ personalized touches per month |
 | Outbound opportunities booked via phone | Donovan/Insight Partners, E61 | 70% |
+
+**AI Agent Touch Compression (2026 caveat):** The 1,000-1,400 figure describes human SDR outreach. AI agents execute 10,000+ personalized touches monthly (vs 200-300 per human SDR), compressing the touches-to-conversion metric dramatically. When measuring outbound efficiency, separate human-SDR touches from AI-agent touches. Blended metrics hide whether your conversion lift comes from better targeting, message quality, or pure volume. Track (a) AI-agent touches per opportunity, (b) AI-agent-sourced opportunity quality (compare win rate and deal size), (c) cost per AI-generated opportunity for cost efficiency comparison.
 
 **AI Adoption:**
 
@@ -613,19 +628,19 @@ Know these numbers before setting any quota:
 
 ## How to Use This Skill
 
-**"Our revenue is off — help me figure out why":** Run the revenue diagnostic sequence. Start with volume, then conversion, then value, then velocity, then retention. Identify the broken link and slice by who/what/where/when.
+**"Our revenue is off: help me figure out why":** Run the revenue diagnostic sequence. Start with volume, then conversion, then value, then velocity, then retention. Identify the broken link and slice by who/what/where/when.
 
 **"What metrics should we track?":** Start with the minimum viable funnel (7 stages). Layer on conversion rates, the 4 velocity levers, and unit economics. Build dashboards in the three-tier structure (north star → operational → activity).
 
-**"How do we compare to benchmarks?":** Provide specific benchmarks by stage, segment, and motion. Context matters — a 15% win rate is terrible for SMB but normal for enterprise. Always benchmark against comparable companies. For current-year B2B benchmarks, see `references/benchmarks.md` (Ebsta/Pavilion) and the Fullcast/Pavilion 2026 data (win rates by stakeholder count, deal cycle data, AI impact metrics, and pipeline composition benchmarks).
+**"How do we compare to benchmarks?":** Provide specific benchmarks by stage, segment, and motion. Context matters: a 15% win rate is terrible for SMB but normal for enterprise. Always benchmark against comparable companies. For current-year B2B benchmarks, see `references/benchmarks.md` (Ebsta/Pavilion) and the Fullcast/Pavilion 2026 data (win rates by stakeholder count, deal cycle data, AI impact metrics, and pipeline composition benchmarks).
 
 **"Help me build a revenue model":** Start with the velocity formula, layer in unit economics (CAC, LTV, payback), add retention metrics (NRR, GRR), and project forward using capacity and conversion assumptions.
 
-**"Cohort questions":** Build the cohort view — revenue over time by acquisition period. Look for the inflection patterns: early churn, expansion timing, and cohort-over-cohort improvement.
+**"Cohort questions":** Build the cohort view: revenue over time by acquisition period. Look for the inflection patterns: early churn, expansion timing, and cohort-over-cohort improvement.
 
-**"How do we score deal health?":** Use the 6-dimension deal health model. Score each dimension 0-3, sum for composite (0-18). Flag deals ≤9 for intervention. Connect to forecast process — unhealthy deals shouldn't be in Commit.
+**"How do we score deal health?":** Use the 6-dimension deal health model. Score each dimension 0-3, sum for composite (0-18). Flag deals ≤9 for intervention. Connect to forecast process: unhealthy deals shouldn't be in Commit.
 
-**"What should we track from call recordings?":** Start with the 6 conversational intelligence metrics. Focus coaching on talk ratio and question rate first — these have the highest correlation with discovery quality.
+**"What should we track from call recordings?":** Start with the 6 conversational intelligence metrics. Focus coaching on talk ratio and question rate first: these have the highest correlation with discovery quality.
 
 ---
 
@@ -636,22 +651,14 @@ Know these numbers before setting any quota:
 
 ---
 
-## Operator Templates — Pavilion Unit Economics Worksheet
+## Operator Templates: Pavilion Unit Economics Worksheet
 
-For LTV/CAC/GM Payback/LTV:CAC calculations in client engagements, use the pre-built Neon-adapted template:
+For LTV/CAC/GM Payback/LTV:CAC calculations in client engagements, use the pre-built adapted template:
 `Frameworks/Templates/cro-school/pavilion-unit-economics-neon.xlsx`
 
 Structure: 1 sheet, 30 rows × 7 cols. Includes validation cells (`=if(E4=G4,"CORRECT","INCORRECT")`). Preserves all original formulas.
 
-Use in: Focus Audit baseline, programme ROI justification, benchmark comparisons.
+Use in: diagnostic baselines, programme ROI justification, benchmark comparisons.
 
 Original source: `Sources/Courses/CRO-School/Pavilion Unit Economics Worksheet.xlsx`
 Attribution: Adapted from Pavilion CRO School. Original author: Carter/Nalbandian/Dick.
-
----
-
-## What good looks like
-
-Great output treats metrics as a diagnostic chain, not a scorecard: it walks the sequence (volume → conversion → value → velocity → retention) to find the broken link, slices it by who/what/where/when to isolate the root cause, benchmarks against comparable segment and motion rather than blended averages, and cascades rep → manager → executive scorecards so every tracked number rolls up to a north star. Deal health is scored on the six 0–3 dimensions with a composite that gates what belongs in Commit.
-
-Mediocre output dumps a wall of KPIs with no diagnostic order, quotes blended benchmarks without segment context ('win rate should be 25%' regardless of enterprise vs SMB), uses the naive LTV formula even when NRR > 100% breaks it, and builds one dashboard for every audience — answering no one's actual question.

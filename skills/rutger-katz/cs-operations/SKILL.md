@@ -1,13 +1,13 @@
 ---
 name: "cs-operations"
 title: Customer success operations
-description: "Customer success operations for B2B SaaS — the post-sale revenue engine that prevents churn, drives expansion, and compounds customer value. Use when the user mentions customer success, CS ops, health scoring, renewal management, churn prevention, expansion playbook, expansion signals, onboarding orchestration, time to first value, QBR, customer segmentation, coverage model, high-touch, low-touch, tech-touch, CSM ratios, NPS, CSAT, save plays, red accounts, CS-Sales handoff, churn autopsy, renewal discount governance, discount sunset, renewal pricing, or save plays with pricing components. Also trigger when someone says \"we keep losing customers\" or \"our CS team is reactive\" or \"we have no idea which accounts will churn\" or \"discounts are expiring and customers are pushing back\" or \"renewal price increase resistance.\""
+description: "Customer success operations for B2B SaaS. The post-sale revenue engine that prevents churn, drives expansion, and compounds customer value. Use when the user mentions customer success, CS ops, health scoring, renewal management, churn prevention, expansion playbook, expansion signals, onboarding orchestration, time to first value, QBR, customer segmentation, coverage model, high-touch, low-touch, tech-touch, CSM ratios, NPS, CSAT, save plays, red accounts, CS-Sales handoff, churn autopsy, renewal discount governance, discount sunset, renewal pricing, or save plays with pricing components. Also trigger when someone says \"we keep losing customers\" or \"our CS team is reactive\" or \"we have no idea which accounts will churn\" or \"discounts are expiring and customers are pushing back\" or \"renewal price increase resistance."
 category: RevOps
 ---
 
 # Customer Success Operations
 
-You are a CS operations architect. CS Ops is the post-sale revenue engine — it sits in the ICP Value Loops layer of the revenue operating system, owning Adopt → Realise Value → Renew → Expand. Without it, you're relying on individual heroics instead of systems.
+You are a CS operations architect. CS Ops is the post-sale revenue engine. It sits in the ICP Value Loops layer of the revenue operating system, owning Adopt → Realise Value → Renew → Expand. Without it, you're relying on individual heroics instead of systems.
 
 ## The CS Ops Operating Model
 
@@ -15,18 +15,21 @@ Four pillars. Neglect any one and the system breaks.
 
 ```
 PROCESS DESIGN          TECHNOLOGY & SYSTEMS
-├─ Playbooks            ├─ CS Platform (Gainsight, ChurnZero, Vitally, Planhat)
-├─ Workflows            ├─ Product analytics (Pendo, Amplitude)
-├─ Escalation paths     ├─ Support (Zendesk, Intercom)
-├─ Governance           ├─ Survey tools (NPS, CSAT)
-└─ Swimlanes            └─ Data warehouse integration
+├─ Playbooks            ├─ CS Platform: Gainsight (Horizon AI, 2024+), ChurnZero,
+├─ Workflows            │  Vitally; all support real-time ML scoring (2026)
+├─ Escalation paths     ├─ Product analytics (Pendo, Amplitude)
+├─ Governance           ├─ Support (Zendesk, Intercom)
+├─ Swimlanes            ├─ Survey tools (NPS, CSAT; note: Delighted shut 30 Jun 2026)
+└─ AI agents            └─ Data warehouse integration; reverse ETL (Hightouch, Census)
 
 DATA & ANALYTICS        ENABLEMENT
 ├─ Health scores        ├─ CSM onboarding (2 weeks, not 2 months)
-├─ Churn prediction     ├─ Playbook documentation
-├─ Expansion scoring    ├─ Tools training
-├─ Cohort analysis      ├─ Certification on key processes
-└─ Team efficiency      └─ Knowledge base
+│  (ML-powered, real-time)  ├─ Playbook documentation
+├─ Churn prediction     ├─ Tools training
+│  (ML+NLP ensemble)    ├─ Certification on key processes
+├─ Expansion scoring    ├─ Knowledge base
+├─ Cohort analysis      └─ AI-assisted customer signal synthesis
+└─ Team efficiency
 ```
 
 ## CS Maturity Model
@@ -84,9 +87,9 @@ OUTCOMES (5%)
 ### Traffic Light System
 
 ```
-GREEN (80+):  Expand. Growth partner posture. 2-5% churn risk.
-YELLOW (40-79): Intervene. Increase touchpoints. 15-30% churn risk.
-RED (<40):    Save mode. Executive intervention. 60%+ churn risk.
+GREEN (80+):  Expand. Growth partner posture. 2-5% churn risk (practice-based).
+YELLOW (40-79): Intervene. Increase touchpoints. 15-30% churn risk (practice-based).
+RED (<40):    Save mode. Executive intervention. 60%+ churn risk (practice-based).
 ```
 
 ### Health Score Anti-Patterns
@@ -94,29 +97,31 @@ RED (<40):    Save mode. Executive intervention. 60%+ churn risk.
 ```
 Binary scores ("healthy" vs "at risk")  → Use 0-100 scale with thresholds
 Usage-only scores                       → Composite with multiple signals
-Manual, updated quarterly               → Automated, updated weekly minimum
+Manual, updated quarterly               → Automated, real-time or weekly minimum
 Score says green but they churn          → Calibrate against actual outcomes
 Nobody acts on red accounts              → CS Manager reviews reds weekly
 ```
 
+**EU Data Governance Note (GDPR Article 22):** Health scores incorporate personal data (NPS responses, engagement metrics from personal profiles). If automated scoring drives material customer-facing decisions (e.g., renewal discounting, reduced support tier) without human review, you must establish documented lawful basis and provide individuals with the right to human review per Article 22. Recommended: reserve automated action for internal escalation only; require CSM/manager review before any customer-visible decision.
+
 ## Segmentation & Coverage Models
 
 ```
-┌──────────────┬─────────────────┬─────────────────┬────────────┐
-│ Segment      │ Criteria        │ Coverage Model   │ CSM Ratio  │
-├──────────────┼─────────────────┼─────────────────┼────────────┤
-│ HIGH-TOUCH   │ >€50K ARR       │ Named CSM        │ 1:10-30    │
-│ (Strategic)  │ Complex product │ Quarterly EBRs   │            │
-│              │ High expansion  │ Dedicated onboard│            │
-├──────────────┼─────────────────┼─────────────────┼────────────┤
-│ MID-TOUCH    │ €10-50K ARR     │ Pooled CSM       │ 1:30-80    │
-│ (Scaled)     │ Moderate complex│ Templated touches│            │
-│              │ Growth potential│ Triggered playbks│            │
-├──────────────┼─────────────────┼─────────────────┼────────────┤
-│ LOW-TOUCH    │ <€10K ARR       │ Automated        │ 1:100-500+ │
-│ (Digital-led)│ Self-serve      │ In-app guidance  │            │
-│              │ Simple use case │ Community/webinar│            │
-└──────────────┴─────────────────┴─────────────────┴────────────┘
+┌──────────────┬─────────────────┬─────────────────┬────────────────────┐
+│ Segment      │ Criteria        │ Coverage Model   │ CSM Ratio          │
+├──────────────┼─────────────────┼─────────────────┼────────────────────┤
+│ HIGH-TOUCH   │ >€50K ARR       │ Named CSM        │ 1:10-50            │
+│ (Strategic)  │ Complex product │ Quarterly EBRs   │ (ChurnZero, 2026)  │
+│              │ High expansion  │ Dedicated onboard│ AI-assisted: +25-50%│
+├──────────────┼─────────────────┼─────────────────┼────────────────────┤
+│ MID-TOUCH    │ €10-50K ARR     │ Pooled CSM       │ 1:100-200          │
+│ (Scaled)     │ Moderate complex│ Templated touches│ (ChurnZero, 2026)  │
+│              │ Growth potential│ Triggered playbks│ AI-assisted tools  │
+├──────────────┼─────────────────┼─────────────────┼────────────────────┤
+│ TECH-TOUCH   │ <€10K ARR       │ Automated        │ 1:500-1000         │
+│ (Digital-led)│ Self-serve      │ In-app guidance  │ (ChurnZero, 2026)  │
+│              │ Simple use case │ Community/webinar│ AI agents primary  │
+└──────────────┴─────────────────┴─────────────────┴────────────────────┘
 ```
 
 Reassess tiers quarterly based on usage growth, health, and expansion potential.
@@ -141,7 +146,7 @@ T-90 days: HEALTH CHECK / KICKOFF
   Score: Likely / At-risk / Needs work
 
 T-60 days: PROPOSAL / CONVERSATION
-  Standard: Renewal proposal sent — present value delivered, roadmap alignment, terms
+  Standard: Renewal proposal sent. Present value delivered, roadmap alignment, terms
   At-risk: Executive sponsor conversation, barrier removal; activate save playbook
   Expanding: Sales/CSM joint upsell conversation, present expansion proposal alongside renewal
 
@@ -164,7 +169,7 @@ T+7: POST-RENEWAL CHECK-IN
 
 ## Expansion Playbooks
 
-Expansion is a process, not an event. Most expansion dies because nobody owns the handoff from CS to Sales — or because the signal was visible but nobody acted on it.
+Expansion is a process, not an event. Most expansion dies because nobody owns the handoff from CS to Sales or because the signal was visible but nobody acted on it.
 
 ### Expansion Signals
 
@@ -224,7 +229,7 @@ DAY 61-90: OPTIMIZATION / FIRST VALUE
 
 **Automation triggers:** No kickoff by day 3 → reminder. Not go-live by day 30 → alert manager. Usage <20% by day 60 → intervention. Health <50 by day 90 → yellow playbook.
 
-**Track:** Time to kickoff (<3d), time to first login (<7d), time to first value (TTFV) (<30d), go-live on schedule (90%+), onboarding completion rate (>90%), onboarding NPS/CSAT (>8/10), feature adoption at T+30 (>3 core features).
+**Track:** Time to kickoff (<3d), time to first login (<7d), time to first value (TTFV) (<30d), go-live on schedule (90%+), onboarding completion rate (>90%), onboarding CSAT (90%+ top performers; recommended), feature adoption at T+30 (>3 core features).
 
 ### Sales → CS Handoff
 
@@ -251,7 +256,7 @@ SUPPORT ESCALATION (Sev-1 OR 3+ tickets in 7 days)
 
 ## Renewal Discount Governance
 
-The #1 cause of contentious renewals is a discount that was never documented to expire — at renewal the customer anchors on what they paid, not what the product is worth. This is a structural governance failure: every discounted deal must carry a `Discount_Expiry_Date` in CRM, the T-120 workflow must flag expiring discounts automatically, and the CSM must prepare value justification before the conversation. The conversation framework leads with value (T-90), frames the step-up (T-60), and offers a graduated step-up only as a save play (T-30). GPO/consortium accounts get coordinated tier/volume validation from T-120 through T-30 with Deal Desk.
+The #1 cause of contentious renewals is a discount that was never documented to expire. At renewal, the customer anchors on what they paid, not what the product is worth. This is a structural governance failure: every discounted deal must carry a `Discount_Expiry_Date` in CRM, the T-120 workflow must flag expiring discounts automatically, and the CSM must prepare value justification before the conversation. The conversation framework leads with value (T-90), frames the step-up (T-60), and offers a graduated step-up only as a save play (T-30). GPO/consortium accounts get coordinated tier/volume validation from T-120 through T-30 with Deal Desk.
 
 For the full discount sunset problem, the pricing conversation framework, the save-plays-with-pricing table, and GPO renewal coordination, see `references/renewal-discount-governance.md`. For discount governance policy (approval matrices, ACV tiers), see pricing-strategy skill.
 
@@ -265,29 +270,51 @@ For the full feedback loop architecture (owners, questions, outputs, and review 
 
 ```
 REVENUE                          TARGETS
-  GRR                            >90% (>95% enterprise)
-  NRR                            >110%
-  Logo retention rate            >90%
-  Expansion rate (% ARR growth)  >15%/year
+  GRR                            84% median (75th %ile 91%+; Optifai, 2026)
+  NRR                            106% median (top performers >130%; Optifai, 2026)
+  Logo retention rate            80-90% (aspirational; industry median 70-80%)
+  Expansion rate (% ARR growth)  40% of new ARR from expansion (ZoomInfo, 2026)
 
 OPERATIONAL
-  Time to first value            <30 days
-  Health score distribution      >70% green
-  QBR completion (high-touch)    100%
-  Renewal on-time rate           >90%
-  Save rate (red accounts)       >40%
+  Time to first value            <30 days (recommended)
+  Health score distribution      >70% green (recommended)
+  QBR completion (high-touch)    100% (recommended)
+  Renewal on-time rate           >90% (recommended)
+  Save rate (red accounts)       >40% (practice-based)
 
 EFFICIENCY
-  Accounts per CSM (by tier)     See coverage model
-  Admin time (% of total)        <30%
-  CSM attrition rate             <15%/year
+  Accounts per CSM (by tier)     See coverage model (sourced, 2026)
+  Admin time (% of total)        <30% (recommended)
+  CSM attrition rate             <15%/year (recommended)
 
 LEADING INDICATORS
-  Accounts with declining usage  Track weekly
-  Accounts without exec sponsor  <5%
-  Days to complete renewal       <60 days
-  Core feature adoption rate     >70%
+  Accounts with declining usage  Track weekly (recommended)
+  Accounts without exec sponsor  <5% (recommended)
+  Days to complete renewal       <60 days (recommended)
+  Core feature adoption rate     >70% (recommended)
 ```
+
+## AI and Automation in CS Ops (2026)
+
+Real-time health scoring, autonomous churn prediction, and AI-assisted signal synthesis are now standard in modern CS platforms. This is not "future state"; it's operational today.
+
+### Real-Time Predictive Scoring
+
+Modern platforms (Gainsight Horizon AI, ChurnZero, Vitally) update health scores in real time rather than batch weekly. Triggers are now event-driven: usage cliff detected → CSM alert; NPS detractor submitted → auto-flag; champion departure → relationship score drops immediately. Churn prediction with ensemble ML plus NLP on unstructured signals (call transcripts, support tickets, email sentiment) cuts churn 15-30% within 12 months (2026 vendor research).
+
+### Autonomous Agents and Workflow
+
+Renewal and expansion processes no longer require manual CSM review at every step. Autonomous agents monitor thresholds (usage >80% of plan, score drop >15pts), initiate escalation workflows, and in some cases send templated outreach. The CSM remains accountable but the agent handles routine hygiene: flag at-risk accounts, surface expansion candidates, suggest playbook actions. This frees CSMs to focus on high-touch strategy and executive relationships.
+
+### Dynamic Segmentation
+
+Static ARR tiers are outdated. Modern platforms segment dynamically by usage trajectory, health trends, and expansion readiness. A sub-€10K account with 200% month-over-month growth and executive sponsor engagement moves into a higher-touch coverage tier automatically. Weekly re-segmentation based on behavioural signals means coverage shifts to where the opportunity is.
+
+### AI-Assisted Churn Autopsy and Insight Synthesis
+
+Gainsight Horizon AI (2024+) and peers now offer automated call transcription, sentiment analysis, and account summary synthesis. Rather than manual CSM + PM churn autopsies, the system ingests call recordings, extracts decision-driver signals, compares against similar accounts, and surfaces likely product gaps. QBR prep no longer requires manual data gathering; AI-generated benchmarking insights ("You are 40% below similar customers in feature X") are delivered automatically to both CSM and customer.
+
+**Implementation rule:** Deploy gradually. Start with real-time scoring; add autonomous escalation after 2 weeks; enable dynamic segmentation once you have clean usage data feeding the platform. Full AI adoption (transcription, synthesis, autonomous agents) requires data quality baseline of 80%+ field population.
 
 ## Diagnostic Assessment
 
@@ -314,13 +341,19 @@ GOVERNANCE:  CS-Product feedback loop? CS-Sales handoff process? Exec
 
 ## Process Operating Cadence
 
-Health scoring and renewal frameworks answer "who is at risk?" and "how do we retain them?" — but they depend on a structured review cadence and escalation discipline. A health score without a review cadence is a dashboard no one acts on. The cadence is the operating system; the score is the signal.
+Health scoring and renewal frameworks answer "who is at risk?" and "how do we retain them?" They depend on a structured review cadence and escalation discipline. A health score without a review cadence is a dashboard no one acts on. The cadence is the operating system; the score is the signal.
+
+**Manual review cadence (foundation for all tiers):**
 
 - **Weekly:** CSM reviews accounts with a score drop >10pts; flag any Green→Yellow or Yellow→Red (CSM + CS Lead).
 - **Monthly:** Full health score review of all accounts; any Red account reviewed with CS Lead + AE; scores updated on new data.
 - **Quarterly:** Portfolio health review, QBR prep for T1 accounts, Red account recovery planning.
 
-**Red accounts: escalate within 24h.** When a customer turns Red, the CSM notifies the CS Lead, who reviews the health breakdown and jointly decides with the AE between rescue mode (>90 days to renewal) and renewal risk mode (<90 days — activate the renewal process immediately, don't wait for T-90). For the full Red Account Playbook (rescue mode, renewal risk mode, commercial options) and the complete health monitoring cadence table, see `references/red-account-playbook.md`.
+**Event-driven automation (2026+, layered on top):**
+
+Modern CS platforms trigger actions in real time on usage cliffs (WAU drop >30%), NPS detractors, champion departures, and score transitions. Autonomous agents notify CSMs of threshold breaches and recommend escalation. This does not replace the manual cadence; it augments it. The CSM still owns accountability and strategy, but routine monitoring is automated.
+
+**Red accounts: escalate within 24h.** When a customer turns Red, the CSM (or automated alert) notifies the CS Lead, who reviews the health breakdown and jointly decides with the AE between rescue mode (>90 days to renewal) and renewal risk mode (<90 days; activate the renewal process immediately, don't wait for T-90). For the full Red Account Playbook (rescue mode, renewal risk mode, commercial options) and the complete health monitoring cadence table, see `references/red-account-playbook.md`.
 
 QBRs are the highest-leverage CS touchpoint for T1 accounts and most fail by looking backwards rather than forwards. For the 45-60 minute agenda structure and cadence-by-tier guidance, see `references/qbr-process-template.md`.
 
@@ -330,7 +363,7 @@ QBRs are the highest-leverage CS touchpoint for T1 accounts and most fail by loo
 
 **"We keep losing customers but don't know why":** Start with health scoring. Build the 5-dimension composite score. You'll see patterns within 4 weeks.
 
-**"Our CS team is drowning":** Segmentation problem. Build the 3-tier coverage model. Most teams try to high-touch everyone — that doesn't scale past 50 accounts.
+**"Our CS team is drowning":** Segmentation problem. Build the 3-tier coverage model. Most teams try to high-touch everyone. That doesn't scale past 50 accounts.
 
 **"Expansion is left on the table":** Build expansion signals and scoring. Define the CS-Sales handoff. Most expansion dies because nobody owns the handoff.
 
@@ -346,9 +379,9 @@ QBRs are the highest-leverage CS touchpoint for T1 accounts and most fail by loo
 
 ---
 
-## WbD Impact Journey — CS Action Framework
+## WbD Impact Journey: CS Action Framework
 
-The Impact Journey maps the post-Mutual Commit customer journey (Mutual Commit → Onboarding → Adoption/Retention → Renewal → Expansion → Advocacy) into structured CS actions, with health-score interpretation and trigger plays by stage. Key guardrail: **do not expand before First Impact (Stage O4)** — customers achieving impact in a single area only are more at risk of churn than those with widespread stakeholder usage. Source: WbD Operating Model PDF, Chapter 08, pages 143-148.
+The Impact Journey maps the post-Mutual Commit customer journey (Mutual Commit → Onboarding → Adoption/Retention → Renewal → Expansion → Advocacy) into structured CS actions, with health-score interpretation and trigger plays by stage. Key guardrail: **do not expand before First Impact (Stage O4)**. Customers achieving impact in a single area only are more at risk of churn than those with widespread stakeholder usage. Source: WbD Operating Model PDF, Chapter 08, pages 143-148.
 
 For the full 8-stage model with CS-action mappings, the health-score-by-stage interpretation, the trigger-plays table, and the expansion timing guardrail, see `references/wbd-impact-journey.md`.
 
@@ -366,7 +399,7 @@ For the full 8-stage model with CS-action mappings, the health-score-by-stage in
 
 ---
 
-## Operator Templates — Forecasting Worksheet (Renewals Tab)
+## Operator Templates: Forecasting Worksheet (Renewals Tab)
 
 The Renewals tab of the forecasting worksheet is specifically useful for CS operations modelling:
 `Frameworks/Templates/cro-school/forecasting-worksheet-neon.xlsx`
@@ -375,9 +408,3 @@ Use the Renewals tab to model: renewal cohort sizing, churn impact on ARR, expan
 
 Original source: `Sources/Courses/CRO-School/Forecasting Worksheet _ Class #4_ Forecasting and Financial Modeling.xlsx`
 Attribution: Adapted from Pavilion CRO School. Original author: Carter/Nalbandian/Dick.
-
----
-
-## What good looks like
-
-A great output is a concrete CS operating system, not a philosophy: a 5-dimension weighted health score (usage 35%, relationship 25%, support 18%, commercial 17%, outcomes 5%) with green/yellow/red thresholds tied to churn-risk bands, a T-120 renewal timeline with owners at each gate, a 3-tier coverage model with CSM ratios, and a named review cadence (weekly score-drop review, monthly full review, 24-hour red-account escalation). Every discount carries a Discount_Expiry_Date, every churned account gets an autopsy within 7 days, and expansion ownership is split by deal size (<20% ACV CS-owned, 20-50% CS-sourced/Sales-closed, >50% Sales-owned).

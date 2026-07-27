@@ -1,7 +1,7 @@
 ---
 name: "revops-data-governance"
 title: Revenue data governance
-description: "Revenue data governance — the operational discipline every other RevOps skill depends on. Use when the user mentions data governance, data quality, data model, data architecture, field governance, property naming conventions, data hygiene, deduplication, integration data flows, system of record, sync rules, data enrichment, data definitions, one vision of truth, data spine, data quality scoring, validation rules, GDPR, field deprecation, or data audit. Also trigger when someone says \"our reports don't match,\" \"our CRM is a mess,\" \"we have too many fields,\" or describes duplicate accounts, conflicting numbers, stale data. Fix data governance before building metrics or scaling. BOUNDARY: Covers data MODEL, QUALITY, and GOVERNANCE. For HubSpot setup, see revops-hubspot. For metrics, see revops-metrics."
+description: "Revenue data governance: the operational discipline every other RevOps skill depends on. Use when the user mentions data governance, data quality, data model, data architecture, field governance, property naming conventions, data hygiene, deduplication, integration data flows, system of record, sync rules, data enrichment, data definitions, one vision of truth, data spine, data quality scoring, validation rules, GDPR, field deprecation, or data audit. Also trigger when someone says \"our reports don't match,\" \"our CRM is a mess,\" \"we have too many fields,\" or describes duplicate accounts, conflicting numbers, stale data. Fix data governance before building metrics or scaling. BOUNDARY: Covers data MODEL, QUALITY, and GOVERNANCE. For HubSpot setup, see revops-hubspot. For metrics, see revops-metrics."
 category: RevOps
 ---
 
@@ -37,14 +37,14 @@ POST-SALE (Adoption → Expansion):
   Health:          Monthly active users, feature adoption, support tickets, NPS
 
 INTERACTION LAYER (Cross-stage):
-  Activities:      Emails, calls, meetings, tasks — linked to contacts, accounts, opportunities
+  Activities:      Emails, calls, meetings, tasks; linked to contacts, accounts, opportunities
 ```
 
 ### Critical Relationships
 
 ```
 Account → Contact (1:many)     Account → Opportunity (1:many)
-Contact → Opportunity (many:many — multiple contacts influence one deal)
+Contact → Opportunity (many:many; multiple contacts influence one deal)
 Opportunity → Line Items (1:many)
 Account → Subscription (1:many)
 Activity → Contact/Account/Opportunity (context link)
@@ -98,22 +98,33 @@ REQUIRED FOR EACH FIELD:
 
 ```
 SINGLE-SELECT: Stage progressions, categories. Best for reporting.
-MULTI-SELECT:  Only when truly needed (hard to report on — use sparingly).
+MULTI-SELECT:  Only when truly needed; hard to report on, use sparingly.
 NUMBER:        Calculations, comparisons. Include min/max validation.
 DATE:          Stage tracking, deadlines. Always document what triggers it.
 CHECKBOX:      Binary status. Clearer than Yes/No dropdowns.
 TEXT (short):  Identifiers only. Use picklists over free text for categories.
-TEXT (long):   Notes only. Rarely useful in reports — use timeline instead.
+TEXT (long):   Notes only. Rarely useful in reports; use timeline instead.
 ```
 
 ### Field Deprecation
 
+Recommended timeline (practice-based); adjust based on team adoption and data volume:
+
 ```
-1. ANNOUNCE (2 weeks): Notify teams. Show replacement.
-2. MIGRATE (4 weeks):  Move data old → new (formula, bulk action, integration).
-3. HIDE (2 weeks):     Remove from views, forms, workflows. Keeps history.
-4. DELETE (after 6 months): Only after confirming nothing depends on it.
+1. ANNOUNCE (2 weeks): Notify all teams that use the field. Document replacement field.
+                       Post in Slack, mention in team standup.
+
+2. MIGRATE (4 weeks):  Move data from old to new field (formula, bulk action, or API).
+                       Audit: 100% of records migrated? Sample check required before next step.
+
+3. HIDE (2 weeks):     Remove field from CRM views, forms, and workflows. Keep it
+                       readable for reporting/historical audit. Test all reports.
+
+4. DELETE (6 months):  After confirming no workflows, reports, or integrations
+                       reference it. Archive export before deletion (audit trail).
 ```
+
+Rationale: two-week announcement allows teams to plan. Four weeks migration time accommodates data volume (large orgs may need 6-8 weeks). Two-week hide allows workarounds to emerge. Six-month retention is insurance against hidden dependencies. For high-risk fields (revenue, dates, identifiers), extend hide to 12 months.
 
 ### The Proliferation Problem
 
@@ -123,30 +134,45 @@ Scale-ups accumulate 500+ fields, 200 of which nobody uses. Prevention: naming c
 
 ### Five Dimensions
 
+Recommended targets for B2B SaaS (€15M-150M ARR); adjust by your stage and risk tolerance (practice-based):
+
 ```
 COMPLETENESS:  Does the record have all required information?
-               Target: 95%+ for required fields per stage
+               Recommended target: 95%+ for required fields per stage
+               (Measure: percentage of records with no null values in mandatory fields)
 
 ACCURACY:      Is the data correct? Matches reality?
-               Target: 90%+ (measured by sample audits, enrichment validation)
+               Recommended target: 90%+ (Measure: sample audits of 50-100 records,
+               third-party verification, enrichment vendor validation)
 
 CONSISTENCY:   Same data appears same way everywhere?
-               Target: 99%+ (if opp is closed-won, does account show subscription?)
+               Recommended target: 99%+ (Measure: if opportunity is closed-won,
+               does account show subscription? Does contact appear on one account only?)
 
 TIMELINESS:    Is data current or stale?
-               Target: 85%+ (engagement scores weekly, industry data yearly)
+               Recommended target: 85%+ (Measure: engagement scores updated weekly,
+               industry/firmographic data refreshed quarterly-yearly, stage changes
+               within 2 business days of action)
 
 UNIQUENESS:    No duplicates?
-               Target: 99%+ (duplicates are binary failure)
+               Recommended target: 99%+ (Measure: duplicate contacts per account,
+               duplicate accounts per domain; duplicates are high-risk)
 ```
 
+Starting point: if your organisation is below 85% on any dimension, prioritise completeness and consistency before accuracy or timeliness.
+
 ### Data Quality Score
+
+Recommended starting weights (practice-based):
 
 ```
 DQ Score = (Completeness × 0.25) + (Accuracy × 0.25) + (Consistency × 0.25)
          + (Timeliness × 0.15) + (Uniqueness × 0.10)
+```
 
-Track monthly. Target: 85%+ across organisation.
+Rationale: completeness, accuracy, and consistency carry equal weight because all three are prerequisite for trustworthy reporting. Timeliness and uniqueness prevent stale or duplicate data from corrupting decisions but require less weight since periodic refresh and deduplication can address them. Adjust weights to your business; if revenue accuracy depends heavily on timeliness (e.g., real-time deal velocity), increase timeliness weight.
+
+Track monthly. Recommended target: 85%+ across organisation. Starting point assumes B2B SaaS (€15M-150M ARR); mature data governance may sustain 90%+.
 ```
 
 ### Prevention-First Approach
@@ -159,7 +185,7 @@ VALIDATION RULES:   Email format. Phone country format. Dates can't be in past
 
 REQUIRED FIELDS:    On Contact: email, first_name, last_name, account_id
                     On Opportunity: account_id, name, stage, close_date
-                    Keep to minimum — too many kills adoption.
+                    Keep to minimum; too many kills adoption.
 
 PICKLISTS > TEXT:   For ANY categorical data (stage, industry, deal_type).
                     Free text proliferates bad data.
@@ -174,15 +200,30 @@ DEFAULT VALUES:     Currency = EUR. Stage = Prospect. Country = from account.
 AUTOMATED SCANS (weekly):
   Duplicate accounts (fuzzy match on name + domain)
   Null required fields | Stage anomalies (backwards movement, stuck >180 days)
-  Data drift (values changed without user action)
+  Data drift (values changed without user action, e.g., stage changed but no activity log)
 
 ANOMALY ALERTS (real-time):
-  Close date in the past | Contact on 5+ accounts | ARR >€10M on single opp
-  Stage change without activity in 30 days
+  Close date in the past | Contact on 5+ accounts | ARR > €10M on single opportunity
+  Stage change without activity in 30 days | Deal velocity anomaly (closed in <3 days or >365 days)
+
+LLM-BASED QUALITY MONITORING (emerging, 2026):
+  Pattern detection: LLM identifies suspicious records based on field patterns
+  (e.g., "contact name contains only one letter", "title has 47 words", "industry unrecognised").
+  Technique: fine-tune on your clean records, flag outliers for review.
+  Accuracy: 75% precision on data quality detection (practice-based; emerging in vendor research 2026).
+  Use case: catch unusual entries before they propagate. Not a replacement for rules.
+
+PREDICTIVE QUALITY SCORING (emerging):
+  Score each record's propensity for future data issues based on historical patterns
+  (e.g., records created by User X without manager review have 40% incompleteness rate).
+  Direct QA effort to riskiest records. Reduces data quality audit workload.
 
 PERIODIC AUDITS (quarterly):
-  Sample 5% of closed opps (really closed?) | 5% churned accounts (really churned?)
-  5% enrichment data (vendor data still accurate?) | Calculate dimension scores
+  Sample 5% of closed opportunities (really closed, or marked closed in error?)
+  Sample 5% of churned accounts (really churned, or erroneously moved?)
+  Sample 5% of enrichment data (vendor data still accurate after 6 months?)
+  Calculate dimension scores: completeness, accuracy, consistency, timeliness, uniqueness
+  (see Five Dimensions section). Compare month-over-month.
 ```
 
 ### The Data Quality Tax
@@ -223,7 +264,7 @@ On contact creation: form triggers lookup by email. If exists, "This contact alr
 
 ### Account Hierarchy
 
-Parent = ultimate legal entity. Child = subsidiary/division. On M&A: create new parent, move old to child. On acquisition: don't delete — create parent relationship. Every contact maps to exactly one primary account.
+Parent = ultimate legal entity. Child = subsidiary/division. On M&A: create new parent, move old to child. On acquisition: don't delete; create parent relationship instead. Every contact maps to exactly one primary account.
 
 ## 5. Integration Data Flows
 
@@ -256,9 +297,29 @@ CONFLICT RESOLUTION:
 
 ```
 POINT-TO-POINT:  Simple, 2-3 systems. Breaks down at 5+.
+
 HUB-AND-SPOKE:   CRM as central hub. All systems speak to CRM. Recommended for €15-80M.
-iPaaS:           Integration platform (Zapier, Make). For 5+ systems, complex transforms.
+                 Risk: CRM becomes bottleneck; sync latency compounds.
+
+iPaaS:           Integration platform (Zapier, Make, n8n). For 5+ systems with
+                 complex transforms. Operational burden: monitoring, error handling.
+
+EVENT-DRIVEN:    Real-time event streams (data warehouse streams, message queues).
+                 Emerging pattern for €100M+ or high-frequency sync requirements.
+                 Each system publishes events; consumers subscribe independently.
+                 Benefit: decoupling, lower latency, easier to add new systems.
+                 Operational burden: event schema governance, consumer failure handling.
+
+DATA FABRIC:     Composable CDP or modern data platform (Hightouch, Census, CDP).
+                 Zero-copy replication from warehouse to destination systems.
+                 Benefit: single source of truth, no ETL reimplementation.
+                 For 2026: emerging as standard for €50M+ with data warehouse.
+
+COMPOSABLE CDP:  Modern CDPs (Attio, Clay, etc.) with multi-destination reverse ETL.
+                 Warehouse-native with no-code sync. Hybrid human+AI enrichment.
 ```
+
+**2026 standard:** Size €50M+ or 5+ integrated systems with complex data flows? Evaluate data fabric or event-driven. Smaller organisations can sustain hub-and-spoke through €80M if iPaaS handles integration complexity.
 
 ### Integration Monitoring
 
@@ -278,15 +339,33 @@ WHEN:  On creation (initial fill) | On stage transition (targeted enrichment)
 GOVERNANCE RULES:
   AUTO-OVERWRITE:    Only for immutable data (founding year, domain)
   FILL-EMPTY-ONLY:  For data where manual entry is authoritative
-  SUGGEST (review):  For data that might conflict (company size, title) — DEFAULT
+  SUGGEST (review):  For data that might conflict (company size, title); default.
 
-Cost: €0.50-2.00/lead. Evaluate vendors on accuracy (>90%), coverage (>70%),
-and integration quality. Request sample enrichment of 100 test accounts.
+Cost varies by vendor type and enrichment depth. Evaluate vendors on accuracy (measured by sample audit against real data), coverage (percentage of your target market addressable), and integration quality. Request sample enrichment of 100 test accounts before commit. Document vendor's data sources to confirm GDPR compliance.
 ```
 
-### GDPR/Privacy (European Market)
+### Privacy & Data Transfer Compliance (Global)
 
-Verify vendor data sources (scraped data may violate GDPR). Document legitimate interest for enrichment. Right to deletion: delete enriched data immediately on request. Require DPA and SCCs for vendors transferring EU data to US. Use EU-based vendors or US vendors with clear GDPR compliance.
+**GDPR (EU, UK, EEA):**
+Verify vendor data sources (scraped data may violate GDPR). Document legitimate interest for B2B outreach (requires documented three-part balancing test; post-October-2024 CJEU rulings). Article 14: notify enriched contacts within one month of collection. Article 21: unconditional right to object to direct marketing; processing must stop immediately. Implement DND/Do-Not-Contact flag + automated cessation workflow + audit log (Schrems II requirement).
+
+**US Transfer Safeguards (Schrems II 2020, updated 2024):**
+Standard Contractual Clauses (SCCs) alone are insufficient. Require supplementary safeguards: transfer-risk assessment for each vendor, encryption in transit/at rest (where applicable), vendor's compliance with US surveillance law, and clause permitting escalation to data protection authorities if US law compels disclosure. If transfer risk is unjustifiable, route data to EU-based vendor or keep processing in EU (common for enrichment).
+
+**CCPA/CPRA (California, US):**
+Consumer right to know, delete, correct, and opt-out of sale/sharing. For B2B: exempt if data relates to business role, but boundaries unclear for personal emails. Implement request intake process. Deletion SLA: 45 days. Requires privacy policy and opt-out link.
+
+**LGPD (Brazil):**
+Broadly similar to GDPR. Requires Data Protection Impact Assessment (DPIA) for high-risk processing. Right to deletion and correction. No adequacy decisions; SCCs required for Brazil-to-US transfers.
+
+**UK DPA 2018 (Post-Brexit):**
+UK retained most GDPR provisions but added transparency duty (inform subjects of data uses). UK-US transfers require adequacy decision (November 2023) or SCCs plus supplementary safeguards.
+
+**Consent & Do-Not-Contact Management:**
+Use consent management platforms (CMPs) for EU contacts to track consent basis per channel (email, phone, SMS). Consent is required for direct marketing in Germany, Austria (UWG s.7); cold email to corporate accounts is permitted in Netherlands (Telecommunications Act art. 11.7) and France under conditions. Implement immediate cessation workflow for Article 21 objections (no delay).
+
+**Enrichment Vendor Assessment:**
+Before engagement: ask vendor for DPA, SCCs, audit report (SOC2/ISO27001), data sources, and transfer mechanisms. Prioritise EU-based vendors for EU data. Document assessments in vendor risk register.
 
 ## 7. Definitions & Taxonomy
 
@@ -306,7 +385,7 @@ Sales says €2M pipeline. Marketing says 50 leads. Finance forecasts €1.8M. N
 
 ### Stage Definitions Tied to Data
 
-Each stage requires specific data to exist — operationalise this:
+Each stage requires specific data to exist; operationalise this:
 
 ```
 PROSPECT:       account_name + contact_email + lead_source (can't advance without these)
@@ -353,18 +432,18 @@ DATA GOVERNANCE COUNCIL:    VP Sales + VP Marketing + VP Finance + VP CS + RevOp
 ### Data Governance Maturity
 
 ```
-LEVEL 1 — CHAOS:     No standards, no ownership. 500+ fields, many duplicates.
+LEVEL 1: CHAOS     No standards, no ownership. 500+ fields, many duplicates.
                       "We don't trust our reports." Fix: 3-6 months dedicated effort.
 
-LEVEL 2 — REACTIVE:  Some naming conventions. Occasional cleanup projects.
+LEVEL 2: REACTIVE  Some naming conventions. Occasional cleanup projects.
                       Ad hoc ownership. Quality scoring begins.
                       "We keep finding new problems." Fix: 6-12 months with council.
 
-LEVEL 3 — PROACTIVE: Council meets monthly. Prevention enforced (validation, picklists).
+LEVEL 3: PROACTIVE Council meets monthly. Prevention enforced (validation, picklists).
                       Quality scoring automated. Standards documented. Dedup prevention built in.
                       "We know what good data looks like." Fix: 12-18 months for Level 4.
 
-LEVEL 4 — OPTIMISED: Automated enforcement. Self-healing data. Culture of ownership.
+LEVEL 4: OPTIMISED Automated enforcement. Self-healing data. Culture of ownership.
                       Real-time monitoring. Predictive quality.
                       "Data quality is our competitive advantage."
 
@@ -381,10 +460,10 @@ TARGET: Level 3 within 12 months. Level 4 requires data engineering resource.
 AI is only as good as the data underpinning it. Most companies trying to bolt AI onto broken infrastructure are installing a turbocharger on a car with a cracked engine block.
 
 **Prerequisites for AI-Ready Data:**
-1. **Single source of truth** — Snowflake (or equivalent) as system of record for intelligence, CRM as operational layer
-2. **Data synthesis** — Sales, marketing, product, and third-party data coherently joined
-3. **Quality thresholds** — Defined minimums for completeness, accuracy, and freshness before AI models can be trained
-4. **Definition convergence** — Consistent stage definitions, field meanings, and scoring criteria across all teams
+1. **Single source of truth**: Snowflake (or equivalent) as system of record for intelligence, CRM as operational layer.
+2. **Data synthesis**: Sales, marketing, product, and third-party data coherently joined.
+3. **Quality thresholds**: Defined minimums for completeness, accuracy, and freshness before AI models can be trained.
+4. **Definition convergence**: Consistent stage definitions, field meanings, and scoring criteria across all teams.
 
 **The Code Red Principle:**
 If your data foundation isn't ready for AI, call a code red at the exec level. Get the resources to fix it.
@@ -407,10 +486,36 @@ When designing data governance, think beyond CRM hygiene. Modern data governance
 | **Customer Data** | Profiles, transactions, behavioural signals, support tickets, enrichment data | Identity resolution, consent management, decay monitoring |
 | **Company Data** | Operational data across departments: financials, pipeline, inventory, logistics | Cross-functional access policies, department data ownership |
 | **Content Data** | Creative assets with metadata: what it is, where it can be used, who approved it, how it performs | Content governance, brand compliance, performance tracking |
-| **Code Data** | AI models, prompts, agent configurations, automation rules — "software is data" | Version control, prompt governance, agent audit trails |
+| **Code Data** | AI models, prompts, agent configurations, automation rules; "software is data" | Version control, prompt governance, agent audit trails, agentic compliance |
 | **Control Data** | Semantic layer definitions, business rules, governance policies, AI guardrails | Meta-governance: the rules that govern the rules |
 
-**Why this matters:** When everything is data — including the AI agents themselves and the governance rules they follow — data governance becomes the foundation of the entire operating system, not just a hygiene exercise. Brinker's thesis: "The martech stack doesn't sit on top of data. It is data."
+**Why this matters:** When everything is data (including the AI agents themselves and the governance rules they follow), data governance becomes the foundation of the entire operating system, not just a hygiene exercise. Brinker's thesis: "The martech stack doesn't sit on top of data. It is data."
+
+### Code Data Governance: Operationalising AI Agents (2026 Standard)
+
+By 2026, 61% of RevOps teams use AI in at least one workflow (Skaled, 2026); governance must address agent behaviour, not just model training. Key runtime controls:
+
+**Agent Audit Trails (Mandatory):**
+Every agent action must be logged: what data it read, what decision it made, what it wrote, timestamp, confidence score (if available). Log writes to immutable ledger (append-only). Enable 72-hour recall: "What did Agent X do on this record last week?" Required for: regulatory compliance (Article 21 objections, GDPR audit), incident investigation (data corruption), and audit defence.
+
+**Prompt Versioning & Control:**
+Treat prompts as code. Version control: prompt text, input validation rules, output validation rules, agent access boundaries. On prompt change: test against 100-record sample before go-live. Document: what changed and why. Escalation: if agent behaviour changes meaningfully, notify VP RevOps before rolling out.
+
+**LLM Output Validation (OWASP Agent Top 10, 2025):**
+AI agents can hallucinate (invent data), confabulate (misunderstand), or take unintended actions. Guardrails per OWASP Agent Governance Toolkit (Microsoft, 2026):
+- No agent writes to immutable fields (account_name, created_date, revenue_closed_won)
+- All writes to mutable fields (stage, notes, scores) must pass validation: "Is this value in the allowed range?" / "Is this a typo?" / "Did something break upstream?"
+- Cost anomaly detection: if agent writes ARR > €10M on single deal, hold and escalate (48-hour review SLA)
+- Contact/account merges: agent cannot merge without human approval; only surfaces candidates
+
+**Escalation Rules:**
+If agent confidence <65% on any critical decision (stage change, data write, contact merge candidate), escalate to human for review. Track escalation rate per agent; >15% escalation signals poor prompt or broken upstream data.
+
+**Agent Lifecycle:**
+Before deployment to production, agent must: pass compliance test (writes only to approved fields), achieve >90% accuracy on 50-record validation sample, and have audit trail integrated. After deployment: weekly logs review (sample 5% of actions), quarterly prompt audit (still appropriate for the data it sees?). Disable agents that exceed escalation threshold; post-mortem before redeployment.
+
+**Singapore Model AI Governance Framework (IDA, 2024) alignment:**
+AI agents for revenue operations are not yet classified as "high-risk" by EU AI Act, but operational controls above reflect emerging best practice in insurance, finance, and government sectors (where AI audit trails and escalation are mandatory). Implementing now prevents regulatory surprise and reduces revenue leakage from agent errors.
 
 ### The Semantic Layer as Governance Foundation
 
@@ -419,28 +524,20 @@ A semantic layer provides consistent, business-friendly vocabulary across the or
 - Translation between technical schemas and business concepts
 - Shared calculations that every report, dashboard, and AI agent uses
 
-**Without a semantic layer:** "Every agent becomes its own island of interpretation — which is how you get three different dashboards showing three different pipeline numbers, or worse, three different agents taking three different actions based on contradictory assumptions." (Brinker, 2026)
+**Without a semantic layer:** "Every agent becomes its own island of interpretation, which is how you get three different dashboards showing three different pipeline numbers, or worse, three different agents taking three different actions based on contradictory assumptions." (Brinker, 2026)
 
 **Practical implication for revenue dashboard:** The breach rules and tile definitions in the revenue dashboard ARE the semantic layer for revenue operations. They enforce shared meaning. When building the revenue dashboard, you're building the semantic layer.
 
 ## How to Use This Skill
 
-**"Our CRM is a mess":** Start with the data quality audit — score the five dimensions. Calculate the data quality tax. Show leadership the cost. Then build prevention (validation rules, required fields, picklists) before correction (cleanup projects).
+**"Our CRM is a mess":** Start with the data quality audit; score the five dimensions. Calculate the data quality tax. Show leadership the cost. Then build prevention (validation rules, required fields, picklists) before correction (cleanup projects).
 
 **"Reports don't match across teams":** This is a definitions problem. Get in a room. Define MQL, pipeline, revenue, customer. Write it down. Publish it. Enforce it.
 
-**"We have too many fields":** Run field audit — which fields haven't been touched in 3 months? Deprecate aggressively. Install field creation governance to prevent recurrence.
+**"We have too many fields":** Run field audit: which fields haven't been touched in 3 months? Deprecate aggressively. Install field creation governance to prevent recurrence.
 
 **"Integrations keep breaking":** Map system of record for every data point. Define sync direction. Set up monitoring. Most integration failures come from undefined ownership.
 
 **Cross-references:** For CRM property implementation, see **revops-hubspot**. For tech stack integration decisions, see **revops-tech-stack**. For data spine quality scoring, see **revops-four-capability-maturity-assessment**. For emergency data audit, see **revops-crisis**.
 
 > Built by [Neon Triforce](https://neontriforce.com)
-
----
-
-## What good looks like
-
-Great output names the system of record for every contested data point, proposes prefixed property names (rev_/mktg_/cs_) with owner, type, and deprecation plan, and quantifies the problem — a data quality score across the five dimensions (completeness, accuracy, consistency, timeliness, uniqueness) plus a data-quality-tax figure in euros that leadership can act on. It sequences prevention (validation rules, picklists, required-fields-by-stage) before cleanup, and ties stage definitions to required data so stage inflation becomes impossible.
-
-Mediocre output recommends a generic 'CRM cleanup project': dedupe everything, delete unused fields, buy a data tool. It skips ownership (no data owner/steward/council), never defines sync direction or conflict resolution per integration, and offers no measurable target, so the mess regrows within two quarters.

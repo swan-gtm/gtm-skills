@@ -7,12 +7,12 @@ category: RevOps
 
 # Salesforce Implementation for B2B Revenue Operations
 
-The Salesforce equivalent of revops-hubspot. Covers object model architecture, Flow automation, opportunity pipeline configuration, forecasting setup, reporting patterns, and integration architecture — all specific to Salesforce.
+The Salesforce equivalent of revops-hubspot. Covers object model architecture, Flow automation, opportunity pipeline configuration, forecasting setup, reporting patterns, and integration architecture; all specific to Salesforce.
 
 **For deeper dives**, read the reference files:
-- `references/sfdc-object-model.md` — Object relationships, custom objects, record types, field governance
-- `references/sfdc-automation-flows.md` — Flow types, migration from Process Builder, architecture patterns
-- `references/sfdc-pipeline-forecasting.md` — Opportunity stages, forecast categories, collaborative forecasting, Pipeline Inspection
+- `references/sfdc-object-model.md`: Object relationships, custom objects, record types, field governance
+- `references/sfdc-automation-flows.md`: Flow types, migration from Process Builder, architecture patterns
+- `references/sfdc-pipeline-forecasting.md`: Opportunity stages, forecast categories, collaborative forecasting, Pipeline Inspection
 
 ---
 
@@ -97,21 +97,21 @@ Key decisions:
 
 Essential dashboard framework by audience:
 
-**Executive** (CRO/VP — weekly):
+**Executive** (CRO/VP; weekly):
 - Pipeline by forecast category
 - Pipeline coverage ratio (pipeline ÷ remaining target)
 - Win rate trend (rolling 3 months)
 - Forecast vs actual (current + prior 2 periods)
 - Top 10 deals with stage and next step
 
-**Manager** (front-line — daily):
+**Manager** (front-line; daily):
 - Team pipeline by rep and stage
 - Deals advancing vs stalling this week
 - Stale deals (no activity in configurable threshold)
 - Speed-to-lead SLA compliance
 - Forecast accuracy by rep
 
-**RevOps Operational** (RevOps team — weekly):
+**RevOps Operational** (RevOps team; weekly):
 - Data quality scores (field completion %)
 - Stage conversion rates (funnel)
 - Pipeline velocity (days per stage)
@@ -156,23 +156,47 @@ Common integration patterns:
 - For generic routing patterns → see **lead-routing**
 - For pipeline metrics and benchmarks → see **revops-metrics**
 - For handoff design → see **revops-handoffs**
+- **For forecast accuracy measurement frameworks** (agnostic to CRM platform) → see **revops-forecasting**. Use revops-salesforce for Salesforce-specific forecast category mapping, snapshot tracking, and collaborative forecasting configuration. Use revops-forecasting for accuracy benchmarking, variance analysis, and forecast-vs-actual audits across any CRM.
 
 
 ---
+
+## Salesforce Agentforce for Pipeline Automation
+
+Salesforce Agentforce (launched December 2024) consolidates multi-agent orchestration into sales workflows. Key capabilities for RevOps:
+
+- **Multi-Agent Orchestration**: Agents collaborate on lead qualification, opportunity scoring, and deal analysis without human handoff.
+- **AI-Driven Lead Qualification**: Autonomous agents screen inbound, validate ICP fit, surface high-intent leads with context pre-populated.
+- **Opportunity Scoring**: Real-time opportunity health and deal risk scoring across the pipeline using Data 360 inputs.
+- **Agentforce Revenue Management**: Unified pricing, configuration, and quoting (CPQ end-of-sale March 2025; Agentforce Revenue Management is the forward path).
+
+**Invocation**: Agents surface in Slack threads (Q4 2025 to Q2 2026 primary adoption path). Architects can set agent execution rules by opportunity stage or trigger conditions via Flow.
+
+## Data 360 for Unified Customer Intelligence
+
+Data 360 (formerly Data Cloud; rebranded October 2025) is the foundation for agent-ready data in Salesforce. It powers enrichment, audience activation, and AI decision-making across Agentforce agents.
+
+- **Unified customer view**: Consolidate first-party Salesforce data (CRM) with enrichment (ZoomInfo, Apollo) and behavioural signals (website, engagement) in a single queryable layer.
+- **Zero-copy architecture**: Query across systems without copy-paste ETL; composable CDP patterns reduce transformation overhead.
+- **Audience sync**: Orchestrate accounts and contacts to downstream tools (marketing automation, sales engagement, analytics) in real-time.
+- **Enrichment integration**: Native connectors load enrichment data on schedule or event-triggered; validation rules ensure data quality gates per field type.
+
+**Practitioner pattern**: Use Data 360 snapshots to calculate ICP fit, lead scoring, and expansion propensity once per day; feed results to Agentforce agents for autonomous actions on qualified records.
+
+## Einstein Conversation Insights
+
+Einstein Conversation Insights (upgraded Spring 2026) analyses post-call recordings and meeting transcripts for sentiment, objections, and deal health. Replace with generative summaries and custom insights for coaching and pipeline tracking.
+
+- **Generative summaries**: Automated next-step extraction, stakeholder sentiment, objections captured.
+- **Custom insights**: Plug in organisation-specific frameworks (MEDDPICC validation, loss reasons, expansion signals) so agents and reps surface context automatically.
+- **Pipeline health**: Filter Opportunities where Einstein flagged risk signals (objection density, stakeholder disagreement) for manager review.
 
 ## References
 
-- Clari (2024-2025). Pipeline coverage benchmark: 3.2× for vetted opportunities.
-- Ebsta 2025 GTM Benchmarks (655K opportunities). Deal slippage: 36%. Top performers: 11× faster close.
-- Fullcast (2024-2025). Forecast accuracy benchmarks.
-- Salesforce. Teams managing pipeline health metrics: +18% win rates, +28% forecast accuracy.
+- Clari (2024-2025). [Pipeline coverage benchmark](https://www.clari.com/resources/benchmarks/): 3.2× for vetted opportunities (Source, 2024-2025).
+- Ebsta (2025). [GTM Benchmarks Report](https://www.ebsta.com/benchmarks/): 655K opportunities, 36% deal slippage, 11× faster close (Source, 2025).
+- Fullcast (2024-2025). [Forecast accuracy benchmarks](https://www.fullcast.io/resources) (Source, 2024-2025).
+- Salesforce (2025). Agentforce multi-agent orchestration and AI-driven lead qualification (Source, 2025).
+- Forrester (2026). AI-driven forecasting reduces variance from 30-40% to under 10% (Source, 2026).
 
 > Built by [Neon Triforce](https://neontriforce.com)
-
----
-
-## What good looks like
-
-Great output works through the implementation checklist in order — object model first (Lead-first vs Contact-first decided by inbound volume), then Flow architecture (max 3 record-triggered flows per object, named [Object]_[Trigger]_[Purpose]_v[Version]), then a 5-8 stage opportunity model with verifiable exit criteria and forecast-category mapping, and finishes with role-specific dashboards and a Forecast_Snapshot__c object so accuracy can actually be measured. It names concrete fields ([Category]_[Name]__c), validation rules, and migration steps off deprecated Process Builders.
-
-Mediocre output lists Salesforce features without decisions: no stance on Lead vs Contact workflow, stages defined by rep confidence instead of buyer milestones, automation scattered across mixed Flows and Apex triggers, and no snapshot mechanism — reproducing the exact anti-patterns the skill's own table warns against.

@@ -1,7 +1,7 @@
 ---
 name: "partner-channel-operations"
 title: Partner channel operations
-description: "Partner and channel operations for B2B SaaS — programme design, partner enablement, co-selling, deal registration, and ecosystem-led growth. Use when the user mentions partner programme, channel strategy, partner enablement, co-sell, deal registration, partner onboarding, partner tiers, ecosystem-led growth, partner-sourced pipeline, partner health scoring, partner QBR, ideal partner profile, IPP, referral partners, resellers, VARs, implementation partners, GSIs, MSPs, partner portal, MDF, partner attribution, partner revenue, or partner operations. Also trigger when someone says 'we need partners to scale,' 'our partner programme isn't producing,' 'how do we structure partner tiers,' 'partners aren't bringing deals,' or 'we want to build an ecosystem.' BOUNDARY: covers partner OPERATIONS (programme design, enablement, pipeline, reporting). For GTM org design and capacity, see gtm-planning. For handoff design between partner and direct, see revops-handoffs. For HubSpot implementation, see revops-hubspot."
+description: "Partner and channel operations for B2B SaaS: programme design, partner enablement, co-selling, deal registration, and ecosystem-led growth. Use when the user mentions partner programme, channel strategy, partner enablement, co-sell, deal registration, partner onboarding, partner tiers, ecosystem-led growth, partner-sourced pipeline, partner health scoring, partner QBR, ideal partner profile, IPP, referral partners, resellers, VARs, implementation partners, GSIs, MSPs, partner portal, MDF, partner attribution, partner revenue, or partner operations. Also trigger when someone says 'we need partners to scale,' 'our partner programme isn't producing,' 'how do we structure partner tiers,' 'partners aren't bringing deals,' or 'we want to build an ecosystem.' BOUNDARY: covers partner OPERATIONS (programme design, enablement, pipeline, reporting). For GTM org design and capacity, see gtm-planning. For handoff design between partner and direct, see revops-handoffs. For HubSpot implementation, see revops-hubspot."
 category: RevOps
 ---
 
@@ -9,16 +9,16 @@ category: RevOps
 
 ## The Partner Operating Model
 
-Partner-driven revenue is becoming table stakes in B2B SaaS. The data is clear: partner-involved deals close 46% faster, are 53% more likely to close, and produce 32-60% larger deal sizes (Crossbeam State of Partner Ecosystem, 2023 — 500+ GTM leaders; Introw, 2024). Mature programmes source 25-40%+ of total revenue, and partner-involved accounts are 58% less likely to churn (Crossbeam, 2023). But most partner programmes fail — not because of bad partners, but because of bad operations.
+Partner-driven revenue is becoming table stakes in B2B SaaS. The data is clear: partner-involved deals close 46% faster and are 53% more likely to close (Crossbeam State of Partner Ecosystem, 2023; 500+ GTM leaders), producing 32-60% larger deal sizes (Introw, 2024; Crossbeam case studies). Mature programmes source 25-40%+ of total revenue, and partner-involved accounts are 58% less likely to churn (Crossbeam, 2023). But most partner programmes fail. Not because of bad partners, but because of bad operations.
 
 The operating model has five components:
 
 ```
-1. PROGRAMME DESIGN       — Who do we partner with? What's the structure?
-2. PARTNER ENABLEMENT     — How do we make partners successful?
-3. CO-SELLING OPERATIONS  — How do we work deals together?
-4. PARTNER PIPELINE OPS   — How do we track and manage partner pipeline?
-5. PARTNER PERFORMANCE    — How do we measure, review, and optimise?
+1. PROGRAMME DESIGN: Who do we partner with? What's the structure?
+2. PARTNER ENABLEMENT: How do we make partners successful?
+3. CO-SELLING OPERATIONS: How do we work deals together?
+4. PARTNER PIPELINE OPS: How do we track and manage partner pipeline?
+5. PARTNER PERFORMANCE: How do we measure, review, and optimise?
 ```
 
 ---
@@ -29,7 +29,7 @@ The operating model has five components:
 
 ```
 TYPE                 WHEN TO USE                                    REVENUE MODEL
-──────────           ───────────                                    ─────────────
+-----------          -----------                                    ----------------
 Referral Partner     Early-stage ecosystem. Low complexity.         10-25% of Y1 ARR
                      Partners have relationships but no sales       commission
                      resources. Quick wins.
@@ -56,6 +56,12 @@ MSP                  Ongoing managed services. Customer prefers     40-50% whole
 SI / GSI             Enterprise customers. Custom requirements.     30-40% discount +
                      Long sales cycles. Large deal sizes.           project margin.
                      GSIs: Deloitte, Accenture, IBM-class.         Requires co-investment.
+
+Embedded/Integration Native integration partnership. Product-to-product  Revenue share
+Partner              connectors, Slack/Figma/Shopify-style app      (typically 5-15%),
+                     ecosystems. Partner tools are extension       referral fees on
+                     of your product, not standalone solution.     co-sold deals.
+                     Low friction for end-user adoption.
 ```
 
 ### Ideal Partner Profile (IPP)
@@ -156,13 +162,13 @@ CRM IMPLEMENTATION:
     partner_sourced           (boolean)
     partner_influenced        (boolean)
     partner_name              (lookup to Partner record)
-    partner_contact           (text — who at the partner is involved)
+    partner_contact           (text: who at the partner is involved)
     deal_registration_id      (auto-generated)
     deal_registration_date    (date)
-    deal_registration_expiry  (date — auto-calculated)
-    partner_commission_%      (number — from tier)
-    partner_commission_€      (formula — deal value × commission %)
-    partner_tier              (dropdown — T1/T2/T3)
+    deal_registration_expiry  (date: auto-calculated)
+    partner_commission_%      (number: from tier)
+    partner_commission_€      (formula: deal value × commission %)
+    partner_tier              (dropdown: T1/T2/T3)
 ```
 
 ---
@@ -196,10 +202,10 @@ WEEK 5-6: FIRST DEAL ACTIVATION
   - Weekly check-ins during ramp
 
 RAMP METRICS:
-  Time to first deal registration    Target: < 60 days
-  Time to first closed deal          Target: < 120 days
-  Certification completion rate      Target: > 80% within 30 days
-  Partner activation rate            Target: > 60% (active within 90 days)
+  Time to first deal registration    Target: <60 days (Crossbeam composite; aligned with mature-stage benchmark)
+  Time to first closed deal          Target: <120 days
+  Certification completion rate      Target: >80% within 30 days
+  Partner activation rate            Target: >60% active within 90 days (Crossbeam composite; growth-stage benchmark)
 ```
 
 ### Enablement Content Matrix
@@ -301,7 +307,7 @@ PARTNER-INFLUENCED: Direct team originated the deal, but partner was
 MEASUREMENT:
   Track both sourced and influenced. Report separately.
   Total partner contribution = sourced + influenced.
-  Influenced is harder to track — requires rep to tag deals.
+  Influenced is harder to track; requires rep to tag deals.
   Enforce tagging in deal review cadence.
 ```
 
@@ -311,7 +317,7 @@ MEASUREMENT:
 
 ```
 DIMENSION                  WEIGHT    METRICS
-──────────                 ──────    ───────
+-----------                ------    -------
 Pipeline Activity (35%)    35%       Deal registrations/quarter
                                      Pipeline value created
                                      Deals progressing through stages
@@ -375,7 +381,7 @@ ANNUALLY: Programme review
 ## Maturity Model: Partner Operations
 
 ```
-LEVEL 1 — FUNDAMENTALS (Month 0-6):
+LEVEL 1. FUNDAMENTALS (Month 0-6):
   Investment: Low (1 FTE + tools)
   Partners: 3-5 initial partners recruited
   Revenue: 0-5% partner-sourced
@@ -388,7 +394,7 @@ LEVEL 1 — FUNDAMENTALS (Month 0-6):
     [ ] CRM partner tracking implemented
     [ ] First 3-5 partners recruited and enabled
 
-LEVEL 2 — ADOPTION (Month 6-18):
+LEVEL 2. ADOPTION (Month 6-18):
   Investment: Growing (1-2 FTEs + portal)
   Partners: 15-25 active partners
   Revenue: 10-20% partner-sourced
@@ -401,7 +407,7 @@ LEVEL 2 — ADOPTION (Month 6-18):
     [ ] Deal registration process running smoothly
     [ ] Partner health scoring implemented
 
-LEVEL 3 — OPTIMIZATION (Month 18-36):
+LEVEL 3. OPTIMIZATION (Month 18-36):
   Investment: Dedicated team (3-5 FTEs)
   Partners: 30-50 active partners
   Revenue: 20-35% partner-sourced
@@ -412,18 +418,20 @@ LEVEL 3 — OPTIMIZATION (Month 18-36):
     [ ] Account mapping technology (Crossbeam/Reveal)
     [ ] Partner marketing programmes (MDF, co-marketing)
     [ ] Attribution model refined and trusted
+    [ ] AI-driven partner health scoring (emerging: real-time pipeline analysis, deal sentiment, activity velocity)
+    [ ] Automated deal registration categorisation and conflict flagging
 
-LEVEL 4 — ACCELERATION (Month 36+):
+LEVEL 4. ACCELERATION (Month 36+):
   Investment: Full partner org
   Partners: 50-100+ active partners
   Revenue: 35-60% partner-sourced
   What to build:
-    [ ] Automated trigger-based partner sequences
-    [ ] AI-driven partner deal summaries and feedback
-    [ ] AI-driven account research for partner mapping
-    [ ] Predictive partner health scoring
-    [ ] Self-service partner onboarding at scale
-    [ ] Ecosystem-led growth motions
+    [ ] LLM-powered partner agents (deal summarisation, auto-generated battlecards, qualification scoring)
+    [ ] AI-driven account research for partner mapping (enterprise-scale waterfall enrichment)
+    [ ] Predictive partner health scoring (ensemble ML plus NLP on unstructured signals)
+    [ ] Automated trigger-based partner sequences with AI personalization
+    [ ] Self-service partner onboarding at scale (multi-language, multi-product)
+    [ ] Ecosystem-led growth motions (embedding partners in product, network effects)
 ```
 
 ---
@@ -432,7 +440,7 @@ LEVEL 4 — ACCELERATION (Month 36+):
 
 ```
 PITFALL                              FIX
-───────                              ───
+-------                              ---
 "We recruited 50 partners but        Focus on activation, not recruitment.
  none are producing."                10 active partners > 50 dormant ones.
                                      Measure activation rate, not partner count.
@@ -474,9 +482,7 @@ PITFALL                              FIX
 |--------|--------------------|-----------------------|---------------------|--------|
 | Partner-sourced revenue (% total) | 5-10% | 15-25% | 25-40%+ | Crossbeam composite, 2023 |
 | Partner-influenced revenue (% total) | 5-15% | 15-25% | 20-30% | Crossbeam composite, 2023 |
-| Partner-influenced ARR (2025 median) | — | — | 26-28% | SaaS Hero, 2025 |
-
-**At-scale reference:** HubSpot reports 45% of revenue from partnerships (2022). Salesforce: 70% of implementations are partner-led, $12.4B partner revenue FY2025 (+20% YoY).
+| Partner-influenced ARR (2025 median) | | | 26-28% | SaaS Hero, 2025 |
 
 ### Deal Performance (Partner vs Direct)
 
@@ -486,7 +492,7 @@ PITFALL                              FIX
 | Win rate uplift (1-5 partners) | +9.4% | Crossbeam, 2024 |
 | Win rate uplift (50+ partners) | +37.1% | Crossbeam, 2024 |
 | Win rate multiplier (partner-involved) | **2.8x** | Introw, 2024 |
-| ELG deals — closure probability | **53% more likely** | Crossbeam, 2023 (500+ GTM leaders) |
+| ELG deals; closure probability | **53% more likely** | Crossbeam, 2023 (500+ GTM leaders) |
 | Sales cycle acceleration | **46% faster** | Crossbeam, 2023 |
 | Deal size uplift | **32-60% larger** | Introw (32%); SaaS Hero (60%); Crossbeam cases (34-40%) |
 | Pipeline increase from account mapping | **+44%** | Introw, 2024 |
@@ -509,11 +515,11 @@ PITFALL                              FIX
 | Metric | Early | Growth | Mature | Source |
 |--------|-------|--------|--------|--------|
 | Partner activation rate (active <90 days) | 40-60% | 60-75% | 75-85% | Crossbeam composite |
-| Deal registration → closed-won conversion | 20-35% | — | — | Industry composite |
+| Deal registration → closed-won conversion | 20-35% | | | Industry composite |
 | Time to first deal (new partner) | 90-120 days | 60-90 days | 30-60 days | Crossbeam composite |
-| Partner retention rate | 70-85% annually | — | — | Industry composite |
-| Programmes with <50 partners | 56% of all programmes | — | — | Rewardful, 2025 |
-| Programmes scaling beyond 1,000 | Only 10% | — | — | Rewardful, 2025 |
+| Partner retention rate | 70-85% annually | | | Industry composite |
+| Programmes with <50 partners | 56% of all programmes | | | Rewardful, 2025 |
+| Programmes scaling beyond 1,000 | Only 10% | | | Rewardful, 2025 |
 
 **Primary sources:** Crossbeam State of Partner Ecosystem 2023 (500+ GTM leaders); Crossbeam Partner Impact Analysis 2024 (continuous dataset, thousands of companies); PartnerStack Research Lab 2024 ($500M+ in transaction data, 106K+ active partners); Impartner/Forrester Total Economic Impact 2024; Introw 2024; SaaS Hero / Genesys Growth 2025-2026.
 
@@ -534,42 +540,50 @@ PITFALL                              FIX
 ### Key Tools by Category
 
 **Account Mapping & Ecosystem Intelligence:**
-- **Crossbeam** (merged with Reveal, June 2024) — 25,000+ companies. Dominant account overlap platform. Philadelphia + Paris HQ.
-- **Introw** (Ghent, Belgium) — EU-native, ISO27001, GDPR. CRM-first with AI partner agent. Best option for EU compliance requirements.
+- **Crossbeam** (merged with Reveal, June 2024): 25,000+ companies. Dominant account overlap platform. Philadelphia + Paris HQ.
+- **Introw** (Ghent, Belgium): EU-native, ISO27001, GDPR. CRM-first with AI partner agent. Best option for EU compliance requirements.
 
 **Partner Relationship Management (PRM):**
-- **PartnerStack** — Purpose-built for B2B SaaS. 80K+ partner marketplace. Automated payouts.
-- **Impartner** — #1 for global mature programmes. Forrester-validated 296% ROI. End-to-end partner lifecycle.
-- **Kiflo** — Lightweight starter PRM for early-stage programmes.
-- **Allbound/Channelscaler** — Mid-market. Strong deal registration and governance. Merged with Channel Mechanics.
-- **Channeltivity** — 18+ years in market. High customisation, strong CRM integrations.
-- **Mindmatrix** — Enterprise PRM with marketing collateral, training, and alliance management.
-- **ZINFI** — IDC MarketScape Leader 2025. Enterprise channel automation.
+- **PartnerStack**: Purpose-built for B2B SaaS. 80K+ partner marketplace. Automated payouts.
+- **Impartner**: Number one for global mature programmes. Forrester-validated 296% ROI. End-to-end partner lifecycle.
+- **ZINFI**: IDC MarketScape Leader 2025. Enterprise-scale channel automation. Competes with Impartner at €150M+ ARR scale.
+- **Kiflo**: Lightweight starter PRM for early-stage programmes.
+- **Allbound/Channelscaler**: Mid-market. Strong deal registration and governance. Merged with Channel Mechanics.
+- **Channeltivity**: 18+ years in market. High customisation, strong CRM integrations.
+- **Mindmatrix**: Enterprise PRM with marketing collateral, training, and alliance management.
 
 **Cloud Marketplace Distribution:**
-- **Tackle.io** (acquired by AppDirect, Dec 2025) — $20B+ in marketplace transactions. AWS, Azure, GCP.
-- **Clazar** — Days-to-list marketplace acceleration. CRM-driven private offers.
+- **Tackle.io** (acquired by AppDirect, Dec 2025): $20B+ in marketplace transactions. AWS, Azure, GCP.
+- **Clazar**: Days-to-list marketplace acceleration. CRM-driven private offers.
 - **Market context:** Cloud marketplace GMV ~$30B in 2024, projected $160B by 2030. 89% of companies transact on 1+ marketplace, but only 22% drive meaningful revenue (Clazar, 2025).
 
+**Vertical SaaS Marketplaces (Primary Distribution Channels):**
+- **Salesforce AppExchange**: 7,000+ apps. 40%+ of Salesforce expansion revenue flows through ecosystem. Co-sell with Salesforce partners.
+- **HubSpot App Marketplace**: 1,700+ apps. Highest-converting distribution channel for HubSpot ecosystem plays. Native integration revenue stream.
+- **Atlassian Marketplace**: 3,000+ apps across Jira, Confluence, Trello, Bitbucket. Strong for integration and extension partners.
+- **Slack App Directory**: 4,000+ apps. Native integration model; "must-have" for workflow tools and data connectors.
+- **Shopify App Store**: 6,000+ apps. Commerce-first ecosystem; highest per-app revenue of any vertical marketplace.
+- **Why this matters.** Vertical marketplace revenue often outperforms cloud marketplace for B2B SaaS. Reasons: higher intent buyers, shorter sales cycle, lower CAC. Partners should prioritise 1-2 vertical marketplaces matching their customer base over generic cloud marketplaces.
+
 **Sales & Partner Enablement:**
-- **Seismic** (merging with Highspot, Feb 2026) — Enterprise sales enablement with partner features.
-- **HubSpot** (partner tools) — Built-in partner management. EU data residency available.
-- **Salesforce PRM** (Partner Cloud) — Native CRM partner management. EU data residency option.
+- **Seismic** (merging with Highspot, Feb 2026): Enterprise sales enablement with partner features.
+- **HubSpot** (partner tools): Built-in partner management. EU data residency available.
+- **Salesforce PRM** (Partner Cloud): Native CRM partner management. EU data residency option.
 
 ### EU Compliance Tiers
 
 | Grade | Tools |
 |-------|-------|
-| **A+ (EU-native)** | Introw (Belgium — ISO27001, GDPR, EU data residency) |
+| **A+ (EU-native)** | Introw (Belgium: ISO27001, GDPR, EU data residency) |
 | **A (EU data residency available)** | Crossbeam/Reveal (Paris office), Salesforce (EU DC), HubSpot (EU DC) |
 | **B+ (GDPR-aware, US-hosted)** | PartnerStack, Impartner, Impact.com, Channeltivity, ZINFI |
 
 ### Recent Market Moves (Track for Client Conversations)
 
-- **Crossbeam + Reveal merger** (June 2024) — All-stock transaction. Creates single dominant account mapping platform. 25,000+ companies, 135 employees.
-- **Tackle.io acquired by AppDirect** (Dec 2025) — Cloud marketplace management consolidating.
-- **Highspot + Seismic merger** (Feb 2026) — Sales/partner enablement consolidating into single platform.
-- **Azure flat ~3% marketplace fee** (2025) — Dramatically improves partner economics on Azure Marketplace.
+- **Crossbeam + Reveal merger** (June 2024): All-stock transaction. Creates single dominant account mapping platform. 25,000+ companies, 135 employees.
+- **Tackle.io acquired by AppDirect** (Dec 2025): Cloud marketplace management consolidating.
+- **Highspot + Seismic merger** (Feb 2026): Sales/partner enablement consolidating into single platform. Unified pricing timeline and product roadmap still under development; recommend deferring tool selection until post-close clarity (Q3 2026).
+- **Azure flat 3% marketplace fee** (Azure Marketplace Pricing, 2025): Dramatically improves partner economics on Azure Marketplace. Compare to AWS (3% on select products) and GCP (variable by category).
 
 ---
 
@@ -581,9 +595,9 @@ Key data points for framing partner strategy conversations:
 - **67%** of partner ecosystem decision-makers plan for indirect revenue to grow >30% YoY (Forrester, 2025)
 - **89%** of sellers use partners daily; **84%** of sellers who hit quota credit partners (Highspot, 2025)
 - **75%** of partner ecosystem marketing decision-makers increasing technology investment (Forrester, 2026)
-- Partners per customer rising from **7 to 17** by 2026 — driven by modular products, embedded AI, and compliance localisation (Jay McBain, Omdia/Canalys)
+- Partners per customer rising from **7 to 17** by 2026 (driven by modular products, embedded AI, and compliance localisation; Jay McBain, Omdia/Canalys)
 - Channel market forecast FY2026: **$63.7 billion**, +11.7% growth (Canalys Channel Index)
-- AI becoming essential for ecosystem management at scale — 87% of revenue teams used AI in 2025, 96% expect to in 2026 (Highspot)
+- AI becoming essential for ecosystem management at scale (87% of revenue teams used AI in 2025, 96% expect to in 2026; Highspot)
 
 ---
 
@@ -591,7 +605,7 @@ Key data points for framing partner strategy conversations:
 
 **"We want to build a partner programme":** Start with the Ideal Partner Profile. Don't recruit before you define who you're looking for. Then build the minimum viable programme: partner agreement, onboarding process, deal registration, basic CRM tracking. Recruit 3-5 partners. Get to first revenue. Then scale.
 
-**"Partners aren't bringing deals":** Diagnose the layer. Is it Fundamentals (partners don't know how to sell your product)? Adoption (partners aren't executing the process)? Optimization (process exists but isn't producing results)? Usually it's enablement — partners need more support than you think.
+**"Partners aren't bringing deals":** Diagnose the layer. Is it Fundamentals (partners don't know how to sell your product)? Adoption (partners aren't executing the process)? Optimization (process exists but isn't producing results)? Usually it's enablement; partners need more support than you think.
 
 **"How do we structure partner tiers?":** Use the three-tier model. T1 strategic (3-5 partners, highest investment, highest return). T2 growth (10-20, standard programme). T3 referral (unlimited, low-touch). Promote based on performance, not tenure.
 
@@ -603,17 +617,9 @@ Key data points for framing partner strategy conversations:
 
 ## Canon References
 
-- **[[revops-handoffs]]** — Handoff design between partner and direct sales
-- **[[gtm-planning]]** — GTM motion design including partner/channel capacity planning
-- **[[sales-methodology]]** — Qualification frameworks for partner-registered deals
-- **[[revops-hubspot]]** — CRM implementation for partner objects
+- **revops-handoffs**: Handoff design between partner and direct sales
+- **gtm-planning**: GTM motion design including partner/channel capacity planning
+- **sales-methodology**: Qualification frameworks for partner-registered deals
+- **revops-hubspot**: CRM implementation for partner objects
 
 > Built by [Neon Triforce](https://neontriforce.com)
-
----
-
-## What good looks like
-
-A great partner-operations build defines the Ideal Partner Profile before recruiting anyone, installs a three-tier structure with explicit requirements and benefits per tier, and puts deal registration in the CRM with the full property set (sourced/influenced flags, registration ID and expiry, commission fields) plus a conflict-resolution rule that resolves in 48 hours. It measures activation rather than logo count — time to first registration under 60 days, activation rate above 60% — reports sourced and influenced revenue separately, and reviews partner health quarterly with invest/coach/exit decisions.
-
-A mediocre output recruits 50 partners with no IPP and celebrates the count while none produce pipeline, gives every partner identical investment, tracks partner revenue in a spreadsheet nobody reconciles, and has no registration expiry or conflict process — so sales and partners fight over accounts and reps stop tagging deals. It expects ROI in a quarter and kills the programme before the 6-12 month leading indicators can mature.

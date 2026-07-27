@@ -2,7 +2,7 @@
 name: "sales-playbook-foundations"
 title: Sales playbook foundations
 description: "Use this skill when a sales team has no written playbook, when success lives in one leader's head, when onboarding is inconsistent, or when the user says \"we need a playbook\", \"document our sales process\", \"what should be in our playbook\", or \"reps ramp too slowly\". It produces the playbook skeleton — the five P's in the right order — and a fully drafted People section, the part almost every playbook is missing."
-category: Coaching
+category: Sales
 ---
 
 Use this when the team's definition of success is undocumented. A playbook is a book of agreed-upon best practices for success — what good looks like (WGLL), written down. It exists for better onboarding, better scaling, and for when the leader isn't there anymore: not in the call, not in the meeting, or gone from the company entirely. The output is the playbook skeleton plus a complete People section drafted with the user.

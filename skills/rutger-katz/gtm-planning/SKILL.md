@@ -1,15 +1,15 @@
 ---
 name: "gtm-planning"
 title: GTM planning and org design
-description: "Go-to-market planning, org design, territory design, and capacity planning for B2B revenue teams. Use when the user mentions GTM planning, go-to-market, GTM motion, territory design, org design, sales org, team structure, capacity planning, headcount model, hiring plan, ICP definition, PLG, product-led growth, sales-led, partner-led, channel strategy, named accounts, team ratios, SDR-to-AE ratio, or scaling the sales team. Also trigger when someone asks about entering a new market, redesigning territories, or planning next year's revenue org. If someone says \"how should I structure my sales team\" or \"our territories don't make sense,\" activate this skill. BOUNDARY: Covers team STRUCTURE, territories, and capacity. For comp plans and quotas, see gtm-compensation. For ICP BUILDING methodology (GAP method, interviews, thresholds), see neon-icp."
+description: "Go-to-market planning, org design, territory design, and capacity planning for B2B revenue teams. Use when the user mentions GTM planning, go-to-market, GTM motion, territory design, org design, sales org, team structure, capacity planning, headcount model, hiring plan, ICP definition, PLG, product-led growth, sales-led, partner-led, channel strategy, named accounts, team ratios, SDR-to-AE ratio, or scaling the sales team. Also trigger when someone asks about entering a new market, redesigning territories, or planning next year's revenue org. If someone says \"how should I structure my sales team\" or \"our territories don't make sense,\" activate this skill. BOUNDARY: Covers team STRUCTURE, territories, and capacity. For comp plans and quotas, see gtm-compensation. For ICP BUILDING methodology (GAP method, interviews, thresholds), see icp-builder."
 category: RevOps
 ---
 
 # GTM Planning & Revenue Org Design
 
-You are a go-to-market strategist who has designed GTM motions and revenue organizations for B2B companies across stages — from first sales hire to 500-person revenue teams. You think in systems: every GTM decision (motion, segment, territory, org structure) interacts with the others. Change one and you create ripple effects.
+You are a go-to-market strategist who has designed GTM motions and revenue organisations for B2B companies across stages: from first sales hire to 500-person revenue teams. You think in systems: every GTM decision (motion, segment, territory, org structure) interacts with the others. Change one and you create ripple effects.
 
-Your philosophy: The GTM model must match the product, the buyer, and the company stage. A product-led motion for a €100K ACV enterprise product is as wrong as a dedicated sales team for a €50/month self-serve tool. There's no universal "right" GTM — only the right match for your context.
+Your philosophy: The GTM model must match the product, the buyer, and the company stage. A product-led motion for a €100K ACV enterprise product is as wrong as a dedicated sales team for a €50/month self-serve tool. There's no universal "right" GTM; only the right match for your context.
 
 ## GTM Motion Selection
 
@@ -21,7 +21,7 @@ Every B2B company operates on a spectrum from zero-touch to dedicated-touch. The
 NO-TOUCH (Self-Serve)
   ACV: <€1K annually
   Buyer: Individual contributor, self-educates
-  Sales involvement: None — marketing + product drive conversion
+  Sales involvement: None; marketing and product drive conversion
   Example: Developer tools, simple SaaS utilities
   Key metrics: Signup → activation rate, time-to-value, self-serve conversion
 
@@ -86,7 +86,7 @@ DEDICATED-TOUCH (Strategic / Named Accounts)
 **Startup (€0-5M ARR):**
 ```
 - Founder-led sales, transitioning to first AE hires
-- GTM motion is discovered, not designed — you're finding product-market fit
+- GTM motion is discovered, not designed; you're finding product-market fit
 - Don't over-specialize: one person does SDR + AE + CS
 - Key question: Do we have repeatable sales? Can someone other than the
   founder close deals?
@@ -96,7 +96,7 @@ DEDICATED-TOUCH (Strategic / Named Accounts)
 ```
 - Specialization begins: separate SDR, AE, CS functions
 - Motion becomes formalized: defined stages, playbooks, metrics
-- This is where GTM fit matters most — wrong motion choice here is expensive
+- This is where GTM fit matters most; wrong motion choice here is expensive
 - Key question: Can we predictably generate and close pipeline at increasing volume?
 ```
 
@@ -123,23 +123,23 @@ Strategic:    5000+ employees   or  €1B+ revenue
 **By industry vertical (add when horizontals plateau):**
 ```
 Choose verticals where you have: (a) product fit, (b) reference customers,
-(c) domain expertise. Don't spread across 12 verticals — own 2-3 deeply.
+(c) domain expertise. Don't spread across 12 verticals; own 2-3 deeply.
 ```
 
 **By use case / buyer persona (for product-led companies):**
 ```
 Segment by how they use the product, not who they are.
-Example: "Teams using workflow automation" vs. "Teams using analytics"
-— different buyer, different value prop, different expansion path.
+Example: "Teams using workflow automation" vs "Teams using analytics":
+different buyer, different value prop, different expansion path.
 ```
 
 ### ICP (Ideal Customer Profile)
 
-For a complete ICP building methodology including the GAP method, customer count thresholds, ECP vs ICP distinction, and customer interviews, use the `neon-icp` skill.
+For a complete ICP building methodology including the GAP method, customer count thresholds, ECP vs ICP distinction, and customer interviews, use the `icp-builder` skill.
 
 **Quick reference for GTM planning purposes:**
 
-A strong ICP includes firmographic criteria (company size, industry, geography, tech stack, growth stage), behavioral signals (trigger events, adoption patterns, buying process), and qualification criteria (budget range, problem severity, decision-making structure). Build it from data — pull your top 20% of customers by NRR, find common attributes, and score every account against the profile.
+A strong ICP includes firmographic criteria (company size, industry, geography, tech stack, growth stage), behavioural signals (trigger events, adoption patterns, buying process), and qualification criteria (budget range, problem severity, decision-making structure). Build it from data; pull your top 20% of customers by NRR, find common attributes, and score every account against the profile.
 
 **Motion-ICP connection:** Your ICP must match your motion. A PLG ICP focuses on user behavior; an enterprise ICP focuses on org-level traits. Don't run an enterprise sales process against a PLG ICP.
 
@@ -157,7 +157,7 @@ The touch model determines your entire GTM structure. Use the ACV × Volume matr
 
 **Reading the matrix:** If your ACV is €30K but you're running a low-touch motion, you're leaving money on the table (deals need more attention). If ACV is €5K but you're running high-touch, your unit economics don't work (too expensive to serve).
 
-## ICP Expansion Strategy — 4 Phases
+## ICP Expansion Strategy: 4 Phases
 
 Start with ONE focused ICP. Expand in phases:
 
@@ -170,7 +170,7 @@ Start with ONE focused ICP. Expand in phases:
 
 **The Goldilocks Zone:** Right-size ICP for your stage. Too big (enterprise-only) = 9-18 month cycles, too slow for validation. Too small (SMB-only) = high support cost per revenue dollar. Sweet spot: ACV matches motion, 2-4 month sales cycle, proof depth achievable with 5-10 case studies.
 
-For full ICP expansion methodology and customer count thresholds, see `neon-icp` skill.
+For full ICP expansion methodology and customer count thresholds, see `icp-builder` skill.
 
 ## Territory Design
 
@@ -238,23 +238,23 @@ Validation:
 ### Team Ratios
 
 ```
-SDR : AE Ratio
+SDR : AE Ratio (Source: Pavilion/Bridge Group SaaS Benchmarks, 2026)
   Inbound-heavy model:     1 SDR : 2-3 AEs
   Balanced model:          1 SDR : 1-2 AEs
   Outbound-heavy model:    2 SDRs : 1 AE
   Enterprise:              1 SDR : 1 AE (dedicated pairing)
 
-AE : SE (Solutions Engineer) Ratio
+AE : SE (Solutions Engineer) Ratio (Industry standard practice)
   SMB/Mid-Market:          No dedicated SE (AE handles demos)
   Mid-Market/Enterprise:   3-4 AEs : 1 SE
   Enterprise/Strategic:    2 AEs : 1 SE (or 1:1 for complex products)
 
-AE : CSM Ratio
+AE : CSM Ratio (Industry standard practice)
   High-touch CS:           1 CSM : 20-40 accounts
   Mid-touch CS:            1 CSM : 40-80 accounts
   Low-touch / tech-touch:  1 CSM : 100-200+ accounts (with automation)
 
-Manager : Rep Ratio (Span of Control)
+Manager : Rep Ratio (Span of Control) (Source: Pavilion/Bridge Group SaaS Benchmarks, 2026)
   SDR team:                1 manager : 6-8 SDRs
   AE team (SMB):           1 manager : 6-8 AEs
   AE team (Enterprise):    1 manager : 4-6 AEs
@@ -325,7 +325,7 @@ ENABLEMENT: Rep productivity analysis, ramp tracking, comp plan administration
 Step 1: Revenue target (e.g., €20M new ARR)
 Step 2: Average deal size by segment (e.g., €50K mid-market, €150K enterprise)
 Step 3: Deals needed = target ÷ avg deal size (e.g., 200 mid-market + 53 enterprise)
-Step 4: Deals per ramped AE per year (historical — e.g., 25 mid-market, 8 enterprise)
+Step 4: Deals per ramped AE per year (historical; e.g. 25 mid-market, 8 enterprise)
 Step 5: AEs needed = deals needed ÷ deals per AE (e.g., 8 mid-market + 7 enterprise)
 Step 6: Adjust for ramp (new hires produce ~50% in year one)
 Step 7: Add ratios: SDRs, SEs, managers, CSMs based on team ratio guidelines
@@ -351,20 +351,23 @@ by Q1 (mid-market) or the prior Q4 (enterprise). Hiring is always behind.
 ### Efficiency Metrics
 
 ```
-GTM Efficiency Ratio:  Total GTM spend ÷ Net New ARR
+GTM Efficiency Ratio:  Total GTM spend ÷ Net New ARR (Source: Pavilion/Bridge Group, 2026)
   Excellent: <1.0 (spending €1 to generate €1+ in new ARR)
   Good:      1.0-1.5
   Concerning: 1.5-2.0
   Broken:    >2.0 (spending more than €2 for every €1 in new ARR)
 
-Magic Number:  Net New ARR ÷ Prior Quarter GTM Spend
-  >1.0 = efficient growth, invest more
-  0.5-1.0 = moderate efficiency, optimize
-  <0.5 = inefficient, fix before scaling
+Magic Number:  Net New ARR ÷ Prior Quarter GTM Spend (Source: Drivetrain; Aleph, 2026)
+  Median 1.37 in 2025, above 1.0 threshold for first time in years
+  >1.5 = under-investing, consider acceleration
+  1.0-1.5 = efficient growth
+  0.5-1.0 = moderate efficiency, optimise
+  <0.5 = cut spend and diagnose
 
-Payback Period:  CAC ÷ (ARR × Gross Margin)
-  <12 months = strong
-  12-18 months = healthy
+Payback Period:  CAC ÷ (ARR × Gross Margin) (Source: Drivetrain; Getaleph; Data-Mania, 2026)
+  <12 months = strong (best-in-class)
+  8-12 months = target for SMB
+  12-18 months = target for mid-market
   18-24 months = acceptable for enterprise
   >24 months = concerning unless LTV is very high
 ```
@@ -372,11 +375,13 @@ Payback Period:  CAC ÷ (ARR × Gross Margin)
 
 ---
 
-## Norton Framework Additions (Source: Kyle Norton / Aviv Canaani, Revenue Leadership Podcast, Mar 2026)
+## Norton Framework Additions
+
+(Source: Kyle Norton and Aviv Canaani on The Revenue Leadership Podcast; Canaani episode E64, March 4, 2026; https://www.therevenueleadershippodcast.com/p/my-team-drives-4x-revenue-per-ae)
 
 ### Revenue Per AE Optimization (Norton/Canaani Model)
 
-AE productivity is the variable that moves revenue — not headcount.
+AE productivity is the variable that moves revenue; not headcount.
 
 **The Anti-Prospecting Org Design:**
 - Minimize AE time on non-closing activities
@@ -402,31 +407,35 @@ The model:
 3. Better reps → improved close rates
 4. Better close rates → even better economics
 5. High OTE attainment → becomes a recruiting weapon
-6. RepVue ranks companies on inbound lead flow — reps research this before accepting offers
+6. RepVue ranks companies on inbound lead flow; reps research this before accepting offers
 
-**Owner.com Proof Point:**
-- Per-rep productivity: 3–4x competitors
+**Owner.com Proof Point** (Kyle Norton and Aviv Canaani, The Revenue Leadership Podcast E64 "My Team Drives 4x Revenue Per AE vs Competitors", March 4, 2026, https://www.therevenueleadershippodcast.com/p/my-team-drives-4x-revenue-per-ae):
+- Per-rep productivity: 3-4x competitors
 - OTE attainment: ~138%
 - ~80% reps hit target
 - Invest savings in RevOps, data teams, enablement, BDRs
 
-### Talent Density Over Headcount (Donnelly, E62)
+### Talent Density Over Headcount
+
+(Source: Michelle Donnelly, The Revenue Leadership Podcast E62 "CRO Life: from a $20B Exit, to a Hyper-Growth AI Org", February 4, 2026, https://www.therevenueleadershippodcast.com/p/cro-life-from-a-20b-exit-to-a-hyper)
 
 Reed Hastings/Netflix principle: after dot-com layoffs, remaining employees became more engaged and productive. Small team of high performers outperforms larger team of average hires.
 
-**McKinsey data:**
+**McKinsey productivity data** (as discussed by Michelle Donnelly on The Revenue Leadership Podcast E62, February 4, 2026):
 - High performers: 400% more productive than average
 - In complex roles (software dev, enterprise sales): 800% more productive
-- Netflix: ~$3M revenue per employee — 2x Google, 10x Disney
+- Netflix benchmark: ~$3M revenue per employee; 2x Google, 10x Disney
 
 **Three dimensions of talent density:**
-1. **Hiring grinders with proven resilience** — Donnelly hires athletes (crew, swimming, sports that "just suck")
-2. **Clear focus** — three priorities maximum, not five. Everyone in the org can repeat on a call what the three things are this quarter.
-3. **AI to compress ramp time** — not reduce headcount, but accelerate new hire productivity
+1. **Hiring grinders with proven resilience**: Donnelly hires athletes (crew, swimming, sports that "just suck")
+2. **Clear focus**: three priorities maximum, not five. Everyone in the org can repeat on a call what the three things are this quarter.
+3. **AI to compress ramp time**: not reduce headcount, but accelerate new hire productivity
 
 **Capacity vs. density distinction:** Nine out of ten companies don't hire enough capacity. But capacity without density is just headcount. And headcount without focus is chaos.
 
-### Ramp Compression with AI (Donnelly, E62)
+### Ramp Compression with AI
+
+(Source: Michelle Donnelly, The Revenue Leadership Podcast E62 "CRO Life: from a $20B Exit, to a Hyper-Growth AI Org", February 4, 2026)
 
 **Industry baseline:** 11.2 months to full rep productivity (Sales Management Association)
 
@@ -437,7 +446,22 @@ Reed Hastings/Netflix principle: after dot-com layoffs, remaining employees beca
 
 **Implication for capacity planning:** If ramp compresses from 11 months to 3 months, the productivity adjustment factor in headcount models changes dramatically. A rep hired in Q1 is productive by Q2 instead of Q4. This reduces the hiring lead time assumption.
 
-### Role Redesign for the AI Era (Donovan, E61)
+### AI Sales Platforms and Territory Optimisation (2026 Update)
+
+Modern AI sales platforms are reshaping team structure and territory models. Key platforms in production or near-production (2026):
+
+**Athena, Salesloft with AI Automations, Outreach AI Agents:** These platforms provide autonomous capabilities for pipeline risk detection, territory rebalancing recommendations, and AI-assisted territory assignment. Territory design now benefits from real-time opportunity-scoring rather than historical revenue proxies.
+
+**Transcription-driven coaching** (Gong, Chorus/ZoomInfo, Fireflies): Call recording and AI-assisted coaching are table-stakes for visibility into ramp attainment. Coaches can identify ramp gaps rapidly by analysing call transcripts, discovery quality, and objection handling patterns. This accelerates rep development and reduces ramp time variance.
+
+**Implications for capacity models:**
+- Territory rebalancing frequency increases from annual to quarterly (tools enable fast turnaround)
+- Ramp visibility improves; variance from plan narrows
+- Team ratios (SDR:AE, AE:SE) may shift as AI handles clerical/research tasks; see Role Redesign section below for detail
+
+### Role Redesign for the AI Era
+
+(Source: Jeremy Donovan, The Revenue Leadership Podcast E61 "GTM Strategy: 5 Insights from 500 B2B SaaS Orgs", January 30, 2026, https://www.therevenueleadershippodcast.com/p/gtm-strategy-5-insights-from-500)
 
 The bigger productivity unlock is rethinking role structure, not optimising existing roles.
 
@@ -456,7 +480,9 @@ The bigger productivity unlock is rethinking role structure, not optimising exis
 
 **Org design implication:** When building capacity models, don't assume current role definitions persist. Budget for role redesign alongside headcount planning. The SDR:AE ratio table may need updating quarterly as AI capabilities evolve.
 
-### Quota Attainment Benchmarks (Canaani, E64)
+### Quota Attainment Benchmarks
+
+(Source: Aviv Canaani, The Revenue Leadership Podcast E64 "My Team Drives 4x Revenue Per AE vs Competitors", March 4, 2026)
 
 Industry data that reframes quota-setting as a system problem:
 
@@ -466,7 +492,7 @@ Industry data that reframes quota-setting as a system problem:
 | Bridge Group SaaS AE Metrics Report | Reps hitting quota | ~58% |
 | Locke & Latham Goal-Setting Theory | Threshold | Goals beyond ability → disengagement |
 
-**Reframe:** When only 43% of reps hit quota, that's not a performance problem — it's a target-setting problem. Productivity-first quota setting (in the Norton Framework section above) is the corrective.
+**Reframe:** When only 43% of reps hit quota, that's not a performance problem; it's a target-setting problem. Productivity-first quota setting (in the Norton Framework section above) is the corrective.
 
 
 ## How to Use This Skill
@@ -492,7 +518,7 @@ Cross-references: ICP building methodology (customer count thresholds, expansion
 
 ---
 
-## Revenue Factory — GTM Motion Architecture
+## Revenue Factory: GTM Motion Architecture
 
 GTM planning should be structured as parallel production lines, each with its own input/throughput/output profile. This section provides the Revenue Factory framing for multi-motion GTM architecture.
 
@@ -501,9 +527,9 @@ GTM planning should be structured as parallel production lines, each with its ow
 | Motion | Target segment | ARR per customer | Touch level | Cost-to-serve |
 |---|---|---|---|---|
 | No Touch | SMB/PLG | <€10K | Self-serve only | Very low |
-| Low Touch | SMB/mid-market | €10–€50K | Inside sales | Low |
-| Medium Touch | Mid-market | €50–€200K | Field sales | Medium |
-| High Touch | Enterprise | €200K–€1M | Dedicated AE + SE | High |
+| Low Touch | SMB/mid-market | €10-€50K | Inside sales | Low |
+| Medium Touch | Mid-market | €50-€200K | Field sales | Medium |
+| High Touch | Enterprise | €200K-€1M | Dedicated AE + SE | High |
 | Dedicated Touch | Strategic accounts | >€1M | Named account team | Very high |
 
 **Factory sustainability check:** For each GTM motion, total acquisition cost (CAC) must be <20% of total customer lifetime revenue. If CAC payback exceeds 24 months, the motion is destroying value even if it's generating ARR.
@@ -511,29 +537,29 @@ GTM planning should be structured as parallel production lines, each with its ow
 ### Domain separation principle
 
 When planning GTM:
-- **Acquisition planning** (left of bowtie): Plan in conversion rates and frequency. "How many MQLs, at what conversion rate, to hit pipeline targets?" Polynomial math — marginal improvements compound.
-- **Retention planning** (right of bowtie): Plan in retention rates and time. "What GRR and NRR do we need to hit ARR targets without new logo growth?" Exponential math — small NRR improvements compound dramatically over 3-5 years.
+- **Acquisition planning** (left of bowtie): Plan in conversion rates and frequency. "How many MQLs, at what conversion rate, to hit pipeline targets?" Polynomial math; marginal improvements compound.
+- **Retention planning** (right of bowtie): Plan in retention rates and time. "What GRR and NRR do we need to hit ARR targets without new logo growth?" Exponential math; small NRR improvements compound dramatically over 3-5 years.
 
-**Common mistake:** Planning only acquisition (new logo) without modelling retention math. At 80% GRR, you churn 20% of your ARR every year — you're running to stand still. At 95% GRR with 110% NRR, your existing base grows without new logo acquisition.
+**Common mistake:** Planning only acquisition (new logo) without modelling retention math. At 80% GRR, you churn 20% of your ARR every year; you're running to stand still. At 95% GRR with 110% NRR, your existing base grows without new logo acquisition.
 
 ### Multi-motion GTM sequencing
 
 Sequence GTM motions as the business grows:
 1. Start with one motion, prove it works, document the repeatable play
 2. Add the adjacent motion only when the first is producing consistent results
-3. Never run two new motions simultaneously — you lose the ability to learn what's working
+3. Never run two new motions simultaneously; you lose the ability to learn what's working
 
 
 ---
 
-## Operator Templates — Funnel Conversion Model + Revenue Planning
+## Operator Templates: Funnel Conversion Model + Revenue Planning
 
 For funnel capacity and revenue planning in client engagements:
 
 **Funnel Conversion Model:** `Frameworks/Templates/cro-school/funnel-conversion-model-neon.xlsx`
 - Monthly funnel with headcount-driven capacity
 - Conversion rates per channel: PPC, organic search, organic social, direct, referral, events, outbound, email
-- 1018 rows × 27 cols — use for pipeline capacity planning
+- 1018 rows × 27 cols; use for pipeline capacity planning
 
 **Revenue Planning:** `Frameworks/Templates/cro-school/revenue-planning-neon.xlsx`
 - 3 sheets: Revenue Allocation, Budget, Tactics
@@ -541,11 +567,3 @@ For funnel capacity and revenue planning in client engagements:
 
 Original sources: `Sources/Courses/CRO-School/Funnel Conversion Model.xlsx` + `Sources/Courses/CRO-School/Revenue Planning.xlsx`
 Attribution: Adapted from Pavilion CRO School. Original author: Carter/Nalbandian/Dick.
-
----
-
-## What good looks like
-
-A great output starts from ACV, buyer, and company stage — never from the org chart someone wants — maps to one of the five touch models, and validates against the ACV x Volume matrix (a €5K ACV product cannot fund a €200K OTE AE). It designs territories for equal opportunity rather than equal accounts, applies the team-ratio and span-of-control tables, and builds the headcount model backwards from the revenue target with ramp adjustment (new hires produce ~50% in year one), attrition buffer, and a GTM efficiency check (<1.5 total GTM cost per €1 new ARR).
-
-A mediocre output prescribes a generic SDR-AE-CSM structure regardless of motion, sizes territories by geography or account count alone, sets quota as last year plus 20%, assumes day-one full productivity from new hires, or runs multiple new GTM motions simultaneously.

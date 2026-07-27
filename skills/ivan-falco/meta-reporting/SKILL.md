@@ -49,7 +49,7 @@ No image API, no external service - just the Meta API and Python. Open it with `
 
 Reporting is describing the numbers. Analysis is deciding what to do. Always:
 
-1. **Lead with the outcome metric, not vanity.** Cost per lead and lead volume first. Impressions, reach, and CPM are context, never the headline. (See `ads-foundations/measurement-scorecard.md`.)
+1. **Lead with the outcome metric, not vanity.** Cost per lead and lead volume first. Impressions, reach, and CPM are context, never the headline. (See [/skill/ads-measurement-scorecard](/skill/ads-measurement-scorecard).)
 2. **Separate leading from lagging signals.** CTR and CPM move first; CPL and lead volume confirm. A rising CPM with flat CPL is fine; a rising CPL is the alarm.
 3. **Read at the right altitude.** Account -> campaign -> ad set -> ad. Find the level where the money is leaking before recommending a fix.
 4. **Tie every number to an action.** "CPL up 40% week over week, driven by the retargeting campaign fatiguing (frequency 4.2). Action: rotate creative, cap frequency." Not "CPL went up."
@@ -59,4 +59,4 @@ Reporting is describing the numbers. Analysis is deciding what to do. Always:
 
 - Dashboards are client-ready: clean, branded, no jargon, no source citations.
 - Written reports lead with wins, then concerns, with week-over-week numbers at the campaign level.
-- Follow `ads-foundations/writing-style.md` for everything you write. No AI slop, no em dashes, no emoji.
+- Follow [/skill/ads-writing-style](/skill/ads-writing-style) for everything you write. No AI slop, no em dashes, no emoji.

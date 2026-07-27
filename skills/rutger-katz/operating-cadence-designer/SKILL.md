@@ -1,7 +1,7 @@
 ---
 name: "operating-cadence-designer"
 title: Operating cadence designer
-description: "Design and install the operating cadence for a client — the calendar that makes the revenue operating system real. Connects the strategy scorecard (strategy), the revenue dashboard (visibility), and weekly/monthly rituals (execution). Use whenever the user mentions 'operating cadence,' 'cadence design,' 'meeting architecture,' 'install the cadence,' 'ritual design,' 'revenue meetings,' '5P meetings,' 'breach rhythm,' 'WIP limits,' 'decision cadence,' 'signal trigger action,' 'decision rules,' or any engagement where meetings need restructuring. Also trigger on 'our meetings are status updates,' 'nobody makes decisions,' 'nothing gets done,' 'the board keeps getting surprised,' or 'we need a rhythm.' Also trigger on 'forecast calls,' 'pipeline review,' 'QBR,' 'board meeting,' 'board deck,' 'monthly business review,' 'sales standup,' or 'deal review.' BOUNDARY: For the revenue dashboard build itself, see pipeline-visibility."
+description: "Design and install the operating cadence for a client: the calendar that makes the revenue operating system real. Connects the strategy scorecard (strategy), the revenue dashboard (visibility), and weekly/monthly rituals (execution). Use whenever the user mentions 'operating cadence,' 'cadence design,' 'meeting architecture,' 'install the cadence,' 'ritual design,' 'revenue meetings,' '5P meetings,' 'breach rhythm,' 'WIP limits,' 'decision cadence,' 'signal trigger action,' 'decision rules,' or any engagement where meetings need restructuring. Also trigger on 'our meetings are status updates,' 'nobody makes decisions,' 'nothing gets done,' 'the board keeps getting surprised,' or 'we need a rhythm.' Also trigger on 'forecast calls,' 'pipeline review,' 'QBR,' 'board meeting,' 'board deck,' 'monthly business review,' 'sales standup,' or 'deal review.' BOUNDARY: For the revenue dashboard build itself, see pipeline-visibility."
 category: RevOps
 ---
 
@@ -9,7 +9,7 @@ category: RevOps
 
 ## Purpose
 
-This skill helps design and install the operating cadence for clients. The cadence is the calendar that makes the revenue operating system real — it connects strategy (strategy scorecard), visibility (revenue dashboard), and execution (weekly/monthly rituals).
+This skill helps design and install the operating cadence for clients. The cadence is the calendar that makes the revenue operating system real. It connects strategy (strategy scorecard), visibility (revenue dashboard), and execution (weekly/monthly rituals).
 
 Without a cadence, leaders waste time in meetings that produce no decisions. With a cadence, every ritual has a clear purpose, owner, and output. This skill walks through the design and installation process.
 
@@ -42,27 +42,27 @@ Every meeting must pass the 5P gate. This is the non-negotiable foundation. If a
 
 ### The 5Ps
 
-1. **Purpose** — One clear sentence: "By the end of this meeting, we will...". This must finish with a concrete outcome (decision, list, design, changed plan), not an activity (discuss, review, understand).
+1. **Purpose**: One clear sentence: "By the end of this meeting, we will...". This must finish with a concrete outcome (decision, list, design, changed plan), not an activity (discuss, review, understand).
 
-2. **Product** — A tangible artifact that proves the meeting was worth the time.
+2. **Product**: A tangible artifact that proves the meeting was worth the time.
    - Examples: 3 decisions in the Decision Log with IDs and owners; prioritised problem list; A3 draft; updated experiment backlog; changed forecast or strategy scorecard tile.
    - Not: "discuss pipeline" or "update everyone" (these are verbs, not products).
 
-3. **People** — The smallest set of roles that can create the product and own the actions.
+3. **People**: The smallest set of roles that can create the product and own the actions.
    - No spectators. Everyone must bring proof, make decisions, or leave with actions.
    - Invite by role, not just by name. Example: "one VP Sales" instead of "everyone from Sales".
 
-4. **Process** — How the time will be used.
+4. **Process**: How the time will be used.
    - 2-5 bullet agenda with explicit timeboxes.
    - Which panels in the revenue dashboard (if applicable).
    - Who facilitates, who decides, who takes notes, how the close happens.
 
-5. **Proof** — The facts and pre-work needed so time is spent deciding, not discovering.
+5. **Proof**: The facts and pre-work needed so time is spent deciding, not discovering.
    - Bowtie metrics, GRR/NRR, customer quotes, win/loss summaries, A3 snippets.
    - Pre-reads sent at least one working day in advance for decision sessions.
    - Clear baseline so you can measure later if the decision worked.
 
-**5P gate rule:** If any P is missing or fuzzy, cancel the meeting or replace it with an async update. A healthy cadence has a non-zero cancel rate.
+**5P gate rule:** If any P is missing or fuzzy, cancel the meeting or replace it with an async update. A healthy cadence has a non-zero cancel rate (5-15% typical; practice-based).
 
 ---
 
@@ -88,7 +88,7 @@ Follow this sequence when designing a cadence for a client:
 
 Use the operating cadence template. Adapt the rhythm to client size and stage.
 
-#### Weekly (7 rituals) — 4.5 hours total
+#### Weekly (7 rituals); 4.5 hours total
 
 1. **Revenue Dashboard: Pipeline and Decisions** (75 min)
    - Owner: CRO
@@ -121,19 +121,20 @@ Use the operating cadence template. Adapt the rhythm to client size and stage.
    - Purpose: Catch and contain SLO breaches
    - Product: Owner and containment plan for each breach
 
-7. **Automation and Agent Triage** (30 min)
-   - Owner: RevOps and Platform
-   - Purpose: Prioritise automation and AI opportunities
-   - Product: Ranked automation experiments
+7. **AI and Automation Integration** (45 min, starting Week 3)
+   - Owner: RevOps and Platform lead
+   - Purpose: Embed AI into the revenue system at four levels: L1 (signal tagging and automation triggers), L2 (breach detection agents that alert decision-makers), L3 (experiment idea generation and analysis), L4 (autonomous agents making decisions within guardrails)
+   - Product: Prioritised automation experiments with cost-benefit, execution plan, and kill rules. Monthly AI rhythm advancement (L1 to L2, L2 to L3, etc.)
+   - Integration: Connects to the Breach Huddle (L2 agents feed incident alerts) and Demo and Retro (L3 and L4 results reviewed monthly)
 
-#### Bi-weekly (1 ritual) — 60 min
+#### Bi-weekly (1 ritual); 60 min
 
 1. **Demo and Retro** (60 min)
    - Owner: Rotating facilitator
    - Purpose: Show shipped experiments and countermeasures, decide keep/kill/scale
    - Product: Keep/kill/scale decisions logged in Decision Log
 
-#### Monthly (2 rituals) — 150 min
+#### Monthly (2 rituals); 150 min
 
 1. **Strategy and Lever Review** (90 min)
    - Owner: CEO and CRO
@@ -142,10 +143,11 @@ Use the operating cadence template. Adapt the rhythm to client size and stage.
 
 2. **Data Spine and Definition Review** (60 min)
    - Owner: RevOps and Data lead
-   - Purpose: Check data freshness and completeness
-   - Product: Data health status, definition change log
+   - Purpose: Check data freshness, completeness, and activation. Ensure decision-to-execution loops close via reverse ETL (data changes trigger CRM updates, audience sync, and alert routing).
+   - Product: Data health status, definition change log, reverse ETL activation status (which signals route to which systems: Salesforce, email platforms, messaging tools)
+   - Integration: Validates that the revenue system feeds real-time data to decision-makers and that decisions propagate back to the stack (via Hightouch, Census, Segment, or native reverse ETL)
 
-#### Quarterly (1 ritual) — 180 min
+#### Quarterly (1 ritual); 180 min
 
 1. **Quarterly Reset** (2-3 hours)
    - Owner: CEO
@@ -268,19 +270,19 @@ The cadence installs in a 12-week programme with clear phases and handoff points
 
 Track these metrics to see if the cadence itself is working:
 
-1. **Decision latency** — Time from insight (data signal) to logged decision, and from logged decision to live countermeasure. Target: <7 days for most decisions.
+1. **Decision latency**: Time from insight (data signal) to logged decision, and from logged decision to live countermeasure. Target: <7 days for most decisions.
 
-2. **5P cancel rate** — Share of scheduled meetings that are cancelled because they lack Purpose, Product, People, Process, or Proof. A healthy cadence has 5-15% cancel rate. Zero cancel rate means the gate is not enforced; >20% means the calendar is overloaded.
+2. **5P cancel rate**: Share of scheduled meetings that are cancelled because they lack Purpose, Product, People, Process, or Proof. A healthy cadence has 5-15% cancel rate (practice-based). Zero cancel rate means the gate is not enforced; >20% means the calendar is overloaded.
 
-3. **SLO hit rate** — Share of weeks where key handover p95 SLOs (lead to first touch, MQL to SQL, etc.) are met. Target: >80%.
+3. **SLO hit rate**: Share of weeks where key handover p95 SLOs (lead to first touch, MQL to SQL, etc.) are met. Target: >80% (practice-based).
 
-4. **Freshness attainment** — Share of weekly Data Spine checks that pass (data is current, complete, accurate). Target: >95%.
+4. **Freshness attainment**: Share of weekly Data Spine checks that pass (data is current, complete, accurate). Target: >95% (practice-based).
 
-5. **Forecast accuracy** — Share of periods where actual revenue sits within forecast bands. Target: >70%.
+5. **Forecast accuracy**: Share of periods where actual revenue sits within forecast bands. Target: >70% (practice-based).
 
-6. **Kill rate** — Share of experiments killed by stop rule per quarter. Target: 20%+ per quarter. Kill rate <10% suggests experiments don't have real stop rules.
+6. **Kill rate**: Share of experiments killed by stop rule per quarter. Target: 20%+ per quarter. Kill rate <10% suggests experiments don't have real stop rules.
 
-7. **Coaching uptake** — Share of reps and teams that complete agreed coaching actions within the target timeframe. Target: >80%.
+7. **Coaching uptake**: Share of reps and teams that complete agreed coaching actions within the target timeframe. Target: >80% (practice-based).
 
 Review these KPIs monthly in the Strategy and Lever Review. Tune the cadence only in the Quarterly Reset.
 
@@ -339,7 +341,7 @@ Before scheduling any revenue meeting, answer these:
 ### Core Ceremony Agendas
 
 **Daily: Sales Pipeline Pulse (15 min)**
-Purpose: Surface blockers. Coordinate same-day wins. RevOps not in the room — pre-built CRM views make this self-serve.
+Purpose: Surface blockers. Coordinate same-day wins. RevOps not in the room; pre-built CRM views make this self-serve.
 
 **Weekly: Pipeline Review (45 min, Sales Manager + team)**
 Pre-meeting packet: stage movement (last 7 days), deal aging by stage, forecast accuracy vs. prior week, win/loss summary.
@@ -402,13 +404,13 @@ Board deck structure (8-10 slides): Executive Summary + Asks -> Revenue Performa
 Upward Flow: Activity -> Team Metrics -> Leadership Review -> Board.
 Downward Flow: Board decisions -> Strategy adjustments -> Manager coaching priorities -> Rep behavior change.
 
-Decision authority: Daily (rep self-manages) -> Weekly pipeline (manager) -> Weekly forecast (director) -> Monthly (VP) -> Quarterly (CRO/Board). Coaching doesn't happen separately — it happens DURING reviews. The cadence IS the coaching system.
+Decision authority: Daily (rep self-manages) -> Weekly pipeline (manager) -> Weekly forecast (director) -> Monthly (VP) -> Quarterly (CRO/Board). Coaching doesn't happen separately; it happens DURING reviews. The cadence IS the coaching system.
 
-**Discipline as AI Prerequisite** (Donovan, E61)
-The #1 differentiator between top performers and average performers using AI is NOT which tools they use. It's operating discipline. "If I could only run one play: incredibly disciplined weekly deal reviews." Before any AI investment conversation, ask: "How tight is your operating rhythm?"
+**Discipline as AI Prerequisite**
+The #1 differentiator between top performers and average performers using AI is NOT which tools they use. It's operating discipline. Jeremy Donovan (Insight Partners) on The Revenue Leadership Podcast, E61: "If I could only run one play: incredibly disciplined weekly deal reviews." Before any AI investment conversation, ask: "How tight is your operating rhythm?" (The Revenue Leadership Podcast, Kyle Norton; Episode 61, "GTM Strategy: 5 Insights from 500 B2B SaaS Orgs"; January 30, 2026).
 
-**The Predictability Playbook** (Canaani, E64)
-Prerequisites: Directors/VPs must build predictable models with conversion rates, capacity constraints, and cost per output. Growth owns top-of-funnel math. RevOps owns instrumentation. Sales knows exactly how many meetings they're getting and what they need to convert.
+**The Predictability Playbook**
+Prerequisites: Directors/VPs must build predictable models with conversion rates, capacity constraints, and cost per output. Growth owns top-of-funnel math. RevOps owns instrumentation. Sales knows exactly how many meetings they're getting and what they need to convert. Aviv Canaani (Datarails CRO) on The Revenue Leadership Podcast, E64: "The real productivity is what matters." (The Revenue Leadership Podcast, Kyle Norton; Episode 64, "My Team Drives 4x Revenue Per AE vs Competitors"; March 4, 2026).
 
 **Operating Rhythm Assessment**
 
@@ -428,11 +430,11 @@ Scoring: 24-30 = ready for AI investment. 15-23 = fix cadence first. <15 = caden
 A structured alternative to the 40-slide board deck.
 
 **The 5 Questions:**
-1. **Are we on track?** — Current quarter vs plan. One number, one trend line. No spin.
-2. **Why?** — Win rate by segment and motion. What's converting, what isn't. Name top 3 loss reasons.
-3. **What changed?** — Actions taken this quarter based on data. Experiment results, process changes, measured impact.
-4. **What do we need?** — Resource asks with projected ROI tied to specific conversion gaps.
-5. **What's the risk?** — Top 3 risks to hitting plan. Be specific.
+1. **Are we on track?** Current quarter vs plan. One number, one trend line. No spin.
+2. **Why?** Win rate by segment and motion. What's converting, what isn't. Name top 3 loss reasons.
+3. **What changed?** Actions taken this quarter based on data. Experiment results, process changes, measured impact.
+4. **What do we need?** Resource asks with projected ROI tied to specific conversion gaps.
+5. **What's the risk?** Top 3 risks to hitting plan. Be specific.
 
 Anti-pattern: 40-slide deck -> 2 hours to prepare -> board skips to bad news -> trust erodes.
 The framework: 10-minute defence -> 30 minutes to prepare -> board gets answers immediately -> trust compounds.
@@ -472,18 +474,10 @@ Use this table to match a client situation to the ritual they need:
 
 ## Related Skills
 
-- **revenue-operating-cadence** — Core meeting architecture and ceremony agendas
-- **pipeline-visibility** — Revenue dashboard build (panels, dashboards, data integration)
-- **revops-strategy** — Strategic advisory and pipeline architecture
-- **revops-forecasting** — Forecast methodology and breach rules
-- **revops-metrics** — What metrics belong in which ritual
+- **revenue-operating-cadence**: Core meeting architecture and ceremony agendas
+- **pipeline-visibility**: Revenue dashboard build (panels, dashboards, data integration)
+- **revops-strategy**: Strategic advisory and pipeline architecture
+- **revops-forecasting**: Forecast methodology and breach rules
+- **revops-metrics**: What metrics belong in which ritual
 
 > Built by [Neon Triforce](https://neontriforce.com)
-
----
-
-## What good looks like
-
-A great cadence design starts with a 5P audit of the client's existing meetings, then produces a colour-coded calendar where every ritual has a purpose ending in a concrete outcome, a tangible product (logged decisions with IDs and owners), the smallest viable attendee set, timeboxed process, and pre-read proof — enforced by a real gate with a 5-15% cancel rate. It layers 8-12 signal-based decision rules with thresholds routed to specific rituals, tracks cadence health KPIs (decision latency under 7 days, kill rate above 20%), and transfers ownership to a named Cadence Owner by week 12.
-
-A mediocre output just adds more meetings: agendas without products, a calendar with no cancel rule, dashboards with 40 metrics and no decisions, and a zero cancel rate that signals the gate is never enforced. It skips the current-state audit, leaves escalation implicit ('the team knows'), never installs a Decision Log, and lets the cadence remain status theatre — data reviewed, nods exchanged, nothing changed.

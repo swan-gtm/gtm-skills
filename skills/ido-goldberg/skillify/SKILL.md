@@ -2,7 +2,7 @@
 name: skillify
 title: Skillify
 description: "Turns useful work from the current conversation into a reusable org skill. Captures the trigger, outcome, procedure, and judgment so the play can be rerun."
-category: Ops
+category: RevOps
 ---
 
 ## Instructions

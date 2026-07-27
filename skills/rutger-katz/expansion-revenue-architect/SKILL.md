@@ -1,7 +1,7 @@
 ---
 name: "expansion-revenue-architect"
 title: Expansion revenue architecture
-description: "Design and install expansion revenue systems improving NRR and GRR for B2B SaaS. GRR/NRR diagnostic, expansion motion architecture, whitespace analysis, CS-Sales handback, renewal pricing, and 90-day NRR programmes. Trigger on 'NRR improvement,' 'GRR strategy,' 'expansion revenue,' 'upsell cross-sell,' 'whitespace analysis,' 'CS expansion,' 'net revenue retention,' 'right side of the bowtie,' 'land and expand,' 'expansion is accidental,' 'CS doesn't own revenue,' 'we keep discounting renewals,' 'health score,' 'time to value,' 'customer advocacy,' 'usage-based pricing NRR,' 'account penetration,' 'second-order revenue,' or 'CSM coverage model.' Also use when NRR below 110% or GRR below 90%. Designs full expansion engine connecting health scoring, signals, whitespace, CS-Sales handbacks, and dashboard tiles. BOUNDARY: For CS operations, see cs-operations. For pricing, see pricing-strategy. For handoffs, see revops-handoffs."
+description: "Design and install expansion revenue systems improving NRR and GRR for B2B SaaS. GRR/NRR diagnostic, expansion motion architecture, whitespace analysis, CS-Sales handback, renewal pricing, and 90-day NRR programmes. Trigger on 'NRR improvement,' 'GRR strategy,' 'expansion revenue,' 'upsell cross-sell,' 'whitespace analysis,' 'CS expansion,' 'net revenue retention,' 'right side of the bowtie,' 'land and expand,' 'expansion is accidental,' 'CS doesn't own revenue,' 'we keep discounting renewals,' 'health score,' 'time to value,' 'customer advocacy,' 'usage-based pricing NRR,' 'account penetration,' 'second-order revenue,' or 'CSM coverage model.' Also use when NRR below 110% or GRR below 90%. Designs full expansion engine connecting health scoring, signals, whitespace, CS-Sales handbacks, and dashboard tiles. BOUNDARY: For CS operations, see cs-operations. For pricing and consumption billing operations, see pricing-monetisation-ops. For handoffs, see revops-handoffs."
 category: RevOps
 ---
 
@@ -13,31 +13,33 @@ This skill sits in the **customer value layer** of the revenue system. It connec
 
 ---
 
+---
+
 ## The GRR-First Principle
 
 Before designing expansion, diagnose retention. **GRR is the foundation. NRR is the outcome.**
 
-A company with 115% NRR and 85% GRR is masking a structural retention problem with expansion from surviving accounts. That's not a system — it's survivorship bias. Fix the leaky bucket before building the expansion engine.
+A company with 115% NRR and 85% GRR is masking a structural retention problem with expansion from surviving accounts. That's not a system; it's survivorship bias. Fix the leaky bucket before building the expansion engine.
 
 ### GRR Diagnostic
 
 ```
 GRR BANDS AND IMPLICATIONS:
 
-< 85%   CRITICAL — Product/market fit issue or severe onboarding failure.
+< 85%   CRITICAL: Product/market fit issue or severe onboarding failure.
           Stop: Do NOT invest in expansion. Fix retention first.
           Action: Run churn autopsy on last 10 churned accounts.
           Levers: Product, onboarding, ICP tightness, pricing.
 
-85-90%  CONCERNING — Structural churn that expansion masks but doesn't fix.
+85-90%  CONCERNING: Structural churn that expansion masks but doesn't fix.
           Action: Identify top 3 churn drivers. Fix the biggest one.
           Levers: Health scoring, renewal process, champion management.
 
-90-95%  HEALTHY — Ready to layer expansion. Some churn is acceptable.
+90-95%  HEALTHY: Ready to layer expansion. Some churn is acceptable.
           Action: Shift focus to expansion architecture.
           Levers: Expansion signals, whitespace analysis, CS-Sales handback.
 
-> 95%   EXCELLENT — Enterprise-grade retention. Expansion is the growth lever.
+> 95%   EXCELLENT: Enterprise-grade retention. Expansion is the growth lever.
           Action: Maximise expansion velocity and coverage.
           Levers: Product-led expansion, pricing architecture, land-and-expand.
 ```
@@ -48,14 +50,14 @@ When GRR needs fixing, these are the levers in priority order:
 
 | Lever | Impact | Timeline | Owner |
 |-------|--------|----------|-------|
-| ICP tightness (stop selling to wrong customers) | Highest — prevents future churn at source | 1-2 quarters to show in GRR | Sales + Marketing |
-| Onboarding (time to first value) | High — first 90 days determine 80% of renewal outcomes | 1 quarter | CS |
-| Champion management (executive sponsor + power user) | High — champion departure is #1 churn predictor | Ongoing | CS |
-| Health scoring + intervention playbooks | Medium-High — early warning system | 1-2 months to build, 1 quarter to show results | CS Ops |
-| Product gaps (feature adoption blockers) | Medium — requires cross-functional investment | 2-4 quarters | Product + CS |
-| Pricing architecture (discount sunset, value alignment) | Medium — prevents renewal friction | 1-2 quarters | RevOps + Finance |
+| ICP tightness (stop selling to wrong customers) | Highest; prevents future churn at source | 1-2 quarters to show in GRR | Sales + Marketing |
+| Onboarding (time to first value) | High; first 90 days determine 80% of renewal outcomes | 1 quarter | CS |
+| Champion management (executive sponsor + power user) | High; champion departure is #1 churn predictor | Ongoing | CS |
+| Health scoring + intervention playbooks | Medium-High; early warning system | 1-2 months to build, 1 quarter to show results | CS Ops |
+| Product gaps (feature adoption blockers) | Medium; requires cross-functional investment | 2-4 quarters | Product + CS |
+| Pricing architecture (discount sunset, value alignment) | Medium; prevents renewal friction | 1-2 quarters | RevOps + Finance |
 
-**Source validation:** Gainsight research confirms that companies improving GRR by 5 points see 20-30% valuation uplift at next funding round. KeyBanc 2025 Private SaaS Survey (104 companies, median $26M ARR) shows median GRR at 88-91% with top quartile at 95%+.
+**Source validation:** Companies improving GRR by 5 points see 20-30% valuation uplift at next funding round (m3ter, 2026; Software Equity Group). KeyBanc 2025 Private SaaS Survey (104 companies, median EUR26M ARR) shows median GRR at 88-91% with top quartile at 95%+.
 
 ---
 
@@ -83,7 +85,7 @@ The highest-leverage NRR driver. Usage-based or hybrid pricing models automatica
 | Usage-based (consumption) | 110-130% | Automatic with value delivery |
 | Hybrid (base + usage) | 115-125% | Base retention + consumption growth |
 
-For detailed pricing architecture, see **pricing-strategy** skill.
+For detailed pricing architecture, metering, billing operations, and consumption-based pricing implementation, see **pricing-monetisation-ops** skill.
 
 ### Lever 2: Product-Led Expansion (Embedded Growth)
 
@@ -127,7 +129,26 @@ OUTCOME SIGNALS (CS-tracked)
   ROI exceeded original business case
   Customer requesting new use cases
   Customer benchmarking against peers (growth mindset)
+
+AI AND MACHINE LEARNING SIGNALS (automated, 2026+)
+  LLM-based meeting note analysis (call recordings, QBR transcripts scanned for expansion language)
+  ML churn prediction models (ensemble learning on engagement history flags accounts at expansion risk)
+  Predictive next-best-action scoring (Salesforce Agentforce expansion recommendation scoring)
+  Autonomous expansion signal clustering (patterns across usage, engagement, and commercial data)
+  Engagement velocity monitoring (velocity trending up = expansion readiness signal)
 ```
+
+### AI and Platform Capabilities for Expansion Automation
+
+2026 brings AI-native signal detection and scoring to expansion. Organisations embedding AI in GTM stacks report materially faster deal cycles and improved revenue outcomes (LeanData, 2026; Skaled, 2026). For expansion specifically, two platform capabilities matter:
+
+**LLM-based meeting analysis for expansion signals:** Automated scanning of call transcripts, QBR recordings, and customer communication logs for expansion language (requests for new features, mentions of adjacent teams, budget discussions, ROI confirmation). Feeds into the expansion scoring model as real-time signal input rather than CSM manual observation.
+
+**Salesforce Agentforce for expansion next-best-action:** Agentforce 360 (Data 360 foundation + Intelligent Context module) surfaces expansion scoring alongside account data in the CRM. The agent recommends next best action (expand, upsell, cross-sell, or defer based on health and timing). CSMs invoke Agentforce in Slack workflows to see expansion recommendations without context-switching. Entry point: Agentforce Sales cloud in Spring 2026+ deployments; integration via Flow automation (Workflow Rules end of support 31 December 2025).
+
+**When to prioritise:** If CSM team lacks time for manual signal scanning (common in scaling organisations), or if expansion close rates below 35% suggest signal quality is the constraint (vs. CSM capacity), build LLM analysis and Agentforce integration. Cost and implementation: Agentforce pricing follows outcome-based agent model (EUR0.50-1.00 per recommended lead action); LLM call analysis is feasible via HubSpot Breeze (Breeze Customer Agent) or Salesforce Data 360 Intelligent Context for mature orgs. Pilot with top 20-50 accounts before rolling to full base.
+
+**EU compliance (GDPR Article 22):** Expansion scoring that makes material decisions about account treatment (e.g. prioritising high-expansion-score accounts for active CSM outreach vs. passive monitoring) must include human review before action if it is fully automated. If ML scoring feeds into CSM dashboards for human decision-making, human review is inherent and no additional safeguard is required. Document your lawful basis for processing engagement data (typically legitimate interest for B2B expansion, with balancing test); ensure contact enrichment data carries source attribution per Article 14. In EU customer contexts, be transparent about automated signal scoring in privacy notices.
 
 ### Lever 4: Sales-Led Expansion (Strategic Growth)
 
@@ -148,8 +169,8 @@ Who owns what depends on deal size and complexity:
 ```
 EXPANSION SIZE            OWNER         SUPPORT         HANDOFF TRIGGER
 ------                    -----         -------         ---------------
-Seat growth (<10%)        CS (auto)     —               Product triggers
-Small upsell (<20% ACV)  CS            —               CSM closes directly
+Seat growth (<10%)        CS (auto)     none            Product triggers
+Small upsell (<20% ACV)  CS            none            CSM closes directly
 Medium (20-50% ACV)      CS sources    Sales closes    CS packages with SPICED context
 Large (>50% ACV)         Sales         CS supports     CS intro to champion, stays involved
 New product line          Sales         CS + Product    CS identifies need, Sales runs eval
@@ -158,17 +179,17 @@ Cross-sell (new BU)       Sales         CS + CSM        Different buying group =
 
 **The handback process (CS -> Sales for medium/large):**
 
-1. **CS packages the opportunity** — Who's the champion? What changed? Why now? What's the expansion need? What SPICED context exists from original sale?
-2. **CS introduces Sales to champion** — Warm handoff, not cold. CS stays on the call.
-3. **Sales runs the expansion discovery** — Treat it like a mini-discovery, not a price quote. There may be new stakeholders, new pain, new budget dynamics.
-4. **CS stays involved through close** — Maintains relationship continuity. Prevents "you sold us and disappeared" perception.
-5. **CS owns post-expansion onboarding** — Expansion product/feature activation follows the same onboarding rigour as new customer.
+1. **CS packages the opportunity.** Who's the champion? What changed? Why now? What's the expansion need? What SPICED context exists from original sale?
+2. **CS introduces Sales to champion.** Warm handoff, not cold. CS stays on the call.
+3. **Sales runs the expansion discovery.** Treat it like a mini-discovery, not a price quote. There may be new stakeholders, new pain, new budget dynamics.
+4. **CS stays involved through close.** Maintains relationship continuity. Prevents "you sold us and disappeared" perception.
+5. **CS owns post-expansion onboarding.** Expansion product/feature activation follows the same onboarding rigour as new customer.
 
 **Credit model:** CS gets sourced credit (pipeline creation). Sales gets close credit. Both are measured. Expansion pipeline without CS sourcing = the system isn't working.
 
 ### Whitespace Analysis Methodology
 
-Whitespace is the gap between what a customer uses and what they could use — the expansion pipeline you haven't created yet. Map it per account across **five dimensions**: Products, Seats/Users, Departments, Features, and Stakeholders (current state vs. potential = the gap). Score each 0-100 on penetration, average to a total whitespace score, then prioritise by whitespace score x health score x contract timing and present in QBRs as a growth partnership.
+Whitespace is the gap between what a customer uses and what they could use; that is the expansion pipeline you haven't created yet. Map it per account across **five dimensions**: Products, Seats/Users, Departments, Features, and Stakeholders (current state vs. potential = the gap). Score each 0-100 on penetration, average to a total whitespace score, then prioritise by whitespace score x health score x contract timing and present in QBRs as a growth partnership.
 
 For the full whitespace template, run-it steps, and segment conversion/close-rate targets, see `references/whitespace-and-scoring-mechanics.md`.
 
@@ -183,10 +204,10 @@ For the component-level scoring questions and mechanics, see `references/whitesp
 **Score-to-action mapping:**
 
 ```
-0-30:   MONITOR — No active expansion pursuit. Focus on adoption and value.
-31-50:  SEED — CSM plants seeds. Share relevant content. Mention capabilities.
-51-70:  QUALIFY — CSM initiates expansion conversation. Confirm interest and timeline.
-71-100: PURSUE — Active expansion opportunity. If >30% ACV -> hand to Sales.
+0-30:   MONITOR. No active expansion pursuit. Focus on adoption and value.
+31-50:  SEED. CSM plants seeds. Share relevant content. Mention capabilities.
+51-70:  QUALIFY. CSM initiates expansion conversation. Confirm interest and timeline.
+71-100: PURSUE. Active expansion opportunity. If >30% ACV -> hand to Sales.
 ```
 
 ---
@@ -211,9 +232,11 @@ These plug directly into the operating cadence. When a signal fires, the cadence
 
 This is the delivery format. When a client's NRR needs improving, structure the engagement in three phases:
 
-- **Phase 1: Diagnose (Weeks 1-3)** — data audit, system assessment, whitespace/pipeline audit. Output: Expansion Diagnostic Report.
-- **Phase 2: Design (Weeks 4-6)** — expansion motion design, system build, enablement. Output: Expansion System Blueprint.
-- **Phase 3: Install and Measure (Weeks 7-12)** — activate, iterate, embed and report against baseline.
+- **Phase 1: Diagnose (Weeks 1-3).** Data audit, system assessment, whitespace/pipeline audit. Output: Expansion Diagnostic Report.
+- **Phase 2: Design (Weeks 4-6).** Expansion motion design, system build, enablement. Output: Expansion System Blueprint.
+- **Phase 3: Install and Measure (Weeks 7-12).** Activate, iterate, embed and report against baseline. Output: CS-to-Sales handback package, QBR frameworks, and baseline-to-6-month outcomes.
+
+Deliverable templates (Expansion Diagnostic Report, Expansion System Blueprint, CS-to-Sales handback package) are produced per engagement from the structures defined in the reference files and diagnostic frameworks, not from pre-built template files.
 
 For the full weekly breakdown and the success-metrics table (90-day and 6-month targets), see `references/90-day-nrr-programme.md`.
 
@@ -223,7 +246,7 @@ For the full weekly breakdown and the success-metrics table (90-day and 6-month 
 
 Calibrated for EUR15-150M B2B SaaS. Always adjust for client's stage, ACV, and motion type. The headline thresholds: **NRR >110%** (great) / **>120%** (best-in-class), **GRR >90%** (great) / **>95%** (best-in-class), and **expansion as 20-30%+ of new ARR**.
 
-For the full sourced benchmark set — master benchmarks, NRR by company stage, NRR by ACV band, GRR by segment, the expansion economics advantage (CAC/payback/close-rate/cycle), and expansion-revenue share by ARR stage — see `references/benchmarks-sourced.md`.
+For the full sourced benchmark set (master benchmarks, NRR by company stage, NRR by ACV band, GRR by segment, the expansion economics advantage of CAC/payback/close-rate/cycle, and expansion-revenue share by ARR stage) see `references/benchmarks-sourced.md`.
 
 ---
 
@@ -237,7 +260,7 @@ UBP is the strongest structural lever for NRR. The data supports prioritizing pr
 | YoY revenue growth | **29.9%** | 21.7% | OpenView; Zuora data |
 | Expansion mechanism | Automatic (usage growth) | Manual (CSM-led) | m3ter 2026 |
 
-**~60% of SaaS companies** now use or are testing usage-based pricing (OpenView). The shift is structural, not a trend.
+**~60% of SaaS companies** now use or are testing usage-based pricing (OpenView, 2024). The shift is structural, not a trend.
 
 **When to recommend UBP to clients:**
 - They have a clear value metric that scales with customer success
@@ -249,7 +272,7 @@ UBP is the strongest structural lever for NRR. The data supports prioritizing pr
 
 ## Time-to-Value: The Retention Foundation
 
-TTV is the most underrated lever for both GRR and expansion readiness. Customers who find value quickly retain better AND expand more — so **fix TTV first, then build expansion**. Customers who haven't reached value will never expand, and the first-90-days onboarding window is the make-or-break moment for the entire right side of the bowtie.
+TTV is the most underrated lever for both GRR and expansion readiness. Customers who find value quickly retain better AND expand more; therefore **fix TTV first, then build expansion**. Customers who haven't reached value will never expand, and the first-90-days onboarding window is the make-or-break moment for the entire right side of the bowtie.
 
 For the sourced TTV-to-retention correlation data and TTV benchmarks by segment, see `references/ttv-benchmarks.md`.
 
@@ -257,7 +280,7 @@ For the sourced TTV-to-retention correlation data and TTV benchmarks by segment,
 
 ## Health Scoring Effectiveness
 
-Health scoring works — but only when done well. Multi-signal scores (usage + engagement + support + satisfaction) outperform single-dimension scores, and segment-specific scores predict at-risk accounts more accurately.
+Health scoring works, but only when done well. Multi-signal scores (usage + engagement + support + satisfaction) outperform single-dimension scores, and segment-specific scores predict at-risk accounts more accurately.
 
 For the effectiveness data, churn-vs-expansion predictors, and the CSM coverage model (accounts/ARR per CSM by touch model), see `references/health-scoring-effectiveness.md`.
 
@@ -265,7 +288,7 @@ For the effectiveness data, churn-vs-expansion predictors, and the CSM coverage 
 
 ## Customer Advocacy as Expansion Multiplier
 
-Happy customers don't just retain — they compound growth through second-order revenue (referrals, references, case studies). **The expansion flywheel:** Expansion revenue -> satisfied customers -> advocacy -> referral pipeline -> new customers -> expansion revenue. This is why NRR is the compound interest of SaaS. Operationalize it by wiring advocacy triggers (NPS promoter -> reference request; closed expansion -> case study request) into the expansion system.
+Happy customers don't just retain; they compound growth through second-order revenue (referrals, references, case studies). **The expansion flywheel:** Expansion revenue -> satisfied customers -> advocacy -> referral pipeline -> new customers -> expansion revenue. This is why NRR is the compound interest of SaaS. Operationalize it by wiring advocacy triggers (NPS promoter -> reference request; closed expansion -> case study request) into the expansion system.
 
 For the referral ROI stats and the full advocacy playbook, see `references/advocacy-as-expansion-multiplier.md`.
 
@@ -273,11 +296,11 @@ For the referral ROI stats and the full advocacy playbook, see `references/advoc
 
 ## How to Use This Skill
 
-**"Their NRR is 102% — is that good?"**
-Check the stage. For EUR15-50M ARR, 102% is below median (typically 104-108%). Run the GRR diagnostic first — is this a churn problem masked by light expansion? Check NRR by segment; aggregate NRR hides segment-level problems.
+**"Their NRR is 102%: Is that good?"**
+Check the stage. For EUR15-50M ARR, 102% is below median (typically 104-108%). Run the GRR diagnostic first. Is this a churn problem masked by light expansion? Check NRR by segment; aggregate NRR hides segment-level problems.
 
 **"They want to improve NRR but don't know where to start"**
-Run the 90-Day Programme Phase 1 diagnostic. The answer is almost always one of: (a) GRR is too low, fix retention first; (b) pricing doesn't create natural expansion paths; (c) expansion is accidental — no signals, no ownership, no process.
+Run the 90-Day Programme Phase 1 diagnostic. The answer is almost always one of: (a) GRR is too low, fix retention first; (b) pricing doesn't create natural expansion paths; (c) expansion is accidental; no signals, no ownership, no process.
 
 **"CS team says they don't have time for expansion"**
 Segmentation problem. They're probably high-touching everyone. Build the three-tier coverage model (see cs-operations). Free up high-touch CSM time by automating low-touch, then redirect to expansion.
@@ -306,18 +329,10 @@ Use the GRR diagnostic bands + NRR benchmarks to quantify the gap. Frame the cos
 
 ## Related Skills
 
-- **cs-operations** — Health scoring, renewal management, onboarding (the plumbing this skill builds on)
-- **revops-handoffs** — CS-to-Sales handback mechanics
-- **revenue-operating-cadence** — Where expansion reviews sit in the meeting cadence
-- **revops-metrics** — GRR, NRR, expansion benchmarks by stage
-- **revops-forecasting** — Expansion pipeline forecasting and predictability
+- **cs-operations**: Health scoring, renewal management, onboarding (the plumbing this skill builds on)
+- **revops-handoffs**: CS-to-Sales handback mechanics
+- **revenue-operating-cadence**: Where expansion reviews sit in the meeting cadence
+- **revops-metrics**: GRR, NRR, expansion benchmarks by stage
+- **revops-forecasting**: Expansion pipeline forecasting and predictability
 
 > Built by [Neon Triforce](https://neontriforce.com)
-
----
-
-## What good looks like
-
-A great output runs the GRR-first diagnostic before any expansion design — a company at 115% NRR with 85% GRR is masking structural churn, and the answer is 'fix retention first,' not an expansion engine. It then selects among the five levers (pricing architecture first), maps signals to a weighted 0-100 Expansion Readiness Score with score-to-action bands, sizes whitespace across five dimensions, and defines the CS-to-Sales handback with SPICED context, ownership thresholds by deal size, and sourced/close credit split. Gaps get quantified against stage- and ACV-banded benchmarks with a cost-of-inaction figure.
-
-A mediocre output jumps straight to upsell plays without checking GRR, cites a single aggregate NRR benchmark regardless of stage, treats expansion as CSM heroics without scoring, ownership, or credit models, and produces recommendations with no baseline, targets, or programme phases.

@@ -1,7 +1,7 @@
 ---
 name: "data-enrichment"
 title: Data enrichment
-description: "B2B data enrichment strategy, provider evaluation, integration patterns, and quality management for revenue operations teams. Use when the user mentions data enrichment, lead enrichment, account enrichment, contact enrichment, ZoomInfo, Clearbit, Apollo, Clay, Cognism, Lusha, enrichment automation, enrichment workflows, firmographic data, technographic data, intent data, data append, enrichment API, enrichment coverage, data freshness, enrichment quality, or third-party data providers. Also trigger on 'our data is incomplete,' 'leads come in with no company info,' 'we need better data on our accounts,' 'enrichment isn't working,' or 'which enrichment tool should we use.' BOUNDARY: Covers enrichment STRATEGY, PROVIDER SELECTION, and INTEGRATION. For CRM-specific implementation, see revops-hubspot or revops-salesforce. For data governance, see revops-data-governance. For lead scoring that uses enriched data, see marketing-operations."
+description: "B2B data enrichment strategy, provider evaluation, integration patterns, and quality management for revenue operations teams. Use when the user mentions data enrichment, lead enrichment, account enrichment, contact enrichment, ZoomInfo, HubSpot Data Platform, Apollo, Clay, Cognism, Lusha, enrichment automation, enrichment workflows, firmographic data, technographic data, intent data, data append, enrichment API, enrichment coverage, data freshness, enrichment quality, or third-party data providers. Also trigger on 'our data is incomplete,' 'leads come in with no company info,' 'we need better data on our accounts,' 'enrichment isn't working,' or 'which enrichment tool should we use.' BOUNDARY: Covers enrichment STRATEGY, PROVIDER SELECTION, and INTEGRATION. For CRM-specific implementation, see revops-hubspot or revops-salesforce. For data governance, see revops-data-governance. For lead scoring that uses enriched data, see marketing-operations."
 category: RevOps
 ---
 
@@ -27,11 +27,11 @@ Data enrichment is the process of appending third-party firmographic, technograp
 
 | Provider | Database Size | Strength | Best For | Price Range |
 |----------|--------------|----------|----------|-------------|
-| **ZoomInfo** | 400M+ profiles (includes partial records) | Largest B2B database; global coverage; identity resolution | Enterprise teams with budget; global targeting | €€€€ |
-| **Apollo.io** | 270M+ contacts | Database + enrichment + engagement combined | SMB/mid-market; teams wanting all-in-one platform | €€ |
-| **Clearbit** (HubSpot) | 200M+ contacts | Real-time enrichment; technographics; clean API | HubSpot-native teams; tech companies | €€€ |
-| **Cognism** | 440M+ profiles (includes partial records) | European data; GDPR compliant; mobile numbers | European-focused teams; GDPR-sensitive orgs | €€€ |
-| **Lusha** | 150M+ contacts | Quick contact enrichment; browser extension | Individual reps; quick lookups | € |
+| **ZoomInfo** | 400M+ profiles (vendor-reported; includes partial records) | Largest B2B database; global coverage; identity resolution | Enterprise teams with budget; global targeting | €€€€ |
+| **Apollo.io** | 270M+ contacts (vendor-reported) | Database + enrichment + engagement combined | SMB/mid-market; teams wanting all-in-one platform | €€ |
+| **HubSpot Data Platform** | 200M+ contacts (vendor-reported; formerly Clearbit) | Real-time enrichment; technographics; HubSpot-native | HubSpot-native teams; tech companies. Note: Clearbit standalone discontinued 2024 | €€€ |
+| **Cognism** | 440M+ profiles (vendor-reported; includes partial records) | European data; GDPR compliant; mobile numbers | European-focused teams; GDPR-sensitive orgs | €€€ |
+| **Lusha** | 150M+ contacts (vendor-reported) | Quick contact enrichment; browser extension | Individual reps; quick lookups | € |
 | **Clay** | Aggregates 25+ sources | Orchestration layer; combines multiple providers | Teams wanting to layer/waterfall providers | €€ |
 | **6sense** | Intent + firmographic | Intent signals; account identification; predictive | ABM-heavy orgs; enterprise marketing | €€€€ |
 | **Demandbase** | Account-level intelligence | ABM platform; advertising + enrichment | Large marketing teams running ABM | €€€€ |
@@ -39,7 +39,7 @@ Data enrichment is the process of appending third-party firmographic, technograp
 ### Provider Selection Framework
 
 ```
-> *Operational template — example budget ranges. Actual costs depend on volume, provider mix, contract terms, and negotiated rates. Date-stamped Q1 2026.*
+> *Operational template: example budget ranges. Actual costs depend on volume, provider mix, contract terms, and negotiated rates. Date-stamped Q1 2026.*
 
 Budget < €500/month?
   → Apollo.io (best value all-in-one)
@@ -51,7 +51,7 @@ Budget €500-2,000/month?
 
 Budget €2,000-10,000/month?
   → ZoomInfo (broadest coverage)
-  → Clearbit (if HubSpot-native)
+  → HubSpot Data Platform (if HubSpot-native)
   → Cognism (if European focus)
 
 Budget >€10,000/month?
@@ -76,7 +76,7 @@ Record enters CRM
   → Provider 1 (primary): ZoomInfo or Apollo
       → If match: populate fields
       → If no match or partial: continue
-  → Provider 2 (fallback): Clearbit or Cognism
+  → Provider 2 (fallback): HubSpot Data Platform or Cognism
       → Fill remaining gaps
   → Provider 3 (specialist): Technographic data (BuiltWith, HG Insights)
       → Add technology stack data if relevant to ICP
@@ -84,9 +84,53 @@ Record enters CRM
 Tools like Clay automate this waterfall natively.
 ```
 
-**Why waterfall**: No single provider has 100% coverage. Published vendor claims range from 91-97% accuracy, but independent tests show real-world results of 55-80% depending on region, industry, and data freshness. Single-provider match rates typically land at 35-52% (BetterContact/Clay independent tests, 2025-2026). The waterfall method — querying 2+ providers in sequence — consistently achieves 85-95% combined match rates (Clay testing: 78%; BetterContact with 20+ sources: 85-95%).
+**Why waterfall**: No single provider has 100% coverage. Single-provider match rates typically land at 35-52% (Clay; BetterContact, 2025-2026). Vendor claims range from 91-97% accuracy, but real-world outcomes depend heavily on region, industry, and data freshness. The waterfall method (querying 2+ providers in sequence) consistently achieves higher combined coverage: Clay testing shows 78% email match (versus 42% Apollo alone, 38% Hunter alone); BetterContact with 20+ sources reports 85-95% (BetterContact, 2026; Clay documentation, 2025-2026).
 
-> **Important**: Provider match rates change frequently and vary by region (EMEA vs US vs APAC), industry, and company size. Always run a pilot with your actual data before committing to a provider. Date of benchmarks: Q1 2026.
+> **Important**: Provider match rates vary by region (EMEA versus US versus APAC), industry, and company size. Always run a pilot with your actual data before committing to a provider. Date of benchmarks: Q1 2026.
+
+### LLM-Based Enrichment (2026 Approach)
+
+Large language models can now extract data from unstructured sources (websites, LinkedIn profiles, news articles) at scale. Three operational patterns are emerging:
+
+**Pattern 1: Website Data Extraction**
+
+Use Claude API or GPT-4 to scrape and parse company websites for data vendors may miss:
+
+- Company description and mission statements (often outdated in third-party databases)
+- Product roadmap signals from websites or blog posts
+- Funding announcements (press releases, blog posts)
+- Key personnel (leadership pages)
+- Technology stack (from website headers, job postings)
+
+Orchestrate via n8n or Make: trigger on record creation, call Claude with a website URL, parse response, upsert to CRM. Cost: Claude API at roughly EUR 0.20-0.40 per enrichment call for full-page analysis (2026 pricing).
+
+**Pattern 2: Semantic Contact Matching**
+
+Use LLM embeddings for fuzzy matching when traditional email/domain matching fails:
+
+- Match on first name + company + title combination when email is missing
+- Identify account decision-makers by title semantic similarity ("VP Revenue" matches "Chief Revenue Officer")
+- Resolve person records across multiple data providers using embedding distance
+
+Integration: Clay now supports AI research agents; n8n can call embedding services (OpenAI, Anthropic) natively. Match confidence scores are probability-based, not vendor-opinionated.
+
+**Pattern 3: LLM-Driven Quality Assurance**
+
+Validate enriched data by asking an LLM to check consistency:
+
+- Does the company size match the industry (e.g. seed-stage biotech with 50 employees is plausible)?
+- Does the title + seniority combo make sense for decision-making authority?
+- Are funding stage and last round date logically consistent?
+
+Reduces garbage-in-garbage-out from downstream enrichment errors. Treat as a secondary quality gate, not a primary match source.
+
+**Tools supporting LLM enrichment** (as of Q2 2026):
+- Clay: AI research agents for website scraping and data extraction (production-ready, credits pricing)
+- Firecrawl: Browser automation for website data extraction (supports Claude integration)
+- Apify: Web scraping platform with structured data extraction (integrates with n8n)
+- n8n: Orchestration backbone; Claude and OpenAI nodes for LLM calls
+
+LLM enrichment excels at low-volume, high-context scenarios (account planning, ABM research). For high-volume automated enrichment, traditional vendor waterfall is still more cost-effective.
 
 ---
 
@@ -183,7 +227,7 @@ n> *Provider confidence scoring methodologies are proprietary. Treat confidence 
 
 Enrichment data decays. People change jobs, companies pivot, funding rounds happen.
 
-> *Operational template — recommended starting cadence. Adjust based on your measured data decay rate and use-case urgency.*
+> *Operational template: recommended starting cadence. Adjust based on your measured data decay rate and use-case urgency.*
 
 | Record Type | Re-Enrichment Cadence | Trigger |
 |------------|----------------------|---------|
@@ -217,19 +261,47 @@ Build automated quality checks:
 
 ### Key Rules for European Data
 
-- **Legitimate interest**: Most B2B enrichment relies on legitimate interest basis (not consent)
+- **Legitimate interest**: Most B2B enrichment relies on legitimate interest basis (not consent). As of October 2024 (CJEU rulings), this requires a documented three-part balancing test: purpose necessity, and data subject rights impact.
 - **Data minimisation**: Only enrich fields you actually use for scoring/routing/personalisation
 - **Right to erasure**: Must be able to delete enriched data on request
 - **Transparency**: Privacy policy must disclose use of third-party data providers
-- **Provider compliance**: Verify your enrichment provider is GDPR-compliant (Cognism is purpose-built for this)
+- **Provider compliance**: Verify your enrichment provider is GDPR-compliant (Cognism is purpose-built for this; HubSpot Data Platform and others offer DPA templates)
 
-### Practical Steps
+### Legitimate Interest Assessment (LIA)
+
+Before scaling enrichment on a legitimate interest basis, document a three-part balancing test in writing:
+
+1. **Purpose Test**: Define the legitimate business purpose (lead scoring, routing, personalisation, fraud prevention). Document why each enriched field is necessary for that purpose.
+2. **Necessity Test**: Justify why the data is necessary. Can you achieve the purpose without enrichment? Why not? (Genuine commercial gain, operational efficiency, risk mitigation all count.)
+3. **Data Subject Rights Impact**: Assess the impact on data subjects. Is enrichment visible to them? Can they object easily? Are you processing sensitive categories (criminal history, health, financial)?
+
+Write a one-page LIA summary before implementing enrichment at scale. This becomes your audit trail if an EU regulator asks. Cognism and other providers can provide LIA templates; adapt to your specific use case.
+
+### Article 14 Notification Workflow
+
+When enriching contact details from third-party sources (rather than collecting directly from the data subject), GDPR Article 14 requires notification within one month of collection or at first outreach, whichever is earlier.
+
+Implement this workflow:
+
+1. **Capture Enrichment Metadata**: For every enriched record, store: enrichment provider name, collection date (date you enriched), source category (purchased database, public records, inferred).
+2. **Notify within One Month**: Before sending a sales email or outreach message to an enriched contact, ensure you have provided Article 14 information. Options:
+   - Include enrichment source in the first email (transparency link in footer)
+   - Send a separate notification email upfront (slower but explicit)
+   - Use a preference center link where contacts can see what data you hold and its source
+3. **Right to Object**: Ensure every contact can easily object to further processing. Include an unsubscribe link and honour objections immediately (no delay).
+4. **Documentation**: Log notification dates per contact in your CRM (custom field: "Article_14_Notified__c" with a date stamp). This proves compliance in an audit.
+
+Non-compliance risk: EUR 10M or 2% of global revenue in fines; this is typically escalated only in large-scale breaches, but still matters for reputational and legal risk.
+
+### Practical Implementation Steps
 
 1. Document which fields are enriched and why (data mapping exercise)
-2. Ensure enrichment providers have DPAs (Data Processing Agreements) in place
-3. Include enrichment in your data retention policy
-4. Build "delete enriched data" capability for data subject requests
-5. Don't enrich personal data beyond what's needed for legitimate business purpose
+2. Write and maintain your Legitimate Interest Assessment (update when enrichment scope changes)
+3. Ensure enrichment providers have DPAs (Data Processing Agreements) in place
+4. Build Article 14 notification into your first-touch workflow (email/call templates must reference data source)
+5. Include enrichment in your data retention policy
+6. Build "delete enriched data" capability for data subject requests
+7. Don't enrich personal data beyond what's needed for legitimate business purpose
 
 ---
 
@@ -264,20 +336,12 @@ Always build a failed-enrichment queue:
 
 ## References
 
-*Benchmarks dated Q1 2026 unless noted. Vendor claims change — verify before purchasing.*
+*Benchmarks dated Q1 2026 unless noted. Vendor claims change; verify before purchasing.*
 
 - **Data decay rates**: Cognism (2.1% monthly = 22.5% annually); Cleanlist 2026 (22%); SignalHire (30%). Range: 22-30% annual decay.
 - **Waterfall enrichment methodology**: Clay waterfall enrichment documentation (clay.com/waterfall-enrichment); BetterContact Ultimate Guide 2026 (bettercontact.rocks/blog/waterfall-enrichment/).
 - **Waterfall match rates**: Clay independent testing: 78% email match (vs 42% Apollo alone, 38% Hunter alone). BetterContact with 20+ sources: 85-95%. Single provider alone: 35-52%.
 - **Cognism accuracy**: 97% accuracy guarantee; verified emails >93% deliverability; Diamond Data phone: 98% phone-verified. Stronger in EMEA; US/APAC data quality variable. (cognism.com/our-data)
-- **Provider comparison methodology**: Swordfish 2026 ZoomInfo accuracy audit; Sparkle.io 2026 Apollo experimental study; MarketBetter 2026 vendor reviews.
+- **Testing your providers**: No published methodology can replace a pilot with your actual data. Database composition, geography, industry, and company size all affect match rates dramatically. Before committing budget, run a 30-day trial enrichment against a sample of 100-500 records from your actual pipeline. Track match rate, field coverage, and cost per match.
 
 > Built by [Neon Triforce](https://neontriforce.com)
-
----
-
-## What good looks like
-
-A great output picks providers with a budget-and-geography decision tree rather than a generic vendor list, recommends a waterfall (2+ providers in sequence, targeting 85-95% combined match vs 35-52% single-provider), and specifies the integration pattern (real-time async on creation, nightly batch backfill, event-driven re-enrichment at MQL/opp creation) plus provenance fields (source, date, status, confidence) and freshness cadences. It quantifies with dated benchmarks and insists on piloting with the buyer's own data before committing.
-
-A mediocre output names ZoomInfo/Apollo/Clearbit without budget tiers or region fit, ignores match-rate reality versus vendor claims, skips the failed-enrichment queue, GDPR steps, and cost gates (don't enrich records that fail quality checks), and treats enrichment as a one-time append instead of a decaying asset needing re-enrichment rules.

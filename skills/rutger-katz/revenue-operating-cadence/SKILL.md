@@ -1,13 +1,13 @@
 ---
 name: "revenue-operating-cadence"
 title: Revenue operating cadence
-description: "Revenue operating cadence — meeting architecture, data pyramid, and board reporting that turns strategy into execution. Use when the user mentions operating cadence, meeting cadence, forecast calls, pipeline review, QBR, board meeting, board deck, monthly business review, sales standup, deal review, meeting architecture, meeting agenda, revenue ceremonies, or structuring revenue meetings. Also trigger when someone asks about board deck structure, running forecast calls, fixing meetings that waste time, or getting accountability. If someone says \"our meetings are status updates\" or \"the board keeps getting surprised\" or \"nothing gets done,\" activate this skill. BOUNDARY: Covers meeting structure and data inputs. For forecast methodology, see revops-forecasting. For metrics, see revops-metrics."
+description: "Revenue operating cadence: meeting architecture, data pyramid, and board reporting that turns strategy into execution. Use when the user mentions operating cadence, meeting cadence, forecast calls, pipeline review, QBR, board meeting, board deck, monthly business review, sales standup, deal review, meeting architecture, meeting agenda, revenue ceremonies, or structuring revenue meetings. Also trigger when someone asks about board deck structure, running forecast calls, fixing meetings that waste time, or getting accountability. If someone says \"our meetings are status updates\" or \"the board keeps getting surprised\" or \"nothing gets done,\" activate this skill. BOUNDARY: Covers meeting structure and data inputs. For forecast methodology, see revops-forecasting. For metrics, see revops-metrics."
 category: RevOps
 ---
 
 # Revenue Operating Cadence Framework
 
-The difference between scaling to €150M and stalling at €20M isn't forecasting accuracy—it's **operating rhythm**. Your cadence is the machine that turns strategy into deals into board updates. Get it wrong and you're firefighting every week. Get it right and revenue becomes predictable.
+The difference between scaling to €150M and stalling at €20M isn't forecasting accuracy; it's **operating rhythm**. Your cadence is the machine that turns strategy into deals into board updates. Get it wrong and you're firefighting every week. Get it right and revenue becomes predictable.
 
 ## The Core Principle: Data Pyramid
 
@@ -64,7 +64,7 @@ Before you schedule it, answer these:
 
 ```
 Rep 1: "AWS deal stuck on legal review. Need legal in Wed meeting."
-Rep 2: "Acme expanded scope—moving to €650k. Closes Friday."
+Rep 2: "Acme expanded scope, moving to €650k. Closes Friday."
 Rep 3: "Nordic Bank went dark for 3 days. Need help re-engaging."
 ```
 
@@ -77,7 +77,7 @@ Rep 3: "Nordic Bank went dark for 3 days. Need help re-engaging."
 
 **Pre-meeting packet (built by RevOps):**
 - Pipeline stage movement report (last 7 days)
-- Deal aging by stage (red flag if >14 days without movement)
+- Deal aging by stage (red flag if over 14 days without movement; Rework, Outreach, 2026)
 - Forecast accuracy vs. prior week
 - Win/loss summary (reasons why deals close/slip)
 
@@ -290,7 +290,7 @@ SLIDE 10: Asks & Decisions Needed
 - No more than 3 metrics per slide
 - Connect every number to strategy
 
-**RevOps role:** Build the data foundation. Don't own the narrative—that's the CEO/CRO.
+**RevOps role:** Build the data foundation. Don't own the narrative; that's the CEO/CRO role.
 
 ---
 
@@ -321,18 +321,96 @@ SLIDE 10: Asks & Decisions Needed
 
 ---
 
+## Async-First Operating Cadence (For Distributed Teams)
+
+Not every org can do synchronous weekly calls. Here's how to run the cadence async-first without losing accountability.
+
+**The structure:**
+
+| Ceremony | Sync or Async | How to Execute |
+|---|---|---|
+| **Daily standup** | Async | Slack thread. Each rep posts: deal wins today, blockers needing escalation, one forecast update. No meeting. |
+| **Weekly pipeline review** | Async (decision sync optional) | RevOps posts pre-built report (stage movement, deal aging, forecast accuracy) to a Slack Canvas by Monday 9am. Team comments on risky deals inline. Friday 4pm: 30-minute optional sync for live questions, or decisions log in Slack. |
+| **Weekly forecast roll-up** | Sync (compressed to 15 min) | CRO reviews async comments. Sync meeting: confirm/adjust forecast, flag gaps, assign actions only. Pre-read deck posted 24h before. |
+| **Monthly business review** | Sync (90 min, optional pre-read) | One-hour async prep (deck in Slack Canvas, team adds context/comments), then 60-minute meeting. No slide reading in the room; straight to decisions. |
+| **Quarterly QBR** | Sync | Full day required. Too many decisions to log async. But pre-reads are non-negotiable. |
+
+**Slack-native decision logging:**
+
+- Create a Slack workflow that captures decisions at the end of each async review: "decision name | owner | due date | success metric | status (open/closed)". This thread becomes the accountability log.
+- Pin the previous week's action log at the top of the weekly review thread. Start every review by checking what was completed, not repeating open actions.
+
+**Recorded updates for async-first companies:**
+
+- Weekly forecast: CRO records 5-minute video update ("Here's where we stand vs. plan, here's the gap, here's what we're doing about it"). Posts to Slack. Team watches at their own pace. Async replies in the thread. Sync call only if someone needs live clarification.
+- Quarterly QBR: Board prep video (10 minutes) posted to Slack 48 hours before board call. Board watches async, posts questions. Call becomes Q+A and decisions, not narrative delivery.
+
+**When async breaks down:**
+
+- If more than 20% of team members haven't contributed to an async decision thread by the deadline, convert to sync. Async assumes engagement; if it's not happening, the problem is broader (culture, tooling, people).
+- Deal escalations always get a 24-hour sync slot; don't park live crisis decisions in Slack threads overnight.
 
 ---
 
-## Norton Framework Additions (Source: Kyle Norton, Revenue Leadership Podcast, 2026)
+
+
+## 2026 Operating Cadence: Platform Architecture & AI Coaching
+
+**New in 2026: Real-Time Data Foundations**
+
+Top-performing revenue teams are moving beyond batch-based weekly reporting. The cadence now sits on three new infrastructure pieces.
+
+### Real-Time Dashboards vs. Batch Cadence
+
+**The traditional model:** Weekly forecast meeting with pre-built reports.
+
+**The 2026 model:** Always-on dashboards with scheduled decision gates.
+
+- **HubSpot Data Hub** (launched October 2025) enables lifecycle stage tracking at the company level with backfill, meeting-based workflow triggers (Q1 2026), and native AI capabilities through Breeze agents (Prospecting Agent $1.00 per recommended lead; Customer Agent $0.50 per resolved conversation, April 2026). Operations teams now surface anomalies in Slack 24 hours before the weekly call.
+
+- **Salesforce Agentforce** (current 2026 standard) replaces Flow-based automation with agentic workflows. Workflow Rules and Process Builder reach end of support 31 December 2025. Data 360 (formerly Data Cloud) serves as the intelligence foundation; Intelligent Context reads unstructured content for deal coaching. Agentforce Revenue Management replaces CPQ as the forward path.
+
+- **Real-time signalling:** Reverse ETL platforms (Segment, Hightouch, Census at 250+ integrations each) sync Salesforce pipeline changes into Slack, email alerts, and BDR routing rules within minutes. No more "I didn't know we lost that deal until Tuesday."
+
+**Cadence implication:** The weekly forecast meeting becomes the decision layer, not the data layer. The data is current. The meeting is about what we're going to DO about it.
+
+### Reverse ETL: Closing the Feedback Loop
+
+Three platforms dominating the space:
+
+| Platform | Capability | Use Case |
+|---|---|---|
+| **Hightouch** | 250+ integrations, warehouse-native, Slack alerts | Real-time lost-deal notifications to SDR team; stalled-deal escalations to managers |
+| **Census** | Composable CDP, zero-copy standard for top-end shops | Churn prediction scores written back to Salesforce; lead routing rules updated hourly |
+| **Segment** | Event streaming + destination management | First-party data governance; unify on-prem + cloud signals into one audience platform |
+
+**Why it matters:** Without reverse ETL, deal reviews surface problems a week after they happen. With it, the team acts the day a deal stalls or a champion leaves.
+
+### AI Coaching Architecture (Beyond Tool Selection)
+
+This is where operating discipline meets AI. One section on discipline isn't enough; it needs to run through the cadence architecture itself.
+
+**AI-Assisted Deal Scoring and Anomaly Detection**
+
+- **Predictive stage progression:** Forecast models no longer rely on rep input alone. Combine rep forecast + pipeline velocity data + contact engagement (email opens, meeting attendance) + win-rate by stage. When actual velocity deviates from the model, surface the deal in the weekly review for investigation.
+
+- **Coaching automation:** Use Gong, Clari, or Revenue Grid AI to identify which reps' call patterns correlate with higher close rates. Surface these patterns during one-on-ones, not as criticism but as "here's what the data shows top closers doing." (52% of RevOps teams run AI in forecasting; 44% in lead scoring per Skaled, 2026; only 8% fully autonomous workflows.)
+
+- **Churn prediction at the customer level:** Combine AI-scored churn risk (NLP on support tickets + usage signals + champion email frequency) with revenue data. The monthly business review now flags "top 5 expansion opportunities" and "top 10 churn risks" in the same dashboard, not separately.
+
+**Operational prerequisite:** Data quality gates. Gartner reports 60% of AI projects abandoned over non-agent-ready data (2026). If your CRM stage-change timestamps are garbage or your call recordings aren't tagged, AI adds no value. The discipline comes first.
+
+---
+
+## Operating Cadence Frameworks (Discipline + Platform Architecture)
 
 ### Closed-Loop Feedback System
 
-The cadence must flow in both directions — information up AND learning down.
+The cadence must flow in both directions: information up and learning down.
 
-**Upward Flow (existing):** Activity → Team Metrics → Leadership Review → Board
+**Upward Flow (existing).** Activity feeds to Team Metrics; then Leadership Review; then Board.
 
-**Downward Flow (add this):** Board decisions → Strategy adjustments → Manager coaching priorities → Rep behavior change → Activity patterns
+**Downward Flow (add this).** Board decisions guide Strategy adjustments; inform Manager coaching priorities; shape Rep behavior change; influence Activity patterns.
 
 **Decision Authority Architecture:**
 Every meeting in the cadence should have a clear decision owner:
@@ -342,26 +420,28 @@ Every meeting in the cadence should have a clear decision owner:
 - Monthly review: VP decides strategic adjustments
 - Quarterly: CRO/Board decides investment and structural changes
 
-**Coaching Integration:**
-Coaching doesn't happen separately — it happens DURING reviews. Pipeline review = coaching moment. Forecast review = strategic coaching moment. The cadence IS the coaching system.
+**Coaching Integration.**
+Coaching doesn't happen separately; it happens during reviews. Pipeline review equals coaching moment. Forecast review equals strategic coaching moment. The cadence is the coaching system.
 
-### Discipline as AI Prerequisite (Donovan, E61)
+### Discipline as AI Prerequisite (Jeremy Donovan, E61)
 
 The #1 differentiator between top performers and average performers using AI is NOT which tools they use. It's operating discipline.
 
-**Key finding:** Top vs. average performers adopt the same AI use cases in roughly the same order. Same tools, same use cases — the difference is operating discipline.
+**Key finding:** Top vs. average performers adopt the same AI use cases in roughly the same order. Same tools, same use cases; the difference is operating discipline.
 
-**Donovan's one-play doctrine:** "If I could only run one play: incredibly disciplined weekly deal reviews."
+**Donovan's one-play doctrine:** "If I could only run one play: incredibly disciplined weekly deal reviews." (The Revenue Leadership Podcast E61, January 2026)
 
-**CRO screening insight:** Donovan screens CRO candidates for Insight Partners portfolio companies. #1 factor: operating rhythm. He back-channels former teams to find out what it was actually like to work for that person.
+**CRO screening insight:** Donovan, EVP Sales + CS at Insight Partners, screens CRO candidates for 500 B2B SaaS portfolio companies. #1 factor he looks for: operating rhythm. He back-channels former teams to find out what it was actually like to work for that person.
 
-**Research backing:** K. Anders Ericsson's work on deliberate practice — feedback-rich environments with tight iteration loops produce mastery faster than anything else. AI amplifies the feedback loop. But you need the loop first.
+**Research backing:** K. Anders Ericsson's work on deliberate practice shows feedback-rich environments with tight iteration loops produce mastery faster than anything else. AI amplifies the feedback loop. But you need the loop first.
 
 **Assessment question:** Before any AI investment conversation, ask: "How tight is your operating rhythm?" This should precede "Which AI tool should we buy?"
 
 **Diagnostic implication:** If a client's weekly deal reviews aren't disciplined, no AI tool will fix their forecast accuracy. Fix the cadence before investing in AI.
 
-### The Predictability Playbook (Canaani, E64)
+**Source:** https://www.therevenueleadershippodcast.com/p/gtm-strategy-5-insights-from-500
+
+### The Predictability Playbook (Aviv Canaani, E64)
 
 A starting template for leaders who want to build predictable revenue operations.
 
@@ -369,16 +449,18 @@ A starting template for leaders who want to build predictable revenue operations
 1. Directors and VPs must build predictable models with conversion rates, capacity constraints, and cost per output
 2. Growth owns top-of-funnel math
 3. RevOps owns instrumentation
-4. Sales knows exactly: how many meetings they're getting this quarter + what they need to convert
+4. Sales knows exactly how many meetings they're getting this quarter and what they need to convert
 
-**Datarails proof point:**
-- Projected new ARR within 5% margin of error, three out of four quarters
-- Sales cycle: 30-45 days (known and modelled)
+**Canaani's evidence from Datarails (Owner.com podcast E64, March 2026):**
+- Sales cycle modelled and disciplined: 30-45 days
 - Every stage conversion rate tracked and used for planning
+- CRO approach: build the model bottom-up from actual productivity, not top-down from board targets
 
 **The principle:** Build the system first, staff it second, let the math do the recruiting for you.
 
-**Cadence integration:** The predictability playbook is what the weekly forecast and monthly business review SHOULD produce. If your cadence doesn't generate these numbers reliably, the cadence is broken — not the forecast methodology.
+**Cadence integration:** The predictability playbook is what the weekly forecast and monthly business review should produce. If your cadence doesn't generate these numbers reliably, the cadence is broken, not the forecast methodology.
+
+**Source:** https://www.therevenueleadershippodcast.com/p/my-team-drives-4x-revenue-per-ae
 
 ### Operating Rhythm Assessment (new diagnostic tool)
 
@@ -387,11 +469,11 @@ Add this to the start of any cadence design engagement:
 | Dimension | Score 1 (Weak) | Score 3 (Adequate) | Score 5 (Strong) |
 |-----------|---------------|-------------------|-----------------|
 | **Deal review frequency** | Ad-hoc or monthly | Weekly but inconsistent | Weekly, never missed, structured |
-| **Pre-meeting data** | None — people wing it | Some data pulled manually | Automated packet delivered 24h before |
+| **Pre-meeting data** | None, people wing it | Some data pulled manually | Automated packet delivered 24h before |
 | **Decision logging** | No actions recorded | Actions noted but not tracked | Actions logged, owners named, reviewed next meeting |
-| **Forecast accuracy** | ±25%+ | ±15-20% | ±5-10% |
-| **Cross-functional sync** | Marketing/Sales don't talk | Monthly alignment meeting | Bi-weekly funnel review with shared metrics |
-| **Coaching integration** | Coaching separate from reviews | Some coaching in reviews | Pipeline review IS the coaching system |
+| **Forecast accuracy** | ±25%+ (practice-based) | ±15-20% (practice-based) | ±5-10% (Forrester, Optifai, 2026) |
+| **Cross-functional sync** | Marketing and Sales don't talk | Monthly alignment meeting | Bi-weekly funnel review with shared metrics |
+| **Coaching integration** | Coaching separate from reviews | Some coaching in reviews | Pipeline review is the coaching system |
 
 **Scoring:** 24-30 = ready for AI investment. 15-23 = fix cadence first. <15 = operating cadence rebuild before anything else.
 
@@ -419,11 +501,11 @@ Add this to the start of any cadence design engagement:
 A structured alternative to the 40-slide board deck. Five questions, one page, ten minutes.
 
 **The 5 Questions:**
-1. **Are we on track?** — Current quarter vs plan. Actual pipeline value, weighted pipeline, commit vs target. One number, one trend line. No spin.
-2. **Why?** — Win rate by segment and motion. What's converting, what isn't. If win rate dropped, name top 3 reasons from loss analysis.
-3. **What changed?** — Actions taken this quarter based on data. Not plans. Experiment results, process changes, measured impact.
-4. **What do we need?** — Resource or investment asks with projected ROI. Every ask tied to a specific conversion gap or capacity constraint.
-5. **What's the risk?** — Top 3 risks to hitting plan. Concentration risk, pipeline gap timing, churn signals. Be specific.
+1. **Are we on track?** Current quarter vs plan. Actual pipeline value, weighted pipeline, commit vs target. One number, one trend line. No spin.
+2. **Why?** Win rate by segment and motion. What's converting, what isn't. If win rate dropped, name top 3 reasons from loss analysis.
+3. **What changed?** Actions taken this quarter based on data. Not plans. Experiment results, process changes, measured impact.
+4. **What do we need?** Resource or investment asks with projected ROI. Every ask tied to a specific conversion gap or capacity constraint.
+5. **What's the risk?** Top 3 risks to hitting plan. Concentration risk, pipeline gap timing, churn signals. Be specific.
 
 **Data prerequisites:**
 - Pipeline health: weighted pipeline by stage, coverage ratio by segment, stage velocity trends
@@ -435,11 +517,3 @@ A structured alternative to the 40-slide board deck. Five questions, one page, t
 **The framework:** 10-minute defence → 30 minutes to prepare → board gets answers immediately → CRO leads the conversation → ends with clear decisions → trust compounds.
 
 > Built by [Neon Triforce](https://neontriforce.com)
-
----
-
-## What good looks like
-
-Great output designs each ceremony against the 7-question framework — every meeting names its decision, required participants, pre-read delivered 24 hours ahead, and logged actions with owners and due dates — layered on the data pyramid so daily activity data feeds weekly forecasts, monthly reviews, and a narrative-led 8-10 slide board deck (or the 10-minute five-question board defence). The Operating Rhythm Assessment is scored honestly before layering anything new, and coaching happens inside the reviews, not beside them.
-
-Mediocre output is a calendar of status meetings: no pre-reads, forecasts negotiated instead of analysed, 40-metric dashboard theater, actions decided Monday and forgotten Wednesday, and a 40-slide board deck that leads with data instead of narrative. The cadence exists on paper but produces no decisions, so the board keeps getting surprised.

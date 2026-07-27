@@ -2,7 +2,7 @@
 name: "call-scorecards"
 title: Call scorecards
 description: "Use this skill when sales call quality is inconsistent, coaching feedback is vague, reps and managers disagree on what a good call is, or the user asks to \"build a call scorecard\", \"score this call\", \"review my rep's calls\", or \"make coaching more consistent\". It builds behavior-based scorecards for each key conversation type (prospecting, discovery, demo, pricing, close) and uses them to score real calls, localize where reps get stuck, and run chunked practice. Also fires when the user pastes a call transcript and wants it graded."
-category: Coaching
+category: Sales
 ---
 
 Use this when nobody can say precisely what a good call looks like. A scorecard turns "what good looks like" into observable, gradeable behaviors per call type, so scoring, coaching, and practice all point at the same standard. The output is a scorecard per key conversation, a scoring cadence, and — when a transcript is supplied — a scored call with evidence per line item.
