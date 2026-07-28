@@ -1,6 +1,6 @@
 ---
 name: Danni Chen
-avatarUrl: "https://media.licdn.com/dms/image/v2/D5603AQFBs_mUQ28V7w/profile-displayphoto-scale_400_400/B56ZicmS_xHUAo-/0/1754973942146?e=1786579200&v=beta&t=wHamTAtiaqwQFSEP4zq_o2euFymMUvnZ-dxPjeXe_qo"
+avatarUrl: "https://avatars.githubusercontent.com/yihan108"
 title: "Head of Product & GTM, AI"
 linkedinUrl: "https://www.linkedin.com/in/dannichen1/"
 companyDomain: gendigital.com
