@@ -17,16 +17,16 @@ Runs before the draft, on every contact in a batch. Produces a premise line per 
 
 A cold touch is what is left after the bridge search fails. It is never the default.
 
-## The four lanes
+## What the lane buys you
 
-Classify the recipient before writing anything. The lane sets the opener, the ask, and the trust rung.
+Classify the recipient before writing anything, using the four categories in `outreach-4-categories`. This skill adds what each lane licenses:
 
-| Lane | They know you because | Opener stands on | Ask may reach |
-|---|---|---|---|
-| **Inbound** | they raised a hand | their own action, quoted | the meeting |
-| **Postbound** | they engaged your content, no hand raised | the thing they engaged | a light question |
-| **Bridge** | something real connects you, and they may not know it | the bridge, as dated fact | one rung above cold |
-| **Cold** | nothing connects you | an unscrapeable line about their business | the smallest yes |
+| Lane | Opener stands on | Ask may reach |
+|---|---|---|
+| **Inbound** | their own action, quoted | the meeting |
+| **Postbound** | the thing they engaged | a light question |
+| **Bridgebound** | the bridge, as dated fact | one rung above cold |
+| **Outbound (cold)** | an unscrapeable line about their business | the smallest yes |
 
 Cold is a legal lane. It is legal **declared**, after the search, not by default.
 
@@ -65,9 +65,9 @@ Cold declares the search instead of a rung: `rungs 1-6 checked, none returned`, 
 
 The best operator reads the number and the date on the row, never the status word. A warm-account label often has no meaningful floor behind it, so a trivial historical order can carry the same badge as your largest customer, and revenue booked in another region or through a reseller is not warmth with the buyer in front of you.
 
-Two mediocre versions recur. The first searches one surface, finds nothing, and calls the account cold: six silences make a declaration, one silence makes an assumption. The second bridges the account while addressing a stranger, which is a bridge to the company and a cold approach to the person. Name which you have.
+Two mediocre versions recur. The first searches one surface, finds nothing, and calls the account cold: six silences make a declaration, one silence makes an assumption. The second bridges the account while addressing a stranger, which is a bridge to the company and a cold approach to the person.
 
-The output is good when every staged contact carries a premise line whose source exists, whose date is inside its window, and whose lane matches its rung, and when the count of cold declarations is said out loud. A batch where everything is cold and no rung was named is unsearched, not finished.
+The output is good when every premise line's source exists, its date is inside its rung's window, and its lane matches its rung, and when the count of cold declarations is said out loud. A batch where everything is cold and no rung was named is unsearched, not finished.
 
 ## Rules
 
@@ -81,6 +81,6 @@ The output is good when every staged contact carries a premise line whose source
 
 ## Combines with
 
-The four lanes are **Alex Vacca's `outreach-4-categories`**, restated here with the two columns this skill needs: what the opener stands on, and how high the ask may reach. His `bridgebound-*` skills are the trigger inventories to reach for once a lane is chosen. Ordering owes to **Tim Yakubson's `b2b-cold-email-copywriting`** (list before copy) and **Jorge Macias' `track-contact-job-changes`** (propose, then confirm).
+The four categories are **Alex Vacca's `outreach-4-categories`**; load it for the definitions, and his `bridgebound-*` skills for the trigger inventories once a lane is chosen. Ordering owes to **Tim Yakubson's `b2b-cold-email-copywriting`** and **Jorge Macias' `track-contact-job-changes`**.
 
-What is mine is the ladder, the premise line, and the rule that cold is declared after a failed search rather than assumed. For a full relationship-graph implementation with confidence scoring and multi-hop paths, use **Din Arbel's `warm-intro-intelligence`**; this skill is the light pre-draft pass for teams that will not stand one up.
+Mine is the ladder, the premise line, and the declared-cold rule. For a full relationship-graph implementation with confidence scoring and multi-hop paths, use **Din Arbel's `warm-intro-intelligence`**; this is the light pre-draft pass instead.
