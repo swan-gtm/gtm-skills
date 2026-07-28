@@ -47,7 +47,7 @@ Five checks first. Any failure is a rewrite:
 
 1. Delete the opener. Does it still make sense? Then the personalization was decoration.
 2. Could this exact message go to another company this week? Then it is a blast in costume.
-3. One ask. Sixty to a hundred and ten words, follow-ups shorter, subject two to five words and lowercase.
+3. One ask, follow-ups shorter than the last, subject two to five words and lowercase.
 4. Is the proof a number or a name? "Helps teams like yours" is not proof.
 5. Read it as the recipient with a full inbox. Any reason to reply beyond politeness?
 
@@ -60,6 +60,12 @@ The best reviewer names which move is missing rather than what the words got wro
 The output is good when the recipient could not have received it from anyone else that week, and when a colleague forwarded the thread would understand it cold.
 
 The gate only improves if replies feed back into it. Log the winning move on every reply and promote the highest-yield opener once you have five: `references/reply-autopsy.md`.
+
+## Combines with
+
+**Alex Vacca's `sdr-outbound-rules`** owns the hygiene floor: word count, one CTA, no bullets, which frameworks are allowed. Run it first and treat it as settled. This skill scores the thing hygiene cannot see, whether a stranger has a reason to answer, which is why a draft can clear every rule there and still fail here.
+
+**`bridge-before-cold`** runs before both and decides what the opener stands on.
 
 ## Rules
 
