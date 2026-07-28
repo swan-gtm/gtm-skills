@@ -6,4 +6,6 @@ linkedinUrl: "https://www.linkedin.com/in/dannichen1/"
 companyDomain: gendigital.com
 ---
 
-Fifteen years running marketing and growth for high-growth SaaS — VP Growth at Yellow.ai ($35M→$75M ARR), Growth Director at LeanTaaS ($70M→$120M), GTM at Payoneer through exit — and then 0→1 on an AI-native product holding the product decisions and the go-to-market decisions at the same time. That seam is what my skills encode: organizations can still specialize, but product and market decisions can no longer be made by separate people handing work down a funnel. I advise early-stage AI companies on exactly that.
+Yellow.ai, $35M→$75M ARR. LeanTaaS, $70M→$120M. Payoneer, through exit. Then 0→1 on an AI-native product, holding the product decisions and the go-to-market decisions at the same time.
+
+I advise early and mid-stage companies on both halves of that problem: proving the PMF is real, then building the engine that scales it. Most GTM advice fails because it comes from one side of the line — marketers who can't change the product, product people who can't sell it. These skills are what I run from both sides.
