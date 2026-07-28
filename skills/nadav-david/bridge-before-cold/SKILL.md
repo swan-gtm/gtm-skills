@@ -79,4 +79,8 @@ The output is good when every staged contact carries a premise line whose source
 
 ---
 
-Adapted with thanks from the trigger and outreach-category taxonomies in this library by Alex Vacca, Tim Yakubson, and Jorge Macias. The lane table and the ladder are mine. For a deeper relationship-graph implementation with confidence scoring, see `warm-intro-intelligence` by Din Arbel.
+## Combines with
+
+The four lanes are **Alex Vacca's `outreach-4-categories`**, restated here with the two columns this skill needs: what the opener stands on, and how high the ask may reach. His `bridgebound-*` skills are the trigger inventories to reach for once a lane is chosen. Ordering owes to **Tim Yakubson's `b2b-cold-email-copywriting`** (list before copy) and **Jorge Macias' `track-contact-job-changes`** (propose, then confirm).
+
+What is mine is the ladder, the premise line, and the rule that cold is declared after a failed search rather than assumed. For a full relationship-graph implementation with confidence scoring and multi-hop paths, use **Din Arbel's `warm-intro-intelligence`**; this skill is the light pre-draft pass for teams that will not stand one up.
