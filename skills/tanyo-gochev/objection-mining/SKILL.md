@@ -36,7 +36,9 @@ Classify before you respond. The same words carry different categories: "too exp
 
 They're deferrals, not rejections — and they're the most commonly discarded. Record the stated reason and the stated date, then come back at that date with something new. A "not now" that gets worked converts at a rate that embarrasses most cold sequences.
 
-Which means: **"not interested" is not "stop contacting me."** It's a signal that the buying window is shut, not an exit. Slow the cadence and keep going. The only exits are an explicit request to stop and a hard unsubscribe.
+Which means: **"not interested" is not "stop contacting me."** It's a signal that the buying window is shut, not an exit. Slow the cadence and keep going.
+
+A direct opt-out is the opposite case and gets no interpretation. "Stop", "unsubscribe", "remove me", "take me off your list" — that contact comes out of every sequence on the spot and goes onto the suppression list permanently. It is not a cadence to slow, not an objection to classify, and not a thread to close with one last message.
 
 ## Pre-handle upstream
 
@@ -55,5 +57,6 @@ Good output is ranked by how often the objection actually occurs, quotes the pro
 - MUST classify each objection by category before writing any response.
 - MUST rank by observed frequency, using real quotes.
 - MUST name where each objection should be pre-handled upstream.
+- MUST honour a direct opt-out — "stop", "unsubscribe", "remove me" — immediately and permanently: suppression-list the contact and remove them from every sequence. Never slow the cadence instead, never send a closing message.
 - NEVER treat a soft "no" as an exit from follow-up.
 - NEVER answer a fit or trust objection with a discount.
