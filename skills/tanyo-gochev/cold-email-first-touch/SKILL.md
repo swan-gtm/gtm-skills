@@ -1,9 +1,10 @@
 ---
-name: cold-email
-title: Cold email
+name: cold-email-first-touch
+title: Cold email first touch
 description: |
-  Use this skill when writing a cold email to someone who has never heard of you — a first touch, a
-  follow-up inside a cold sequence, a subject line, or a batch of messages off a list. Produces
+  Use this skill when writing the first cold email to someone who has never heard of you — that
+  opening touch, its subject line, the follow-ups threaded behind it, or a batch of first touches
+  off a list. Produces
   copy built to earn a reply rather than close a deal, with the deliverability constraints treated
   as writing rules rather than an infrastructure problem. Trigger phrasings: "write a cold email",
   "cold outreach", "prospecting email", "outbound email", "email these leads", "SDR email",
