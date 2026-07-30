@@ -43,6 +43,7 @@ skills/
       SKILL.md             # the skill — portable, tool-agnostic
       swan.md              # optional — Swan-specific execution layer
       references/          # optional — deeper material the skill routes to
+      examples/            # optional — finished outcomes, shown as a slideshow on gtmskills.com
 ```
 
 The folder name is the skill's permanent identity. Categories, tags, and everything else live in frontmatter.

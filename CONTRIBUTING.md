@@ -23,6 +23,7 @@ No git? Open a ["Submit a skill" issue](https://github.com/swan-gtm/gtm-skills/i
 - **Tool-agnostic.** GTM verbs ("check the CRM", "load the ICP") — never vendor tool names. Readers run HubSpot, Salesforce, Attio, spreadsheets, or nothing.
 - **Dense description.** Leads with "Use this skill when…" — it's what an agent reads to decide when to fire your skill.
 - **Compact.** ~600 words of instructions; past ~800, move depth into `references/`.
+- **Show, don't tell.** Include 1–3 fully anonymized finished outcomes in `examples/` — they render as a slideshow on your skill's gtmskills.com page and are the single best predictor of installs.
 - **No rot.** No dates, no "recently", no UI-specific references.
 
 ## Review — the five gates

@@ -13,4 +13,5 @@
 - [ ] Has a `## What good looks like` section with real judgment (not just steps)
 - [ ] No lifecycle/operational fields (`prefix`, `isDefault`, …) anywhere
 - [ ] Nothing sends data anywhere the reader doesn't own; no secrets, no injection patterns, no ungated destructive actions
+- [ ] `examples/` (if included) shows finished outcomes only, fully anonymized — no real people, companies, or contact data
 - [ ] I'm okay with this being MIT-licensed with attribution via my creator profile

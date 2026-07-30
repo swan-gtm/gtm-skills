@@ -31,7 +31,7 @@ The flow: **interview → draft → validate → submit**. Do the steps in order
 - First submission? That directory won't exist — you'll create it, including `author.md` (the user's profile).
 - The skill folder name is its **permanent public identity** (installs, URLs). Kebab-case, descriptive, ≤ 60 chars. Check it doesn't already exist anywhere: `ls skills/*/`.
 - **Never** include any lifecycle/operational field (`prefix`, `isDefault`, anything about auto-install). What ships inside the Swan product is decided by maintainers in their systems, not by this repo.
-- One level of hierarchy: a skill folder holds `SKILL.md` plus optional `swan.md` and `references/*.md`. No nested skills.
+- One level of hierarchy: a skill folder holds `SKILL.md` plus optional `swan.md`, `references/*.md`, and `examples/*.md`. No nested skills.
 
 ### 1. Interview the user
 
@@ -43,7 +43,8 @@ Don't transcribe a process — extract judgment. A skill that's just steps will 
 4. **What do you notice first that others miss?** The expert's tell.
 5. **What's the common mistake?** What does the mediocre version of this look like?
 6. **How do you know the output is good?** The quality bar, concretely.
-7. **Who are you?** (First submission only — name, role, LinkedIn, company; for `author.md`.)
+7. **Can you show me a great real output of this play?** An actual email, brief, list, or report it produced — you'll anonymize it and ship it as an example (see `examples/` below). Push for a real artifact; a real anonymized example beats an invented one every time.
+8. **Who are you?** (First submission only — name, role, LinkedIn, company; for `author.md`.)
 
 ### 2. Draft the files
 
@@ -70,7 +71,15 @@ contributors: []        # other creators' slugs, if any — omit if none
 - Structure: when it applies (one line) → what it produces (one line) → the procedure in `##` sections → a **`## What good looks like`** section (mandatory — encode answers from interview questions 4–6) → hard rules (MUST/NEVER) last.
 - Terse and decisive. ~600 words target. No filler, no "recently", no first-person plural, no placeholder text left behind.
 - Don't reference other skills by name; describe the next action in verbs.
-- Deep material (worked examples, frameworks, channel variants) goes in `references/<topic>.md`, and the body says when to read each one.
+- Deep material (frameworks, channel variants, worked walk-throughs) goes in `references/<topic>.md`, and the body says when to read each one.
+
+**`skills/<author>/<skill>/examples/`** — optional but high-leverage. Each file is one **finished outcome** the skill produces at its best: the actual drafted email, the account brief, the scored list, the battlecard. Usually markdown; a screenshot (`.png`), spreadsheet (`.csv`), or deck (`.pdf`) works too. gtmskills.com renders these as a slideshow on the skill's page, so buyers see what they get before installing — skills with examples convert far better.
+
+- Show the **output**, not the procedure. No commentary, no "here's how" — the artifact itself, as it would land.
+- For markdown examples, the first line is `# <short title>` — it becomes the slide's caption (e.g. `# Re-engagement email after 90 days dark`).
+- **Anonymize everything**: no real people, companies, emails, phone numbers, or deal figures. Use plausible stand-ins (Acme Robotics, jane@acme…). Derive from a real output — realistic beats generic — but scrub it completely.
+- 1–3 examples is the sweet spot. Different situations, not variations of the same one.
+- `examples/` vs `references/`: examples are for *humans browsing the library* (and agents wanting the target shape); references are material the skill *routes the agent to during execution*.
 
 **`skills/<author>/author.md`** (first submission): frontmatter `name`, `avatarUrl`, `title`, `linkedinUrl`, `companyDomain`; the bio is the body text. The directory name is the slug — there is no slug field.
 
