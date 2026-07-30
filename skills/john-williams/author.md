@@ -1,6 +1,6 @@
 ---
 name: John Williams
-avatarUrl: https://ahmeego.com/shared/authors/john-williams-160.webp
+avatarUrl: https://www.gtmskills.com/authors/john-williams.jpg
 title: Founder, AHMEEGO
 linkedinUrl: https://www.linkedin.com/in/johnmichaelwilliams
 companyDomain: ahmeego.com

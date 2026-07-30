@@ -1,6 +1,6 @@
 ---
 name: Shane O'Connor
-avatarUrl: https://avatars.githubusercontent.com/u/256833559?v=4
+avatarUrl: https://www.gtmskills.com/authors/shane-oconnor.jpg
 title: Founder, The DevTool GTM Company
 linkedinUrl: https://www.linkedin.com/in/devtoolgtm
 companyDomain: gtmcofounder.com

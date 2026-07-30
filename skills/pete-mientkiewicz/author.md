@@ -1,6 +1,6 @@
 ---
 name: Pete Mientkiewicz
-avatarUrl: https://scaleupsystems.co/assets/brand/pete-mientkiewicz.jpg
+avatarUrl: https://www.gtmskills.com/authors/pete-mientkiewicz.jpg
 title: Founder, ScaleUP Systems
 linkedinUrl: https://www.linkedin.com/in/pete-mientkiewicz/
 companyDomain: scaleupsystems.co

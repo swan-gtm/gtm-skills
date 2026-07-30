@@ -1,6 +1,6 @@
 ---
 name: Peter Cools
-avatarUrl: https://144687585.fs1.hubspotusercontent-eu1.net/hubfs/144687585/Photo-Peter.jpg
+avatarUrl: https://www.gtmskills.com/authors/peter-cools.jpg
 title: Founder, Rodz
 linkedinUrl: https://www.linkedin.com/in/coolspeter/
 companyDomain: rodz.io

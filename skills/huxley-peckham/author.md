@@ -1,6 +1,6 @@
 ---
 name: Huxley Peckham
-avatarUrl: "https://www.gtmskills.com/authors/huxley-peckham.jpg"
+avatarUrl: https://www.gtmskills.com/authors/huxley-peckham.jpg
 title: Founder, Tech Horizon Labs
 linkedinUrl: "https://www.linkedin.com/in/huxley-peckham"
 companyDomain: areyoufoundbyai.com

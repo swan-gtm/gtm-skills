@@ -1,6 +1,6 @@
 ---
 name: Tanyo Gochev
-avatarUrl: https://iili.io/CvhNfBj.png
+avatarUrl: https://www.gtmskills.com/authors/tanyo-gochev.jpg
 title: "Co-Founder & Head of GTM, The Demand Department"
 linkedinUrl: https://www.linkedin.com/in/tanyo/
 companyDomain: demanddept.com

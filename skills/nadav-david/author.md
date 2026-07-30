@@ -1,6 +1,6 @@
 ---
 name: Nadav David
-avatarUrl: https://avatars.githubusercontent.com/u/59076508?v=4
+avatarUrl: https://www.gtmskills.com/authors/nadav-david.jpg
 title: Strategic Partnerships Manager, Kidoz
 linkedinUrl: https://www.linkedin.com/in/nadavdvd/
 companyDomain: kidoz.net
