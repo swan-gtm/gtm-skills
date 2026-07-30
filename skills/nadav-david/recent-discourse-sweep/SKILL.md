@@ -23,7 +23,7 @@ A sweep is only as honest as its coverage report. An empty result means nothing 
 
 1. **Fix the window and list the venues before searching.** Name the window in days, then list every venue you intend to read: open discussion communities, technical forums, video, job postings, filings and preprints, the trade press, short-form social feeds, plain web search. The list is the plan. A venue never listed cannot turn up missing later.
 
-2. **Keep the topic string clean.** The topic is a routing key, not a description. Plain words, no brackets, no slashes, no "versus" unless a comparison is genuinely wanted. Disambiguation belongs in the query terms. A topic carrying a parenthetical splits silently into two searches, one of them a fragment, and half the budget goes into the fragment. Before sweeping a named company, product or person, read `references/query-plan.md`.
+2. **Keep the topic string clean.** The topic is a routing key, not a description: plain words, no brackets, no slashes, no "versus" unless a comparison is wanted. Disambiguation belongs in the query terms. A topic carrying a parenthetical splits silently into two searches, one of them a fragment, and half the budget goes into the fragment. Before sweeping a named company, product or person, read `references/query-plan.md`.
 
 3. **Run the venues one at a time and record each outcome as one of three states:** read-with-results, read-and-empty, never-reached. Three different facts, and collapsing them into "nothing found" is the failure this skill exists to prevent. Diagnosis is in `references/coverage-report.md`, to be read the first time a venue comes back empty.
 
@@ -44,6 +44,14 @@ The most expensive mistake is reading a quiet sweep as a quiet market. A venue t
 Next most expensive: repeating a tool's own coverage complaint as fact. A venue reported unavailable is a statement about that route, not about the venue. If another route to it exists, the honest word is "not run", and not running it needs a reason.
 
 Good output survives the handoff. Someone who was not on the sweep can act on it, because every claim carries a venue, a date and a link, and every gap is named rather than smoothed over.
+
+## Combines with
+
+The discipline of publishing what was checked is not new here. **Din Arbel's `warm-intro-intelligence`** already ends its card with a footer of sources checked versus unavailable and refuses to omit it, and **Dusan Vystrcil's `hiring-radar`** already names the failure by its right name, a silent zero nobody checked. Treat both as settled.
+
+Mine is the split into three states rather than two, the ordered diagnosis that runs before a zero is believed, and the rule that a tool's complaint about a venue describes the route and not the venue. Those skills report coverage as a footer on a path search; this one makes it the deliverable, over a dated window.
+
+To turn a surfaced item into a graded signal, hand off to **Din Arbel's `signal-interpreter`**.
 
 ## Rules
 
