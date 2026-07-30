@@ -4,6 +4,7 @@ avatarUrl: https://www.gtmskills.com/authors/nadav-david.jpg
 title: Strategic Partnerships Manager, Kidoz
 linkedinUrl: https://www.linkedin.com/in/nadavdvd/
 companyDomain: kidoz.net
+email: nadav@kidoz.net
 ---
 
 Strategic partnerships in advertising technology, selling media into brand and agency
