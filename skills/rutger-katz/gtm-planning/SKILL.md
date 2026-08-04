@@ -512,7 +512,7 @@ Industry data that reframes quota-setting as a system problem:
 ## Canon References
 
 Cross-references: ICP building methodology (customer count thresholds, expansion strategy, Goldilocks zone), growth maturity model (Stream 2 drives GTM planning decisions), Fullcast/Pavilion 2026 GTM benchmarks (SDR headcount, AE surge, sales efficiency, AI-enabled ramp data), and customer pain quote library for territory hypothesis validation.
-- For cost-to-serve model per GTM motion (7 cost centres, cost-to-serve benchmarks by ARR, GRR durability thresholds, throughput levers), see `references/wbd-gtm-cost-model.md`.
+- For cost-to-serve model per GTM motion (cost centers, cost-to-serve benchmarks by ARR, GRR durability thresholds, throughput levers), see `references/gtm-cost-model.md`.
 
 > Built by [Neon Triforce](https://neontriforce.com)
 

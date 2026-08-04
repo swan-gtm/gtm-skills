@@ -61,7 +61,7 @@ In practice, clients implementing this split report MQL acceptance improvements 
 
 When a client uses the SPICED qualification framework, replace the generic Fit Score with a SPICED ICP Fit Matrix: scoring two independent dimensions (Selection Fit: is this our ICP? / Urgency Fit: are they ready now?) to assign a qualification tier (T1/T2/T3). This produces more accurate MQL scoring because it uses the same language sales uses to qualify deals.
 
-For the full Selection Fit and Urgency Fit scoring tables, tier matrix, and quarterly calibration method, see `references/spiced-icp-fit-matrix.md`. See icp-builder (references/spiced-icp-library-v1.md) for the full ICP Fit Matrix framework and cluster-specific criteria.
+For the full Selection Fit and Urgency Fit scoring tables, tier matrix, and quarterly calibration method, see `references/spiced-icp-fit-matrix.md`.
 
 ### Lead Scoring Versioning and Governance
 
@@ -433,7 +433,6 @@ For the full flip mechanics, the supporting data citations, the channel quality 
 
 ## Canon References
 
-- **icp-builder (references/spiced-icp-library-v1.md)**: SPICED language library with ICP Fit Matrix framework and qualification tiers (T1/T2/T3)
 - **icp-builder (references/icp-building-reference.md)**: Full ICP building methodology including customer interview pipeline
 - **revops-diagnostic**: Constraint diagnosis, including the gut-feel ICP pattern that produces inaccurate lead scoring
 

@@ -379,12 +379,6 @@ QBRs are the highest-leverage CS touchpoint for T1 accounts and most fail by loo
 
 ---
 
-## WbD Impact Journey: CS Action Framework
-
-The Impact Journey maps the post-Mutual Commit customer journey (Mutual Commit → Onboarding → Adoption/Retention → Renewal → Expansion → Advocacy) into structured CS actions, with health-score interpretation and trigger plays by stage. Key guardrail: **do not expand before First Impact (Stage O4)**. Customers achieving impact in a single area only are more at risk of churn than those with widespread stakeholder usage. Source: WbD Operating Model PDF, Chapter 08, pages 143-148.
-
-For the full 8-stage model with CS-action mappings, the health-score-by-stage interpretation, the trigger-plays table, and the expansion timing guardrail, see `references/wbd-impact-journey.md`.
-
 ## Reference Files
 
 | File | When to read | What's inside |
@@ -395,7 +389,7 @@ For the full 8-stage model with CS-action mappings, the health-score-by-stage in
 | `references/red-account-playbook.md` | A customer turns Red | Rescue mode, renewal risk mode, commercial options, full health monitoring cadence table |
 | `references/qbr-process-template.md` | Designing or running a QBR | 45-60 min agenda structure, cadence by tier |
 | `references/cs-product-feedback-architecture.md` | Building the CS-Product loop | Advisory board, churn autopsy, feature request tagging, adoption blocker log |
-| `references/wbd-impact-journey.md` | Mapping the post-sale journey to CS actions | 8-stage model, health-by-stage, trigger plays, expansion timing guardrail |
+| `references/customer-lifecycle-plays.md` | Choosing the right CS action for an account's phase | Four-phase classification, health interpretation per phase, trigger plays, expansion timing rule |
 
 ---
 

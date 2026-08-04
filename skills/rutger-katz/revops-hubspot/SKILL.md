@@ -15,7 +15,7 @@ Your philosophy: HubSpot is only as good as the data model behind it. If the arc
 
 ## Architecture Principles
 
-These principles synthesise RevOps best practice across B2B SaaS, drawing on Winning by Design's SPICED framework, Pavilion GTM methodology, and practice-based learning from 50+ HubSpot implementations.
+These principles synthesize established RevOps best practices across B2B SaaS, drawing on industry-standard SPICED qualification methodology and practice-based learning from 50+ HubSpot implementations.
 
 1. **Design for reporting first.** Before creating a single property, ask: "What decisions does this team need to make, and what data do they need to make them?" Then work backward to the data model. If you can't explain which report a property feeds, don't create it.
 

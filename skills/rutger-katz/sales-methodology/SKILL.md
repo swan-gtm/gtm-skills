@@ -168,13 +168,11 @@ Use these in deal reviews to probe for gaps:
 
 The SPICED ICP Library defines three customer clusters with different SPICED language and qualification rhythms. Use this to route leads and tailor your discovery.
 
-**See `references/spiced-icp-library.md` for full canonical language by cluster. Quick reference:**
-
 | Cluster | Archetype | Typical ACV | Sales Cycle | SPICED Emphasis |
 |---------|-----------|------------|-------------|-----------------|
-| **PE** | Portfolio company operator (e.g. Verdane) | €200K-€1M+ | 12-16 weeks | Strong on Decision (multiple portcos, standardisation mandate), strong on Critical Event (board/value-creation deadlines) |
-| **Large SaaS** | 30M+ ARR scale-up (e.g. Pleo) | €80K-€500K | 8-12 weeks | Strong on Pain (process sprawl, multi-team chaos), strong on Impact (NRR, forecast durability), strong on Decision (complex buying committees) |
-| **Small SaaS** | 10-40M ARR immature (e.g. iWell) | €20K-€100K | 6-10 weeks | Strong on Situation (GTM immaturity), strong on Pain (spreadsheet chaos, no process), may lack Critical Event (window to act, but no forcing function yet) |
+| **PE** | Portfolio company operator | €200K-€1M+ | 12-16 weeks | Strong on Decision (multiple portcos, standardisation mandate), strong on Critical Event (board/value-creation deadlines) |
+| **Large SaaS** | 30M+ ARR scale-up | €80K-€500K | 8-12 weeks | Strong on Pain (process sprawl, multi-team chaos), strong on Impact (NRR, forecast durability), strong on Decision (complex buying committees) |
+| **Small SaaS** | 10-40M ARR, GTM maturity behind revenue stage | €20K-€100K | 6-10 weeks | Strong on Situation (GTM immaturity), strong on Pain (spreadsheet chaos, no process), may lack Critical Event (window to act, but no forcing function yet) |
 
 **Use this in deal routing:** When a new lead comes in, fit-check them against one of these clusters. Use the cluster's SPICED language in your first discovery call. They'll feel like you "get their world."
 
@@ -637,12 +635,10 @@ The body above is the decision/methodology layer. Load these on demand for full 
 | `references/discount-objection-handlers.md` | Handling a live discount objection | Verbatim response scripts for the four most common discount objections + governance/confidentiality rules |
 | `references/pipeline-management-model.md` | Operationalizing the pipeline (stage criteria, inspection, forecasting) | Full operating model: both stage-criteria tables, Stocks & Questions, required CRM fields, inspection cadence, disqualification rules, forecast categories |
 | `references/emerging-practices.md` | Designing AI-augmented methodology or coaching | AI-Augmented Sales Day, Architecture vs. Craft, Show-Don't-Demo, Cognitive Atrophy warning, Anti-Prospecting Thesis (with sources) |
-| `references/spiced-icp-library.md` | Building SPICED tiers or needing canonical language by cluster | SPICED language library with T1/T2/T3 qualification tiers by customer cluster |
 
 ## Canon References
 
 - ICP building methodology (GAP method, customer interview pipeline)
-- `references/spiced-icp-library.md`; SPICED language library with qualification tiers (T1/T2/T3) by customer cluster
 - Positioning and messaging design (ICP to Positioning to Messaging chain)
 - Discovery SPICED processing (call transcripts through SPICED framework)
 
@@ -676,7 +672,7 @@ SPICED uncovers *why* a customer is buying. The Impact Journey maps *what happen
 | **Situation** | Contextualises which Impact Journey stage the customer is starting from |
 | **Pain** | The gap between their current Impact Journey stage and where they need to be |
 | **Impact** | The specific business outcome they need; this becomes the Joint Impact Plan milestone |
-| **Critical Event** | The deadline by which they must reach that Impact; anchors the CET (see Critical Event Timeline section in neon-discovery-spiced) |
+| **Critical Event** | The deadline by which they must reach that Impact; anchors the Critical Event Timeline |
 | **Decision** | Mutual Commit; the moment the customer and the seller formalise the Impact promise |
 
 ### Pre-Mutual Commit: SPICED qualifies readiness

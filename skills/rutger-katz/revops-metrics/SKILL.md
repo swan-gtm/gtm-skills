@@ -645,7 +645,7 @@ Know these numbers before setting any quota:
 ---
 
 **Cross-references:**
-- For V/CR/Δt metric scaffold, expansion type matrix (Renew/Resell/Upsell/Cross-sell), churn classification, and benchmarking methods, see `references/wbd-data-model-scaffold.md`.
+- For V/CR/Δt metric scaffold, expansion type matrix (Renew/Resell/Upsell/Cross-sell), churn classification, and benchmarking methods, see `references/revenue-data-model-scaffold.md`.
 
 > Built by [Neon Triforce](https://neontriforce.com)
 

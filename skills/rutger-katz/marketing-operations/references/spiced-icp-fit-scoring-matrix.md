@@ -51,4 +51,4 @@ Instead of a single "fit" number, score two independent dimensions:
 
 **Implementation note:** The scoring weights above are starting points. Calibrate quarterly by running a correlation analysis: which scoring dimensions best predict Closed-Won? Increase weight on predictive dimensions, decrease on noise.
 
-See [[neon-spiced-icp-library-v1]] for the full ICP Fit Matrix framework and cluster-specific criteria.
+See the icp-builder skill for the full ICP Fit Matrix framework and cluster-specific criteria.

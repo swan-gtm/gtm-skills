@@ -1,13 +1,8 @@
----
-title: "Signal → trigger → action: forecast breach rules"
-description: (reference)
----
-
 # Signal → Trigger → Action: Forecast Breach Rules
 
 On-demand reference for the revops-forecasting skill.
 
-These connect forecasting to the Operating Cadence. When a forecast signal fires, the cadence ensures someone acts — not next quarter, but this week. These rules plug into the revenue dashboard and weekly/monthly rituals.
+These connect forecasting to the Operating Cadence. When a forecast signal fires, the cadence ensures someone acts: not next quarter, but this week. These rules plug into the revenue dashboard and weekly/monthly rituals.
 
 ## Forecast-Specific Breach Rules
 
@@ -26,26 +21,26 @@ These connect forecasting to the Operating Cadence. When a forecast signal fires
 Not all breaches are equal. Use this escalation framework:
 
 ```
-SEVERITY 1 — INFORMATION (no action required yet)
+SEVERITY 1: INFORMATION (no action required yet)
   Coverage between 2.5-3x with >6 weeks left in quarter
   Single-week variance spike (noise, not signal)
   One rep's forecast off in isolation
   → Note in revenue dashboard. Monitor next week.
 
-SEVERITY 2 — WARNING (action required this week)
+SEVERITY 2: WARNING (action required this week)
   Coverage below 3x with <6 weeks left
   Forecast accuracy trending >±15% for 2+ weeks
   Best Case slippage rate climbing
   → Assign investigation owner. Report back in next weekly ritual.
 
-SEVERITY 3 — BREACH (management intervention immediately)
+SEVERITY 3: BREACH (management intervention immediately)
   Coverage below 2.5x with <4 weeks left
   Commit coverage below 0.8x target
   Forecast accuracy >±25% for 3+ weeks
   → Escalate to CRO/CEO. Activate contingency playbook.
   → Consider: adjust expectations with board proactively.
 
-SEVERITY 4 — CRITICAL (executive action)
+SEVERITY 4: CRITICAL (executive action)
   Coverage below 2x with <3 weeks left
   Quarter is materially at risk (>20% miss projected)
   → Board-level communication required.
@@ -54,17 +49,17 @@ SEVERITY 4 — CRITICAL (executive action)
 
 ## Pipeline Generation Breach Rules
 
-Forecasting doesn't just measure the current quarter — it must also monitor next quarter's pipeline health:
+Forecasting doesn't just measure the current quarter; it must also monitor next quarter's pipeline health:
 
 | Signal | Trigger | Action | Timeline |
 |--------|---------|--------|----------|
 | Next quarter pipeline < 2x target at quarter midpoint | Projected coverage gap | Activate outbound blitz + partner channel activation + marketing campaign acceleration | Within 1 week |
 | Pipeline creation rate declining month-over-month | 2+ months of declining new pipeline | Diagnose: is inbound drying up, outbound slowing, or conversion dropping? Different roots, different fixes | Within 2 weeks |
-| Pipeline age increasing (average days open rising) | Average deal age >1.5x segment benchmark for 2+ weeks | Pipeline deflation sprint — remove zombies to restore healthy metrics. See neon-deal-velocity-engineer. | Within 1 week |
+| Pipeline age increasing (average days open rising) | Average deal age >1.5x segment benchmark for 2+ weeks | Pipeline deflation sprint: remove zombies to restore healthy metrics. See deal-velocity-engineer. | Within 1 week |
 
 ## Connecting Forecasting to the revenue dashboard
 
-The forecast is not a spreadsheet — it's a tile in the revenue dashboard with bands and breach rules:
+The forecast is not a spreadsheet; it's a tile in the revenue dashboard with bands and breach rules:
 
 ```
 FORECAST TILE CONFIGURATION:

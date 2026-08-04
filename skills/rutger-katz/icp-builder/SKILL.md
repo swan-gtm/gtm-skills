@@ -41,7 +41,7 @@ Score the client's ICP across seven dimensions. Each gets a rating: **Strong / A
 
 **Dimension 1: Specificity** - Named firmographic criteria: industry, size by revenue and headcount, geography, tech stack, growth stage. Not "mid-market SaaS companies" but "B2B SaaS, EUR10-50M ARR, 100-500 employees, post-Series B, EU-based, using HubSpot or Salesforce." Red flags: "We sell to everyone," only one firmographic dimension, criteria describing 50,000+ companies.
 
-**Dimension 2: Pain Clarity** - Specific problems in customer language, not vendor language. External problems (business issues), internal problems (how it feels), philosophical problems (why it feels wrong). Mapped by persona. Red flag: pain described as "they need better visibility" instead of "I can't answer simple revenue questions without pulling three spreadsheets." Reference: `references/persona-dmu.md` for benchmark pain language.
+**Dimension 2: Pain Clarity** - Specific problems in customer language, not vendor language. External problems (business issues), internal problems (how it feels), philosophical problems (why it feels wrong). Mapped by persona. Red flag: pain described as "they need better visibility" instead of "I can't answer simple revenue questions without pulling three spreadsheets."
 
 **Dimension 3: Buying Signals & Timing** : Clear triggers that indicate a company is in-market NOW (new CRO hired, missed target, board pressure, CRM migration planned). Red flag: no distinction between in-market and total addressable.
 
@@ -148,7 +148,6 @@ Synthesize into 4 deliverables:
 **Output 4: Informational Needs per Buying Phase** : Content/proof needed at Awareness, Consideration, Decision, Onboarding.
 
 For detailed templates, read `references/icp-building-reference.md` Section 3 (Phase P).
-For existing SPICED language patterns, read `references/spiced-icp-library-v1.md`.
 
 ### Step 5: Goldilocks Zone Check
 
@@ -210,9 +209,6 @@ Hand off to `positioning-messaging-designer` to translate ICP insights into posi
 | File | When to read | What's inside |
 |------|-------------|---------------|
 | `references/icp-building-reference.md` | Always for Mode 2 : full methodology | GAP method, 8-dimension analysis, interview pipeline, expansion, Goldilocks zone, thresholds |
-| `references/spiced-icp-library-v1.md` | When building SPICED tiers or need language examples | Canonical SPICED language for ICP clusters |
-| `references/persona-dmu.md` | Mode 1 validation (pain clarity benchmark) | Full persona & DMU with Dreams/Problems/Headaches |
-| `references/brand-canvas.md` | When connecting ICP to brand narrative | Brand Canvas (StoryBrand framework) |
 
 ## Related Skills
 
