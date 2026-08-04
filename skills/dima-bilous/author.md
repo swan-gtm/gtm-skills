@@ -6,7 +6,6 @@ companyDomain: anfloy.com
 email: dimabilous@anfloy.com
 ---
 
-Dima is the founder of Anfloy, an AI engineering studio that designs and builds
-AI agents and GTM systems companies own forever. He runs Anfloy's own outbound
-founder-led; the skills he publishes here are the playbooks behind his real
-campaigns.
+Dima is the founder of Anfloy, where he builds AI agentic systems for GTM and
+internal ops. He shares real breakdowns of tested systems he delivered to
+clients or runs inside his own company.
