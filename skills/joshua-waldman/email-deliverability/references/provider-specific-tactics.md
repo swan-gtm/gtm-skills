@@ -46,7 +46,7 @@ Microsoft tends to be more aggressive with blocking than Gmail. Where Gmail migh
 
 ### Microsoft-Specific Issues
 - **Outages affect senders:** Microsoft's own outages can cause mass bounces. The ESP should detect this and pause sending: "If everybody starts getting blocked at Microsoft because it went down again, we should pause sending and not just bounce a gazillion emails off of Microsoft's infrastructure."
-- **Aggressive gray-listing:** Microsoft uses gray-listing (code 400 soft bounces) extensively. Legitimate senders retry and get through; spammers don't. Understanding this behavior is critical — it inflates apparent soft bounce rates for legitimate senders.
+- **Aggressive gray-listing:** Microsoft uses gray-listing (code 400 soft bounces) extensively. Legitimate senders retry and get through; spammers don't. Understanding this behavior is critical — it inflates apparent soft bounce rates for legitimate senders. Never treat graylisted soft bounces as a dirty list: retry them, and only treat what still fails after three attempts across 72 hours as a hard bounce. Suppressing on the first soft bounce at Microsoft deletes valid, reachable addresses.
 
 ### Microsoft-Specific Fixes
 - When Microsoft blocks: 48-hour pause from that IP, then restart at minimal volume
@@ -81,6 +81,7 @@ iCloud/Apple Mail open rates below 10% indicate severe inbox placement problems.
 - Apple MPP (Mail Privacy Protection) pre-fetches images, which inflates open rate numbers
 - If you're seeing sub-10% opens at iCloud despite MPP inflation, the actual engagement is dramatically worse
 - iCloud placement is heavily reputation-dependent
+- Do not use the 4x-opens ramp here — MPP inflation makes it unsafe. Use a fixed daily schedule and watch bounces and delivery instead
 - Recovery approach follows the standard warmup playbook but with extra attention to engagement quality
 
 ---
@@ -147,6 +148,8 @@ Real-world example of segment management during warmup:
 - **Gradual decline:** Engagement erosion — probably sending to too many inactive contacts
 
 ### The 4x Rule
-Across all providers: "Never send more than 4x previous day's opens."
+Where opens are trustworthy: "Never send more than 4x previous day's opens."
 
-This is a universal safety guardrail. If you sent 100 emails yesterday and got 25 opens, today's maximum is 100 emails (4x25). This prevents over-sending to unengaged audiences and naturally scales volume as engagement improves.
+If you sent 100 emails yesterday and got 25 opens, today's maximum is 100 emails (4x25). This prevents over-sending to unengaged audiences and naturally scales volume as engagement improves.
+
+**The Apple exception.** Do not ramp on this rule at iCloud or Apple Mail. Mail Privacy Protection pre-fetches images, so a large share of those opens are machines, not people. Multiplying an inflated number authorizes volume no human asked for. Ramp Apple on a fixed schedule instead, and judge it on delivery and bounce behavior. The same caution applies anywhere else opens are proxied or prefetched.

@@ -73,7 +73,7 @@ When restarting from severely damaged reputation:
 | Microsoft | 25 emails | Never send more than 4x previous day's opens |
 | Yahoo | 50 emails | Never send more than 4x previous day's opens |
 | Gmail | 200 emails | Never send more than 4x previous day's opens |
-| iCloud | 50 emails | Monitor carefully — under 10% open rate at iCloud = severe issue |
+| iCloud | 50 emails | Fixed schedule, not the 4x rule — MPP inflates opens here. Under 10% open rate at iCloud = severe issue |
 
 ### Starting Volumes (New Domain/IP Warmup)
 When warming from scratch (not damaged, just new):
