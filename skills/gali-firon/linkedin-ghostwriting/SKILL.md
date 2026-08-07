@@ -28,7 +28,7 @@ Gather these before drafting. A thin input set produces generic posts.
 5. **Check messenger and lane fit.** The exec must plausibly follow that source and their audience must care about it - not merely "is the argument sound". Route the peg to the exec whose lane it is (regulatory to the policy voice, product to the builder, numbers to the finance voice). Two execs never comment on the same article.
 6. **Draft in voice, then two finishing passes.** Draft each option against the voice card and closest samples. Then strip AI tells to a clean baseline, and add one or two real human moves so the post reads as the person, not a clean bot. One or two moves, never invented detail.
 7. **Score, rank, and deliver.** Score each on hook strength and on commercial value (audience precision, proof, narrative fit, why-now). Below bar gets one revision. Deliver three ranked options per exec with attachments and, for the graphic, the image recommendation. Dependencies and posting-order notes travel with the delivery, never on the post itself.
-8. **Close the loop.** After the exec picks, edits, or posts, append the chosen post to the ledger. If they rewrote it, that rewrite becomes the new gold line - update the voice card. Add the angle to the off-limits map so the next run cannot repeat it.
+8. **Close the loop.** After the exec picks, edits, or posts, append the chosen post to the ledger - it re-enters play only after the cooldown window, never sooner. If they rewrote it, that rewrite becomes the new gold line - update the voice card. Any angle the exec killed or rejected goes to the off-limits map as a permanent block. (Ledger entries return after the cooldown; off-limits entries never do.)
 
 ## What good looks like
 
