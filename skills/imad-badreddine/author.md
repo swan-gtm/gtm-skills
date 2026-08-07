@@ -1,5 +1,6 @@
 ---
 name: Imad Badreddine
+avatarUrl: https://www.gtmskills.com/authors/imad-badreddine.jpg
 title: Founder, Alpaca Leads
 linkedinUrl: https://www.linkedin.com/in/imad-ngl/
 companyDomain: alpacaleads.com

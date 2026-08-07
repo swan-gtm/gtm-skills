@@ -1,5 +1,6 @@
 ---
 name: Dima Bilous
+avatarUrl: https://www.gtmskills.com/authors/dima-bilous.jpg
 title: Founder, Anfloy
 linkedinUrl: https://www.linkedin.com/in/dima-bilous
 companyDomain: anfloy.com

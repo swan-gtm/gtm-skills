@@ -1,5 +1,6 @@
 ---
 name: Lucas Godtfredsen
+avatarUrl: https://www.gtmskills.com/authors/lucas-godtfredsen.jpg
 avatarUrl: ""
 title: Founder, GTM Now
 linkedinUrl: "https://www.linkedin.com/in/lucas-godtfredsen-b9a19614/"

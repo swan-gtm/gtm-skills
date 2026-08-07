@@ -1,5 +1,6 @@
 ---
 name: Joshua Waldman
+avatarUrl: https://www.gtmskills.com/authors/joshua-waldman.jpg
 title: Founder, SendX
 linkedinUrl: https://www.linkedin.com/in/joshuawaldman/
 companyDomain: sendx.io
