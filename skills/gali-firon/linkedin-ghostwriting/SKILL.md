@@ -1,6 +1,6 @@
 ---
-name: exec-linkedin-engine
-title: Executive LinkedIn content engine
+name: linkedin-ghostwriting
+title: LinkedIn ghostwriting
 description: |
   Use this skill when a founder or executive needs their next LinkedIn posts and the ask is "what should our CEO post", "draft the next posts for [exec]", "an industry-news take", "a repost", or "exec thought leadership". Produces three ranked, typed post options per executive - a news share, a repost, and a thought-leadership piece with a graphic - each short, each with an attachment, each gated against everything they have already posted. Reach for it whenever exec social content has to be fresh, on-voice, and non-repeating.
 category: Positioning
