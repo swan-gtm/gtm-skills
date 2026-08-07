@@ -2,14 +2,14 @@
 name: linkedin-ghostwriting
 title: LinkedIn ghostwriting
 description: |
-  Use this skill when a founder or executive needs their next LinkedIn posts and the ask is "what should our CEO post", "draft the next posts for [exec]", "an industry-news take", "a repost", or "exec thought leadership". Produces three ranked, typed post options per executive - a news share, a repost, and a thought-leadership piece with a graphic - each short, each with an attachment, each gated against everything they have already posted. Reach for it whenever exec social content has to be fresh, on-voice, and non-repeating.
+  Use this skill when ghostwriting LinkedIn posts for a founder or executive - the ask is "what should our CEO post", "draft the next posts for [exec]", "write this in [exec]'s voice", "an industry-news take", "a repost", or "exec thought leadership". Produces three ranked, typed post options per executive in that person's own voice - a news share, a repost, and a thought-leadership piece with a graphic - each short, each with an attachment, each gated against everything they have already posted. Reach for it whenever you are writing exec social content that has to sound like them, stay fresh, and never repeat itself.
 category: Positioning
 tags: [Marketing]
 ---
 
-Applies when a named executive needs their next LinkedIn posts. Produces three ranked, typed options per exec, each a few lines, each with an attachment, each cleared by an anti-repeat gate.
+Applies when ghostwriting a named executive's next LinkedIn posts. Produces three ranked, typed options per exec, each a few lines, each with an attachment, each cleared by an anti-repeat gate.
 
-The engine exists to fix the two failure modes of exec ghostwriting: posts that repeat what the exec already said, and posts that read like marketing copy instead of the person. It runs in one pass and hands the exec ready-to-post options to approve by hand. It never posts anything.
+This skill exists to fix the two failure modes of exec ghostwriting: posts that repeat what the exec already said, and posts that read like marketing copy instead of the person. It runs in one pass and hands the exec ready-to-post options to approve by hand. It never posts anything.
 
 ## Required inputs
 

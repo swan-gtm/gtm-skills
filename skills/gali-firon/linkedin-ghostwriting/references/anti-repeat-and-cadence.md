@@ -1,6 +1,6 @@
 # Anti-repeat gate and cadence
 
-The gate is the heart of the engine. It is what stops an exec's feed from saying the same thing twice in slightly different words. It compares argument families, not wording.
+The gate is the heart of this skill. It is what stops an exec's feed from saying the same thing twice in slightly different words. It compares argument families, not wording.
 
 ## What the gate reads
 
