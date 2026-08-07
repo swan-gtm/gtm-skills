@@ -1,8 +1,8 @@
 ---
-name: anti-slop
-title: Anti-slop editing pass
+name: anti-ai-slop-writing
+title: Anti AI slop writing
 description: |
-  Use this skill when any GTM copy needs to stop reading like AI before it ships - a LinkedIn post, a cold email, a newsletter, a landing page, a case study, an exec's thought-leadership draft. Produces the same copy with the machine tells removed and a real human voice held. Reach for it when someone says "this sounds like AI", "make it less robotic", "remove the AI tells", "de-slop this", or when a draft is technically fine but reads like a competent bot wrote it.
+  Use this skill when any GTM copy needs to stop reading like AI before it ships - a LinkedIn post, a cold email, a newsletter, a landing page, a case study, an exec's thought-leadership draft. Produces the same copy with the machine tells stripped out, back to a clean baseline. Reach for it when someone says "this sounds like AI", "make it less robotic", "remove the AI tells", "de-slop this", or when a draft is technically fine but reads like a competent bot wrote it.
 category: Positioning
 tags: [Marketing]
 ---
@@ -10,6 +10,8 @@ tags: [Marketing]
 Applies to any prose before it ships. Produces copy with the recognisable AI patterns removed, in two disciplined passes.
 
 The core idea: AI writing fails in two different ways, and each needs its own pass. Some patterns are rhetorical moves with no human upside - they are wrong every time they appear. Others are ordinary words and structures that read fine once but scream machine when they cluster. Scan for each separately.
+
+This skill is the subtractive half of a two-pass writing standard. It takes tells out. Its companion, the human-mannerisms pass, does the opposite job - it puts voice in, so clean copy does not read flat. They are deliberately kept as two skills, not one, because the two jobs do not always both apply. Every piece that ships should have its AI tells removed; not every piece should be made to sound casual. A formal announcement, a compliance note, or a technical one-pager needs to be clean, not chatty - run this pass and stop. A LinkedIn post, a founder's thought leadership, or a personal email needs voice on top - run this pass first, then the mannerisms pass. Bundling them would force a casual register onto writing that should stay plain. Keeping them separate lets you apply the floor everywhere and the texture only where it fits.
 
 ## The two passes
 
