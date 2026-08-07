@@ -1,6 +1,6 @@
 # Pairing and order — how this pass fits with tell-stripping
 
-This skill is one half of a two-pass editing standard. The other half strips AI tells (the "anti-slop" pass). They are not interchangeable, and the order is not optional.
+This skill is one half of a two-pass editing standard. The other half strips AI tells (the anti-ai-slop-writing pass). They are not interchangeable, and the order is not optional.
 
 ## The two-zero model
 

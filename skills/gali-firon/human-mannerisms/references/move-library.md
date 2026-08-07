@@ -1,6 +1,6 @@
 # Move library — the human moves, with specimens
 
-The eight moves that put a specific person back into flat copy. Each entry: what it is, why it reads as human, how to place it, and multiple specimens. Pull one or two per piece. Never all of them.
+The eight moves that put a specific person back into flat copy. Each entry: what it is, why it reads as human, how to place it, and multiple specimens. Pull one or two distinct moves per piece, never all of them. A single move may recur a couple of times within the piece; that still counts as one move.
 
 ---
 
@@ -46,7 +46,7 @@ Vary sentence length hard. Follow a long, winding sentence with a two-word one. 
 
 Open a sentence with a conjunction when you want a beat before the turn. The period-then-"But" lands harder than a comma.
 
-**Why it's human:** it mimics how a thought arrives, as a continuation of the last one. Two or three per piece, max; constant use is sloppy, not casual.
+**Why it's human:** it mimics how a thought arrives, as a continuation of the last one. If you pick this move, two or three uses is its ceiling; constant use is sloppy, not casual.
 
 - "We had the data the whole time. But nobody had put it on one slide."
 - "So we stopped guessing and asked the client what they actually measured."

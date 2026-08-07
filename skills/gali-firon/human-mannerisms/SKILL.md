@@ -9,7 +9,9 @@ tags: [Marketing]
 
 Applies when a piece of copy has had its AI tells removed but still has no voice. Produces a version with one or two earned human moves added, so a real person is visibly in the room.
 
-Stripping AI tells gets copy "to zero": nothing screams machine. It does not get you above zero. Clean copy with no texture still reads as AI, because "flawless and flat" is itself the tell. This skill is the positive pass: a small library of moves that put a specific person back into the writing. It runs *after* the tell-stripping pass, never instead of it.
+Stripping AI tells gets copy "to zero": nothing screams machine. It does not get you above zero. Clean copy with no texture still reads as AI, because "flawless and flat" is itself the tell. This skill is the positive, additive pass: a small library of moves that put a specific person back into the writing. It runs *after* the subtractive pass, never instead of it.
+
+This is deliberately a separate skill from the anti-ai-slop-writing pass, not one combined step, because the two jobs do not always both apply. Every piece that ships should have its AI tells removed; not every piece should be made to sound casual. A formal announcement, a compliance note, or a technical one-pager needs to be clean, not chatty - it gets the tell-stripping pass and stops there. A LinkedIn post, a founder's thought leadership, or a personal email needs voice on top - it gets both, in order. Bundling the two would force human texture onto writing that should stay plain. Keeping them apart lets you run the floor everywhere and reach for these moves only where the register calls for it.
 
 ## The play
 
@@ -17,7 +19,7 @@ Stripping AI tells gets copy "to zero": nothing screams machine. It does not get
 
 2. **Read the piece once and locate the flatness.** Find the stretch where the writing is smooth, correct, and voiceless - usually the middle, where the argument goes on autopilot. That is where a move earns its place. Do not spray moves across every line.
 
-3. **Add one or two moves, no more.** Pick from the move library below. One or two earned moments per piece. A piece stuffed with quirks reads as try-hard, which is its own kind of slop. Match the move to the writer's real register - a dry operator gets a deadpan undercut, not a whimsical aside.
+3. **Add one or two moves, no more.** This counts distinct move-types from the library below - pick one or two, not all eight. A single move may recur its own handful of times within the piece (the conjunction-opener below, for instance, can appear two or three times); that still counts as one move. What reads as try-hard is stacking many different quirks, so hold the line at one or two move-types per piece. Match the move to the writer's real register - a dry operator gets a deadpan undercut, not a whimsical aside.
 
 4. **Pull the real detail, never invent it.** The specificity move (below) uses only true detail the writer actually has. Specificity you own reads as lived; specificity you invent reads as fraud, and invented numbers or moments are a hard failure.
 
@@ -31,7 +33,7 @@ Each is expanded with multiple specimens in `references/move-library.md`.
 - **Undercut your own big statement.** A confident claim, then a small deflation. "It's the best tool we've built. Low bar, given the last one."
 - **Oddly specific real detail.** The weirdly exact true detail instead of the smooth generic one. "Fill rate dropped the Tuesday after the holiday, 11%, and nobody noticed until Thursday."
 - **Short. Then shorter.** Vary sentence length hard; follow a long winding sentence with a two-word one.
-- **Start on And / But / So.** A conjunction opener for a beat before the turn. Two or three per piece, max.
+- **Start on And / But / So.** A conjunction opener for a beat before the turn. If you pick this move, two or three uses is its ceiling.
 - **Talk to one person.** Write to a single reader, not an audience. Contractions, "you", direct address.
 - **Self-interruption mid-thought.** Start to say one thing, stop, say the truer thing. The visible seam is the humanness.
 - **Deadpan the absurd.** State the ridiculous thing in a flat tone. Let the gap between calm delivery and wild content do the work.
