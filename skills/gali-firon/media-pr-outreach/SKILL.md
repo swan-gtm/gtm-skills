@@ -1,6 +1,6 @@
 ---
-name: journalist-outreach
-title: Journalist outreach that gets replies
+name: media-pr-outreach
+title: Media and PR outreach
 description: |
   Use this skill when reaching out to journalists for earned media - first contact with a reporter, a news pitch, a contributed-byline pitch, or a fast reactive pitch on breaking news. Produces a short, anchored pitch that leads with the reporter's beat and closes on a concrete give-plus-ask, plus a follow-up plan. Reach for it when the ask is "pitch this reporter", "get us coverage", "draft a media pitch", "respond to this story", or "build our journalist list".
 category: Outreach
