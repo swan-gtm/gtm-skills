@@ -2,12 +2,12 @@
 name: media-pr-outreach
 title: Media and PR outreach
 description: |
-  Use this skill when reaching out to journalists for earned media - first contact with a reporter, a news pitch, a contributed-byline pitch, or a fast reactive pitch on breaking news. Produces a short, anchored pitch that leads with the reporter's beat and closes on a concrete give-plus-ask, plus a follow-up plan. Reach for it when the ask is "pitch this reporter", "get us coverage", "draft a media pitch", "respond to this story", or "build our journalist list".
+  Use this skill for media and PR outreach - first contact with a reporter, a news pitch, a contributed-byline pitch, or a fast reactive pitch on breaking news. Produces a short, anchored pitch that leads with the reporter's beat and closes on a concrete give-plus-ask, plus a follow-up plan. Reach for it when the ask is "pitch this reporter", "get us press coverage", "draft a media or PR pitch", "respond to this story", or "build our journalist list".
 category: Outreach
 tags: [Marketing]
 ---
 
-Applies to any outbound to a journalist for coverage. Produces a short pitch anchored to the reporter's recent work, weighted toward their readers, and closed on a specific give and one clear ask.
+Applies to any media or PR outreach to a journalist for coverage. Produces a short pitch anchored to the reporter's recent work, weighted toward their readers, and closed on a specific give and one clear ask.
 
 Most cold pitches to reporters fail the same three ways: they lead with the company, they are not anchored to anything the reporter actually wrote, and they open with "happy to be a source" and give no reason to reply. This skill fixes all three, then routes the draft through a review gate before it sends.
 
