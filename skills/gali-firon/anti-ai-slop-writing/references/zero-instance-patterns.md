@@ -37,7 +37,7 @@ The whole class is banned, not a phrase list: "Here's the thing", "Here's the ki
 
 ## The colon setup
 
-No repeating "abstract noun, colon, payoff": "The reality:", "The problem:", "The takeaway:". One at most per piece. The mid-sentence version is the same tell worn as a sentence - a setup clause, a colon, then the payoff. State the fact plainly instead.
+No "abstract noun, colon, payoff": "The reality:", "The problem:", "The takeaway:". Banned as a device; state the point as a plain sentence. The mid-sentence version is the same tell worn as a sentence - a setup clause, a colon, then the payoff. State the fact plainly instead.
 
 ## Pedagogical framing
 
@@ -78,6 +78,22 @@ No "a hook that lands", "copy that resonates", "the point settles". Name the spe
 ## Metaphorical verbs where a literal one is clearer
 
 "collapses" to "stops working"; "siphoning attention" to "stealing attention"; "dovetails into" to "connects to"; "percolates through" to "spreads through".
+
+## Formulaic openers
+
+Do not open a piece, section, or paragraph with a stock frame. The whole class is banned, not just these examples:
+
+- "In today's fast-paced world", "In an age where", "In a world where", "More than ever before".
+- "At its core", "Welcome to", "Enter [X]".
+- LinkedIn humblebrag announcement openers: "I'm humbled to share", "Thrilled to announce", "Beyond excited to". State the news itself, not your feelings about it.
+- Faux-personal-ritual openers: "One number I keep coming back to", "I finally sat down with". Lead with the fact or the observation instead.
+
+## Formulaic closers
+
+Do not announce the conclusion. Just make the last point and stop:
+
+- "In conclusion", "In summary", "To sum up".
+- "Ultimately", "At the end of the day".
 
 ---
 

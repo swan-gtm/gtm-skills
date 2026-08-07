@@ -22,7 +22,7 @@ Run both, in order, before returning any prose.
 1. **Negative parallelism** - asserting what something IS by first saying what it ISN'T about the same subject: "It's not X, it's Y", "Not just X, Y", "We don't just X, we Y". The test: remove the negated half. If the point still stands, the negation was scaffolding - cut it and state the claim directly.
 2. **False-suspense transitions** - "Here's the thing", "Here's what nobody tells you", "Here's what changed". The whole class, not set phrases. Does it name the revelation in the same beat, or just tease one? If it teases, cut it.
 3. **Self-answered rhetorical questions** - "The result? Devastating."
-4. **The colon setup** - "abstract noun, colon, payoff" ("The reality:", "The takeaway:"). One at most per piece.
+4. **The colon setup** - the "abstract noun, colon, payoff" cadence ("The reality:", "The takeaway:"). Banned as a device; state the point as a plain sentence.
 5. **Formulaic openers and closers** - "In today's fast-paced world", "At its core", humblebrag announcement openers ("Thrilled to share"), and "In conclusion", "Ultimately", "At the end of the day".
 6. **Patronising analogy** - "Think of it like...", "It's like...". Even one forced analogy is too many; name the thing directly.
 7. **Manufactured stakes** - grandiose inflation ("this reshapes everything") and phantom-future projection ("a year from now you'll wish you'd..."). Stakes come from a present cost the reader already pays.
