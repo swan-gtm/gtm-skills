@@ -16,8 +16,10 @@ Each type has a different job, length, and structure. Pick the type first; the s
 - An offer to be a resource for future stories.
 - No pitch.
 
+This is the one type that deliberately closes on a resource offer with no ask. The give-plus-ask close rule (see the anchor-ratio-and-close reference) does not apply to first contact.
+
 **Worked example:**
-> Hi [Name], I lead comms at [company], which runs [one-line what it does]. Your piece on [specific recent article, with the actual angle they took] lined up with something we see constantly on [the beat], so I wanted to introduce myself. No pitch here - just a useful source if a related story ever comes up. Happy to share what we are seeing whenever it helps.
+> Hi [Name], I lead comms at [company], which runs [one-line what it does]. Your piece on [specific recent article, with the actual angle they took] lined up with something we see constantly on [the beat], so I wanted to introduce myself. No pitch, and nothing I need from you. If a related story ever comes up, I'll be around to compare notes.
 
 ## 2. News pitch
 
@@ -51,6 +53,8 @@ Each type has a different job, length, and structure. Pick the type first; the s
 **Job:** offer a fast expert take while a story is breaking. Speed is the entire value.
 
 **Length:** under 100 words. Send within a few hours of the story breaking.
+
+This is the one type that anchors to the breaking story itself, not to the reporter's own recent byline - the exception to the anchor rule. Speed replaces the byline check.
 
 **Structure:**
 - Reference the story that just broke, by name.

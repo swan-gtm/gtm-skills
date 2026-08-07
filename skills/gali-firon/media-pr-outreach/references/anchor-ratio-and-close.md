@@ -27,13 +27,13 @@ Three things decide whether a pitch gets a reply. Get these right and the rest o
 **Why it works:** a reporter's job is their readers, not the company. A pitch mostly about the company reads as a favour being asked; a pitch mostly about the story reads as a favour being offered.
 
 **Worked count:**
-> Saw your piece on [X] - the enforcement angle is going to hit [reader segment] hardest. [1: them] Most teams there have no plan for it yet. [2: them/story] We ran into exactly this and have data on what breaks first. [3: light us + give] Worth a look? [ask]
+> Saw your piece on [X] - the enforcement angle is going to hit [reader segment] hardest. [1: them] Most teams there have no plan for it yet. [2: them/story] The ones that do are quietly switching approaches before Q4. [3: them/story] We ran into exactly this and have data on what breaks first. [1: light us + give] Worth a look? [ask]
 
-Two-plus sentences on them and the story, one light on the company. That is the ratio.
+Three sentences on the reader and the story, one light on the company. That is three-to-one.
 
 ## 3. The give-plus-ask close
 
-**The rule:** close on a concrete give paired with one clear, low-effort ask. Never open or close with "happy to be a source".
+**The rule:** close a pitch on a concrete give paired with one clear, low-effort ask. Never open or close a pitch with "happy to be a source". First contact is the one exception - by design it makes no ask and simply offers to be a resource later (see the pitch-types reference).
 
 **Why it works:** "happy to be a source" is an ask with no give - it puts the work on the reporter to figure out what to do with you. A give-plus-ask does the opposite: it offers something specific and makes the next step tiny.
 

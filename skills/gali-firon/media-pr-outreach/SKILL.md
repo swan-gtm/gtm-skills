@@ -22,11 +22,11 @@ Pick the type before drafting - each has a different structure and length, detai
 
 ## The play
 
-1. **Qualify the reporter against a recent, on-beat byline.** Find a specific piece they published recently that the company can genuinely comment on, and confirm it is actually recent at the source - a contact list goes stale, and a byline from last quarter is not an anchor. Record the anchor's title, date, and link. No live anchor means the reporter is not ready to pitch yet.
+1. **Qualify the reporter against a recent, on-beat byline.** Find a specific piece they published recently that the company can genuinely comment on, and confirm it is actually recent at the source - a contact list goes stale, and a byline from last quarter is not an anchor. Record the anchor's title, date, and link. No live anchor means the reporter is not ready for first contact or a pitch yet. (A reactive pitch is the exception: its anchor is the story that just broke, so speed replaces the byline check.)
 2. **Pick the type and draft to its structure.** Use the matching structure from `references/pitch-types.md`. Keep it short - first contact under five sentences, a news pitch under 150 words, a reactive pitch under 100.
 3. **Lead with their readers, not the company.** Open on the news value or the beat. One line of company relevance, not three. The anchor rule, the them:us ratio, and the give-plus-ask close - the three levers that decide reply rate - are worked through with examples in `references/anchor-ratio-and-close.md`.
 4. **Run the copy pass.** Strip AI tells, then add enough plain human voice that it reads as one person emailing another, not a template. No jargon, no "circling back", no press-release voice.
-5. **Clear the review gate.** Before it sends, one independent read confirms: anchored to a real recent piece with a link, passes the them:us ratio, closes on a real give-plus-ask, and reads clean. One revision round.
+5. **Clear the review gate.** Before it sends, one independent read confirms: anchored (to the reporter's recent byline, or for a reactive pitch to the breaking story), passes the them:us ratio, closes on a real give-plus-ask (first contact excepted - it makes no ask), and reads clean. One revision round.
 6. **Send, log, and follow up once.** Send from the right person's inbox. Log the reporter, outlet, date, type, and anchor. Follow up once after five to seven business days, one sentence, no pressure. Log every response, including a decline - a "not now" is a relationship.
 
 ## What good looks like
@@ -37,9 +37,9 @@ Pick the type before drafting - each has a different structure and length, detai
 
 ## Rules
 
-- MUST anchor first contact and pitches to a specific, verified-recent, on-beat article with a link.
+- MUST anchor first contact, news pitches, and byline pitches to a specific, verified-recent article the reporter published, with a link. A reactive pitch is the exception: it anchors to the breaking story it responds to, not the reporter's own byline.
 - MUST keep the them:us sentence ratio at three-to-one or better.
-- MUST close on a concrete give-plus-ask; never open or close with "happy to be a source".
+- MUST close a news, byline, or reactive pitch on a concrete give-plus-ask, and never open or close a pitch with "happy to be a source". First contact is the deliberate exception: it makes no ask and only offers to be a resource later.
 - MUST hold to one reporter per outlet per story.
 - NEVER send a mass or templated pitch, and NEVER send the press release as the pitch - the release is supporting material.
 - NEVER follow up more than once on the same pitch.
