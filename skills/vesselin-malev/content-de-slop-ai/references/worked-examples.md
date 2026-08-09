@@ -58,7 +58,7 @@ Structure went first: the flip is gone, the bullets are gone, the two triads are
 >
 > Worth 15 minutes?
 
-Cold email has the least tolerance for slop of any channel. The observation is traceable, the claim is bounded, and the close is one line. See `channel-variants.md`.
+Cold email has the least tolerance for slop of any channel. The observation is traceable, the claim is bounded, and the close is one line. See `channel-calibration.md`.
 
 ## Example 3: Blog section
 

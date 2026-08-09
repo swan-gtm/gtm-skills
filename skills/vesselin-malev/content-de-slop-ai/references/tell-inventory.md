@@ -1,104 +1,89 @@
-# Tell inventory
+# The tell inventory
 
-The full catalogue, ordered by how much it costs to fix. Structural tells come first because they survive every word-level edit.
+The catalog, ordered by damage. Fix from the top down. Structural findings mean rewriting sentences and merging paragraphs, and that happens before any surface fix, or the surface work gets overwritten.
 
-## Structural tells
+Quoted specimens are examples of what to remove, never patterns to imitate.
 
-### The contrast flip
+## 1. Structural tells (fix first, always)
 
-Any construction that sets up a negation to make the real claim feel earned.
+**The contrast flip.** "This isn't X. It's Y." / "It's not about X, it's about Y." The single most recognizable machine move. *Fix:* state the claim directly. "It's not about volume, it's about targeting" becomes "Targeting decides this; volume never did."
 
-- "This isn't a tooling problem. It's a process problem."
-- "Not just faster. Smarter."
-- "Most teams think X. The truth is Y."
-- "X? Think again."
+**Negative parallelism.** "No fluff. No filler. Just results." *Fix:* one plain sentence about what the thing does.
 
-**Rewrite:** state the claim directly and cut the setup. "The process is the problem" carries the same information in a third of the words. If the negated half is genuinely load-bearing, keep it as its own sentence with its own evidence, not as a rhetorical windup.
+**Triads.** Three parallel items in every list, every sentence, every section. Models default to three. *Fix:* cut to two or extend to four, and vary across the piece.
 
-The flip is the single highest-signal tell in the inventory. One instance in a short post is usually enough for a reader to classify the whole piece.
+**Uniform rhythm.** Every sentence the same length, every paragraph the same depth, every section the same shape. *Fix:* run one long sentence, then a fragment. Merge two paragraphs. Let one section run twice as long as its neighbor.
 
-### Triads
+**The staircase.** Every sentence its own paragraph, line after line, engineered for fake momentum. *Fix:* merge into real paragraphs and keep one single-line break where the emphasis is earned.
 
-Three parallel items, repeated as a structural habit: three bullets per list, three adjectives per noun, three clauses per sentence.
+**The rhetorical question opener.** "Ever wondered why your emails get ignored?" *Fix:* open with the claim or the number the question was hiding.
 
-- "Faster, cheaper, and more reliable."
-- Three-bullet lists under every heading.
+**The summary close.** "The bottom line?" / "At the end of the day" / a conclusion restating the intro. *Fix:* end on the most specific thing in the piece, then stop.
 
-**Rewrite:** cut to two or extend to four. Check the count across the whole piece, not per list. Three lists of three is the pattern that gives it away, and each list looks fine alone.
+**Over-signposting.** "In this post, I'll cover…" / "Let's dive in" / "Let's break it down." *Fix:* delete the announcement and start covering it.
 
-### Uniform rhythm
+**The inclusivity sweep.** "Whether you're a founder, a marketer, or a sales leader…" *Fix:* name the one reader the piece is for.
 
-Every sentence between 12 and 20 words. Every paragraph two to three sentences. Every section the same depth.
+**The range sweep.** "From strategy to execution, from awareness to conversion…" *Fix:* pick the one thing the piece actually addresses.
 
-**Rewrite:** see the rhythm pass. Measure before fixing: if the longest sentence in a section is under twice the shortest, the section is uniform.
+**Fake dialogue.** "You might be thinking…" / "I know what you're going to say." *Fix:* state the objection as an objection and answer it.
 
-### The summary close
+**False gatekeeping.** "Here's what nobody tells you" / "The secret nobody talks about." *Fix:* if the insight is real, it survives without the costume.
 
-"The bottom line?" "Here's the thing." "At the end of the day." A closing paragraph that restates the piece rather than ending it.
+**One-word-sentence drama.** "Powerful. Simple. Free." *Fix:* one real sentence with a verb.
 
-**Rewrite:** delete it. The last real point is usually the ending. If the piece needs a landing, make it a specific next action, not a restatement.
+**"Let that sink in."** *Fix:* delete. If the line lands, it needs no instruction.
 
-### The rhetorical question opener
+## 2. Punctuation and typography
 
-"Ever wonder why your reply rates are dropping?"
+- **Em dashes**, the long horizontal dash and its double-hyphen stand-in. The single loudest tell. *Fix:* period, comma, colon, or parentheses. The sentence almost always improves.
+- **En dashes used as pause punctuation.** Same fix.
+- **Semicolons in casual copy.** Humans writing feed posts and emails rarely reach for them. *Fix:* split the sentence.
+- **Ellipsis as drama.** "And then… everything changed." *Fix:* delete the ellipsis; keep or cut the sentence on its own merits.
+- **Quotation marks around ordinary phrases** for fake emphasis, as in the "secret sauce." *Fix:* remove the quotes or replace the phrase.
+- **Title Case Headers On Everything.** *Fix:* sentence case.
 
-**Rewrite:** open with the claim or the specific. "Reply rates dropped to 1.2% in Q3." Exception: if the author's fingerprint shows they genuinely open this way, keep it.
+## 3. The slop lexicon
 
-### Over-signposting
+Cut on sight, or replace with the plain verb:
 
-"In this post, we'll cover three things." "Let's dive in." "First, some context." Announcing the structure before delivering it.
+delve, dive in, deep dive, unpack, unlock, unleash, elevate, empower, leverage (as a verb), robust, seamless, streamline, supercharge, game-changer, revolutionize, transform (without an object that changed), landscape, realm, tapestry, testament, beacon, navigate, embark, journey, thrive, foster, harness, "in today's fast-paced world," "in the ever-evolving landscape of," "let's face it," "here's the thing," "the best part?," "spoiler alert," "pro tip," "it's important to note," "it's worth noting," "arguably," "moreover" and "furthermore" as paragraph glue, "folks."
 
-**Rewrite:** delete the announcement and start with the content. Headings already signpost. In email, the entire construction goes.
+The rule underneath the list: any phrase that appears in everyone's AI drafts belongs to no one's voice. Apply that test to words not on the list yet.
 
-### The false balance
+Do not treat this as find-and-replace. A word on the list is a prompt to check the sentence, and the sentence is usually the problem.
 
-"While X has its merits, Y offers distinct advantages." Both-sides framing applied to a question the author actually has a position on.
+## 4. Content-level tells
 
-**Rewrite:** take the position. Concede the specific counterpoint later, if it is real.
+**Hedging stacks.** "Arguably one of the most important…" *Fix:* commit or cut.
 
-## Surface tells
+**Both-sides mush.** Perfectly symmetrical pros and cons with no stance. *Fix:* take the position the author actually holds and give the tradeoff honestly.
 
-### Punctuation
+**Invented specificity.** Round numbers and composite anecdotes the source material never contained. *Fix:* trace to source or cut. A flagged gap beats a fabricated fact.
 
-- Em dashes, especially more than one per paragraph. Check what the author actually uses, then match it.
-- Semicolons in social copy.
-- Colons introducing every list.
-- Curly quotes in one place and straight quotes in another, which signals a paste from a generated draft.
+**Unverifiable superlatives.** "The best," "the largest," "industry-leading." *Fix:* replace with a checkable claim that survives a hostile reader. "The largest community" dies to one counterexample; a dated, verifiable "longest-running" survives.
 
-### Diction
+**Generic hypotheticals.** "Imagine a SaaS company struggling with churn…" *Fix:* use the real example from source material, or none.
 
-- Written-out forms where a person contracts: it is, do not, cannot, will not.
-- Register vocabulary that appears in no human draft by the same author: delve, leverage as a verb, robust, seamless, landscape, realm, testament, tapestry, navigate the complexities, unlock, elevate, harness, foster.
-- Hedging stacks: "arguably one of the most," "can often be seen as," "may potentially."
-- Unverifiable superlatives: "the most effective approach," "the ultimate guide," "game-changing."
+**"Studies show" with no study.** *Fix:* name it or lose it.
 
-Do not treat the vocabulary list as a find-and-replace. A word on this list is a prompt to check the sentence, and the sentence is usually the problem.
+**Advice with no cost.** Recommendations where nothing is traded off. *Fix:* state what the approach costs. Cost is what makes advice credible.
 
-### Formatting
+**No lived detail.** No time, place, name, or number anywhere in the piece. *Fix:* the specificity pass. If nothing lived can be added, question whether the piece should ship.
 
-- Bold on every other line, or bold applied to whole sentences rather than terms.
-- Emoji bullets, especially rocket, checkmark, fire.
-- Hashtag piles at the end of social copy.
-- Heading levels that step down evenly with no section given more room than another.
+## 5. Voice tells
 
-### Closers
-
-Aphoristic endings reaching for profundity: "Because in the end, growth is just a series of small decisions." Cut them.
-
-## Specificity failures
-
-- Quantifiers with no number: many, several, countless, a growing number of.
-- Named-source-free authority: "studies show," "experts agree," "research suggests."
-- Placeholder ranges that were never filled: "X%," "significant improvement," "dramatically reduced."
-- Composite anecdotes with no traceable origin: "one team we worked with."
-
-Each of these resolves one of two ways. It becomes a real number, name, or date traced to source material, or it gets cut. Never a third way.
+- **Written-out forms where a person contracts:** it is, do not, cannot, they are. *Fix:* contract them. Humans contract by default; the formal expansion reads as machine politeness.
+- **Relentless positivity,** exclamation inflation, motivational-poster closers. "Now go build something amazing!" *Fix:* end on substance.
+- **Apology hedges and permission-seeking.** "I hope this helps," "Just my two cents." *Fix:* delete. Public copy asserts.
+- **Explaining the joke,** or flagging humor before making it. *Fix:* trust the reader or cut the joke.
+- **Register drift.** Essay formality in a feed post, feed punchiness in a long essay. *Fix:* match the channel's register end to end.
 
 ## What is not a tell
 
-These get flagged by careless passes and are usually fine:
+Flagged by careless passes, usually fine:
 
-- Correct parallelism inside a single list. Parallel structure is good writing; only the repetition across sections is a tell.
+- Correct parallelism inside a single list. Only the repetition across sections is a tell.
 - Bullets in general.
 - Long sentences.
 - The word "however."
