@@ -53,7 +53,7 @@ The story bank is what makes volume possible without fiction. It is the differen
 
 Batch drafts. One approval touchpoint a week. Target under 30 minutes of founder time, because approval friction is the number one killer of consistency.
 
-Track edit rate, the share of drafts approved untouched. Falling means calibration is working. Rising means voice drift, so go back to the corpus and re-extract rather than absorbing the edits one at a time.
+Track edit rate, the share of drafts the founder changes before approving. Falling means calibration is working. Rising means voice drift, so go back to the corpus and re-extract rather than absorbing the edits one at a time.
 
 Under 10 percent after the first month is the working target. An engagement that needs an hour of founder time a week will quietly stop getting it, and the posts stop with it.
 
