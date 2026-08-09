@@ -10,7 +10,7 @@ Genuine samples the fingerprint gets built from and every draft gets checked aga
 
 **What to collect:**
 
-- 10 to 20 pieces the founder wrote themselves, unassisted. Posts, internal memos, long Slack messages, investor updates, conference talk transcripts.
+- 10 to 20 pieces the founder wrote themselves, unassisted. Posts, internal memos, long messages in the team chat, investor updates, conference talk transcripts.
 - Recordings of them talking about their work, unscripted. Podcast appearances are ideal. Speech patterns transfer to the page better than an invented style does.
 - Anything they have written that they dislike, with the reason. Negative examples calibrate faster than positive ones.
 
