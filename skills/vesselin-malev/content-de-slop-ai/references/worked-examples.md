@@ -2,7 +2,7 @@
 
 Three passes end to end, plus one case where the flagged construction was correct and stayed.
 
-> Replace these with real drafts from your own work before merge if you have them. Illustrative examples are weaker than traceable ones.
+Read these for the method, not the wording. Each one names the tells first, then rewrites, in that order. The diagnosis is the transferable part.
 
 ## Example 1: LinkedIn post
 
