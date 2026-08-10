@@ -2,7 +2,7 @@
 name: media-pr-outreach
 title: Media and PR outreach
 description: |
-  Use this skill for media and PR outreach - first contact with a reporter, a news pitch, a contributed-byline pitch, or a fast reactive pitch on breaking news. Produces a short, anchored pitch that leads with the reporter's beat and closes on a concrete give-plus-ask, plus a follow-up plan. Reach for it when the ask is "pitch this reporter", "get us press coverage", "draft a media or PR pitch", "respond to this story", or "build our journalist list".
+  Use this skill when doing media and PR outreach - first contact with a reporter, a news pitch, a contributed-byline pitch, or a fast reactive pitch on breaking news. Produces a short, anchored pitch that leads with the reporter's beat and closes on a concrete give-plus-ask, plus a follow-up plan. Reach for it when the ask is "pitch this reporter", "get us press coverage", "draft a media or PR pitch", "respond to this story", or "build our journalist list".
 category: Outreach
 tags: [Marketing]
 ---
@@ -27,13 +27,13 @@ Pick the type before drafting - each has a different structure and length, detai
 3. **Lead with their readers, not the company.** Open on the news value or the beat. One line of company relevance, not three. The anchor rule, the them:us ratio, and the give-plus-ask close - the three levers that decide reply rate - are worked through with examples in `references/anchor-ratio-and-close.md`.
 4. **Run the copy pass.** Strip AI tells, then add enough plain human voice that it reads as one person emailing another, not a template. No jargon, no "circling back", no press-release voice.
 5. **Clear the review gate.** Before it sends, one independent read confirms: anchored (to the reporter's recent byline, or for a reactive pitch to the breaking story), passes the them:us ratio, closes on a real give-plus-ask (first contact excepted - it makes no ask), and reads clean. One revision round.
-6. **Send, log, and follow up once.** Send from the right person's inbox. Log the reporter, outlet, date, type, and anchor. Follow up once after five to seven business days, one sentence, no pressure. Log every response, including a decline - a "not now" is a relationship.
+6. **Human approves, then send, log, and follow up once.** A person reviews and approves the final email and sends it from the right inbox - nothing goes out automatically. Log the reporter, outlet, date, type, and anchor. Follow up once after five to seven business days, one sentence, no pressure. Log every response, including a decline - a "not now" is a relationship.
 
 ## What good looks like
 
 - **What the best operator notices first:** the anchor is doing more work than the pitch. A reporter decides whether to keep reading based on whether the first line proves you actually read their work. A specific, recent, correctly-attributed anchor earns the next sentence; a generic "I love your coverage of ad tech" gets deleted. Get the anchor right and the rest is easy.
 - **The common mistake:** leading with the company and its product, and closing with "would love to be a source" - a ratio of mostly-us and an ask with no give. The mediocre pitch is also a mass send: the same paragraph to five reporters, which every reporter can smell. One reporter per outlet per story, every pitch specific to that person.
-- **How you know it's ready:** count sentences about their readers versus about the company - three to one, minimum. The close names a concrete give (a specific quote, a data point, an exclusive angle, a ready draft) and one low-effort ask. And it would read, to the reporter, like an email from a person who knows their beat.
+- **How you know it's ready:** count sentences about their readers versus about the company - three to one, minimum. The close names a concrete give (a specific quote, a data point, an exclusive angle, a ready draft) and one low-effort ask (first contact excepted - it makes no ask, it just offers to be a resource). And it would read, to the reporter, like an email from a person who knows their beat.
 
 ## Rules
 

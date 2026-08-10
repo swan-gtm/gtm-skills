@@ -6,7 +6,7 @@ Three things decide whether a pitch gets a reply. Get these right and the rest o
 
 ## 1. The anchor
 
-**The rule:** first contact and pitches reference a specific piece the reporter published recently, on their beat, that the company can genuinely comment on.
+**The rule:** first contact, news pitches, and byline pitches reference a specific piece the reporter published recently, on their beat, that the company can genuinely comment on. The reactive pitch is the one exception: it anchors to the story that just broke, not to the reporter's own byline, because speed is the point.
 
 **Why it works:** the anchor is the proof you actually read them. A reporter gets dozens of pitches that open with flattery about their "great coverage of [broad topic]" - a phrase that proves nothing. A specific, recent, correctly-attributed reference proves you did the work, and it earns the next sentence.
 
@@ -48,4 +48,4 @@ Three sentences on the reader and the story, one light on the company. That is t
 
 ## Putting it together
 
-A pitch that clears all three: opens on a verified-recent anchor, spends most of its sentences on the reader and the story, and closes with one specific give and one small ask. Short, specific, and easy to say yes to. That is the whole game.
+A pitch that clears all three: opens on a verified-recent anchor (the breaking story, for a reactive pitch), spends most of its sentences on the reader and the story, and closes with one specific give and one small ask. First contact is the exception to the close - it makes no ask, it just offers to be a resource. Short, specific, and easy to say yes to. That is the whole game.
