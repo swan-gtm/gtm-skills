@@ -1,6 +1,6 @@
 # Move library — the human moves, with specimens
 
-The eight moves that put a specific person back into flat copy. Each entry: what it is, why it reads as human, how to place it, and multiple specimens. Pull one or two distinct moves per piece, never all of them. A single move may recur a couple of times within the piece; that still counts as one move.
+The eight moves that put a specific person back into flat copy. Each entry: what it is, why it reads as human, how to place it, and multiple specimens. Pull one or two distinct moves per piece, never all of them. A single move-type may recur two or three times within the piece and still count as one move. The one exception is the mid-sentence aside (move 1): use it at most once per piece.
 
 ---
 
@@ -10,7 +10,7 @@ Drop a short comment into the middle of a line, in parentheses or between commas
 
 **Why it's human:** it reveals a point of view that isn't strictly necessary to the argument. A machine optimises the sentence so every clause is load-bearing; a person can't resist the side comment. The unnecessary bit is the human bit.
 
-**How to place it:** once per piece, let a real reaction interrupt the sentence. Keep it short. It should feel tossed off, not staged.
+**How to place it:** at most once per piece (this is the one move that does not recur), let a real reaction interrupt the sentence. Keep it short. It should feel tossed off, not staged.
 
 - "We ran it for six weeks (which, in ad-tech time, is roughly a geological era) and the numbers held."
 - "The client wanted 'something viral', of course they did, so we started with what actually moves the metric."

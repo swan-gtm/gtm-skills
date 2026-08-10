@@ -19,7 +19,7 @@ This is deliberately a separate skill from the anti-ai-slop-writing pass, not on
 
 2. **Read the piece once and locate the flatness.** Find the stretch where the writing is smooth, correct, and voiceless - usually the middle, where the argument goes on autopilot. That is where a move earns its place. Do not spray moves across every line.
 
-3. **Add one or two moves, no more.** This counts distinct move-types from the library below - pick one or two, not all eight. A single move may recur its own handful of times within the piece (the conjunction-opener below, for instance, can appear two or three times); that still counts as one move. What reads as try-hard is stacking many different quirks, so hold the line at one or two move-types per piece. Match the move to the writer's real register - a dry operator gets a deadpan undercut, not a whimsical aside.
+3. **Add one or two moves, no more.** This counts distinct move-types from the library below - pick one or two, not all eight. A single move-type may recur two or three times within the piece and still count as one move (the conjunction opener, for instance). The one exception is the mid-sentence aside: use it at most once per piece. What reads as try-hard is stacking many different quirks, so hold the line at one or two move-types per piece. Match the move to the writer's real register - a dry operator gets a deadpan undercut, not a whimsical aside.
 
 4. **Pull the real detail, never invent it.** The specificity move (below) uses only true detail the writer actually has. Specificity you own reads as lived; specificity you invent reads as fraud, and invented numbers or moments are a hard failure.
 

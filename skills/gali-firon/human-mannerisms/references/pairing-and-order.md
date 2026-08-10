@@ -24,6 +24,8 @@ If you add human moves to copy that still carries AI tells, the moves make the t
 | Reads as a costume, not the writer | Moves don't match the writer's register | Match dry moves to dry writers, warm to warm |
 | Reads as fabricated | Specificity move used invented detail | Use only true detail, or drop the move |
 
+One row above needs a carve-out: "smooth and lifeless" is only a problem for voice-forward copy. Formal, compliance, or technical copy is *supposed* to read clean and plain - it correctly stops after the tell-stripping pass, and this pass should not run on it. Do not add casual texture to writing meant to stay plain; smooth-and-neutral is the target there, not a failure.
+
 ## What this pass is NOT
 
 - **Not a checklist to apply all at once.** One or two moves per piece. A wall of quirks is try-hard slop.
