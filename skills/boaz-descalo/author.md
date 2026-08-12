@@ -1,5 +1,6 @@
 ---
 name: Boaz Descalo
+avatarUrl: "https://www.gtmskills.com/authors/boaz-descalo.jpg"
 title: Founder & CEO, Node8
 linkedinUrl: https://www.linkedin.com/in/descalo/
 companyDomain: node8.ai

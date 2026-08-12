@@ -1,5 +1,6 @@
 ---
 name: Ryan Iyengar
+avatarUrl: "https://www.gtmskills.com/authors/ryan-iyengar.jpg"
 title: CEO & Founder, Full Stack GTM
 linkedinUrl: https://www.linkedin.com/in/ryaniyengar
 companyDomain: fullstackgtm.com

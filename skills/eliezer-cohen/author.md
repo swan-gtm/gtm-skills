@@ -1,5 +1,6 @@
 ---
 name: Eliezer Cohen
+avatarUrl: "https://www.gtmskills.com/authors/eliezer-cohen.jpg"
 title: Head of Global Sales & Partnerships, GoPerfect
 linkedinUrl: https://www.linkedin.com/in/eliezercohen/
 companyDomain: goperfect.com
