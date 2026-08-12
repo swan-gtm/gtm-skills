@@ -10,7 +10,7 @@ Use this when a few leads converted and you need more like them. It produces a d
 
 ## The play
 
-1. **Read the seed properly.** Pull the seed's full record and extract three things: current title, current employer, and industry. That triple is the similarity signature. Everything downstream depends on it being right, so read the actual current role rather than the headline, which is often aspirational or stale.
+1. **Read the seed properly.** Pull the seed's full record and extract two things: current title and current employer. That pair is the similarity signature. Everything downstream depends on it being right, so read the actual current role rather than the headline, which is often aspirational or stale.
 
 2. **Decide what "similar" means.** There are two different searches and they answer different questions:
    - **Peers inside the same company** — title plus employer. Use when you are mapping a buying committee or expanding within a won account.

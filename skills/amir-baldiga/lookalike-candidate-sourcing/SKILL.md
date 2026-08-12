@@ -32,7 +32,7 @@ Use this when one hire worked and you want more like them. It produces a ranked 
 
 - The strongest sourcers treat a zero-result search as information about the query, not the market, and can say which filter they loosened and why.
 - The mediocre version returns fifty unranked names and calls it a pipeline, leaving the hiring manager to do the actual sourcing work.
-- A score is only useful if it decomposes. "82" means nothing; "82: exact title, 6 of 9 skills, one level junior, same metro" is a conversation.
+- A score is only useful if it decomposes. "77" means nothing; "77: exact title, 6 of 9 skills, one level junior, same metro" is a conversation.
 - You know it is good when the hiring manager disagrees with a specific score for a specific reason. That means they can see the reasoning.
 
 ## Rules
