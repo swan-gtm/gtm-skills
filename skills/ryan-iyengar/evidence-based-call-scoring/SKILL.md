@@ -1,6 +1,6 @@
 ---
 name: evidence-based-call-scoring
-title: Evidence-based sales call scoring
+title: Score sales calls on evidence
 description: |
   Use this skill when reviewing sales calls for coaching, qualification, deal inspection, or CRM updates. Produces an evidence-quoted scorecard, calibrated dimension scores, uncertainty flags, and a reviewable set of deal insights and next actions.
 category: Sales
