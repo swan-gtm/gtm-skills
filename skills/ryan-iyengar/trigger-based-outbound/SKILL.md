@@ -2,7 +2,7 @@
 name: trigger-based-outbound
 title: Trigger-based outbound
 description: |
-  Use this skill when an account-level change creates a timely reason to engage. Produces a ranked send, nurture, or skip decision, a verified contact target, a trigger-grounded opener, and an outcome record that improves future signal selection.
+  Use this skill to qualify one already-detected account event for an outreach decision; use abm-signal-watchlist to operate persistent monitoring across a fixed account list. Produces a ranked send, nurture, or skip decision, a verified contact target, a trigger-grounded opener, and an outcome record that improves future signal selection.
 category: Signals
 tags: [Sales, Demand Gen]
 ---
