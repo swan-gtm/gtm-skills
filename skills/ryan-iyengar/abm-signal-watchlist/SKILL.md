@@ -2,7 +2,7 @@
 name: abm-signal-watchlist
 title: Build an ABM signal watchlist
 description: |
-  Use this skill when a team has target companies and wants to engage only when meaningful account changes occur. Produces a resolved account watchlist, signal definitions, stakeholder coverage plan, ranked action queue, and learning loop.
+  Use this skill for ongoing monitoring across a fixed target-account list; use trigger-based-outbound when evaluating one already-detected event. Produces a resolved account watchlist, signal definitions, stakeholder coverage plan, ranked action queue, and learning loop.
 category: ABM
 tags: [Sales, Marketing, Demand Gen]
 ---
