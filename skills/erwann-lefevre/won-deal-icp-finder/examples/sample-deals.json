@@ -1,0 +1,16 @@
+[
+  {"Company": "Northwind Logistics", "Amount": "48000", "Deal Stage": "Closed Won", "Industry": "Logistics", "Number of Employees": "320", "Country": "France", "Original Source": "LinkedIn outreach", "Close Date": "2026-01-12"},
+  {"Company": "Northwind Logistics", "Amount": "22000", "Deal Stage": "Closed Won", "Industry": "Logistics", "Number of Employees": "320", "Country": "France", "Original Source": "LinkedIn outreach", "Close Date": "2026-04-03"},
+  {"Company": "Velora SaaS", "Amount": "36000", "Deal Stage": "Closed Won", "Industry": "SaaS", "Number of Employees": "140", "Country": "Germany", "Original Source": "LinkedIn outreach", "Close Date": "2026-02-08"},
+  {"Company": "Brightpath Consulting", "Amount": "31000", "Deal Stage": "Closed Won", "Industry": "Consulting", "Number of Employees": "85", "Country": "United Kingdom", "Original Source": "Email outreach", "Close Date": "2026-03-19"},
+  {"Company": "Cobalt FinTech", "Amount": "54000", "Deal Stage": "Closed Won", "Industry": "FinTech", "Number of Employees": "210", "Country": "France", "Original Source": "LinkedIn outreach", "Close Date": "2026-02-27"},
+  {"Company": "Cobalt FinTech", "Amount": "18000", "Deal Stage": "Closed Won", "Industry": "FinTech", "Number of Employees": "210", "Country": "France", "Original Source": "LinkedIn outreach", "Close Date": "2026-05-05"},
+  {"Company": "Atlas Retail Group", "Amount": "12000", "Deal Stage": "Closed Won", "Industry": "Retail", "Number of Employees": "1200", "Country": "Spain", "Original Source": "Inbound demo", "Close Date": "2026-01-30"},
+  {"Company": "Meridian SaaS", "Amount": "29000", "Deal Stage": "Closed Won", "Industry": "SaaS", "Number of Employees": "160", "Country": "Germany", "Original Source": "LinkedIn outreach", "Close Date": "2026-03-11"},
+  {"Company": "Solis Agency", "Amount": "9000", "Deal Stage": "Closed Won", "Industry": "Consulting", "Number of Employees": "45", "Country": "United Kingdom", "Original Source": "Email outreach", "Close Date": "2026-04-22"},
+  {"Company": "Ferro Manufacturing", "Amount": "15000", "Deal Stage": "Closed Won", "Industry": "Manufacturing", "Number of Employees": "2400", "Country": "Italy", "Original Source": "", "Close Date": "2026-02-02"},
+  {"Company": "Vantage FinTech", "Amount": "41000", "Deal Stage": "Closed Won", "Industry": "FinTech", "Number of Employees": "190", "Country": "Germany", "Original Source": "LinkedIn outreach", "Close Date": "2026-04-14"},
+  {"Company": "Quill SaaS", "Amount": "27000", "Deal Stage": "Closed Won", "Industry": "SaaS", "Number of Employees": "110", "Country": "France", "Original Source": "LinkedIn outreach", "Close Date": "2026-05-09"},
+  {"Company": "Harbor Insurance", "Amount": "7000", "Deal Stage": "Closed Lost", "Industry": "Insurance", "Number of Employees": "600", "Country": "France", "Original Source": "Cold call", "Close Date": "2026-01-05"},
+  {"Company": "Tideway Media", "Amount": "6000", "Deal Stage": "Discovery", "Industry": "Media", "Number of Employees": "70", "Country": "United Kingdom", "Original Source": "Inbound demo", "Close Date": ""}
+]
