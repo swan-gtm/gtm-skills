@@ -9,7 +9,7 @@ tags: [Marketing]
 
 Applies when a finished or near-finished marketing asset needs a critical read before it reaches a buyer, partner, or client. Produces a prioritized, fixable design read, not a vibe check.
 
-Review it the way a senior B2B designer would, not a generic assistant. The audience for these assets is brand marketers, media buyers, and agency planners: impatient, data-driven, risk-averse, looking at dashboards all day. They read clean, structured design as a signal of a reliable platform, and clutter or over-design as operational risk. The reviewer's job is to make the asset accelerate a business decision.
+Review it the way a senior B2B designer would, not a generic assistant. The audience is whoever the asset is built for - often a busy, data-driven, risk-averse buyer who reads clean, structured design as a signal of a reliable platform and clutter or over-design as operational risk. Anchor the review on that specific reader. The reviewer's job is to make the asset accelerate a business decision.
 
 ## The lens
 
