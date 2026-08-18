@@ -8,7 +8,7 @@ The moment any slice of the surface is shown to someone else, it has to be a cle
 
 - **Raw scores and rankings.** Your internal 1-to-10 on an item, your "why this is deprioritised" note.
 - **Blunt working notes.** The candid version of why a deal is stuck or a person went quiet.
-- **Internal labels and process names.** The names of the tools, scripts, agents, or steps that generate your work. A teammate-facing view names outcomes, not machinery.
+- **Process detail.** How the work got made - the tools, steps, or helpers involved - is noise to the recipient, who needs the outcome and its status, not a narration of the process. Describe work by what it is and where it stands, not by how it was produced.
 - **Unapproved drafts.** Anything not yet cleared to be seen.
 - **Anything about people that you would not say to their face or in front of them.**
 
@@ -16,7 +16,7 @@ The moment any slice of the surface is shown to someone else, it has to be a cle
 
 The same work, described by outcome and status in plain language:
 
-- "Draft ready for review", not "Sofia pass complete, score 7".
+- "Draft ready for review", not "second editing pass done, score 7/10".
 - "Waiting on client", not your private note about why the client is difficult.
 - Functional owner labels, not internal code names.
 - Committed and in-flight work, not your raw backlog and scores.
@@ -30,4 +30,4 @@ The same work, described by outcome and status in plain language:
 
 ## Why this matters more than it looks
 
-Two failure modes this prevents. The obvious one: a raw note or a candid score reaches the person it was about. The quieter one: internal machinery leaks - the names of your tools, helpers, or process steps - and what was meant to read as your judgment now reads as automated output. The clean-room view protects both the people in your notes and the credibility of the work.
+Two failure modes this prevents. The obvious one: a raw note or a candid score reaches the person it was about. The quieter one: process detail clutters a view that should be about outcomes - the recipient gets a narration of how the work was made instead of the decision or status they came for. A shareable view describes work by outcome and status, which is what the recipient can actually use.
