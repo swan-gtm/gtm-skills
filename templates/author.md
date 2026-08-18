@@ -4,6 +4,7 @@ avatarUrl: https://…            # optional: a real PHOTO OF YOU — headshot, 
 title: Role, Company            # e.g. "Head of Growth, Acme"
 linkedinUrl: https://www.linkedin.com/in/…   # YOUR OWN profile — required. Not a company or product page. This is how maintainers verify you.
 companyDomain: example.com
+companyLogoUrl: https://…   # optional: a square COMPANY MARK — ≥256px, transparent PNG or SVG. Omit it and the library derives one from companyDomain.
 email: you@company.com          # required — how maintainers reach you about your skills; use a work address you're OK having public (this repo is open)
 ---
 

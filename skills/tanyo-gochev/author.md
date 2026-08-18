@@ -4,6 +4,7 @@ avatarUrl: https://www.gtmskills.com/authors/tanyo-gochev.jpg
 title: "Co-Founder & Head of GTM, The Demand Department"
 linkedinUrl: https://www.linkedin.com/in/tanyo/
 companyDomain: demanddept.com
+companyLogoUrl: https://raw.githubusercontent.com/tanyo-cell/gtm-skills/brand-assets/demanddept-logo-512.png
 email: tanyo@copytg.com
 ---
 

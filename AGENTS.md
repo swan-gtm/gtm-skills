@@ -76,7 +76,7 @@ contributors: []        # other creators' slugs, if any — omit if none
 - The depth that makes a skill worth installing lives in `references/<topic>.md` pages: full scoring rubrics with real numbers, worked examples, templates, edge-case playbooks, channel variants. The body says when to read each one. **The library's flagship skills ship 2–5 reference pages** — a submission with no references usually means the interview stopped too early, and a bare checklist gets sent back.
 - Don't reference other skills by name; describe the next action in verbs.
 
-**`skills/<author>/author.md`** (first submission): frontmatter `name`, `avatarUrl`, `title`, `linkedinUrl`, `companyDomain`, `email`; the bio is the body text. The directory name is the slug — there is no slug field.
+**`skills/<author>/author.md`** (first submission): frontmatter `name`, `avatarUrl`, `title`, `linkedinUrl`, `companyDomain`, `companyLogoUrl`, `email`; the bio is the body text. The directory name is the slug — there is no slug field.
 
 This is a **people-first marketplace** — every skill is published under a real person's name and face, and maintainers verify identity before merging. Four fields are load-bearing:
 
@@ -84,6 +84,8 @@ This is a **people-first marketplace** — every skill is published under a real
 - **`avatarUrl` — optional, but when present it must be a real photo of the person.** A clear headshot, roughly square, at least 400px. Not a logo, not a mascot, not a GitHub identicon, not an AI-generated face. **If you leave it out (or the URL is unusable), maintainers will take your profile photo from the LinkedIn profile above and re-host it at gtmskills.com — submitting means you're OK with that.** Prefer a durable URL if you do supply one (LinkedIn image URLs expire), or attach the image to the PR and note it.
 - **`email` — required.** How maintainers reach you about your skills: review questions, a missing file, a heads-up when something ships or needs a refresh. Use a work address you are comfortable having public — this repo is open, so the file (email included) is visible to anyone.
 - **The bio (body text)** — 2–4 sentences about the person, written person-first ("Jane built…", not "Acme is…"). Every claim should be verifiable on the person's own site, LinkedIn, or press — maintainers check, and unverifiable claims get trimmed.
+
+**`companyLogoUrl` — optional.** A square company mark, at least 256px, transparent PNG or SVG, at a durable URL. When it is absent the library derives a logo from `companyDomain`; for domains the upstream logo source does not carry, that fallback renders a screenshot of the company homepage instead of a mark.
 
 Submitting several skills at once? Include `author.md` in your **first** PR only — every PR duplicating it will conflict after the first one merges.
 
