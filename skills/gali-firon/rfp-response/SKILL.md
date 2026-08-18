@@ -2,7 +2,7 @@
 name: rfp-response
 title: RFP response
 description: |
-  Use this skill when an inbound RFP, RFI, or brief lands and a proposal has to go back by a deadline - "an RFP just came in", "should we bid on this", "build the response", "the proposal is due Friday", "set up the RFP", "where are we on the [brand] RFP", "what's the status of our RFPs", "what's at risk in the pipeline". Produces a bid/no-bid call, a structured response built to the evaluator's criteria, a work plan sequenced backward from the deadline, and a status read across every live RFP.
+  Use this skill when an inbound RFP, RFI, or brief lands and a proposal has to go back by a deadline - "an RFP just came in", "should we bid on this", "build the response", "the proposal is due Friday", "set up the RFP", "where are we on the [brand] RFP", "what's the status of our RFPs", "which RFP is about to slip". Produces a bid/no-bid call, a structured response built to the evaluator's criteria, a work plan sequenced backward from the deadline, and a status read across every live RFP.
 category: Deals
 tags: [Sales]
 ---
