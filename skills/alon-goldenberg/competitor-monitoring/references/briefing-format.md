@@ -10,8 +10,8 @@ Decided from the profile's last-run date, before any searching:
 |---|---|---|
 | Never (first run) | **Full** | Past 14 days |
 | More than 14 days ago | **Full** | Past 14 days |
-| 3–14 days ago | **Quick refresh** | Since the last run date |
-| Under 3 days ago | **Quick refresh** | Past 7 days (never narrower — near-empty windows read as false quiet) |
+| 3–14 days ago | **Quick refresh** | Since the last run date, but never narrower than 7 days |
+| Under 3 days ago | **Quick refresh** | Past 7 days (the same floor — near-empty windows read as false quiet) |
 | Today, and today's briefing exists | **Same-day repeat** | Ask before re-running; never silently duplicate |
 
 Tune the 14-day boundary to the market's tempo — weekly for fast-moving spaces, monthly for slow ones — but keep the structure: a wide window with the full format, a narrow window with the delta format.

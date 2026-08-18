@@ -65,4 +65,4 @@ The rest of the report follows in full, updated where signals changed. The "What
 
 ## Quick-mode variant
 
-Same skeleton, but built from search snippets only (no full-page extraction): shorter sections, no executive quotes unless a snippet contained one, and the Strategic Outlook trimmed to 2–3 sentences. Still fully dated and sourced — quick mode shortens the report, never the honesty.
+Same skeleton, but built from search snippets only (no full-page extraction): shorter sections, no executive quotes unless a snippet contained one, and the Strategic Outlook trimmed to 2–3 sentences. One exception survives quick mode: the P1 verification gate in `signal-dating.md` still applies — a P1 signal (funding, M&A, leadership change) found only in a snippet either gets its corroboration search run anyway or ships labeled **unverified**, never presented as confirmed. Still fully dated and sourced — quick mode shortens the report, never the honesty.

@@ -23,6 +23,8 @@ Do two research steps before asking the user anything:
 1. **Resolve brand variants.** Search the live web for the brand's alternate spellings, hashtags, handles, product names, and sub-brands that get mentioned independently. For common-word brand names, find the disambiguating terms (industry, founder, domain) so the sweep doesn't pull unrelated noise. Fold every confirmed variant into the query list silently — never ask the user to supply this.
 2. **Profile the brand.** Establish B2B vs B2C, industry, primary geography and language, and rough audience size. This picks the source profile and calibrates scoring — "high reach" means something different for a niche B2B tool than for a consumer app with millions of users.
 
+Replace before enabling: {{CRISIS_OWNER}} (who gets flagged on a Crisis hit) and {{ALERTS_CHANNEL}} (the team channel, if any, for Crisis/Watch pushes).
+
 Then confirm scope in a single message: the brand as you understood it plus any competitors to track alongside, the date window (default: last 7 days), depth (quick scan vs deep sweep; default deep), and who gets flagged on a Crisis-tier hit ({{CRISIS_OWNER}} — a PR lead, legal, founder, or the marketing team by default). Skip the questions entirely when the user already provided the answers or a prior run in this workspace configured them. If the brand name is still ambiguous after research, confirm which entity is meant before running anything.
 
 ## Pick the source profile
@@ -39,6 +41,8 @@ Four dimensions, each 0–100: **reach** (how many people can see this), **veloc
 
 ```
 composite = reach x 0.30 + velocity x 0.30 + max(risk_sentiment, risk_topic) x 0.25 + opportunity x 0.15
+
+Dimension scores are additive rows capped at 100 each — see the rubric for the cap rule and why the Crisis bar sits at 65.
 ```
 
 Velocity has an honesty gate: hourly growth rates need two data points. On a first pass with no baseline, score only observable proxies (cross-platform pickup, press pickup of a social post, crisis-scale absolute engagement) and label the velocity `~estimated`. The full point tables, baseline rules, and the rapid re-check upgrade path are in `references/scoring-rubric.md` — read it before scoring anything.
@@ -53,10 +57,10 @@ Assign every mention exactly one tier — teams act on tiers, not numbers.
 
 | Tier | Score | Action | Suggested owner | Window |
 |---|---|---|---|---|
-| Crisis | 80–100 | Route immediately | {{CRISIS_OWNER}} + legal + leadership | Respond < 2h |
-| Watch | 50–79 | Assign owner, monitor velocity | Marketing / comms | Respond < 24h |
+| Crisis | 65+ | Route immediately | {{CRISIS_OWNER}} + legal + leadership | Respond < 2h |
+| Watch | 45 up to 65 | Assign owner, monitor velocity | Marketing / comms | Respond < 24h |
 | Engage | Any score, positive + high reach | Amplify, thank, share | Marketing / social team | Act within 48h |
-| Log | < 50, no risk signals | None — searchable record | — | — |
+| Log | < 45, no risk signals | None — searchable record | — | — |
 
 Crisis mentions surface first, each as a full decision card: excerpt, all four scores, why it was flagged, who responds, by when, and a suggested draft action. If the user wants Crisis and Watch items pushed to a team channel ({{ALERTS_CHANNEL}}), post only those tiers — never the full feed.
 

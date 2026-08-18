@@ -30,11 +30,11 @@ If you also keep business-signal notes on these companies (funding, hiring, lead
 
 ## Confirm scope
 
-Work from {{COMPETITOR_LIST}}. Four or fewer competitors: analyze all. More: ask which to focus on this run — group them by category and let the user pick. Every competitor costs real research time; don't spend it on companies nobody asked about.
+Work from the confirmed competitor list. If a competitor profile already exists in this workspace (from a prior run or a competitor-monitoring setup), load it and confirm it's still current; otherwise ask the user for their domain and the competitors they care about, propose any obvious additions, and get an explicit yes on the final list before spending research time. Four or fewer competitors: analyze all. More: ask which to focus on this run — group them by category and let the user pick. Every competitor costs real research time; don't spend it on companies nobody asked about.
 
 ## Capture your own baseline first
 
-Before touching any competitor, capture your own positioning from {{YOUR_DOMAIN}} the exact same way you'll capture theirs — otherwise the messaging matrix has an empty row where "us" should be, and the comparison collapses into a list.
+Before touching any competitor, capture your own positioning from the user's own domain (confirmed during setup) the exact same way you'll capture theirs — otherwise the messaging matrix has an empty row where "us" should be, and the comparison collapses into a list.
 
 1. Map the site (sitemap or crawl) to find the real features/product and pricing URLs — don't guess paths.
 2. Extract the homepage, features page, and pricing page as clean text: tagline, hero copy, primary CTA, value props, tier names.

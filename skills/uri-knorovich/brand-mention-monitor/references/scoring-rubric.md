@@ -1,6 +1,6 @@
 # Scoring rubric — four dimensions, composite, tiers
 
-Score every mention 0–100 on each dimension, then compute the composite. Points come from evidence visible on the page (follower counts, reply counts, repost counts, domain, language) — never from guesses. When a value can't be verified, leave the points off and note it on the card.
+Score every mention 0–100 on each dimension, then compute the composite. Rows within a dimension are additive, and each dimension is capped at 100 — sum the matching rows, then clamp. Points come from evidence visible on the page (follower counts, reply counts, repost counts, domain, language) — never from guesses. When a value can't be verified, leave the points off and note it on the card.
 
 ## Reach / visibility (0–100) — how many people can see this?
 
@@ -79,9 +79,11 @@ Risk takes the stronger of the two risk reads — a legally dangerous mention wi
 
 | Tier | Rule |
 |---|---|
-| Crisis | composite 80–100 |
-| Watch | composite 50–79 |
+| Crisis | composite 65+ |
+| Watch | composite 45 up to 65 |
 | Engage | any composite, sentiment strongly positive and reach high — opportunity worth acting on |
-| Log | composite under 50 with no risk signals |
+| Log | composite under 45 with no risk signals |
+
+Why 65: the weights make 100 nearly unreachable (risk carries 0.25, opportunity 0.15 — a textbook crisis with zero opportunity tops out in the low 70s). A mention with high reach, climbing velocity, and a capped risk read composites to ~69; the Crisis bar sits below that on purpose.
 
 Engage is not a consolation tier: it exists so high-reach praise gets amplified within 48 hours instead of rotting in a log. A mention can be Engage even with a modest composite when opportunity and reach are both strong.
