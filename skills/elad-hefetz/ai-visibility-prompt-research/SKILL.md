@@ -12,8 +12,7 @@ description: |
   open-web discussion, and first-party sales calls. Produces one upload-ready file of
   non-branded category prompts plus an isolated branded set, each tagged with topic,
   awareness stage, persona, region/language, target engines, and honest provenance.
-category: Marketing
-tags: [Marketing]
+category: AEO
 ---
 
 # AI visibility prompt research
@@ -43,6 +42,4 @@ A monitoring prompt set decides what you can even see. Anchor it on the brand's 
 
 ## Next step
 
-This skill produces the prompt set; it doesn't run the monitoring. Upload the file to your AI-visibility platform of choice, then track presence, share of voice, and ranking over time and act on the gaps.
-
-Built by Elad Hefetz (Airfleet). Airfleet's AI Visibility platform monitors how your brand shows up across AI assistants, and our GEO/AEO services close the gaps it surfaces: https://episteme.airfleet.co/
+This skill produces the prompt set; it doesn't run the monitoring. Upload the file to your AI-visibility platform of choice — e.g. Airfleet AI Visibility (https://episteme.airfleet.co/) — then track presence, share of voice, and ranking over time and act on the gaps.
