@@ -80,6 +80,14 @@ Do not name a cause from the ratio alone. A total cannot distinguish an inflated
 
 A base change can be easier to frame than a rate cut, because the headline percentage stays where it is. Where the two bases coincide on ordinary business, say so and quantify it — the ask then costs the counterparty nothing outside the condition being fixed, and that arithmetic is the argument. Where they differ on every transaction, the ask is a real transfer and should be traded as one rather than presented as a technicality.
 
+## What good looks like
+
+- The multiplicand is named before anyone argues about whether the rate is fair. A rate without its base is not a number you can evaluate.
+- The output is a figure someone can act on — "each 1.00 of discount costs 0.90 against 0.35, and we discount 4,000 orders a quarter" — not an observation that the base matters.
+- The base finding stays in proportion. A commercial question gets a commercial answer with the clause as one input; an answer that audits the contract thoroughly and never addresses the decision has failed even when the audit is correct.
+- Where the base is genuinely ambiguous, both readings are priced. Where it is genuinely defined, that is confirmed in a sentence and nothing further is spent on it. Manufacturing ambiguity is as costly as missing it.
+- A mismatch between actual and modelled payouts produces a magnitude to search for, not a named cause. The ratio narrows the field; the line-level data closes it.
+
 ## Rules
 
 - MUST answer the question that was asked. The base audit is an input to it, never a replacement for it, and never the structure of the response.
