@@ -1,0 +1,122 @@
+{
+  "_comment": "Ordered pattern taxonomy. Seniority is evaluated top-down: the FIRST tier whose pattern matches wins. Order matters — 'Chief Executive Officer' must hit founder_c before 'executive' sends it to ic.",
+  "seniority": [
+    {
+      "tier": "founder_c",
+      "label": "Founder / C-level",
+      "patterns": [
+        "\\bfounder\\b", "\\bco-?founder\\b", "\\bfondat(eur|rice)\\b", "\\bfounding (member|partner)\\b",
+        "\\bceo\\b", "\\bcto\\b", "\\bcmo\\b", "\\bcro\\b", "\\bcoo\\b", "\\bcpo\\b", "\\bcfo\\b", "\\bciso\\b",
+        "chief [a-z ]{0,20}officer", "\\bpresident\\b", "\\bpr[ée]sident\\b",
+        "\\bowner\\b", "\\bmanaging (partner|director)\\b", "\\bg[ée]rant\\b", "\\bassoci[ée]\\b"
+      ]
+    },
+    {
+      "tier": "vp_head",
+      "label": "VP / Head of",
+      "patterns": [
+        "\\bvp\\b", "\\bs?vp\\b", "\\bevp\\b", "vice[- ]president",
+        "\\bhead of\\b", "\\bhead,", "\\bglobal head\\b",
+        "\\bdirector\\b", "\\bdirecteur\\b", "\\bdirectrice\\b", "\\bdirection\\b",
+        "\\bgeneral manager\\b", "\\bcountry manager\\b"
+      ]
+    },
+    {
+      "tier": "manager_lead",
+      "label": "Manager / Lead",
+      "patterns": [
+        "\\bmanager\\b", "\\bmanagement\\b", "\\blead\\b", "\\bleader\\b",
+        "\\bresponsable\\b", "\\bsupervisor\\b", "\\bprincipal\\b",
+        "\\bfounder'?s office\\b", "\\bchef de\\b"
+      ]
+    },
+    {
+      "tier": "ic",
+      "label": "Individual contributor",
+      "patterns": [
+        "\\bspecialist\\b", "\\bcoordinator\\b", "\\banalyst\\b", "\\bassociate\\b",
+        "\\baccount executive\\b", "\\bae\\b", "\\bsdr\\b", "\\bbdr\\b",
+        "\\brepresentative\\b", "\\bexecutive\\b", "\\bconsultant\\b",
+        "\\bengineer\\b", "\\bdeveloper\\b", "\\bdesigner\\b", "\\bscientist\\b",
+        "\\bintern\\b", "\\bjunior\\b", "\\bjr\\b", "\\bstudent\\b", "\\bfreelance\\b",
+        "\\bexpert\\b", "\\bstrategist\\b", "\\bofficer\\b"
+      ]
+    }
+  ],
+  "_function_comment": "Functions are NOT ordered — all matches are collected, then intersected with the ICP. A title can carry several (e.g. 'Sales and Marketing').",
+  "function": [
+    {
+      "key": "sales",
+      "label": "Sales / SDR / BDR",
+      "patterns": [
+        "\\bsales\\b", "\\bselling\\b", "\\bvente\\b", "\\bcommercial(e|ial)?\\b",
+        "\\baccount executive\\b", "\\bsdr\\b", "\\bbdr\\b", "\\bae\\b",
+        "business development", "\\bnew business\\b", "\\bd[ée]veloppement commercial\\b",
+        "\\bpipeline\\b", "\\bquota\\b", "\\bpre-?sales\\b"
+      ]
+    },
+    {
+      "key": "growth_marketing",
+      "label": "Growth / Marketing",
+      "patterns": [
+        "\\bgrowth\\b", "\\bmarketing\\b", "\\bmartech\\b", "\\bdemand gen",
+        "\\bacquisition\\b", "\\bbrand\\b", "\\bcontent\\b", "\\bseo\\b",
+        "\\bpaid\\b", "\\bads?\\b", "\\bcampaign\\b", "\\bcroissance\\b"
+      ]
+    },
+    {
+      "key": "revops",
+      "label": "RevOps / GTM engineering",
+      "patterns": [
+        "\\brevops\\b", "revenue operations", "revenue systems", "revenue strategy",
+        "sales operations", "\\bsales ops\\b", "\\bgtm\\b", "go-?to-?market",
+        "\\brevenue\\b", "\\bcrm\\b", "\\bautomation\\b", "\\benablement\\b"
+      ]
+    },
+    {
+      "key": "partnerships",
+      "label": "Partnerships / Alliances",
+      "patterns": ["\\bpartnership", "\\balliance", "\\bchannel\\b", "\\baffiliate", "\\bpartner\\b"]
+    },
+    {
+      "key": "product_tech",
+      "label": "Product / Engineering",
+      "patterns": [
+        "\\bproduct\\b", "\\bengineer", "\\bdeveloper\\b", "\\bsoftware\\b",
+        "\\bcto\\b", "\\bcpo\\b", "\\bdevops\\b", "\\bqa\\b", "\\bdata\\b", "\\bIT\\b",
+        "information system", "\\bsecurity\\b", "\\bdesign", "\\btechnical\\b",
+        "\\btechnolog(y|ies|ie)\\b", "\\bplatform\\b", "\\barchitect\\b", "\\bR&D\\b"
+      ]
+    },
+    {
+      "key": "other",
+      "label": "Other / support functions",
+      "patterns": [
+        "\\bhr\\b", "\\brecruit", "\\btalent\\b", "\\bfinance\\b", "\\baccounting\\b",
+        "\\bcompta\\b", "\\blegal\\b", "\\boffice manager\\b", "\\bcustomer success\\b",
+        "\\bsupport\\b", "\\bcoach", "\\bteacher\\b", "\\bjournalist", "\\b[ée]ditorial"
+      ]
+    }
+  ],
+  "_noise_comment": "Titles that indicate the person is not a buyer for a GTM tool regardless of seniority. Used to route to no_match, never silently dropped.",
+  "noise_patterns": [
+    "\\bstudent\\b", "\\bintern\\b", "\\bopen to work\\b", "\\bseeking\\b",
+    "\\bjob seeker\\b", "\\bretired\\b", "\\bventure scout\\b", "\\bangel investor\\b"
+  ],
+  "_industry_synonyms_comment": "When the user's ICP industries list contains a key (or the key contains it), the variants are added before matching. LinkedIn writes SaaS a dozen ways; this keeps a real SaaS company from being wrongly dropped as no_match. Match is substring, case-insensitive.",
+  "industry_synonyms": {
+    "saas": ["software development", "computer software", "software", "technology, information and internet", "information technology", "it services", "internet", "saas", "b2b software", "enterprise software"],
+    "software": ["software development", "computer software", "software", "technology, information and internet", "information technology", "it services", "internet", "saas"],
+    "tech": ["software development", "computer software", "technology, information and internet", "information technology", "it services", "internet", "information services", "data infrastructure and analytics", "technology"],
+    "fintech": ["financial services", "fintech", "banking", "software development", "technology, information and internet"],
+    "healthtech": ["hospitals and health care", "health, wellness and fitness", "medical devices", "biotechnology research", "software development"],
+    "ecommerce": ["retail", "e-commerce", "consumer goods", "internet", "software development"]
+  },
+  "_agency_comment": "Agency / freelance / consulting signals. NOT an auto-exclude (some agencies are ICP) — a lead whose company or bio hits these is FLAGGED so pass 2 gives it a look instead of trusting the auto-match. Checked against company name and bio.",
+  "agency_patterns": [
+    "\\bagenc(e|y|ies)\\b", "\\bfreelance", "\\bfreelanc", "\\bind[eé]pendant", "\\bfractional\\b",
+    "\\bconsult(ing|ant|ance)\\b", "\\bconseil\\b", "\\bstudio\\b", "\\bcollective\\b", "\\bcollectif\\b",
+    "\\bself-?employed\\b", "\\bauto-?entrepreneur\\b", "\\b\\bEI\\b", "\\bsole trader\\b", "\\bportage\\b",
+    "\\bsolopreneur\\b", "\\bexternalis", "\\boutsourc"
+  ]
+}
