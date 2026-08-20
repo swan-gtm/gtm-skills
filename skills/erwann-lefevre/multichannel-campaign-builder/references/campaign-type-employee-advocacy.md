@@ -6,7 +6,7 @@ Use this playbook when the user wants to reach the engagers of a specific collea
 
 ## What makes it different from social selling
 
-In a standard social-selling campaign, the engagement must never be referenced directly (it reads as surveillance — see `social-selling.md`).
+In a standard social-selling campaign, the engagement must never be referenced directly (it reads as surveillance — see `campaign-type-social-selling.md`).
 
 Here it's the opposite: **the engagement can be referenced openly.** The sender is a *colleague* of the post's author, so mentioning the advocate's post is a legitimate professional relationship, not monitoring.
 

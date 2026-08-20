@@ -2,7 +2,7 @@
 name: audit-the-base-not-the-rate
 title: Audit the base, not the rate
 description: |
-  Use this skill whenever a percentage in a commercial term is being set, questioned, or is
+  Use this skill when a percentage in a commercial term is being set, questioned, or is
   producing a number nobody expected — sales commission, revenue share, affiliate and creator
   payouts, channel margin, agency fees, referral fees, rebates. Triggers: "reps are hitting quota
   but margin isn't moving", "what does this promo actually cost us", "our partner payouts are

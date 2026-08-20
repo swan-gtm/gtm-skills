@@ -2,13 +2,13 @@
 name: quora-authority-answering
 title: Quora authority answering
 description: |
-  Use this skill for any Quora answering program run as a lead generation channel:
+  Use this skill when running a Quora answering program run as a lead generation channel:
   "answer these Quora questions", "write Quora answers for our founder", "our Quora
   answers read like AI", "how do we get leads from Quora", "which of these questions
   should we answer". Produces linkless answers that survive moderation, earn upvotes
   on the collapsed preview, and convert readers into profile visits, plus the triage
   and posting order for a batch.
-category: Influencers
+category: AEO
 tags: [Marketing, Demand Gen]
 ---
 
@@ -28,7 +28,7 @@ Set a credential line per topic cluster — role, company, one clause on what th
 
 Answer everything in a pasted batch unless the client says otherwise. Raise concerns as flags delivered alongside the work, never as withheld work.
 
-Five conditions get flagged and still get written: off-position questions, vendor-seeded clusters, near-duplicate threads, tool questions where the tool is unknown, and regulatory questions. Each carries its own handling and its own effect on posting order — read `references/triage-flags.md` before sequencing a batch.
+Four conditions get flagged and still get written: off-position questions, vendor-seeded clusters, tool questions where the tool is unknown, and regulatory questions. Near-duplicate threads are the one deliberate exception — pick the thread with the better traffic and skip the twin, per the triage reference. Each carries its own handling and its own effect on posting order — read `references/triage-flags.md` before sequencing a batch.
 
 ## Pace the posting
 
@@ -76,7 +76,7 @@ The output is good when no two answers in a batch share a skeleton or a length, 
 
 - MUST answer from a personal profile with a credential line matched to the topic cluster.
 - MUST carry at least one practitioner-level mechanic in every answer.
-- MUST deliver flagged questions as written answers with the flag attached, never as withheld work.
+- MUST deliver flagged questions as written answers with the flag attached, never as withheld work — except near-duplicate twins, which are skipped by design with the skip noted.
 - MUST vary opener shape and answer length deliberately across a batch.
 - MUST space a vendor-seeded cluster across days rather than answering it in one sitting.
 - NEVER include a link or a call to action, outside the disclosed "which company is best" pattern.

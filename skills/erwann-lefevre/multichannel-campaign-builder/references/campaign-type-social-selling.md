@@ -33,7 +33,7 @@ The signal tells you *what to talk about*. It is never something you talk *about
 | Mix | Sequence | Cadence |
 |---|---|---|
 | LinkedIn-only | invite + 2 DMs | J0 / J+5 / J+12 |
-| Multichannel (recommended) | 3 LinkedIn + 3 emails, alternating | J0 / J+4 / J+7 / J+10 / J+14 |
+| Multichannel (recommended) | 3 LinkedIn + 2 emails, alternating | J0 / J+4 / J+7 / J+10 / J+14 |
 | Email-only | 3 emails | J0 / J+4 / J+8 |
 
 ## Sequence shape
