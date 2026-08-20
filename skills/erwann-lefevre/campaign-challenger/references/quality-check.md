@@ -31,13 +31,31 @@ Score each with a cited excerpt as evidence.
 | 3 | Optimal length & structure | 50–100 words email / 40–70 LinkedIn, no sentence over 20 words, body max 3 sentences |
 | 4 | Concrete value & impact | Specific pain, concrete outcome, active phrasing, prospect's language |
 | 5 | Loss-aversion framing | Risks avoided, cost of inaction — not gain-only framing |
-| 6 | CTA structure | Low-friction, value-framed, follows the PVP framework (see `cta-framework.md`) |
+| 6 | CTA structure | Low-friction, value-framed, passes the permissionless-value bar below |
 | 7 | Persona fit | Right altitude and language for the target buyer persona the user is going after |
 | 8 | Value proposition relevance | Trigger → capability alignment, differentiated, business outcome |
 | 9 | Safe social proof | "Companies like..." phrasing, no fabricated metrics, sector-relevant |
 | 10 | Factual accuracy | Every claim traceable, no hallucinations (see Step 4) |
 | 11 | Strategic question / insight | Non-generic, reply-driving, curiosity-driving |
 | 12 | Positioning alignment | Consistent with the user's positioning: no positioning-banned words, claims on-message |
+
+## Scoring dimension 6 — the permissionless-value bar
+
+Most outreach dies at the CTA. *"Would you be open to a 30-minute call?"* is high-friction and seller-centric: it forces a binary the prospect has no reason to resolve in your favour yet, so they resolve it by ignoring the message.
+
+A CTA that carries **permissionless value** delivers something standalone — an insight, a benchmark, a resource, a question worth answering — that the reader can use whether or not they ever buy. The reply comes from curiosity rather than obligation.
+
+Score dimension 6 against five checks. A CTA passes only if all five hold:
+
+- The prospect can use the insight or resource even if they never buy.
+- The product is not mentioned.
+- The reply it asks for fits in one word or one sentence.
+- It is specific — it could not be sent to a thousand random people.
+- No urgency, no implicit pressure.
+
+Failing any one of them caps dimension 6 below the launch threshold, and the fix is a rewrite of the CTA rather than an edit.
+
+Two structural faults score here as well, independent of the wording: a meeting ask in the opening touch, and the same CTA shape repeated in consecutive touches. Both are sequence-level defects that a per-message read will miss, so check them across the whole cadence before scoring.
 
 Dimension 12 is the only one that depends on the user's own context. If the user has shared their positioning and a banned-word list, check the copy against them. If not, check only that claims are coherent and not off-brand, and skip the banned-word part.
 
