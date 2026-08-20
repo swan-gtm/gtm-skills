@@ -11,11 +11,17 @@ Each metric gets a good threshold and a floor, producing on target / watch / to 
 | Email open | 60% | 45% | higher is better |
 | Email reply | 6% | 3% | higher is better |
 | Email click | 8% | 4% | higher is better |
-| Bounce rate | 15% | 25% | **lower is better** |
+| Bounce rate | 2% | 5% | **lower is better** |
 
 For a higher-is-better metric: on target at or above good, watch at or above floor, otherwise to fix. For bounce, invert both comparisons.
 
+**Bounce is the one row not to loosen.** The others are calibration and can move with the market; this one is a hard technical limit. A bounce rate in the double digits burns the sending domain — mailbox providers read it as list abuse, and the damage lands on every campaign sent from that address, including the ones that were working. Treat 2% as the ceiling for healthy sending and 5% as the point where sending should stop until the list is verified and the domain re-warmed, rather than a number to watch decline over a few weeks.
+
+This is why bounce is always status-driving regardless of which channel a campaign leans on: it is the only metric here whose damage outlives the campaign.
+
 **These are starting defaults, not truth.** They're calibrated for cold outbound to a B2B audience, and they will be wrong for warm re-engagement, for a different market, or for a notably different offer. Replace them with the team's own trailing median as soon as there's enough history to compute one — their own numbers already account for their offer, their market and their execution, which no published figure does.
+
+The bounce row is excluded from that substitution. A team whose own history sits at 9% bounce has a domain problem, not a benchmark; adopting their median as the target would encode the damage as normal. Every other row moves with the market, that one doesn't.
 
 Email reply in particular swings hard by temperature. Six percent is a reasonable cold bar and a poor warm one.
 
