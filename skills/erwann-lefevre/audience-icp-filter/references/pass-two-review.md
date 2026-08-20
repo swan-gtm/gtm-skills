@@ -14,8 +14,11 @@ On a clean, on-target list the queue is fifteen to twenty-five leads. That's the
 | `bio-inferred match` | matched from the bio, not the title | confirm the bio really indicates an in-ICP function |
 | `agency/freelance` | a match whose company or bio reads like an agency, freelancer or consultant | keep if they're a real buyer, drop if they're a service provider |
 | `dropped on geo/industry` | right seniority and function, failed the location or industry substring | rescue if the label is just a variant of an in-ICP value |
+| `bio-inferred drop` | left the ICP on a seniority or function read out of the bio, not the title | confirm the bio really means that, before discarding the lead |
 
 Note that false positives live in `match`, not only in `review` — which is why the queue pulls risky matches in alongside the ambiguous ones. That's how you catch them without re-reading the confident ones.
+
+The same logic runs in the other direction. A lead dropped because of a function or seniority read out of free text is the mirror image of a bio-inferred match: same weak signal, worse consequence, because a wrong drop is invisible by construction. Nothing leaves the ICP on an inference without passing through the queue first.
 
 ## What patterns can't catch
 

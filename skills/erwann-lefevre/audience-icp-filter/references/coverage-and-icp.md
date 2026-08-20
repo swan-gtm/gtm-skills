@@ -23,7 +23,9 @@ The bio row is the one people skip. It's the only field that catches a colleague
 
 ## Enrichment
 
-When the gate flags gaps, offer profile enrichment, quote the exact cost, and wait for an explicit yes. The coverage output returns the number of leads that would need it.
+When the gate flags gaps, offer profile enrichment, quote the exact cost, and wait for an explicit yes.
+
+The coverage output returns `leads_needing_enrichment` — the number of rows actually missing at least one of the fields that came back insufficient, not the size of the list. On an audience that is mostly complete those are very different numbers, and quoting the total overstates the cost of the fix.
 
 Enrichment aimed at finding email addresses is a different, more expensive product and contributes nothing to ICP scoring. If someone asks for it here, say plainly that it serves deliverability rather than filtering, and let them decide.
 

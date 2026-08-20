@@ -38,6 +38,14 @@ A `Managing Director` whose bio reads *"Développement commercial"* matches on t
 
 Every bio-inferred match is flagged as such in its reason and enters the pass-2 queue, because inference from free text is exactly where a pattern is most likely to be confidently wrong.
 
+## Case is part of the pattern
+
+Detection runs against the original string, not a lowercased one, and **a pattern written with an uppercase letter is matched case-sensitively.**
+
+This exists because short acronyms are indistinguishable from ordinary words once case is discarded. Matched case-insensitively, `IT` matches the English pronoun — so a bio reading "making it happen" scores as a technology function, and if the ICP doesn't include that function the lead is dropped. Three patterns rely on this: `IT`, `R&D`, and `EI` in the agency list.
+
+The practical rule when extending the taxonomy: write a pattern in lowercase unless the capitals carry meaning. `\bproduct\b` should match "Product", "product" and "PRODUCT" alike; `\bIT\b` should match only the acronym.
+
 ## Multilingual titles
 
 The taxonomy carries French alongside English — `Fondatrice`, `Responsable`, `Directeur`, `Commercial`, `Vente` — because a list drawn from a European market is routinely half non-English, and a taxonomy that only reads English routes all of it to review.

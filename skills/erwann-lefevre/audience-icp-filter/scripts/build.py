@@ -37,18 +37,33 @@ class ValidationError(Exception):
     pass
 
 
+def _compile(pattern):
+    """Compile a taxonomy pattern, case-sensitively when it carries an uppercase.
+
+    Short acronyms are indistinguishable from common words once case is thrown
+    away: `\bIT\b` under re.IGNORECASE matches the English pronoun, so a bio
+    reading "making it happen" scored as product_tech and the lead was dropped
+    from the ICP without ever reaching pass 2. Uppercase in a pattern is
+    therefore load-bearing — it means the capitals are part of the signal.
+
+    Everything else stays case-insensitive, which is why the detectors are fed
+    the original-case string rather than a lowercased one.
+    """
+    return re.compile(pattern, 0 if re.search(r"[A-Z]", pattern) else re.I)
+
+
 def _load_taxonomy(path=TAXONOMY_PATH):
     with open(path, encoding="utf-8") as fh:
         raw = json.load(fh)
     tax = {
-        "seniority": [(t["tier"], [re.compile(p, re.I) for p in t["patterns"]])
+        "seniority": [(t["tier"], [_compile(p) for p in t["patterns"]])
                       for t in raw["seniority"]],
-        "function": {f["key"]: [re.compile(p, re.I) for p in f["patterns"]]
+        "function": {f["key"]: [_compile(p) for p in f["patterns"]]
                      for f in raw["function"]},
-        "noise": [re.compile(p, re.I) for p in raw["noise_patterns"]],
+        "noise": [_compile(p) for p in raw["noise_patterns"]],
         "industry_synonyms": {k.lower(): [v.lower() for v in vs]
                               for k, vs in raw.get("industry_synonyms", {}).items()},
-        "agency": [re.compile(p, re.I) for p in raw.get("agency_patterns", [])],
+        "agency": [_compile(p) for p in raw.get("agency_patterns", [])],
     }
     return tax
 
@@ -243,6 +258,9 @@ def _criterion_ok(lead, field, wanted):
     return any(w.strip().lower() in val for w in wanted)
 
 
+INFERRED_DROP = " (inferred from bio)"
+
+
 def classify(lead, icp, exclusions, tax):
     """Return (bucket, reason)."""
     reason_excl = check_exclusions(lead, exclusions)
@@ -253,24 +271,23 @@ def classify(lead, icp, exclusions, tax):
     if not title:
         return "review", "no job title — cannot judge seniority or function"
 
-    tl = title.lower()
     for pat in tax["noise"]:
-        if pat.search(tl):
+        if pat.search(title):
             return "no_match", f"noise title: {title}"
 
     # The title is the primary signal, but since enrichment now exposes the bio,
     # use it as a fallback: many people write their function in the bio, not the
     # title ("Managing Director" + bio "Développement commercial"). Only fall
     # back when the title is silent — the title is more reliable when present.
-    bio = _norm(lead.get("shortBio")).lower()
+    bio = _norm(lead.get("shortBio"))
 
-    seniority = detect_seniority(tl, tax)
+    seniority = detect_seniority(title, tax)
     sen_src = "title"
     if seniority is None and bio:
         seniority = detect_seniority(bio, tax)
         sen_src = "bio"
 
-    functions = detect_functions(tl, tax)
+    functions = detect_functions(title, tax)
     fn_src = "title"
     if not functions and bio:
         functions = detect_functions(bio, tax)
@@ -280,7 +297,8 @@ def classify(lead, icp, exclusions, tax):
         return "review", f"seniority unclear from title or bio: {title}"
 
     if seniority not in icp["seniority"]:
-        return "no_match", f"seniority {seniority} not in ICP"
+        return "no_match", (f"seniority {seniority} not in ICP"
+                            + (INFERRED_DROP if sen_src == "bio" else ""))
 
     founder_pass = (seniority == "founder_c" and
                     icp.get("founder_qualifies_regardless_of_function", False))
@@ -289,7 +307,8 @@ def classify(lead, icp, exclusions, tax):
         if not functions:
             return "review", f"function unclear from title or bio: {title}"
         if not set(functions) & set(icp["functions"]):
-            return "no_match", f"function {functions} not in ICP"
+            return "no_match", (f"function {functions} not in ICP"
+                                + (INFERRED_DROP if fn_src == "bio" else ""))
 
     for field, key in (("location", "locations"), ("industry", "industries")):
         ok = _criterion_ok(lead, field, icp.get(key))
@@ -347,6 +366,10 @@ def build(spec):
             # dropped ONLY on a soft substring criterion → likely false negative
             if reason.startswith("location outside") or reason.startswith("industry outside"):
                 flag = "dropped on geo/industry — check the variant"
+            elif INFERRED_DROP in reason:
+                # Dropped on a signal read out of free text, not off the title.
+                # Nothing may leave the ICP on an inference without a second look.
+                flag = "bio-inferred drop — confirm before discarding"
         if flag:
             row["_flag"] = flag
             queue.append(row)
@@ -411,7 +434,13 @@ def coverage(payload):
         "blocked_criteria": blocked,
         "degraded_checks": degraded,
         "enrichment_recommended": bool(blocked or degraded),
-        "leads_needing_enrichment": n,
+        # Leads missing at least one field that came back insufficient — not the
+        # whole list. Quoting the total overstates the cost of enrichment on an
+        # audience that is mostly complete.
+        "leads_needing_enrichment": (
+            sum(1 for ld in leads
+                if any(not _norm(ld.get(d["field"])) for d in blocked + degraded))
+            if (blocked or degraded) else 0),
     }
 
 
@@ -717,6 +746,75 @@ def _selftest():
         print("FAIL [coverage] empty list should raise", file=sys.stderr)
     except ValidationError:
         pass
+
+    # --- regression: short acronyms must not match common words -------------
+    # `\bIT\b` under re.IGNORECASE matched the English pronoun, so a bio
+    # reading "making it happen" scored as product_tech and the lead left the
+    # ICP silently — with function-based drops absent from pass2_queue, nothing
+    # surfaced it. Both halves are covered here.
+    acro_icp = {"seniority": ["founder_c", "vp_head", "manager_lead"],
+                "functions": ["sales", "growth_marketing", "revops"],
+                "founder_qualifies_regardless_of_function": False}
+    acro_cases = [
+        ({"leadId": "it1", "jobTitle": "Managing Director",
+          "shortBio": "I love building teams and making it happen"},
+         "review", "pronoun 'it' must not read as the IT function"),
+        ({"leadId": "it2", "jobTitle": "Managing Director",
+          "shortBio": "it is what it is"},
+         "review", "repeated pronoun 'it' must not read as IT"),
+        ({"leadId": "it3", "jobTitle": "Head of Sales",
+          "shortBio": "we commit it weekly"},
+         "match", "pronoun in bio must not override a clear title"),
+    ]
+    for lead, want, note in acro_cases:
+        total += 1
+        got, why = classify(lead, acro_icp, {}, _load_taxonomy())
+        if got != want:
+            failures += 1
+            print(f"FAIL [{note}] expected={want} got={got} ({why})",
+                  file=sys.stderr)
+
+    # the acronym must still be detected when it is genuinely uppercase
+    tech_icp = {"seniority": ["vp_head"], "functions": ["product_tech"],
+                "founder_qualifies_regardless_of_function": False}
+    for title, note in (("Head of IT", "uppercase IT still detected"),
+                        ("Head of R&D", "uppercase R&D still detected")):
+        total += 1
+        got, why = classify({"leadId": "t", "jobTitle": title}, tech_icp, {},
+                            _load_taxonomy())
+        if got != "match":
+            failures += 1
+            print(f"FAIL [{note}] expected=match got={got} ({why})",
+                  file=sys.stderr)
+
+    # --- regression: a drop inferred from the bio must reach pass 2 ----------
+    # Nothing may leave the ICP on a free-text inference without a second look.
+    total += 1
+    drop = build({"icp": {"seniority": ["vp_head"], "functions": ["sales"],
+                          "founder_qualifies_regardless_of_function": False},
+                  "exclusions": {},
+                  "leads": [{"leadId": "d1", "jobTitle": "Head of Operations",
+                             "shortBio": "I lead the product roadmap"}]})
+    d1 = drop["buckets"]["no_match"]
+    if not d1 or "_flag" not in d1[0] or drop["pass2_queue_size"] != 1:
+        failures += 1
+        print(f"FAIL [bio-inferred drop] not queued for pass 2: {drop['buckets']}",
+              file=sys.stderr)
+
+    # --- regression: enrichment count is rows missing a gated field ---------
+    mixed = ([{"leadId": f"r{i}", "jobTitle": "Head of Sales",
+               "companyName": "Acme", "proEmail": "a@acme.com",
+               "shortBio": "Sales leader", "location": "Paris",
+               "industry": "SaaS"} for i in range(7)]
+             + [{"leadId": f"t{i}", "jobTitle": "Head of Sales",
+                 "companyName": "Acme"} for i in range(3)])
+    total += 1
+    cov = coverage({"leads": mixed})
+    if cov["leads_needing_enrichment"] != 3:
+        failures += 1
+        print("FAIL [coverage] enrichment count should be the rows actually "
+              f"missing a gated field, got {cov['leads_needing_enrichment']}",
+              file=sys.stderr)
 
     print(f"{total - failures}/{total} passed")
     return 1 if failures else 0

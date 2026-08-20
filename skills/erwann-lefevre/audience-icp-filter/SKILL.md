@@ -41,7 +41,7 @@ The point of the skill is that nobody hand-sorts a list. Handing back a fifty-le
 
 The expensive mistake is re-reading everything in pass 2. On a 250-lead list, lead-by-lead review took eight minutes and changed almost nothing, because most classifications were never in doubt.
 
-Pass 1 returns a bounded queue instead: the ambiguous, the matches inferred from a bio rather than a title, the matches whose company reads like an agency or a freelancer, and the leads dropped on a soft geography or industry miss. Each carries a flag saying why it's there. On a clean list that's fifteen to twenty-five leads, and it's the whole of pass 2's work. Anything outside the queue was confident enough to trust.
+Pass 1 returns a bounded queue instead: the ambiguous, the matches inferred from a bio rather than a title, the matches whose company reads like an agency or a freelancer, the leads dropped on a soft geography or industry miss, and the leads dropped on a seniority or function read out of free text rather than off the title. Each carries a flag saying why it's there. On a clean list that's fifteen to twenty-five leads, and it's the whole of pass 2's work. Anything outside the queue was confident enough to trust.
 
 A large review bucket is a signal, not a workload. It usually means the list was never enriched, or the ICP is under-specified — most often that nobody answered whether founders qualify regardless of stated function. Diagnose the cause and say it rather than moving forty leads by hand. `references/pass-two-review.md` covers the flags and the false-positive patterns.
 
@@ -73,6 +73,7 @@ Good output reconciles. Every lead is in exactly one bucket, every bucket decisi
 - MUST match exclusions across company, both email fields, bio and company URL, with a punctuation-stripped comparison for longer terms.
 - MUST seed exclusions with the team's own company and domain.
 - MUST reconcile: every lead in exactly one bucket, with a reason, totalling the input.
+- MUST queue any lead that left the ICP on a signal inferred from free text — a wrong drop is invisible by construction, so no lead may be discarded on an inference without a second look.
 - NEVER classify a list by hand.
 - NEVER exclude someone on a competitor name found only in their bio without confirming it's their employer.
 - NEVER drop ambiguous leads to keep the output tidy — route them to review.
