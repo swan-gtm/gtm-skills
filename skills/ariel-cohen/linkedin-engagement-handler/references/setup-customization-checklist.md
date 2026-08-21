@@ -61,6 +61,10 @@ All `{{...}}` in SKILL.md filled — most important:
       — deliberate, but only for the narrow high-ACV + decision-maker path
       with no note attached. Switching to auto-send is a conscious opt-in;
       align with your risk tolerance and LinkedIn account hygiene.
+- [ ] **Reactions are a separate lane** — a lone like only logs to CRM +
+      account memory; the {{ALERT_TIERS}} and repeat-engagement exceptions
+      are the only escalators. Widening this is a conscious choice —
+      reaction volume is much higher and signal much lower than comments.
 - [ ] **Repeat engagers get a multi-channel sequence built and queued for
       review** (at 2+ interactions), never sent automatically. If your org
       wants auto-send, that's an explicit policy change on your side.
@@ -74,5 +78,7 @@ All `{{...}}` in SKILL.md filled — most important:
 - ICP company alone is not enough — persona gate applies to every engager.
 - LinkedIn engagement is the lowest-weight signal; tier cap unless stacked.
 - Never move an account backwards in the funnel.
+- A lone reaction never fires the high-value path or an alert, and the
+  active-buyer check runs before every repeat-engagement escalation.
 - High-value Slack post fires only when an action was taken — filtered
   engagement stays silent.

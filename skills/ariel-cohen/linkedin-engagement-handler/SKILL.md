@@ -1,7 +1,7 @@
 ---
 name: "linkedin-engagement-handler"
-title: LinkedIn post engagement handler
-description: "Use this skill when monitoring comments and reactions on a team member's LinkedIn posts. It filters engagers to ICP companies and buyer personas, logs the signal to CRM and account memory, runs lead scoring, and routes high-value engagers to connection requests and Slack alerts. Repeat engagers escalate to high intent with a personalized multi-channel draft queued for review."
+title: Handle LinkedIn post engagement signal
+description: "Use this skill when monitoring comments and reactions on a team member's LinkedIn posts. Comments get the full treatment — ICP + persona gating, CRM and account-memory logging, lead scoring, and a high-value path to connection requests and Slack alerts — while lone reactions are logged as a light touch unless the account is top-tier or a repeat engager. Repeat engagers escalate to high intent after an active-buyer check, with a personalized multi-channel draft queued for review."
 category: Signals
 ---
 
@@ -21,6 +21,20 @@ Replace every `{{...}}` before enabling. See the setup checklist reference for t
 - `{{SELF_SERVE_THRESHOLD}}` — Company size below which accounts are self-serve (default: fewer than 30 employees)
 - `{{ALERT_TIERS}}` — Tiers that always alert on first touch (default: Gold, Diamond)
 
+
+## Signal type — read first
+
+Check the event type in the webhook payload before processing:
+
+- **New comment** → full treatment (everything below).
+- **New reaction (like)** → light touch only: log to {{CRM}} + account
+  memory, then stop. No connection request. No Slack alert.
+  Exception: if the company is tagged {{ALERT_TIERS}}, or this is a repeated
+  engagement (2+ interactions), apply the full treatment.
+
+Comments and reactions are deliberately separate lanes: a comment is an
+opinion someone attached their name to; a lone like is awareness at best —
+volume is far higher and signal far lower.
 
 ## Engagement Process
 
@@ -103,6 +117,22 @@ engagement is logged and scored silently.
 When the same ICP lead engages 2 or more times across {{PROFILE_OWNER}}'s
 posts:
 
+**Active buyer check (run before any escalation):** verify the engager is
+currently active in a buying role at the ICP company:
+
+- Is the ICP company their primary, active role? If they have stepped back
+  (currently running a separate startup, recently founded a new company, or
+  no longer day-to-day there), treat them as a non-buyer and **stop — do not
+  surface, do not sequence, do not create a task**.
+- If their primary/active company is itself not an ICP fit (a 2-person
+  startup, a personal venture studio, or self-serve territory), stop. Do not
+  escalate on their nominal association with the larger company.
+- Partner-potential exception: a GTM operator, agency owner, or advisor who
+  might refer clients to you gets flagged to your partnerships owner instead
+  of routed as a buyer.
+
+If the active buyer check passes:
+
 1. **Move to high intent** — Update their stage to MQL (high intent signal)
 2. **Build a multi-channel sequence** — Create a personalized multi-channel
    campaign, queued for review (never sent automatically):
@@ -155,4 +185,6 @@ happens:
 
 A great run processes only engagers who clear both gates — ICP company and buying persona — and the high-value path fires precisely: high-ACV tag plus decision maker, nothing else. Repeat engagers get a personalized multi-channel draft queued for review with their full engagement history attached, and every alert includes what the person actually said.
 
-Mediocre looks like: connection requests burned on individual contributors, engagement alone driving Gold or Diamond tiers, alerts without the comment text, or sequences going out without review.
+Lone reactions stay in their light-touch lane, and repeat engagers who have stepped back from the ICP company get caught by the active-buyer check instead of escalated.
+
+Mediocre looks like: full-treatment alerts fired on a lone like, connection requests burned on individual contributors, engagement alone driving Gold or Diamond tiers, alerts without the comment text, or sequences going out without review.
