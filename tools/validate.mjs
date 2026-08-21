@@ -16,12 +16,69 @@ const ALLOWED_EXTENSIONS = new Set([
 const KEBAB = /^[a-z0-9][a-z0-9-]*$/;
 const FILE_SEGMENT = /^[A-Za-z0-9][A-Za-z0-9._-]*\.[A-Za-z0-9]+$/;
 const DIR_SEGMENT = /^[A-Za-z0-9][A-Za-z0-9_-]*$/;
+// Categories the site renders (app/lib/skills.ts in gtm-skills-web) — anything else
+// merges fine but shows uncategorized, so we catch it here.
+const CATEGORIES = new Set([
+  'Prospecting', 'Research', 'Positioning', 'Signals', 'ABM', 'Outreach', 'Deals',
+  'Events', 'Pricing', 'Reddit', 'AEO', 'RevOps', 'Sales', 'SEO', 'Influencers',
+  'Ads', 'Affiliates', 'Newsletters',
+]);
+
+// Authors who predate the email requirement (2026-08-07). New submissions hard-fail
+// without `email:`; these stay warnings until backfilled. Remove slugs as emails land —
+// this list only shrinks.
+const EMAIL_GRANDFATHERED = new Set([
+  'alex-vacca',
+  'amos-bar-joseph',
+  'ariel-cohen',
+  'austin-hay',
+  'bojan-berisavljevic',
+  'brad-smith',
+  'brianne-thomas',
+  'daniel-bustamante',
+  'danni-chen',
+  'dave-engel',
+  'din-arbel',
+  'dusan-vystrcil',
+  'emilia-korczynska',
+  'gal-tamir',
+  'huxley-peckham',
+  'ido-goldberg',
+  'ivan-falco',
+  'jeremy-hurst',
+  'john-williams',
+  'jorge-macias',
+  'katya-tarapovskaia',
+  'kevin-kd-dorsey',
+  'luke-shalom',
+  'maja-voje',
+  'manny-medina',
+  'maxwell-nimmo',
+  'omer-levy',
+  'pete-mientkiewicz',
+  'peter-cools',
+  'rutger-katz',
+  'ryan-estes',
+  'sabahudin-murtic',
+  'sam-dunning',
+  'sangram-vajre',
+  'steve-armenti',
+  'thomas-marcelle',
+  'tim-yakubson',
+  'udi-cohen',
+  'victor-moen',
+  'yahav-fuchs',
+]);
+
 const FORBIDDEN_SKILL_KEYS = [
   'prefix', 'slug', 'author', 'apps', 'authorAvatar', 'authorUrl', 'isDefault', 'isOrgEditable', 'license',
 ];
 
 const errors = [];
 const err = (file, message) => errors.push(`${file}: ${message}`);
+
+const warnings = [];
+const warn = (file, message) => warnings.push(`${file}: ${message}`);
 
 const rel = (p) => path.relative(ROOT, p);
 
@@ -125,6 +182,24 @@ for (const entry of fs.readdirSync(SKILLS_DIR, { withFileTypes: true })) {
     const fm = readFrontmatter(authorMd);
     if (!fm.name) err(rel(authorMd), 'frontmatter is missing `name:` (the author\'s full name)');
     if (fm.slug) err(rel(authorMd), 'remove `slug:` — the directory name is the slug');
+    if (!fm.linkedinUrl) {
+      err(rel(authorMd), 'frontmatter is missing `linkedinUrl:` — the person\'s own LinkedIn profile is the primary identity check');
+    } else if (!/linkedin\.com\/in\//.test(fm.linkedinUrl)) {
+      err(rel(authorMd), '`linkedinUrl:` must be a personal profile (linkedin.com/in/<handle>), not a company or product page');
+    }
+    if (!fm.companyDomain) {
+      err(rel(authorMd), 'frontmatter is missing `companyDomain:` — it powers your company page and logo on gtmskills.com (a personal site\'s domain works too)');
+    } else if (!/^[a-z0-9][a-z0-9.-]*\.[a-z]{2,}$/.test(fm.companyDomain)) {
+      err(rel(authorMd), `\`companyDomain: ${fm.companyDomain}\` should be a bare domain like acme.com — no protocol, no path`);
+    }
+    if (!fm.email) {
+      if (EMAIL_GRANDFATHERED.has(authorSlug)) {
+        warn(rel(authorMd), 'no `email:` (grandfathered) — backfill so maintainers can send acceptance/rejection and review mail');
+      } else {
+        err(rel(authorMd), 'frontmatter is missing `email:` — required; maintainers use it for acceptance, rejection, and review questions. Use a work address you\'re comfortable having public');
+      }
+    }
+    if (!fm.avatarUrl) warn(rel(authorMd), 'no `avatarUrl:` — maintainers will take your LinkedIn photo and re-host it (submitting means you\'re OK with that)');
   }
   if (fs.existsSync(path.join(authorDir, 'SKILL.md'))) {
     err(rel(path.join(authorDir, 'SKILL.md')), 'SKILL.md directly in an author directory — each skill needs its own folder: skills/<author>/<skill>/SKILL.md');
@@ -169,6 +244,11 @@ function validateSkillDir(skillDir, authorSlug) {
   }
   if (!fm.title) err(rel(skillMd), 'frontmatter is missing `title:` (the human display name)');
   if (!fm.description) err(rel(skillMd), 'frontmatter is missing `description:` — required by npx skills and by the library router');
+  if (!fm.category) {
+    err(rel(skillMd), 'frontmatter is missing `category:` — pick one the site already renders (see the list in tools/validate.mjs)');
+  } else if (!CATEGORIES.has(fm.category)) {
+    err(rel(skillMd), `\`category: ${fm.category}\` isn't one the site renders — it would publish uncategorized. Known: ${[...CATEGORIES].join(', ')}`);
+  }
   for (const key of FORBIDDEN_SKILL_KEYS) {
     if (key in fm) err(rel(skillMd), `remove \`${key}:\` — ${key === 'prefix' || key === 'isDefault' || key === 'isOrgEditable' ? 'Swan lifecycle flags are decided in the database, never in this repo' : 'this field is no longer part of the spec'}`);
   }
@@ -211,6 +291,7 @@ if (fs.existsSync(systemDir)) {
 }
 
 function report() {
+  for (const w of warnings) console.warn(`warn — ${w}`);
   if (errors.length) {
     console.error(`${errors.length} problem${errors.length === 1 ? '' : 's'} found:\n`);
     for (const line of errors) console.error(`  ${line}`);
