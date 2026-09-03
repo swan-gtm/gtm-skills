@@ -23,7 +23,7 @@ The event is public; everyone selling to this company saw it. And "congrats on t
 ## Don't
 
 - Don't congratulate. At most one clause of acknowledgment; the message is about the consequence.
-- Don't open with "I noticed" or "I saw that" — state the observation directly, or skip to its implication.
+- Don't open with the event. Not "I noticed", not "I saw that", and not the event stated plainly either — sentence one is the consequence. An event-led opening line is the single most reliable way to get ignored.
 - Don't stack events. A company that raised, hired, and launched gets one consequence — the sharpest.
 - Don't recycle the same event-template across a list; the market hears every "congrats on the Series B" template within a quarter.
 - Don't use an event as a costume for a pitch that was going out anyway — if the consequence doesn't connect to what the org actually solves, the signal isn't a hook.

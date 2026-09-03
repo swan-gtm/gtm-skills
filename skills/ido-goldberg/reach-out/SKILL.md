@@ -22,7 +22,7 @@ This table is the org's motion library. It starts seeded and is meant to be edit
 | Someone engaged with a post or profile on LinkedIn | `references/linkedin-engagement.md` |
 | Funding, hiring spree, leadership change, product launch | `references/company-signals.md` |
 | Form fill, content download, demo request, MQL, signup | `references/inbound-hand-raiser.md` |
-| Webinar or conference registrants, attendees, no-shows | `references/event-followup.md` |
+| Webinar or conference registrants, attendees, no-shows | `references/event-follow-up.md` |
 | Third-party intent data — category research, review-site activity | `references/intent-signals.md` |
 | The user gives feedback, wants outreach to sound or perform better, announces a strategy shift, or asks to set up the voice | `references/improve-outreach.md` |
 
@@ -38,7 +38,7 @@ Nothing recorded yet. Org-wide rules from user feedback live here, one do/don't 
 
 Every message needs a reason it goes to this person now. Hook ladder: trigger event > relationship > their own content > company initiative > persona pain (usable, but say so in the reasoning). No hook → push back before drafting. NEVER invent a signal.
 
-The hook informs the angle; it rarely appears in the copy. Tracking-type signals — website visits, intent data, profile views — NEVER appear in the message. Public events may be referenced once, as an observation with its implication, never as a congratulation.
+The hook informs the angle; it rarely appears in the copy. Tracking-type signals — website visits, intent data, profile views — NEVER appear in the message. A public event may be referenced once, later in the message, as an observation with its implication — NEVER as the opening sentence, never as a congratulation. Leading with someone's funding round or new hire is the clearest tell that a machine wrote the message.
 
 ### Voice
 
@@ -46,9 +46,10 @@ Approved sends accumulate automatically as style examples. Examples carry the vo
 
 ### Draft
 
-- Opener: the hook's implication, in the contact's frame. One sentence.
-- Body: one researched detail max, reacted to rather than exhibited. One proof point max — attributed, sized to the company. Never a feature list, never an invented customer or stat.
-- CTA: one ask. Offering something concrete (a breakdown, an estimate, a resource) beats asking for time.
+- Opener, email: the hook's implication, in the contact's frame. One sentence. The event or signal itself never opens the message.
+- Opener, LinkedIn: say who you are and what you want in the first line. A DM has no room for a warm-up observation — it reads as preamble and gets skipped.
+- Body: one researched detail max, reacted to rather than exhibited. One proof point max — attributed, sized to the company. Never a feature list, never an invented customer or stat. On LinkedIn, drop the proof point and the hard numbers entirely; the register is a message between two people, not a pitch.
+- CTA: one ask, and make it the smallest real thing that could land this week — a short list to run, one account to check, a sample to review. Offering to do concrete work, or asking for the raw material to do it, beats asking for time.
 - Pitch at the reader's altitude: C-level hears risk and strategy, VP hears performance, director hears operational pain.
 - Shape per email: signal → proof → ask (fresh trigger); problem → cost → fix (only when the pain is documented in the ICP); before → after → bridge (easy-to-picture change).
 - Draft in the language the org sells in — a wrong-language sequence is an error, not a style choice.
@@ -62,10 +63,12 @@ The org's recorded cadence always wins; default: 3–5 steps, days ~0/3/7/14, si
 Run on every message before staging; a failed check means rewrite, not tweak:
 
 1. Delete the opener — still makes sense? The personalization is decoration; rebuild around the hook.
-2. Could this go to anyone else this week? Then it's a blast in costume.
-3. One CTA. 60–110 words, follow-ups shorter. Subject 2–5 words, lowercase, internal-looking. More "you" than "I/we".
-4. Is the proof a number or a name? "Helps teams like yours" is not proof.
-5. Read as the recipient with a full inbox: any reason to reply beyond politeness?
+2. Does the close contain the word "worth"? Rewrite it. "worth 15 minutes", "worth a quick look", "worth a conversation" — anyone who receives outbound has read them a hundred times, and they cost replies. Ask for the thing itself instead.
+3. Does sentence one name a funding round, a launch, a hire, or any other event? Rewrite — open with what it means for them, not with the news.
+4. Could this go to anyone else this week? Then it's a blast in costume.
+5. One CTA. 60–110 words, follow-ups shorter. Subject 2–5 words, lowercase, internal-looking. More "you" than "I/we".
+6. Email: is the proof a number or a name? "Helps teams like yours" is not proof.
+7. Read as the recipient with a full inbox: any reason to reply beyond politeness?
 
 ### Stage
 
