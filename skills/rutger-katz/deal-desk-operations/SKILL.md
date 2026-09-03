@@ -1,7 +1,7 @@
 ---
 name: "deal-desk-operations"
-title: Deal desk operations
-description: "Deal desk as a RevOps-owned function: when to stand one up, approval matrix design, discount governance and non-standard terms, quote review workflows, pricing economics for consumption and outcome-based deals, renewal negotiation governance, and maturity progression from ad-hoc approvals to strategic desk. Use when the user mentions deal desk, approval matrix, discount governance, quote SLAs, non-standard terms, pricing exceptions, deal desk ROI, approval velocity, discount leakage, or centralising deal approval authority. Also trigger on \"our reps have too much authority\", \"discounts are all over the place\", \"deals are stalled in approval\", \"we need guardrails on pricing\", \"custom pricing is a bottleneck\", or \"how do we control margin erosion\"."
+title: Discount governance and approval system
+description: "Use this skill when reps hold too much pricing authority, discounts spiral by region, or approval bottlenecks stall deals. Builds the approval matrix by discount depth and deal size, SLA-backed quote workflows, and strategic override lanes that separate noise from genuine exceptions. Produces a matrix routing small discounts to reps, large discounts to leadership and non-standard terms to the deal desk, a three-stage quote process with 24 to 48 hour SLAs, and a 30-day audit loop on exceptions. Rule: if a rep can approve a discount without understanding the margin impact, the approval matrix is too loose. Trigger phrases: discount governance, approval matrix, pricing exceptions, deals stalled in approval, margin erosion, quote SLAs."
 category: RevOps
 ---
 
@@ -265,3 +265,10 @@ Build this over 12-24 months as volume and complexity justify investment.
 ## References
 
 See `references/benchmarks-sourced.md` for full sourcing on all quantitative claims in this skill.
+
+## What good looks like
+
+- Discount approval routes by depth and deal size, and everyone can name their own authority.
+- Quotes clear each review stage inside the SLA, and exceptions carry a written rationale.
+- Exception patterns are audited monthly and recurring ones become policy.
+- Margin impact is visible at approval time, not after close.

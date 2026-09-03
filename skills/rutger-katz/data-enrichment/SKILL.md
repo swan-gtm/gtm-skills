@@ -1,7 +1,7 @@
 ---
 name: "data-enrichment"
-title: Data enrichment
-description: "B2B data enrichment strategy, provider evaluation, integration patterns, and quality management for revenue operations teams. Use when the user mentions data enrichment, lead enrichment, account enrichment, contact enrichment, ZoomInfo, HubSpot Data Platform, Apollo, Clay, Cognism, Lusha, enrichment automation, enrichment workflows, firmographic data, technographic data, intent data, data append, enrichment API, enrichment coverage, data freshness, enrichment quality, or third-party data providers. Also trigger on 'our data is incomplete,' 'leads come in with no company info,' 'we need better data on our accounts,' 'enrichment isn't working,' or 'which enrichment tool should we use.' BOUNDARY: Covers enrichment STRATEGY, PROVIDER SELECTION, and INTEGRATION. For CRM-specific implementation, see revops-hubspot or revops-salesforce. For data governance, see revops-data-governance. For lead scoring that uses enriched data, see marketing-operations."
+title: Choose an enrichment provider and build a waterfall
+description: "Use this skill when inbound leads arrive incomplete (missing company size, industry, revenue), the TAM list lacks data for scoring, or the CRM cannot route and segment without enrichment. Maps coverage gaps, compares single-source and waterfall provider strategies, and builds an integration roadmap with cost guardrails and quality gates. Produces a provider recommendation matrix, a waterfall architecture, and a go or no-go checklist. Rule: no single provider has full coverage; a waterfall across two or more providers in sequence beats any one source on match rate. Trigger phrases: data enrichment, leads come in with no company info, enrichment coverage, firmographic data, which enrichment tool, data freshness."
 category: RevOps
 ---
 
@@ -343,5 +343,12 @@ Always build a failed-enrichment queue:
 - **Waterfall match rates**: Clay independent testing: 78% email match (vs 42% Apollo alone, 38% Hunter alone). BetterContact with 20+ sources: 85-95%. Single provider alone: 35-52%.
 - **Cognism accuracy**: 97% accuracy guarantee; verified emails >93% deliverability; Diamond Data phone: 98% phone-verified. Stronger in EMEA; US/APAC data quality variable. (cognism.com/our-data)
 - **Testing your providers**: No published methodology can replace a pilot with your actual data. Database composition, geography, industry, and company size all affect match rates dramatically. Before committing budget, run a 30-day trial enrichment against a sample of 100-500 records from your actual pipeline. Track match rate, field coverage, and cost per match.
+
+## What good looks like
+
+- Coverage gaps are quantified per field before any provider contract is signed.
+- Providers run in a waterfall sequence with match rate and cost tracked per step.
+- Enriched data lands with freshness targets and a re-enrichment schedule.
+- The go or no-go checklist blocks enrichment spend on segments that cannot use the data.
 
 > Built by [Neon Triforce](https://neontriforce.com)

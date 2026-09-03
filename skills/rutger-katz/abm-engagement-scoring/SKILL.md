@@ -1,7 +1,7 @@
 ---
 name: "abm-engagement-scoring"
-title: ABM engagement scoring
-description: "Account-level engagement scoring, buying group/DMU measurement, and marketing-to-sales handover triggers for account-based marketing programs (50-500 named accounts). Use when the user mentions account engagement score, ABM measurement, buying committee, DMU coverage, account stage progression, engagement triggering sales handover, multiple stakeholder tracking, account qualification, or ABM program measurement. Also trigger on 'how do we measure ABM success,' 'which accounts are hot,' 'do we have the buying group,' 'when do we hand this to sales,' 'account engagement scoring model,' or 'we run ABM but can't prove ROI.' BOUNDARY: Covers account-level engagement scoring, buying group measurement, and handover-to-sales triggers in ABM contexts. For lead-level scoring (fit + engagement dual-axis), see marketing-operations. For account selection and ICP methodology, see icp-builder. For sales speed-to-lead and routing, see lead-routing."
+title: Measure ABM engagement and hand accounts to sales
+description: "Use this skill when an ABM program cannot prove engagement matters, accounts get handed to sales on gut feel, or nobody knows which activity moves buying groups forward. Builds an account engagement score (weighted signals plus decay), maps buying group coverage across the decision-making unit, and defines explicit handover gates so marketing and sales agree on readiness. Produces a scoring model, a buying group tracker template, and a handover decision rule. Rule: without buying group visibility a high engagement score is a false positive; handover requires both the score and the coverage threshold met. Trigger phrases: ABM measurement, which accounts are hot, buying committee coverage, when do we hand this to sales, account engagement score, ABM ROI."
 category: ABM
 ---
 
@@ -578,5 +578,12 @@ For ABM measurement buildout:
 Use in: ABM program inception, measurement system buildout, monthly cadence reporting.
 
 Original source: Practitioner scenario documented for 200-account enterprise ABM TAM (2026).
+
+## What good looks like
+
+- Engagement is scored at account level with signal weights and decay, not summed lead activity.
+- Buying group coverage is tracked per account against a target per role.
+- Handover to sales fires on an explicit gate combining score and coverage, and sales accepts the definition.
+- The program reports account movement, not activity volume.
 
 > Built by [Neon Triforce](https://neontriforce.com)

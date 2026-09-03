@@ -1,7 +1,7 @@
 ---
 name: "cs-operations"
-title: Customer success operations
-description: "Customer success operations for B2B SaaS. The post-sale revenue engine that prevents churn, drives expansion, and compounds customer value. Use when the user mentions customer success, CS ops, health scoring, renewal management, churn prevention, expansion playbook, expansion signals, onboarding orchestration, time to first value, QBR, customer segmentation, coverage model, high-touch, low-touch, tech-touch, CSM ratios, NPS, CSAT, save plays, red accounts, CS-Sales handoff, churn autopsy, renewal discount governance, discount sunset, renewal pricing, or save plays with pricing components. Also trigger when someone says 'we keep losing customers' or 'our CS team is reactive' or 'we have no idea which accounts will churn' or 'discounts are expiring and customers are pushing back' or 'renewal price increase resistance.'"
+title: Red account rescue
+description: "Save churning customers through proactive health scoring and recovery plays. Use when red accounts pile up unpredictably, renewal conversations turn contentious, or expansion-ready accounts slip away. Builds a 5-dimension health score (product usage, relationship quality, support friction, commercial trends, outcomes) updated weekly, triages red accounts into rescue mode or renewal-risk mode, and activates save plays with executive sponsorship, backed by the full post-sale operating model (onboarding, QBRs, CS-Sales handoffs, renewal governance). Produces a weekly red-account triage list and recovery playbooks by churn cause. Rule: a customer does not turn red on one signal; red means 3 or more health dimensions breaking at once. Trigger phrases: we keep losing customers, red accounts, health scoring, save play, churn autopsy, renewal price increase resistance."
 category: RevOps
 ---
 
@@ -394,5 +394,12 @@ QBRs are the highest-leverage CS touchpoint for T1 accounts and most fail by loo
 ## Operator Templates: Forecasting Worksheet (Renewals Tab)
 
 Use a forecasting worksheet with dedicated renewal modeling tabs to model: renewal cohort sizing, churn impact on ARR, expansion uplift scenarios.
+
+## What good looks like
+
+- Every account carries a health score across five dimensions, refreshed weekly.
+- Red accounts surface on a triage list with an owner and a named recovery play before the renewal window opens.
+- Renewal conversations start from documented value evidence, not a pricing surprise.
+- Churn postmortems feed a playbook per churn cause instead of anecdotes.
 
 > Built by [Neon Triforce](https://neontriforce.com)

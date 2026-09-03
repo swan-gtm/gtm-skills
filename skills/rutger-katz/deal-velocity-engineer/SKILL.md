@@ -1,7 +1,7 @@
 ---
 name: "deal-velocity-engineer"
-title: Deal velocity engineering
-description: "Diagnose and fix deal velocity problems. Sales cycle diagnostics, stage exit criteria, pipeline deflation, zombie deal elimination, multi-threading, mutual action plans, AI-driven deal scoring, revenue intelligence integration (Gong/Chorus), and compression tactics with sourced benchmarks. Trigger on 'deal velocity,' 'sales cycle too long,' 'deals stalling,' 'pipeline velocity,' 'stage exit criteria,' 'zombie deals,' 'pipeline deflation,' 'deals stuck,' 'multi-threading,' 'mutual action plan,' 'deal inspection,' 'pipeline hygiene,' 'cycle time,' 'stage conversion,' 'deals die in negotiation,' 'we keep slipping deals,' 'reps can't close,' or 'pipeline is bloated but nothing closes.' Connects stage gates, deal scoring, inspection cadence, and pipeline deflation into the operating cadence. Includes modern AI/automation patterns (HubSpot Breeze, Salesforce Agentforce, predictive pipeline management). BOUNDARY: For forecast methodology see revops-forecasting. For pipeline visibility and dashboards see pipeline-visibility. For sales methodology (SPICED/MEDDPICC) see sales-methodology. For operating cadence see revenue-operating-cadence."
+title: Sales cycle compression
+description: "Compress sales cycles through stage-gate enforcement and pipeline deflation. Use when deals stall at specific stages, cycles exceed segment benchmarks, or zombie deals inflate the pipeline. Diagnoses the binding constraint (qualification, stage progression, or volume), builds stage exit criteria mapped to buyer actions rather than seller activities, and establishes zombie detection to deflate stale deals. Produces a velocity diagnostic with benchmarked targets and a stage-gate implementation blueprint. Rule: if a deal cannot advance without meeting stage exit criteria, the system is the constraint, not the rep. Trigger phrases: deal velocity, sales cycle too long, deals stalling, zombie deals, stage exit criteria, pipeline is bloated but nothing closes."
 category: RevOps
 ---
 
@@ -421,5 +421,12 @@ Forecast accuracy is a velocity output, not a separate problem. Fix stage defini
 - **pipeline-visibility**: Pipeline dashboards that surface velocity data
 - **sales-methodology**: SPICED and MEDDPICC frameworks that stage gates enforce
 - **revops-handoffs**: Handoff mechanics that affect stage transition speed
+
+## What good looks like
+
+- Every pipeline stage has exit criteria phrased as buyer actions, and deals cannot advance without them.
+- Stale deals get flagged and deflated on a fixed cadence instead of inflating coverage.
+- Cycle time is tracked per segment against a benchmarked target, and the binding constraint is named.
+- Pipeline reviews inspect evidence for stage placement, not rep optimism.
 
 > Built by [Neon Triforce](https://neontriforce.com)

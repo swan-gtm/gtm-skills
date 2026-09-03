@@ -1,8 +1,8 @@
 ---
 name: "pricing-monetisation-ops"
-title: Pricing and monetisation ops
-description: "Pricing and monetization operations for B2B SaaS: designing, implementing, and operating consumption-based and outcome-based pricing models; metering architecture with deduplication and customer mapping; billing system integration for usage, overages, and variable revenue; hybrid contract structures (minimums, ramps, credits); monthly reconciliation and drift detection; revenue recognition for variable contracts; pricing-tier migrations from per-seat to usage without breaking revenue reporting; packaging changes and price increases across renewal cohorts; CPQ and billing platform selection; billing data quality audits. Use when discussing metering infrastructure, consumption billing, hybrid pricing models, variable revenue, price migrations, quote-to-cash consolidation, billing-grade data quality, or revenue reconciliation. Trigger phrases: metering, deduplication, usage billing, consumption pricing, hybrid pricing, price migration, overages, minimums, CPQ platform, billing reconciliation, variable revenue, outcome-based pricing. Also triggers on 'we need to move from per-seat to usage,' 'our billing system can't handle variable revenue,' 'revenue recognition is a nightmare,' or 'we're losing customers on bill shock.'"
-category: Pricing
+title: Consumption billing and revenue operations
+description: "Use this skill when bill shock is killing renewal cohorts, a consumption model breaks revenue recognition, or metering and billing are out of sync. Builds the operational layers: metering (ingestion, deduplication, customer mapping), rating and pricing engines (tiers, overages, minimums, credits), invoicing with audit trails, collections logic, and revenue reconciliation for variable contracts. Produces a data-quality audit of metering leaks, a quote-to-cash integration map, a per-seat-to-usage migration plan that does not break revenue reporting, and an ASC 606 compliance checklist. Rule: consumption pricing is only as good as its metering, billing and reconciliation plumbing; one broken layer breaks them all. Trigger phrases: usage billing, bill shock, metering, price migration, overages, billing reconciliation, variable revenue."
+category: RevOps
 ---
 
 # Pricing and Monetization Operations
@@ -556,5 +556,12 @@ Run the Billing Data Quality Audit. Which check fails worst? Start there. Usuall
 - Normative estimates on revenue recognition complexity: Based on practice patterns across 5,000+ consumption contracts per customer. Re-estimation required monthly for ASC 606 compliance.
 
 See also: `references/benchmarks-sourced.md` for detailed sourcing on all quantitative claims.
+
+## What good looks like
+
+- Usage events are metered once, mapped to the right customer, and reconciled monthly against billed revenue.
+- Overage, minimum and credit terms in contracts match what the billing system can execute.
+- A per-seat-to-usage migration runs without breaking revenue reporting or triggering bill shock.
+- Revenue recognition for variable contracts survives an audit.
 
 > Built by [Neon Triforce](https://neontriforce.com)

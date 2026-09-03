@@ -1,7 +1,7 @@
 ---
 name: "revops-hubspot"
-title: HubSpot implementation for RevOps
-description: "HubSpot implementation patterns for revenue operations teams. Use this skill when the user mentions HubSpot, CRM setup, HubSpot properties, lifecycle stages, lead scoring in HubSpot, HubSpot workflows, HubSpot reporting, HubSpot dashboards, deal pipelines in HubSpot, HubSpot automation, contact/company/deal properties, HubSpot integrations, or asks about CRM architecture for B2B revenue teams using HubSpot. Also trigger when the user asks about mapping a bow tie or funnel model into HubSpot, building RevOps reporting in HubSpot, structuring HubSpot for multi-team revenue operations, cleaning up a messy HubSpot instance, HubSpot data hygiene, or migrating to HubSpot. If someone mentions CRM and they're in a B2B context, this skill is likely relevant even if they don't say \"HubSpot\" explicitly. BOUNDARY: This skill covers HubSpot-specific implementation. For strategic pipeline architecture and framework thinking, see revops-strategy. For ICP BUILDING methodology, see icp-builder. For lead routing rules and assignment logic, see lead-routing (which defers to this skill for CRM-specific implementation). For reporting, dashboards, and pipeline visibility, see revops-pipeline-visibility."
+title: Design HubSpot for revenue operations
+description: "Use this skill when CRM architecture breaks revenue clarity: lifecycle stages that do not match the funnel, unmaintainable properties, reporting that needs three spreadsheets. Covers object model design, lifecycle architecture, property governance, pipeline configuration, automation patterns, and reporting structure for HubSpot. Produces a documented architecture with stage definitions, property naming standards, workflow specs, and a revenue-decision-focused dashboard roadmap. Rule: design for reporting first; if you cannot name the report a property feeds, do not create it. Trigger phrases: HubSpot setup, lifecycle stages, messy HubSpot instance, deal pipelines, HubSpot reporting, CRM architecture."
 category: RevOps
 ---
 
@@ -403,5 +403,12 @@ When building fit scores, audit weights to ensure they do not proxy for protecte
 **Reporting questions:** Push toward revenue-connected reports. If they want an activity report, help them connect it to pipeline outcomes. If they want to know "how many emails did we send," redirect to "how many replies did those emails generate, and how many became pipeline?"
 
 **Cleanup and migration:** Prioritize by revenue impact. Clean active pipeline data first, then active customer records, then historical. Don't clean records that will never produce revenue.
+
+## What good looks like
+
+- Lifecycle stages map one-to-one to the funnel model, with written entry and exit definitions.
+- Every property feeds a named report or automation; unused properties are archived.
+- Pipelines, workflows and dashboards are documented well enough that a new admin can navigate them in a day.
+- Revenue leaders pull decisions from dashboards without exporting to spreadsheets.
 
 > Built by [Neon Triforce](https://neontriforce.com)

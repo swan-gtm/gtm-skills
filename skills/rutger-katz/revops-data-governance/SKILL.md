@@ -1,7 +1,7 @@
 ---
 name: "revops-data-governance"
-title: Revenue data governance
-description: "Revenue data governance: the operational discipline every other RevOps skill depends on. Use when the user mentions data governance, data quality, data model, data architecture, field governance, property naming conventions, data hygiene, deduplication, integration data flows, system of record, sync rules, data enrichment, data definitions, one vision of truth, data spine, data quality scoring, validation rules, GDPR, field deprecation, or data audit. Also trigger when someone says 'our reports don't match,' 'our CRM is a mess,' 'we have too many fields,' or describes duplicate accounts, conflicting numbers, stale data. Fix data governance before building metrics or scaling. BOUNDARY: Covers data MODEL, QUALITY, and GOVERNANCE. For HubSpot setup, see revops-hubspot. For metrics, see revops-metrics."
+title: Fix your CRM data chaos
+description: "Use this skill when CRM reports do not match, fields are a mess, hundreds of properties sit unused, or nobody trusts the data. Builds a data model mapped to the customer journey, designs field naming conventions and governance, sets up quality scorecards (completeness, accuracy, consistency, timeliness), and audits integrations to stop data rot. Produces a data dictionary, a field governance process with create and deprecate workflows, and quarterly quality targets. Rule: if a field has no documented owner and no documented use case, delete it. Trigger phrases: our reports do not match, our CRM is a mess, data quality, system of record, deduplication, field governance."
 category: RevOps
 ---
 
@@ -539,5 +539,12 @@ A semantic layer provides consistent, business-friendly vocabulary across the or
 **"Integrations keep breaking":** Map system of record for every data point. Define sync direction. Set up monitoring. Most integration failures come from undefined ownership.
 
 **Cross-references:** For CRM property implementation, see **revops-hubspot**. For tech stack integration decisions, see **revops-tech-stack**. For emergency data audit, see **revops-crisis**.
+
+## What good looks like
+
+- One documented system of record per object, and reports built on it agree with each other.
+- Every active field has an owner and a use case; fields without either are deprecated on a schedule.
+- Data quality is scored on completeness, accuracy, consistency and timeliness, with quarterly targets.
+- New fields go through a create workflow instead of appearing ad hoc.
 
 > Built by [Neon Triforce](https://neontriforce.com)

@@ -1,7 +1,7 @@
 ---
 name: "revops-forecasting"
-title: Revenue forecasting
-description: "Revenue forecasting methodology, forecast categories, pipeline analysis, and predictability for B2B revenue teams. Use when the user mentions forecasting, revenue forecast, sales forecast, forecast accuracy, forecast categories, commit, best case, upside, pipeline coverage, weighted pipeline, forecast cadence, capacity planning, quota modeling, forecast call, deal inspection, or forecast variance. Also trigger when someone says 'we can't predict our number,' 'our forecast is always wrong,' 'how much will we close this quarter,' 'we can't see our pipeline,' 'deals go stale,' or 'we need better dashboards.' Also trigger on pipeline visibility, pipeline reporting, sales dashboards, pipeline hygiene, stale deals, pipeline health, big deal alerts, or pipeline quality score. BOUNDARY: Covers forecast methodology, accuracy, and pipeline visibility/reporting. For CRM-specific dashboard implementation, see revops-hubspot. For metrics and benchmarks, see revops-metrics."
+title: Forecast accuracy recovery
+description: "Use this skill when the forecast is consistently wrong: over-forecasting, missed quarter-ends, deals slipping unexpectedly. Installs category-based forecasting (Commit, Best Case, Upside), multi-method triangulation combining stage-weighted and historical views, and forecast accuracy diagnostics with benchmarks. Produces a repeatable forecast cadence, the red flags to inspect in forecast calls, and a variance-reduction roadmap. Rule: if a rep cannot explain their Commit deal in 2 minutes, it is not a Commit. Trigger phrases: forecast accuracy, we cannot predict our number, forecast categories, pipeline coverage, forecast call, deals go stale."
 category: RevOps
 ---
 
@@ -245,5 +245,12 @@ Build a forecasting worksheet with 4 sheets: Assumptions (base metrics like win 
 The Renewals tab is especially useful for CS operations; it models the renewal cohort with churn rates and expansion tracking.
 
 Use in: Forecasting methodology buildout, board preparation, operating cadence design.
+
+## What good looks like
+
+- Forecast categories have written definitions and every rep applies them the same way.
+- The quarterly number comes from at least two independent methods that get reconciled, not one gut call.
+- Forecast calls inspect changed deals and red flags, not a full pipeline readout.
+- Variance per category is measured every quarter and drives the next accuracy fix.
 
 > Built by [Neon Triforce](https://neontriforce.com)

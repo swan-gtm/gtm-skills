@@ -1,7 +1,7 @@
 ---
 name: "revops-handoffs"
-title: Revenue handoff operations
-description: "Revenue handoff design across the full bow-tie model; Marketing → Sales → Partner/Implementation → CS → Sales (expansion), plus lifecycle marketing and ABM loops. Use when the user mentions handoff, lead routing, speed-to-lead, MQL routing, closed-won handoff, partner handoff, CS-to-sales handback, expansion pipeline, cross-sell pipeline, upsell pipeline, renewal pipeline, territory routing, SLA between teams, transfer document, or AI handoff docs. Also trigger on \"leads fall through the cracks,\" \"CS never knows what sales promised,\" \"we lose momentum after signature,\" \"nobody owns expansion,\" or \"cross-sell has a different buying group.\" BOUNDARY: covers handoff design and SLAs between bow-tie stages. For HubSpot implementation, also consult revops-hubspot. For CS operations, see cs-operations. For SPICED, see sales-methodology."
+title: Design revenue handoffs
+description: "Use this skill when revenue leaks between teams: leads go dark after handover to sales, promised commitments disappear after signature, expansion signals stay invisible, CS never learns what sales committed. Designs handoff protocols across the full revenue bow-tie (marketing to sales, sales to customer, customer to expansion) with speed-to-lead SLAs, context-packet architecture, ownership models, and leading indicators of failure. Produces handoff playbooks per transition, context templates, SLAs with measurement dashboards, and detection rules for leaking revenue. Rule: handoffs are where revenue leaks. Trigger phrases: leads fall through the cracks, closed-won handoff, CS-to-sales handback, speed-to-lead, SLA between teams, nobody owns expansion."
 category: RevOps
 ---
 
@@ -234,5 +234,12 @@ Receiving team rates each handoff 1-5 across: information completeness, promise 
 - KeyBanc (2024). Expansion = 52% of new ARR.
 - Rework (2025). "Deal Handoff Protocol: Standardizing Post-Close Transitions." 45% implementation improvement, 35-40% churn reduction.
 - Forrester/SiriusDecisions. Demand Waterfall: MQL→SQL 39-40% with scoring vs 15-21% without.
+
+## What good looks like
+
+- Every bow-tie transition has a named owner, an SLA, and a context packet the receiving team actually reads.
+- Speed-to-lead is measured against the SLA and breaches alert someone accountable.
+- After signature, CS can see what sales promised without asking.
+- Leak indicators such as unworked leads and silent post-sale accounts sit on a dashboard, not in retrospectives.
 
 > Built by [Neon Triforce](https://neontriforce.com)
