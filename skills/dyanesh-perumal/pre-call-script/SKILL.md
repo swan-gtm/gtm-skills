@@ -74,9 +74,9 @@ End with the contact block: best number, LinkedIn URL, email, and which channel 
 - The prospect can answer two questions 20 seconds in: why is this person calling me, and why now.
 - The frame is in the prospect's own language and never names the solution category — in
   conservative industries the category word ("software", "the platform") triggers a reflexive no.
-- Read on the live call (rules of thumb, not measured rates): a short time-to-first-question and
-  answers longer than yes/no mean they are leaning in; past three minutes the call has drifted
-  into selling the product — pull back to booking.
+- As a rough read on the live call: a short time-to-first-question and answers longer than yes/no
+  mean they are leaning in; past three minutes the call has drifted into selling the product —
+  pull back to booking.
 - The mediocre version opens with a greeting and a company intro, pitches a capability instead of
   an outcome, and could be read to anyone in the segment.
 
