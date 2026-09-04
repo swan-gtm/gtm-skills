@@ -1,13 +1,16 @@
 ---
 name: pre-call-script
-title: Pre-call script for a named prospect
+title: Script a prospect call that earns the meeting
 description: |
-  Use when a rep has a call booked or dialing planned against one specific named prospect and needs
-  what to say — grounded in that account's research, not a generic template. Produces a one-page
-  script: opener, relevance frame, proof point, one ask, two or three likely objections, and a
-  voicemail. Trigger phrasings: "script for [name]", "call prep", "prep me for [name]", "what do I
-  say to [name]", "brief me on [name]", "how do I approach [name]", "get me ready for my call with
-  [name]", "call script for [company]".
+  Use this skill when a rep has a call booked or dialing against one named prospect, a script would
+  otherwise be improvised on the line, or a first attempt went to voicemail and the retry needs a
+  sharper angle. Builds the call from that account's research: opener, relevance frame tied to a KPI
+  the prospect owns, proof point, one ask, the two or three objections this prospect will actually
+  raise, and a voicemail. Produces a one-page script every line of which traces to a researched
+  fact. Rule: if the prospect cannot answer "why you" and "why now" in the first 20 seconds, the
+  call is a cold read that wastes a rare live connect. Trigger phrases: script for [name], call
+  prep, prep me for [name], what do I say to [name], brief me on [name], get me ready for my call
+  with [name], call script for [company].
 category: Outreach
 tags: [Sales]
 contributors: []
@@ -16,8 +19,8 @@ contributors: []
 Use this when a rep is about to call one named person and needs the words. It produces a one-page
 script every line of which traces to a fact in that account's research.
 
-This is not a template library (`cold-call-scripts`), a call-scoring rubric (`call-scorecards`),
-or an email or LinkedIn sequence (`reach-out`). It is the script for one named person on one call.
+It is the script for one named person on one call — not a reusable template, not a call-scoring
+rubric, not an email or LinkedIn sequence.
 
 The whole call is 2–3 minutes and it sells the meeting, not the product. Anything discovery-grade
 stays out of the script.
@@ -43,8 +46,10 @@ more than yes or no.
 
 **Relevance frame — two to three sentences.** Pick the *one* signal that most directly indicates
 movement on the KPI this person owns, and describe the problem it implies — accurately enough that
-they hear their own situation read back. Not a feature. Not the product. Expect two or three angles
-per persona before one lands. See `references/worked-examples.md`.
+they hear their own situation read back. Not a feature. Not the product. When two signals compete,
+rank by how directly each maps to a KPI this person owns; break a remaining tie toward the most
+recent, most time-bound one — it carries the most "why now". Expect two or three angles per persona
+before one lands. See `references/worked-examples.md`.
 
 **Proof point — one sentence.** One named customer in a comparable situation, stated as an outcome
 not a capability ("their reps stopped writing follow-ups by hand," not "we automate follow-ups").
@@ -92,6 +97,8 @@ Let that bias the signal you lead with next time; once you have the rows it outr
 - MUST make *why you* and *why now* answerable from the script alone. No why-now signal → say so in
   the header line, do not manufacture urgency.
 - MUST lead the opener with the warm route whenever one exists.
+- When signals compete, rank by KPI-ownership first, recency second — never average them into a
+  vague frame that fits several.
 - If the prospect meets the frame with a flat correction ("that's not really our situation"), do
   not defend it — drop straight to the ask. A wrong frame argued is the call lost.
 - NEVER open with a greeting followed by a pitch.
