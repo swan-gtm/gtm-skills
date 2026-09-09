@@ -1,5 +1,6 @@
 ---
 name: Dyanesh Perumal
+avatarUrl: https://media.licdn.com/dms/image/v2/D5603AQGm6byIYEes7w/profile-displayphoto-crop_800_800/B56Z8156NEKEAI-/0/1783315804127?e=1790812800&v=beta&t=JGHPR-giUoydrUiz15x4yiudnc6Gl9o7Kk-YmJbCZB4
 title: Principal GTM Engineer & Founder, Nett New
 linkedinUrl: https://www.linkedin.com/in/dyaneshp
 companyDomain: nettnew.com
