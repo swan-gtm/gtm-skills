@@ -3,6 +3,7 @@ name: "Vesselin Malev"
 title: "Managing Director, The Demand Department"
 linkedinUrl: "https://www.linkedin.com/in/vesselinmalev/"
 companyDomain: demanddept.com
+# company mark for the site-side logo override (#74): https://raw.githubusercontent.com/tanyo-cell/gtm-skills/brand-assets/demanddept-logo-512.png
 email: office@demanddept.com
 ---
 
