@@ -1,7 +1,7 @@
 ---
 name: "pavilion-event-concierge"
 title: "Pavilion event concierge"
-description: "Build a personalized Pavilion event agenda (GTM Summit / GTM2026) as a living HTML app from the bundled swan × Pavilion template and the bundled session database — timeline, sessions, explore feed, prep."
+description: "Turn GTM2026 into your own event app. Claude builds a living agenda for you from the full session program, with a timeline, sessions, an explore feed, and prep, and updates it as your plans change."
 category: Events
 ---
 
