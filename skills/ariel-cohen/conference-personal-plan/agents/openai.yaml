@@ -1,0 +1,4 @@
+interface:
+  display_name: "Personal Conference Plan"
+  short_description: "Plan sessions, duties, travel, and time for meetings"
+  default_prompt: "Use $conference-personal-plan to build my conference itinerary around confirmed commitments and meeting time."

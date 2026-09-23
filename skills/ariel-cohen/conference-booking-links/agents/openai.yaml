@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conference Booking Links"
+  short_description: "Set up and verify conference meeting links in Cal.com"
+  default_prompt: "Use $conference-booking-links to set up and verify my Cal.com links for in-person conference meetings."

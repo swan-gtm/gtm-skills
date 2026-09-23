@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shared Conference Calendar"
+  short_description: "Create a shared agenda without blocking meeting time"
+  default_prompt: "Use $conference-shared-calendar to create a shared reference calendar from my event agenda."
