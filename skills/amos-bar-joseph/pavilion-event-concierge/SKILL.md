@@ -1,7 +1,7 @@
 ---
 name: "pavilion-event-concierge"
 title: "Pavilion event concierge"
-description: "Use this skill when you are attending a Pavilion event (the GTM2026 Summit program is bundled) and want a personal, realistic agenda instead of the full schedule: a living HTML app built from the bundled Swan x Pavilion template and the complete session database, with a timeline that protects breaks, backups only on real conflicts, an Explore feed, a prep checklist, and calendar sync. It asks five quick questions, publishes a first version immediately, and refines by conversation."
+description: "Build a personalized Pavilion event agenda (GTM Summit / GTM2026) as a living HTML app from the bundled swan × Pavilion template and the bundled session database — timeline, sessions, explore feed, prep."
 category: Events
 ---
 
