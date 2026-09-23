@@ -12,6 +12,7 @@ const SKILLS_DIR = path.join(ROOT, 'skills');
 
 const ALLOWED_EXTENSIONS = new Set([
   '.md', '.txt', '.json', '.csv', '.yaml', '.yml', '.py', '.sql', '.docx', '.pdf', '.png',
+  '.html', '.webp', // runnable templates + brand assets a skill ships as-is (e.g. pavilion-event-concierge)
 ]);
 const KEBAB = /^[a-z0-9][a-z0-9-]*$/;
 const FILE_SEGMENT = /^[A-Za-z0-9][A-Za-z0-9._-]*\.[A-Za-z0-9]+$/;
