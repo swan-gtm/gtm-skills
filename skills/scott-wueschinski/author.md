@@ -3,6 +3,7 @@ name: Scott Wueschinski
 title: Co-Founder, GTMify
 linkedinUrl: https://www.linkedin.com/in/scottwueschinski
 companyDomain: gtmify.io
+avatarUrl: "https://www.gtmskills.com/authors/scott-wueschinski.jpg"
 email: scott@gtmify.io
 ---
 
