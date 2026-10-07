@@ -3,7 +3,7 @@ name: panel-debrief-alignment
 title: Panel debrief alignment
 description: |
   Use this skill after an interview round for a sales, marketing, customer success or other GTM hire, when the hiring manager has panel feedback and a read on the candidate and needs to decide what happens next. Pulls each interviewer's written feedback and the candidate's debrief, builds one alignment map across every interviewer and the candidate, ranks the concerns with the exact move to resolve each, rates interest on both sides independently, and ends with a 48-hour momentum plan and one Yes/No decision for a human. Handles one candidate or a whole round. Triggers on "debrief the panel", "interview debrief", "the panel is split", "hiring committee", "should we move them forward", "they were fine", "is this a slow no", "candidate feedback", "we can't agree on this hire", "final round debrief", "are they still keen".
-category: Sales
+category: Hiring
 tags: [Sales, Leadership]
 ---
 

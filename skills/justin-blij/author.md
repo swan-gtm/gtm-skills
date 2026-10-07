@@ -1,8 +1,9 @@
 ---
 name: Justin Blij
-title: Founder, GTM Digital
+title: Founder @ GTM Digital
 linkedinUrl: https://www.linkedin.com/in/jusblij
 companyDomain: gtmdigital.com.au
+avatarUrl: "https://www.gtmskills.com/authors/justin-blij.jpg"
 email: justin@gtmdigital.com.au
 ---
 
