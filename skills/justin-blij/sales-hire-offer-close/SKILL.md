@@ -1,13 +1,13 @@
 ---
-name: sales-offer-close
-title: Sales offer close
+name: sales-hire-offer-close
+title: Sales hire offer close
 description: |
   Use this skill when a hiring manager is about to make an offer to a sales, marketing, customer success or other GTM hire and wants it accepted, resigned on and started without a fall-off. Pulls the candidate's stated motive and numbers, runs a close-ready gate, sizes the gap on total package, prices up to three offer structures on cost, signal and risk, writes word-for-word trial closes, rates counter-offer risk with a defence plan and resignation rehearsal, and schedules a dated notice-period plan from resignation day to start day. Ends with one Yes/No decision for a human. Handles one offer or several in flight. Triggers on "we're ready to offer", "what should we offer", "will this number land", "structure the offer", "they want more money", "counter-offer", "they're resigning today", "worried they'll get bought back", "notice period", "they accepted, now what", "offer stage".
 category: Hiring
 tags: [Sales, Leadership]
 ---
 
-# Sales offer close
+# Sales hire offer close
 
 Runs from the moment a hiring manager decides to offer until the new hire's first day. Produces a close plan and a Yes/No decision on the number, never an offer sent by the agent.
 
