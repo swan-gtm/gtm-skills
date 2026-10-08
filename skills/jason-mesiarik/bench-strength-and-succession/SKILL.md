@@ -11,7 +11,7 @@ description: |
   for "bench strength", "succession plan", "talent review", "9-box", "who
   replaces our VP Sales", "key-person risk", "are we too dependent on one
   rep", "high-potential list", or "board wants a succession plan".
-category: Hiring
+category: Leadership
 tags: [Leadership, Sales]
 ---
 

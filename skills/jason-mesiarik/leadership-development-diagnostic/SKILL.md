@@ -12,7 +12,7 @@ description: |
   bottleneck", "new manager struggling", "promoted to manager of managers",
   "is this leader ready for the next stage", or "should we promote, develop,
   or replace this leader".
-category: Hiring
+category: Leadership
 tags: [Leadership, Sales]
 ---
 

@@ -11,7 +11,7 @@ description: |
   hire this candidate", "evaluate a VP Sales candidate", "first sales hire",
   "co-founder evaluation", "two finalists, help me decide", or "our last
   sales leader did not work out".
-category: Hiring
+category: Leadership
 tags: [Leadership, Sales]
 ---
 
