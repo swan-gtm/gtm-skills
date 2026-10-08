@@ -12,7 +12,7 @@ The skill fires when a candidate moves to an offer stage, or on demand ("build t
 ```
 [Candidate] has moved to offer stage for [role].
 
-Load and follow the <Sales offer close> skill in full.
+Load and follow the <Sales hire offer close> skill in full.
 
 Context for this run:
 - Candidate and role: [ATS link or ID]
