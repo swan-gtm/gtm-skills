@@ -21,7 +21,7 @@ const DIR_SEGMENT = /^[A-Za-z0-9][A-Za-z0-9_-]*$/;
 // merges fine but shows uncategorized, so we catch it here.
 const CATEGORIES = new Set([
   'Prospecting', 'Research', 'Positioning', 'Signals', 'ABM', 'Outreach', 'Deals',
-  'Events', 'Pricing', 'Reddit', 'AEO', 'RevOps', 'Sales', 'Hiring', 'SEO', 'Influencers',
+  'Events', 'Pricing', 'Reddit', 'AEO', 'RevOps', 'Sales', 'Hiring', 'Leadership', 'SEO', 'Influencers',
   'Ads', 'Affiliates', 'Newsletters',
 ]);
 
