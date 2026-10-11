@@ -134,7 +134,7 @@ code{font-size:.9em;overflow-wrap:anywhere}
   tg.onclick=function(){var on=document.body.classList.toggle('review');cp.hidden=!on;tg.textContent=on?L.exit:L.review;};
   cp.onclick=function(){
     var meta=((document.querySelector('.meta')||{}).textContent||'').trim(),ver=(meta.match(/\bV(\d+)\b/)||[0,'1'])[1];
-    var lines=['[lawyer-five-year-old · review v'+ver+']',document.title+' · '+meta];
+    var lines=['[kill-the-wall-of-text · review v'+ver+']',document.title+' · '+meta];
     Object.keys(state).forEach(function(k){var s=state[k];if(s.v||s.n)lines.push(k+' | '+(s.v||'Note')+(s.n?' | '+s.n:''));});
     if(lines.length===2)lines.push(L.none);
     var txt=lines.join('\n');

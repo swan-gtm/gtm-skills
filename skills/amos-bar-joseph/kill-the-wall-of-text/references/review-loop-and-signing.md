@@ -8,7 +8,7 @@ AI makes the first version in a minute, and it is almost never fully correct. Th
 
 - Put `data-block` on each unit that the human can want to cut or fix alone: a block, an option, and also a single row or action when the rows are the content. Each one gets review controls.
 - Do not put `data-block` on a container and also on its rows. Select one level.
-- Each block in the artifact has review controls (Keep / Cut / Fix / Move up + note) in Review mode. The **Copy feedback** button builds a text block with the marker `[lawyer-five-year-old · review vN]`. The human pastes it in chat.
+- Each block in the artifact has review controls (Keep / Cut / Fix / Move up + note) in Review mode. The **Copy feedback** button builds a text block with the marker `[kill-the-wall-of-text · review vN]`. The human pastes it in chat.
 - When you receive that marker, or feedback in plain words, apply each item: cut the block (move it to "Cut" in layer 3), fix it, or move it up. Then publish again to the same location.
 - The human can name a block, a tab, a tile, or use free words. A tab name applies to all of the blocks in that tab. If a name is ambiguous, ask.
 - "Move up" means: put it nearer to the top. Use the note for the exact position. With no note, move it one position up in its tab, or make it the first tab.

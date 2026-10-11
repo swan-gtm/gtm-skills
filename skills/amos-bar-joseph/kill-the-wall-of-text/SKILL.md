@@ -1,6 +1,6 @@
 ---
-name: lawyer-five-year-old
-title: Lawyer talking to a five-year-old
+name: kill-the-wall-of-text
+title: Kill the wall of text
 description: |
   Use this skill when work is about to go from one person to another: a report, a plan, an
   analysis, a memo, meeting notes, research, a code change, a proposal, or a raw AI answer.
