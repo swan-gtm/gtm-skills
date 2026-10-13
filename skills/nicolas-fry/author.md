@@ -1,6 +1,7 @@
 ---
 name: Nicolas Fry
-title: Founder & CEO, TurboDocx
+avatarUrl: "https://www.gtmskills.com/authors/nicolas-fry.jpg"
+title: Founder, TurboDocx
 linkedinUrl: https://www.linkedin.com/in/nicolasfry
 companyDomain: turbodocx.com
 email: nicolas@turbodocx.com
