@@ -12,7 +12,7 @@ The best discovery conversations on this topic follow the same five steps. When 
 4. **Ownership and boundaries.** "Who builds and maintains this? Can other people contribute to it?" "What must a human own, and what can run without one?"
 5. **Success and the economic case.** "What does success look like at 30 and 90 days?" "Is there a budget case, and what proof would earn more?"
 
-Ask how the organization works, then score it. Do not ask leading questions that only have one acceptable answer.
+Ask how the organization works, then place it against what good looks like. Do not ask leading questions that only have one acceptable answer.
 
 ## Tells by level
 
