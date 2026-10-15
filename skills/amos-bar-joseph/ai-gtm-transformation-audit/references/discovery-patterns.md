@@ -16,25 +16,25 @@ Ask how the organization works, then score it. Do not ask leading questions that
 
 ## Tells by level
 
-**Level 1, Chat**
+**01 Mostly manual**
 - "We bought licences and people use it, but I couldn't tell you what it changed."
 - "It depends on who is prompting."
 - Research, list building and follow-up still described as rep hours.
 
-**Level 2, Q&A**
+**02 AI as an answer engine**
 - "We connected it to the CRM and the call recorder, so we can ask it anything."
 - "AI is adding noise, not simplifying the work." Dashboards report outcomes but do not tell anyone what to do next.
 - AI use is spread across the org with no central operating layer: every team has its own tools and experiments.
 - The leader describes integration (everything connected, the data accessible in one place) and calls it a shared layer. Run the logic test.
 
-**Level 3, Agents in production**
+**03 AI as an action engine**
 - "We have agents running and we're seeing productivity gains, but each one was built separately."
 - One technical operator (often a GTM engineer or a RevOps lead) built most of it, and the question is whether anyone else can contribute without breaking it.
 - "Every time we want to change something, someone has to go into the tool it was built in."
 - Hidden maintenance: prompts, integrations and vendor changes break workflows, and nobody owns finding out.
 - Concern about a rep's name going out on a message they never approved.
 
-**Level 4, Shared AI layer**
+**04 Shared AI layer**
 - Teams describe iterating on different parts of the funnel (pre-qualification, deals, renewals) from the same foundation.
 - The questions shift to measurement and investment: which workflows earn more budget, and how to prove impact beyond activity counts.
 

@@ -38,7 +38,7 @@ Format: **name** · roles · trigger · the workflow · the 30-day result.
 
 ## Running AI in production
 
-21. **AI workflow production gate** · all · J1 at agents or above, or N3, N5, R4 or E2 below 3 · inventory live AI workflows and give each an owner, an eval set, an approval threshold, rollback and a cost ceiling · every AI workflow in production has an owner and a kill switch.
+21. **AI workflow production gate** · all · J1 at AI as an action engine or above, or N3, N5, R4 or E2 below 3 · inventory live AI workflows and give each an owner, an eval set, an approval threshold, rollback and a cost ceiling · every AI workflow in production has an owner and a kill switch.
 22. **Change-control monitor** · RevOps, founder · N2 or R4 below 3 · regression tests run automatically when models, prompts, schemas or vendor APIs change · breakage found by a test, not by a customer.
 23. **AI unit economics ledger** · founder, RevOps, customer success · N4, E4 or E1 below 3 · cost per run tied to accepted outputs, meetings, opportunities, saves and expansions · a cost-per-outcome number for the next budget review.
 24. **AI-to-revenue proof** · founder, marketing · N6 or Q12 at 1 or lower · one workflow measured against a baseline or holdout through pipeline and revenue · a defensible ROI line instead of activity counts.
@@ -47,4 +47,4 @@ Format: **name** · roles · trigger · the workflow · the 30-day result.
 
 ## If every answer is strong
 
-Say in one line that the basics are in place, then pick from plays 21 to 25. At level 4 the work is keeping production AI owned, tested and measured.
+Say in one line that the basics are in place, then pick from plays 21 to 25. At 04 Shared AI layer the work is keeping production AI owned, tested and measured.

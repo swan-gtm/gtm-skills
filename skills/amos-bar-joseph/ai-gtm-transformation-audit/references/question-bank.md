@@ -10,12 +10,12 @@ Each question carries the dimension it scores, what good looks like, and the 30-
 
 Dimension: Systems. This is the self-placement; the gates in SKILL.md test it.
 
-1. Shared AI layer across GTM. Multiple teams build and run agents off a common foundation, with permissions, monitoring and shared context in place. (3, claims level 4)
-2. Agents in production. We've defined workflows and skills, and agents run them when something triggers them, without someone prompting each step. (2, claims level 3)
-3. AI as a Q&A layer. Claude or ChatGPT is connected to some of our systems, and we ask it questions when we need something. (1, claims level 2)
-4. Mostly chat, mostly manual. Some people use AI on their own; research, list building and outreach are done by hand or in traditional tools. (0, claims level 1)
+1. Shared AI layer. Several teams build and run agents on one foundation with permissions, monitoring and shared context. (3, claims 04)
+2. AI as an action engine. Agents run defined workflows and skills when something triggers them. (2, claims 03)
+3. AI as an answer engine. AI is connected to some systems and answers questions when someone asks. (1, claims 02)
+4. Mostly manual. Research, list building and outreach are done by hand or in traditional tools. (0, claims 01)
 
-- Sufficient when: a typed answer can be placed on one of the four. If not, ask which of the four is closest, naming them.
+- Sufficient when: a typed answer can be placed on one of the four. If not, ask which of the four is closest, naming them: mostly manual, AI as an answer engine, AI as an action engine, shared AI layer.
 - Good: multiple teams run agents on one shared foundation with permissions, monitoring and shared context.
 - 30-day move: pick one repeatable workflow and run it as a triggered agent with an owner, an approval boundary and an outcome metric.
 
@@ -45,7 +45,7 @@ Q19 (Core, below) is the outcome question for every role. Offer two or three opt
 
 ## Persona defaults for the adaptive question
 
-When no routing rule in SKILL.md matches: marketing M5 if J1 is Q&A, else M2; sales S3 if J1 is Q&A, else S4; RevOps R3 if Q15 is Some or Little, else R1; customer success C1 if Q23 is "when they tell us" or "after they leave", else C2; founder E4.
+When no routing rule in SKILL.md matches: marketing M5 if J1 is AI as an answer engine, else M2; sales S3 if J1 is AI as an answer engine, else S4; RevOps R3 if Q15 is Some or Little, else R1; customer success C1 if Q23 is "when they tell us" or "after they leave", else C2; founder E4.
 
 ## Core (all roles)
 

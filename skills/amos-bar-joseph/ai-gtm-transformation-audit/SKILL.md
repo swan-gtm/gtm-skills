@@ -2,7 +2,7 @@
 name: ai-gtm-transformation-audit
 title: AI GTM transformation audit
 description: |
-  Use this skill when a GTM leader (CRO, CMO, VP Sales, RevOps, CS leader, founder) wants to know where their organization really stands on its AI GTM transformation, what is holding it at that level, and what to do in the next 30 days to move up. It runs a short structured interview, places the org on one of four levels (Chat, Q&A, Agents in production, Shared AI layer), scores the four dimensions underneath (People, Process, Systems, Data), names the gaps that block the next level, and writes a one-page readout a leadership team can act on. Also answers "AI readiness assessment", "AI maturity audit for sales and marketing", "where are we on AI in GTM", "why isn't AI moving our numbers".
+  Use this skill when a GTM leader (CRO, CMO, VP Sales, RevOps, CS leader, founder) wants to know where their organization really stands on its AI GTM transformation, what is holding it at that level, and what to do in the next 30 days to move up. It runs a short structured interview, places the org on one of four levels (Mostly manual, AI as an answer engine, AI as an action engine, Shared AI layer), scores the four dimensions underneath (People, Process, Systems, Data), names the gaps that block the next level, and writes a one-page readout a leadership team can act on. Also answers "AI readiness assessment", "AI maturity audit for sales and marketing", "where are we on AI in GTM", "why isn't AI moving our numbers".
 category: Leadership
 tags: [Sales, Marketing, RevOps]
 ---
@@ -13,16 +13,25 @@ Most teams overrate their level. They have connected AI to their CRM and call it
 
 ## The four levels
 
-Every org sits on one of four levels. Each has a tell, and each has a ceiling that stops it from reaching the next one.
+Every org sits on one of four levels. Classify against these definitions exactly, and use these names, in this order, everywhere: in the interview, the placement and the readout.
 
-| Level | What it looks like | The tell | The ceiling |
-|---|---|---|---|
-| 1. Chat | Some people use ChatGPT or Claude on their own. Research, lists and outreach are still done by hand or in traditional tools. | AI use depends on who is prompting. Nobody can say what it changed. | Nothing is connected, so every answer starts from zero context. The metrics do not move. |
-| 2. Q&A | AI is connected to some systems (CRM, call recorder, docs). People ask it questions and get good answers. | "We can ask it anything about an account." A human still does every step after the answer. | Faster answers, same amount of work. The metrics still do not move in a way the board would notice. |
-| 3. Agents in production | Defined workflows run on triggers without someone prompting each step. Real productivity uplift: the same headcount produces more. | There are agents, but each one lives in a different tool and was built from scratch by one person. | Everything is siloed. Every new workflow starts from zero, one builder becomes the bottleneck, and changing a workflow means going into the system it was built in. Progress plateaus. |
-| 4. Shared AI layer | Multiple teams build and run agents on one common foundation: shared context (ICP, accounts, messaging, decisions), permissions, monitoring and evaluation. | A team can iterate on any part of the funnel (prospecting, inbound, deals, renewals) without starting over or filing a ticket. | The ceiling becomes judgment and measurement: which workflows to invest in, and proving what they produce. |
+| # | Level | Definition |
+|---|---|---|
+| 01 | Mostly manual | Research, list building and outreach are done by hand or in traditional tools. |
+| 02 | AI as an answer engine | AI is connected to some systems and answers questions when someone asks. |
+| 03 | AI as an action engine | Agents run defined workflows and skills when something triggers them. |
+| 04 | Shared AI layer | Several teams build and run agents on one foundation with permissions, monitoring and shared context. |
 
-**The most common misplacement is calling a level 2 org a level 4.** Integration is not a shared layer. Having every system connected and the data accessible in one place is level 2. Level 4 means the *workflow logic* is defined in one place and can be reproduced and changed simply. Run the logic test below before accepting any self-placement above 2.
+Each level has a tell that confirms it and a ceiling that stops it from reaching the next one:
+
+| Level | The tell | The ceiling |
+|---|---|---|
+| 01 Mostly manual | Some people use ChatGPT or Claude on their own; AI use depends on who is prompting, and nobody can say what it changed. | Nothing is connected, so every answer starts from zero context. The metrics do not move. |
+| 02 AI as an answer engine | "We can ask it anything about an account." A human still does every step after the answer. | Faster answers, same amount of work. The metrics still do not move in a way the board would notice. |
+| 03 AI as an action engine | Real productivity uplift, but each agent lives in a different tool and was built from scratch by one person. | Everything is siloed. Every new workflow starts from zero, one builder becomes the bottleneck, and changing a workflow means going into the system it was built in. Progress plateaus. |
+| 04 Shared AI layer | A team can iterate on any part of the funnel (prospecting, inbound, deals, renewals) without starting over or filing a ticket. | The ceiling becomes judgment and measurement: which workflows to invest in, and proving what they produce. |
+
+**The most common misplacement is calling an answer engine a shared AI layer.** Integration is not a shared layer. Having every system connected and the data accessible in one place is level 02, AI as an answer engine. Level 04 means the *workflow logic* is defined in one place and can be reproduced and changed simply. Run the logic test below before accepting any self-placement above 02.
 
 ### The logic test
 
@@ -33,9 +42,9 @@ Pick one live motion the leader cares about, usually inbound: a lead arrives, it
 3. "If marketing wanted the same account context for an event follow-up, would they reuse it or rebuild it?"
 
 Read the answers this way:
-- Logic split across two or more systems (scoring in the marketing automation tool, qualification in the CRM, routing in a third tool), and a change needs RevOps or an engineer in each one: **not level 4**, whatever else is connected.
-- One place, but only one person can change it: **level 3**, with a single-builder risk.
-- One place, changeable by the people who own the motion inside guardrails, with context reused across teams: **level 4**.
+- Logic split across two or more systems (scoring in the marketing automation tool, qualification in the CRM, routing in a third tool), and a change needs RevOps or an engineer in each one: **not level 04**, whatever else is connected.
+- One place, but only one person can change it: **level 03, AI as an action engine**, with a single-builder risk.
+- One place, changeable by the people who own the motion inside guardrails, with context reused across teams: **level 04, Shared AI layer**.
 
 ## The four dimensions
 
@@ -46,7 +55,7 @@ The level is the headline. The dimensions explain it and locate the gaps.
 - **Systems:** where AI sits in the stack, how signals turn into action, how many tools a rep touches, and whether orchestration writes back to the system of record safely.
 - **Data:** whether the CRM is trusted, whether there is one shared account record, whether signals resolve to accounts and buying groups, and whether AI work can be tied to pipeline and revenue.
 
-A level-3 org with a level-1 Data dimension is the classic plateau: agents run, but on data nobody trusts, so nobody acts on their output.
+An action-engine org with a Data score under 30 is the classic plateau: agents run, but on data nobody trusts, so nobody acts on their output.
 
 ## How to run it
 
@@ -81,7 +90,7 @@ A level-3 org with a level-1 Data dimension is the classic plateau: agents run, 
    - They raised models, vendors or integrations breaking: N2
    - They raised cost or budget: N4
    - They raised trust in scores or recommendations: N7
-   - They placed themselves at level 3 or 4: N5
+   - They placed themselves at 03 or 04: N5
    - Only RevOps or engineering can build (Q10): N3
    - They raised build versus buy, hiring or DIY: N8
    - Founder, or they raised ROI or board scrutiny: N6
@@ -94,9 +103,10 @@ The full question bank, with options, what good looks like and the 30-day move f
 1. Scaled answers score 3, 2, 1, 0 in option order. Free-text, P1 and P2 do not score. A typed answer scores against the closest option.
 2. **Dimension score** = the average of that dimension's answered questions x 33.3, rounded, out of 100. A dimension with no answered question is "not assessed" and left out.
 3. **Level placement.** Start from the J1 claim, then apply the gates. Place the org at the highest level whose gate holds:
-   - Level 2 needs AI connected to at least one system of record, by name (ask "connected to what?" if J1 says Q&A or above and no system came up).
-   - Level 3 needs at least one workflow running on a trigger without someone prompting each step, with a named owner.
-   - Level 4 needs the logic test to pass and Data at 60 or above. Shared context on untrusted data is not a shared layer.
+   - 02 AI as an answer engine needs AI connected to at least one system of record, by name (ask "connected to what?" if J1 says answer engine or above and no system came up).
+   - 03 AI as an action engine needs at least one agent running a defined workflow or skill on a trigger, without someone prompting each step, with a named owner.
+   - 04 Shared AI layer needs several teams building and running agents on one foundation, the logic test passing, and Data at 60 or above. Shared context on untrusted data is not a shared layer.
+   - Anything below the 02 gate is 01 Mostly manual.
 4. If the placement is lower than the claim, say so plainly, and name the gate that failed. That sentence is usually the most valuable line in the readout.
 5. A dimension two or more steps below the others (for example, Systems 70 and Data 25) is an **uneven profile**. Call it out: the weak dimension is what is capping the level.
 
@@ -119,8 +129,15 @@ Write it so it can be pasted into a leadership doc as is. Under 450 words.
 # AI GTM transformation audit · <Company>
 <Name>, <title>. <One line: what the company sells, size.>
 
-## Where you are
-Level <n>: <name>. <One sentence on the evidence.>
+## Where you are in your GTM transformation
+01 Mostly manual: Research, list building and outreach are done by hand or in traditional tools.
+02 AI as an answer engine: AI is connected to some systems and answers questions when someone asks.
+03 AI as an action engine: Agents run defined workflows and skills when something triggers them.
+04 Shared AI layer: Several teams build and run agents on one foundation with permissions, monitoring and shared context.
+
+(Print all four, with these exact names and definitions. Mark their level "You are here" and the level above it "Next". At 04, there is no "Next".)
+
+<One sentence on the evidence for the placement.>
 <If lower than their claim: "You placed yourselves at <claimed>. The gap is <failed gate>, from your answer: '<quote>'.">
 
 | Dimension | Score | What drove it |
@@ -132,7 +149,7 @@ Level <n>: <name>. <One sentence on the evidence.>
 
 <If uneven: one sentence naming the dimension that caps the level.>
 
-## What is holding you at level <n>
+## What is holding you at <level name>
 <Two or three sentences. Name the ceiling from the levels table in their own terms.>
 
 ## Three moves for the next 30 days
@@ -140,7 +157,7 @@ Level <n>: <name>. <One sentence on the evidence.>
 2. ...
 3. ...
 
-## What it takes to reach level <n+1>
+## What it takes to reach <next level name>
 <Three bullets: the gate to pass, the owner it needs, the proof that will show it worked.>
 
 ## Your answers
@@ -156,12 +173,12 @@ Add a section before "Your answers": **Where the team disagrees.** List every qu
 - The level placement is backed by named evidence, and a self-placement that fails a gate is challenged in one plain sentence, not softened.
 - Every score line and every move quotes the leader's own answer or a fact you found. Nothing generic like "invest in data quality".
 - The three moves are small enough to start this month, each with an owner and a result you can check in 30 days, and each is tied to the number the leader is measured on.
-- A level-4 claim always got the logic test.
+- A Shared AI layer claim always got the logic test.
 - The readout reads like it was written for this company, and a CEO could forward it to the board without editing.
 
 ## Common mistakes
 
-- **Treating integration as transformation.** Connected systems plus a chat window is level 2. Ask where the workflow logic lives.
+- **Treating integration as transformation.** Connected systems plus a chat window is 02, AI as an answer engine. Ask where the workflow logic lives.
 - **Scoring tools instead of operations.** Owning an intent tool is not a Data score. Acting on intent, per account, with the evidence attached, is.
 - **Averaging away the bottleneck.** A 60 average with Data at 20 is a Data problem, not a 60.
 - **Prescribing a platform.** The moves name workflows, owners and checks. Tools come up only if the leader asks.
@@ -170,4 +187,4 @@ Add a section before "Your answers": **Where the team disagrees.** List every qu
 
 ## Using the discovery patterns
 
-`references/discovery-patterns.md` has the pains GTM leaders describe most often at each level and in each function, drawn from discovery calls and community conversations. Use them to recognize a typed answer ("AI is adding noise, not simplifying work" is a level 2 tell), and to word a gap in language the leader already uses. Never present them as statistics.
+`references/discovery-patterns.md` has the pains GTM leaders describe most often at each level and in each function, drawn from discovery calls and community conversations. Use them to recognize a typed answer ("AI is adding noise, not simplifying work" is an answer-engine tell), and to word a gap in language the leader already uses. Never present them as statistics.
